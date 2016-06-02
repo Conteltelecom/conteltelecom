@@ -1,0 +1,191 @@
+﻿<%@ Master Language="VB" MasterPageFile="~/Site.Master" AutoEventWireup="false" CodeBehind="Menu.master.vb" Inherits="conteltelecom.Menu" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    
+     <script type="text/javascript" >
+
+        $(document).ready(function () { $("div.content").click(function () { $("div#divLoading").addClass('show'); }); });
+
+    </script>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderMenuhead" runat="server"></asp:ContentPlaceHolder>
+
+
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    <form id="form1" runat="server" >
+           <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server"></telerik:RadAjaxManager>
+           <telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
+    <div class="navbar navbar-inverse navbar-fixed-top" style="background-color: #f6701d !important;text-align:left">
+       <a href="#ToggleSideMenu" style="width:52px" id="ToggleSideMenu">
+                      <asp:Image ID="Image1"  runat="server" ImageUrl="~/img/Menu.png" />
+                    </a>
+                  <asp:Image ID="ImageLogo" Width="185px"  runat="server" ImageUrl="~/img/Logo.jpg" />
+      
+    </div>
+       
+    <div class="container body-content">
+    </div>
+    <div id="wrapper">
+        <!-- Sidebar   -->
+        <div id="sidebar-wrapper" style="padding-top:48px">
+            <telerik:RadPanelBar ID="RadPanelBar1" runat="server" Skin="Bootstrap"   Height="100%" RenderMode="Auto" >
+                    <Items>
+                          <telerik:RadPanelItem runat="server" Text="LINHAS">
+                              <Items>
+                                   <telerik:RadPanelItem runat="server" Text="TP PROGRAMAÇÃO"  NavigateUrl="~/web/linhas/cadastro/li_cad_tipo_programacao.aspx">
+
+                                       </telerik:RadPanelItem>
+                              </Items>
+                              </telerik:RadPanelItem>
+                        <telerik:RadPanelItem runat="server" Text="PESSOAS">
+                            <Items>
+                                <telerik:RadPanelItem runat="server" Text="CIDADES" NavigateUrl="~/web/pessoas/ps_cidades.aspx">
+                                </telerik:RadPanelItem>
+                                <telerik:RadPanelItem runat="server" Text="UF" NavigateUrl="~/web/pessoas/ps_uf.aspx">
+                                </telerik:RadPanelItem>
+                                <telerik:RadPanelItem runat="server" Text="PESSOAS" NavigateUrl="~/web/pessoas/ps_pessoas.aspx">
+                                </telerik:RadPanelItem>
+                            </Items>
+                        </telerik:RadPanelItem>
+                        <telerik:RadPanelItem runat="server" Text="OPERADORAS"  >
+                            <Items>
+                                <telerik:RadPanelItem runat="server" Text="CAD. OPERADORA" NavigateUrl="~/web/operadoras/cad_operadoras.aspx">
+                                </telerik:RadPanelItem>
+                                <telerik:RadPanelItem runat="server" Text="CAD. PLANOS " NavigateUrl="~/web/operadoras/op_planos.aspx">
+                                </telerik:RadPanelItem>
+                            </Items>
+                        </telerik:RadPanelItem>
+                         <telerik:RadPanelItem runat="server" Text="IMPORTAÇÃO DA FATURA"  Visible="True">
+                            <Items>
+                                 
+                                <telerik:RadPanelItem runat="server" Text="IMPORTAÇÃO MANUAL" NavigateUrl="~/web/servicos_fatura/if_input_fatura_manual.aspx">
+                                </telerik:RadPanelItem>
+                                 <telerik:RadPanelItem runat="server" Text="MANUTENÇÃO">
+                           <Items>
+                               <telerik:RadPanelItem runat="server" Text="MANUTENÇÃO P/ CLIENTE"  NavigateUrl="~/web/clientes/relatorios/configuracoes/atualizar_infoamacoes_relatorio.aspx">
+                                                                    </telerik:RadPanelItem>
+                                <telerik:RadPanelItem runat="server" Text="REL PENDÊNCIAS"  NavigateUrl="~/web/clientes/relatorios/cl_rel_reducaoPendecias.aspx" Target="_blank">
+                                                                    </telerik:RadPanelItem>
+                               <telerik:RadPanelItem runat="server" Text="CAD. LEIAUTE"  NavigateUrl="~/web/servicos_fatura/configuracoes/sf_cad_leiaute.aspx" >
+                                                                    </telerik:RadPanelItem>
+                            
+                           </Items>
+                                    
+                                        </telerik:RadPanelItem>
+                                
+                            </Items>
+                              
+                             <Items>
+                                 <telerik:RadPanelItem runat="server" Text="CONFIGURAÇÕES">
+                                     <Items>
+                                         <telerik:RadPanelItem runat="server" Text="TIPOS DE USO" NavigateUrl="~/web/servicos_fatura/configuracoes/sf_tipo_uso.aspx">
+                                         </telerik:RadPanelItem>
+                                         <telerik:RadPanelItem runat="server" Text="TIPO DE USO RELATÓRIO" NavigateUrl="~/web/servicos_fatura/configuracoes/cadatro_tipo_uso_rel.aspx">
+                                          
+                                         </telerik:RadPanelItem>
+                                          <telerik:RadPanelItem runat="server" Text="AGRUPAMENTO DE USO" NavigateUrl="~/web/servicos_fatura/configuracoes/sf_agrupamento_tipo_uso.aspx">
+                                             
+                                         </telerik:RadPanelItem>
+                                     </Items>
+                                 </telerik:RadPanelItem>
+
+                             </Items>
+                            
+                        </telerik:RadPanelItem>
+                         <telerik:RadPanelItem runat="server" Text="FINANCEIRO"  Visible="True">
+                                                           <Items>
+                                <telerik:RadPanelItem runat="server" Text="GERA CVS CLIENTES" NavigateUrl="~/web/financeiro/bling/export_clientes_bling.aspx">
+                                </telerik:RadPanelItem>
+                            </Items>
+                            
+                        </telerik:RadPanelItem>
+                      <telerik:RadPanelItem runat="server" Text="RELATÓRIOS" Visible="false" >
+                                    <Items>
+                                        <telerik:RadPanelItem runat="server" Text="USO">
+                                            <Items>
+                                                <telerik:RadPanelItem runat="server" Text="USO x CIDADES"  NavigateUrl="~/web/clientes/relatorios/cl_rel_uso.aspx" Target="_blank">
+                                        </telerik:RadPanelItem>
+                                            </Items>
+                                          
+                                        </telerik:RadPanelItem>
+                                        <telerik:RadPanelItem runat="server" Text="REDUÇÃO"  NavigateUrl="~/web/clientes/relatorios/cl_rel_reducao.aspx" Target="_blank">
+                                        </telerik:RadPanelItem>
+                                        <telerik:RadPanelItem runat="server" Text="DESCRITIVO">
+                                        </telerik:RadPanelItem>
+                                    </Items>
+                                </telerik:RadPanelItem>
+                        <telerik:RadPanelItem runat="server" Text="ATENDIMENTO"  Visible="false">
+                            <Items>
+                                
+                                <telerik:RadPanelItem runat="server" Text="FATURAS"  Visible="false">
+                                    <Items>
+                                        <telerik:RadPanelItem runat="server" Text="SOLICITAÇÃO">
+                                        </telerik:RadPanelItem>
+                                        <telerik:RadPanelItem runat="server" Text="ANALISE">
+                                        </telerik:RadPanelItem>
+                                        <telerik:RadPanelItem runat="server" Text="CONTROLE">
+                                        </telerik:RadPanelItem>
+                                    </Items>
+                                </telerik:RadPanelItem>
+                            </Items>
+                        </telerik:RadPanelItem>
+                        <telerik:RadPanelItem runat="server" Text="RELACIONAMENTO">
+                            <Items>
+                                <telerik:RadPanelItem runat="server"  Text="RELATÓRIOS">
+                               <Items>
+                                    <telerik:RadPanelItem runat="server" NavigateUrl="~/web/relacionamento/relatorios/rl_rel_movel_x_inter.aspx" Text="MOVEL x INTER.">
+                                        </telerik:RadPanelItem>
+                               </Items>
+                                     </telerik:RadPanelItem>
+                            </Items>
+                        </telerik:RadPanelItem>
+
+                        <telerik:RadPanelItem runat="server" Text="CLIENTES">
+                            <Items>
+                                <telerik:RadPanelItem runat="server" NavigateUrl="~/web/pessoas/ps_cliente.aspx" Text="CLIENTES">
+                                </telerik:RadPanelItem>
+                                <telerik:RadPanelItem runat="server" Text="CONFIGURAÇÕES">
+                                    <Items>
+                                    <telerik:RadPanelItem runat="server" Text="CAD. TIPO DE CONTRATOS"  NavigateUrl="~/web/clientes/cl_configuracoes/cl_tipos_contratos.aspx">
+
+                                </telerik:RadPanelItem>
+                                        
+
+                                    </Items>
+                                </telerik:RadPanelItem>
+                            </Items>
+
+                        </telerik:RadPanelItem>
+                    </Items>
+                </telerik:RadPanelBar>
+         
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id=" page-content-wrapper"  style="padding-top:48px;">
+            <div>
+                <asp:ImageButton ID="ImageButtonHome" ImageUrl="~/img/home_w.png" runat="server"   />       <asp:Label ID="LabelNomePagina"  runat="server" Text="Label" Font-Size="23px" Font-Bold="true" ></asp:Label>
+            </div>
+
+  
+  
+             <asp:ContentPlaceHolder ID="ContentPlaceHolderMenu" runat="server">
+              
+         
+   
+                        </asp:ContentPlaceHolder>
+                        
+           <br />
+       
+            <footer style="bottom:0;">
+         
+        </footer>
+        </div>
+        
+        <!-- /#page-content-wrapper -->
+    </div>
+       </form>
+
+
+
+</asp:Content>

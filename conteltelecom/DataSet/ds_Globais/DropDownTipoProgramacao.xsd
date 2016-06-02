@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DropDownTipoProgramacao" targetNamespace="http://tempuri.org/DropDownTipoProgramacao.xsd" xmlns:mstns="http://tempuri.org/DropDownTipoProgramacao.xsd" xmlns="http://tempuri.org/DropDownTipoProgramacao.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="conteltelecomConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="conteltelecomConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.conteltelecomConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LI_TIPO_PROGRAMACAOTableAdapter" GeneratorDataComponentClassName="LI_TIPO_PROGRAMACAOTableAdapter" Name="LI_TIPO_PROGRAMACAO" UserDataComponentName="LI_TIPO_PROGRAMACAOTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="conteltelecomConnectionString (Web.config)" DbObjectName="conteltelecom.dbo.LI_TIPO_PROGRAMACAO" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT id_LI_TIPO_PROGRAMACAO, desc_LI_TIPO_PROGRAMACAO FROM LI_TIPO_PROGRAMACAO WHERE (st_LI_TIPO_PROGRAMACAO = 1)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_LI_TIPO_PROGRAMACAO" DataSetColumn="id_LI_TIPO_PROGRAMACAO" />
+              <Mapping SourceColumn="desc_LI_TIPO_PROGRAMACAO" DataSetColumn="desc_LI_TIPO_PROGRAMACAO" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DropDownTipoProgramacao" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DropDownTipoProgramacao" msprop:Generator_UserDSName="DropDownTipoProgramacao">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="LI_TIPO_PROGRAMACAO" msprop:Generator_TableClassName="LI_TIPO_PROGRAMACAODataTable" msprop:Generator_TableVarName="tableLI_TIPO_PROGRAMACAO" msprop:Generator_TablePropName="LI_TIPO_PROGRAMACAO" msprop:Generator_RowDeletingName="LI_TIPO_PROGRAMACAORowDeleting" msprop:Generator_RowChangingName="LI_TIPO_PROGRAMACAORowChanging" msprop:Generator_RowEvHandlerName="LI_TIPO_PROGRAMACAORowChangeEventHandler" msprop:Generator_RowDeletedName="LI_TIPO_PROGRAMACAORowDeleted" msprop:Generator_UserTableName="LI_TIPO_PROGRAMACAO" msprop:Generator_RowChangedName="LI_TIPO_PROGRAMACAORowChanged" msprop:Generator_RowEvArgName="LI_TIPO_PROGRAMACAORowChangeEvent" msprop:Generator_RowClassName="LI_TIPO_PROGRAMACAORow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_LI_TIPO_PROGRAMACAO" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_LI_TIPO_PROGRAMACAO" msprop:Generator_ColumnPropNameInRow="id_LI_TIPO_PROGRAMACAO" msprop:Generator_ColumnPropNameInTable="id_LI_TIPO_PROGRAMACAOColumn" msprop:Generator_UserColumnName="id_LI_TIPO_PROGRAMACAO" type="xs:int" />
+              <xs:element name="desc_LI_TIPO_PROGRAMACAO" msprop:Generator_ColumnVarNameInTable="columndesc_LI_TIPO_PROGRAMACAO" msprop:Generator_ColumnPropNameInRow="desc_LI_TIPO_PROGRAMACAO" msprop:Generator_ColumnPropNameInTable="desc_LI_TIPO_PROGRAMACAOColumn" msprop:Generator_UserColumnName="desc_LI_TIPO_PROGRAMACAO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:LI_TIPO_PROGRAMACAO" />
+      <xs:field xpath="mstns:id_LI_TIPO_PROGRAMACAO" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

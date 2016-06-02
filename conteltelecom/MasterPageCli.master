@@ -1,0 +1,100 @@
+﻿<%@ Master Language="VB" MasterPageFile="~/Menu.master" AutoEventWireup="false" CodeBehind="MasterPageCli.master.vb" Inherits="conteltelecom.MasterPageCli" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderMenuhead" runat="server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
+
+
+
+</asp:Content>
+
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderMenu" runat="server">
+    <div style="margin:2px"></div>
+   <%-- ###########################################################MENU 01 ########################################## --%>
+        <telerik:RadNavigation runat="server" ID="NavClienteMatriz" dir="rtl" Visible="true">
+        <Nodes>
+            <telerik:NavigationNode ID="PlanosCliente" Text="CAD. PLANOS" NavigateUrl='<%# String.Format("~/web/clientes/clinetes_matriz/cad_planos_x_clientes.aspx?id_PS_PESSOA={0}&consultaMatriz={1}", Session("id_PS_PESSOA"), Request.QueryString("consultaMatriz"))%>'>
+            </telerik:NavigationNode>
+             <telerik:NavigationNode ID="Linhas" Text=" CONSULTA LINHAS" NavigateUrl='<%# String.Format("~/web/clientes/cl_linhas.aspx?id_pessoas={0}&consultaMatriz={1}&codMatriz_PS_CLIENTES={2}", Session("id_pessoaNav"), Request.QueryString("consultaMatriz"), Request.QueryString("codMatriz_PS_CLIENTES"))%>'>
+            </telerik:NavigationNode>
+            <telerik:NavigationNode ID="Relatorios" Text="RELATÓRIOS" >
+               <Nodes>
+                   <telerik:NavigationNode ID="reducao" Text="REDUÇÃO" NavigateUrl='<%# String.Format("~/web/clientes/relatorios/cl_rel_reducao.aspx?id_PS_PESSOA={0}&consultaMatriz={1}", Session("id_PS_PESSOA"), Request.QueryString("consultaMatriz"))%>' Target="_blank">
+                           </telerik:NavigationNode>
+                                   
+                        <telerik:NavigationNode ID="unidade" Text="REL. USO" NavigateUrl='<%# String.Format("~/web/clientes/relatorios/cl_rel_uso.aspx?id_PS_PESSOA={0}&consultaMatriz={1}", Session("id_PS_PESSOA"), Request.QueryString("consultaMatriz"))%>' Target="_blank">
+                           </telerik:NavigationNode>
+                
+                   <telerik:NavigationNode ID="descritvo" Text="DESCRITIVO" NavigateUrl='<%# String.Format("~/web/clientes/relatorios/rel_descritivo.aspx?id_PS_PESSOA={0}&consultaMatriz={1}", Session("id_PS_PESSOA"), Request.QueryString("consultaMatriz"))%>' Target="_blank">
+                           </telerik:NavigationNode>
+               </Nodes>              
+            </telerik:NavigationNode>
+            <telerik:NavigationNode ID="MatrizGeral" Text="GERAL" NavigateUrl='<%# String.Format("~/web/pessoas/ps_cliente_detalhes.aspx?id_pessoas={0}&consultaMatriz={1}", Session("id_pessoaNav"), Request.QueryString("consultaMatriz"))%>'>
+            </telerik:NavigationNode>
+        </Nodes>
+    </telerik:RadNavigation>
+    <%-- ###########################################################MENU 00 ########################################## --%>
+    <telerik:RadNavigation runat="server"  ID="Nav1"   dir="rtl" Visible="false"  >
+         <Nodes>
+                
+                <telerik:NavigationNode Text="LINHAS" NavigateUrl='<%# String.Format("~/web/clientes/cl_linhas.aspx?id_pessoas={0}&consultaMatriz={1}", Session("id_pessoaNav"), Request.QueryString("consultaMatriz"))%>'>
+</telerik:NavigationNode> 
+        </Nodes> 
+        <Nodes>                
+            <telerik:NavigationNode Text="SOLICITAÇÃO FATURAS">
+                <Nodes>
+                     <telerik:NavigationNode Text="PENDÊNCIA P/ LINHA" NavigateUrl='<%# String.Format("~/web/servicos_fatura/solicitacao_fatura.aspx?id_pessoas={0}&consultaMatriz={1}", Session("id_pessoaNav"), Request.QueryString("consultaMatriz"))%>'>
+                         </telerik:NavigationNode>
+                </Nodes>
+</telerik:NavigationNode> 
+        </Nodes> 
+         <Nodes>  
+                <telerik:NavigationNode Text="LINHAS VIRTUAIS" NavigateUrl='<%# String.Format("~/web/clientes/cl_linhas_virtuais.aspx?id_pessoas={0}&consultaMatriz={1}", Session("id_pessoaNav"), Request.QueryString("consultaMatriz"))%>'>
+</telerik:NavigationNode> 
+        </Nodes> 
+        
+         <Nodes>
+                <telerik:NavigationNode Text="CONTRATOS" NavigateUrl='<%# String.Format("~/web/clientes/cl_contratos.aspx?id_pessoas={0}&consultaMatriz={1}", Session("id_pessoaNav"), Request.QueryString("consultaMatriz"))%>'>
+</telerik:NavigationNode> 
+        </Nodes> 
+           <Nodes>
+  <telerik:NavigationNode ID="CONTATOS" Text="CONTATOS"  NavigateUrl='<%# String.Format("~/web/clientes/cli_contatos.aspx?id_pessoas={0}&consultaMatriz={1}", Session("id_pessoaNav"), Request.QueryString("consultaMatriz"))%>'>
+</telerik:NavigationNode> 
+        </Nodes>  
+           <Nodes>
+                <telerik:NavigationNode Text="RESPOSNAVEIS CONTEL" Visible="false" >
+</telerik:NavigationNode> 
+        </Nodes>
+         <Nodes>
+                <telerik:NavigationNode ID="GERAL" Text="GERAL"    NavigateUrl='<%# String.Format("~/web/pessoas/ps_cliente_detalhes.aspx?id_pessoas={0}", Session("id_pessoaNav"))%>'>
+</telerik:NavigationNode>
+        </Nodes>  
+    </telerik:RadNavigation>
+
+      <%-- ###########################################################MENU 02 ########################################## --%>
+    <telerik:RadNavigation  runat="server" ID="RadNavigationLinhas" dir="rtl" Visible="true">
+        <Nodes>
+            <telerik:NavigationNode  Visible="false"  Text="LINHAS" NavigateUrl='<%# String.Format("~/web/clientes/clinetes_matriz/cad_planos_x_clientes.aspx?id_PS_PESSOA={0}&consultaMatriz={1}&id_pessoas={2}", Session("id_PS_PESSOA"), Request.QueryString("consultaMatriz"), Session("id_pessoaNav"))%>'>
+            </telerik:NavigationNode>
+            <telerik:NavigationNode  Text="CAD. PROGRAMAÇÃO" NavigateUrl='<%# String.Format("~/web/clientes/clinetes_matriz/cad_planos_x_clientes.aspx?id_PS_PESSOA={0}&consultaMatriz={1}", Session("id_PS_PESSOA"), Request.QueryString("consultaMatriz"))%>'>
+            </telerik:NavigationNode>
+            <telerik:NavigationNode ID="MatrizGeralLinhas" Visible="false" Text="GERAL" NavigateUrl='<%# String.Format("~/web/pessoas/ps_cliente_detalhes.aspx?id_pessoas={0}&consultaMatriz={1}", Session("id_pessoaNav"), Request.QueryString("consultaMatriz"))%>'>
+
+            </telerik:NavigationNode>
+        </Nodes>
+    </telerik:RadNavigation>
+    <br> 
+      <fieldset>
+    <legend><asp:Label ID="LabelCliente" runat="server" Text="" Font-Bold="true"></asp:Label></legend> 
+                     </fieldset>
+             <div style="margin-left:10px;margin-right:10px ; height:100% !important"">
+          <telerik:RadAjaxLoadingPanel ID="RadAjaxLoadingPanel1"  runat="server" InitialDelayTime="1000" Modal="false"  Transparency="10" MinDisplayTime="1" Width="50px"  >
+     
+          <div id="divLoading">
+                        </div>
+        </telerik:RadAjaxLoadingPanel>
+                 <telerik:RadAjaxPanel ID="RadAjaxPanel1" runat="server" LoadingPanelID="RadAjaxLoadingPanel1" Width="100%" EnableAJAX="true"  >   
+   <asp:ContentPlaceHolder ID="ContentPlaceHolder12" runat="server">
+                         </asp:ContentPlaceHolder> 
+                     </telerik:RadAjaxPanel>
+          </div>
+</asp:Content>

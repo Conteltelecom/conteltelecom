@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ds_relDescritivo" targetNamespace="http://tempuri.org/ds_relDescritivo.xsd" xmlns:mstns="http://tempuri.org/ds_relDescritivo.xsd" xmlns="http://tempuri.org/ds_relDescritivo.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="conteltelecomConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="conteltelecomConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.conteltelecomConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="RelDiscritivoTableAdapter" GeneratorDataComponentClassName="RelDiscritivoTableAdapter" Name="RelDiscritivo" UserDataComponentName="RelDiscritivoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="conteltelecomConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT CL_PLANOSxLINHAS_1.idLinhasPai_LI_LINHAS, CL_PLANOSxLINHAS_1.id_LI_LINHAS, CL_PLANOS_CLIENTE_1.desc_CL_PLANOS_CLIENTE, CL_PLANOS_CLIENTE_1.ordem_CL_PLANOS_CLIENTE, LI_LINHAS_2.numLinha_LI_LINHAS, LI_LINHAS_1.codLinha_LI_LINHAS, PS_CIDADES_1.desc_PS_CIDADES, PS_JURIDICA_1.CNPJ_PS_JURIDICA, PS_JURIDICA_1.razaosocial_PS_JURIDICA, 0 AS tipoinfo, SF_VL_SERVICO.vl_SF_VL_SERVICO, SF_VL_SERVICO.vlDesconto_SF_VL_SERVICO, SF_VL_SERVICO.desc_SF_VL_SERVICO, SF_VL_SERVICO.qtDias_SF_VL_SERVICO, CL_PLANOS_CLIENTE_1.valor_CL_PLANOS_CLIENTE, OP_PLANOS.desc_OP_PLANOS FROM OP_PLANOS INNER JOIN PS_JURIDICA AS PS_JURIDICA_1 INNER JOIN PS_CLIENTES AS PS_CLIENTES_1 ON PS_JURIDICA_1.id_PS_JURIDICA = PS_CLIENTES_1.id_PS_JURIDICA INNER JOIN CL_PLANOS_CLIENTE AS CL_PLANOS_CLIENTE_1 INNER JOIN CL_PLANOSxLINHAS AS CL_PLANOSxLINHAS_1 ON CL_PLANOS_CLIENTE_1.id_CL_PLANOS_CLIENTE = CL_PLANOSxLINHAS_1.id_CL_PLANOS_CLIENTE INNER JOIN LI_LINHAS AS LI_LINHAS_2 ON CL_PLANOSxLINHAS_1.id_LI_LINHAS = LI_LINHAS_2.id_LI_LINHAS INNER JOIN LI_LINHAS AS LI_LINHAS_1 ON CL_PLANOSxLINHAS_1.idLinhasPai_LI_LINHAS = LI_LINHAS_1.id_LI_LINHAS INNER JOIN PS_CIDADES AS PS_CIDADES_1 ON LI_LINHAS_1.id_PS_CIDADES = PS_CIDADES_1.id_PS_CIDADES ON PS_CLIENTES_1.id_PS_PESSOA = CL_PLANOS_CLIENTE_1.id_PS_PESSOA ON OP_PLANOS.id_OP_PLANOS = CL_PLANOS_CLIENTE_1.id_OP_PLANOS LEFT OUTER JOIN SF_VL_SERVICO INNER JOIN SF_SERVICOS_FATURA AS SF_SERVICOS_FATURA_1 ON SF_VL_SERVICO.id_SF_SERVICOS_FATURA = SF_SERVICOS_FATURA_1.id_SF_SERVICOS_FATURA ON CL_PLANOSxLINHAS_1.id_LI_LINHAS = SF_SERVICOS_FATURA_1.id_LI_LINHAS WHERE (SF_SERVICOS_FATURA_1.mesAnoRefereincia_SF_SERVICOS_FATURA = @mesAnoRefereincia_SF_SERVICOS_FATURA) AND (SF_SERVICOS_FATURA_1.codMatriz_PS_CLIENTES = @codMatriz_PS_CLIENTES) AND (SF_SERVICOS_FATURA_1.numSequencia_SF_SERVICOS_FATURA = 0) UNION ALL SELECT CL_PLANOSxLINHAS.idLinhasPai_LI_LINHAS, CL_PLANOSxLINHAS.id_LI_LINHAS, CL_PLANOS_CLIENTE.desc_CL_PLANOS_CLIENTE, CL_PLANOS_CLIENTE.ordem_CL_PLANOS_CLIENTE, LI_LINHAS.numLinha_LI_LINHAS, LI_LINHAS_1.codLinha_LI_LINHAS, PS_CIDADES.desc_PS_CIDADES, PS_JURIDICA.CNPJ_PS_JURIDICA, PS_JURIDICA.razaosocial_PS_JURIDICA, 1 AS tipoinfo, SF_VL_USO.vlUso_SF_VL_USO AS vl_SF_VL_SERVICO, 0 AS vlDesconto_SF_VL_SERVICO, SF_TIPO_USO.desc_SF_TIPO_USO AS desc_SF_VL_SERVICO, '' AS qtDias_SF_VL_SERVICO, CL_PLANOS_CLIENTE.valor_CL_PLANOS_CLIENTE, OP_PLANOS_1.desc_OP_PLANOS FROM OP_PLANOS AS OP_PLANOS_1 INNER JOIN PS_JURIDICA INNER JOIN PS_CLIENTES ON PS_JURIDICA.id_PS_JURIDICA = PS_CLIENTES.id_PS_JURIDICA INNER JOIN CL_PLANOS_CLIENTE INNER JOIN CL_PLANOSxLINHAS ON CL_PLANOS_CLIENTE.id_CL_PLANOS_CLIENTE = CL_PLANOSxLINHAS.id_CL_PLANOS_CLIENTE INNER JOIN LI_LINHAS ON CL_PLANOSxLINHAS.id_LI_LINHAS = LI_LINHAS.id_LI_LINHAS INNER JOIN LI_LINHAS AS LI_LINHAS_1 ON CL_PLANOSxLINHAS.idLinhasPai_LI_LINHAS = LI_LINHAS_1.id_LI_LINHAS INNER JOIN PS_CIDADES ON LI_LINHAS_1.id_PS_CIDADES = PS_CIDADES.id_PS_CIDADES ON PS_CLIENTES.id_PS_PESSOA = CL_PLANOS_CLIENTE.id_PS_PESSOA ON OP_PLANOS_1.id_OP_PLANOS = CL_PLANOS_CLIENTE.id_OP_PLANOS LEFT OUTER JOIN SF_SERVICOS_FATURA INNER JOIN SF_VL_USO ON SF_SERVICOS_FATURA.id_SF_SERVICOS_FATURA = SF_VL_USO.id_SF_SERVICOS_FATURA INNER JOIN SF_TIPO_USO ON SF_VL_USO.id_SF_TIPO_USO = SF_TIPO_USO.id_SF_TIPO_USO ON CL_PLANOSxLINHAS.id_LI_LINHAS = SF_SERVICOS_FATURA.id_LI_LINHAS WHERE (SF_SERVICOS_FATURA.mesAnoRefereincia_SF_SERVICOS_FATURA = @mesAnoRefereincia_SF_SERVICOS_FATURA) AND (SF_SERVICOS_FATURA.codMatriz_PS_CLIENTES = @codMatriz_PS_CLIENTES) AND (SF_SERVICOS_FATURA.numSequencia_SF_SERVICOS_FATURA = 0)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="mesAnoRefereincia_SF_SERVICOS_FATURA" ColumnName="" DataSourceName="" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@mesAnoRefereincia_SF_SERVICOS_FATURA" Precision="0" Scale="0" Size="50" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="codMatriz_PS_CLIENTES" ColumnName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@codMatriz_PS_CLIENTES" Precision="0" Scale="0" Size="4" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ordem_CL_PLANOS_CLIENTE" DataSetColumn="ordem_CL_PLANOS_CLIENTE" />
+              <Mapping SourceColumn="desc_CL_PLANOS_CLIENTE" DataSetColumn="desc_CL_PLANOS_CLIENTE" />
+              <Mapping SourceColumn="idLinhasPai_LI_LINHAS" DataSetColumn="idLinhasPai_LI_LINHAS" />
+              <Mapping SourceColumn="id_LI_LINHAS" DataSetColumn="id_LI_LINHAS" />
+              <Mapping SourceColumn="numLinha_LI_LINHAS" DataSetColumn="numLinha_LI_LINHAS" />
+              <Mapping SourceColumn="codLinha_LI_LINHAS" DataSetColumn="codLinha_LI_LINHAS" />
+              <Mapping SourceColumn="desc_PS_CIDADES" DataSetColumn="desc_PS_CIDADES" />
+              <Mapping SourceColumn="CNPJ_PS_JURIDICA" DataSetColumn="CNPJ_PS_JURIDICA" />
+              <Mapping SourceColumn="razaosocial_PS_JURIDICA" DataSetColumn="razaosocial_PS_JURIDICA" />
+              <Mapping SourceColumn="desc_SF_VL_SERVICO" DataSetColumn="desc_SF_VL_SERVICO" />
+              <Mapping SourceColumn="vl_SF_VL_SERVICO" DataSetColumn="vl_SF_VL_SERVICO" />
+              <Mapping SourceColumn="vlDesconto_SF_VL_SERVICO" DataSetColumn="vlDesconto_SF_VL_SERVICO" />
+              <Mapping SourceColumn="tipoinfo" DataSetColumn="tipoinfo" />
+              <Mapping SourceColumn="qtDias_SF_VL_SERVICO" DataSetColumn="qtDias_SF_VL_SERVICO" />
+              <Mapping SourceColumn="valor_CL_PLANOS_CLIENTE" DataSetColumn="valor_CL_PLANOS_CLIENTE" />
+              <Mapping SourceColumn="desc_OP_PLANOS" DataSetColumn="desc_OP_PLANOS" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ds_relDescritivo" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ds_relDescritivo" msprop:Generator_UserDSName="ds_relDescritivo">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="RelDiscritivo" msprop:Generator_TableClassName="RelDiscritivoDataTable" msprop:Generator_TableVarName="tableRelDiscritivo" msprop:Generator_TablePropName="RelDiscritivo" msprop:Generator_RowDeletingName="RelDiscritivoRowDeleting" msprop:Generator_RowChangingName="RelDiscritivoRowChanging" msprop:Generator_RowEvHandlerName="RelDiscritivoRowChangeEventHandler" msprop:Generator_RowDeletedName="RelDiscritivoRowDeleted" msprop:Generator_UserTableName="RelDiscritivo" msprop:Generator_RowChangedName="RelDiscritivoRowChanged" msprop:Generator_RowEvArgName="RelDiscritivoRowChangeEvent" msprop:Generator_RowClassName="RelDiscritivoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ordem_CL_PLANOS_CLIENTE" msprop:Generator_ColumnVarNameInTable="columnordem_CL_PLANOS_CLIENTE" msprop:Generator_ColumnPropNameInRow="ordem_CL_PLANOS_CLIENTE" msprop:Generator_ColumnPropNameInTable="ordem_CL_PLANOS_CLIENTEColumn" msprop:Generator_UserColumnName="ordem_CL_PLANOS_CLIENTE" type="xs:int" minOccurs="0" />
+              <xs:element name="desc_CL_PLANOS_CLIENTE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndesc_CL_PLANOS_CLIENTE" msprop:Generator_ColumnPropNameInRow="desc_CL_PLANOS_CLIENTE" msprop:Generator_ColumnPropNameInTable="desc_CL_PLANOS_CLIENTEColumn" msprop:Generator_UserColumnName="desc_CL_PLANOS_CLIENTE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="301" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idLinhasPai_LI_LINHAS" msprop:Generator_ColumnVarNameInTable="columnidLinhasPai_LI_LINHAS" msprop:Generator_ColumnPropNameInRow="idLinhasPai_LI_LINHAS" msprop:Generator_ColumnPropNameInTable="idLinhasPai_LI_LINHASColumn" msprop:Generator_UserColumnName="idLinhasPai_LI_LINHAS" type="xs:int" minOccurs="0" />
+              <xs:element name="id_LI_LINHAS" msprop:Generator_ColumnVarNameInTable="columnid_LI_LINHAS" msprop:Generator_ColumnPropNameInRow="id_LI_LINHAS" msprop:Generator_ColumnPropNameInTable="id_LI_LINHASColumn" msprop:Generator_UserColumnName="id_LI_LINHAS" type="xs:int" minOccurs="0" />
+              <xs:element name="numLinha_LI_LINHAS" msprop:Generator_ColumnVarNameInTable="columnnumLinha_LI_LINHAS" msprop:Generator_ColumnPropNameInRow="numLinha_LI_LINHAS" msprop:Generator_ColumnPropNameInTable="numLinha_LI_LINHASColumn" msprop:Generator_UserColumnName="numLinha_LI_LINHAS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="codLinha_LI_LINHAS" msprop:Generator_ColumnVarNameInTable="columncodLinha_LI_LINHAS" msprop:Generator_ColumnPropNameInRow="codLinha_LI_LINHAS" msprop:Generator_ColumnPropNameInTable="codLinha_LI_LINHASColumn" msprop:Generator_UserColumnName="codLinha_LI_LINHAS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="desc_PS_CIDADES" msprop:Generator_ColumnVarNameInTable="columndesc_PS_CIDADES" msprop:Generator_ColumnPropNameInRow="desc_PS_CIDADES" msprop:Generator_ColumnPropNameInTable="desc_PS_CIDADESColumn" msprop:Generator_UserColumnName="desc_PS_CIDADES" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CNPJ_PS_JURIDICA" msprop:Generator_ColumnVarNameInTable="columnCNPJ_PS_JURIDICA" msprop:Generator_ColumnPropNameInRow="CNPJ_PS_JURIDICA" msprop:Generator_ColumnPropNameInTable="CNPJ_PS_JURIDICAColumn" msprop:Generator_UserColumnName="CNPJ_PS_JURIDICA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="14" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="razaosocial_PS_JURIDICA" msprop:Generator_ColumnVarNameInTable="columnrazaosocial_PS_JURIDICA" msprop:Generator_ColumnPropNameInRow="razaosocial_PS_JURIDICA" msprop:Generator_ColumnPropNameInTable="razaosocial_PS_JURIDICAColumn" msprop:Generator_UserColumnName="razaosocial_PS_JURIDICA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="desc_SF_VL_SERVICO" msprop:Generator_ColumnVarNameInTable="columndesc_SF_VL_SERVICO" msprop:Generator_ColumnPropNameInRow="desc_SF_VL_SERVICO" msprop:Generator_ColumnPropNameInTable="desc_SF_VL_SERVICOColumn" msprop:Generator_UserColumnName="desc_SF_VL_SERVICO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vl_SF_VL_SERVICO" msprop:Generator_ColumnVarNameInTable="columnvl_SF_VL_SERVICO" msprop:Generator_ColumnPropNameInRow="vl_SF_VL_SERVICO" msprop:Generator_ColumnPropNameInTable="vl_SF_VL_SERVICOColumn" msprop:Generator_UserColumnName="vl_SF_VL_SERVICO" type="xs:decimal" minOccurs="0" />
+              <xs:element name="vlDesconto_SF_VL_SERVICO" msprop:Generator_ColumnVarNameInTable="columnvlDesconto_SF_VL_SERVICO" msprop:Generator_ColumnPropNameInRow="vlDesconto_SF_VL_SERVICO" msprop:Generator_ColumnPropNameInTable="vlDesconto_SF_VL_SERVICOColumn" msprop:Generator_UserColumnName="vlDesconto_SF_VL_SERVICO" type="xs:decimal" minOccurs="0" />
+              <xs:element name="tipoinfo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columntipoinfo" msprop:Generator_ColumnPropNameInRow="tipoinfo" msprop:Generator_ColumnPropNameInTable="tipoinfoColumn" msprop:Generator_UserColumnName="tipoinfo" type="xs:int" minOccurs="0" />
+              <xs:element name="qtDias_SF_VL_SERVICO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnqtDias_SF_VL_SERVICO" msprop:Generator_ColumnPropNameInRow="qtDias_SF_VL_SERVICO" msprop:Generator_ColumnPropNameInTable="qtDias_SF_VL_SERVICOColumn" msprop:Generator_UserColumnName="qtDias_SF_VL_SERVICO" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="valor_CL_PLANOS_CLIENTE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnvalor_CL_PLANOS_CLIENTE" msprop:Generator_ColumnPropNameInRow="valor_CL_PLANOS_CLIENTE" msprop:Generator_ColumnPropNameInTable="valor_CL_PLANOS_CLIENTEColumn" msprop:Generator_UserColumnName="valor_CL_PLANOS_CLIENTE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="desc_OP_PLANOS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndesc_OP_PLANOS" msprop:Generator_ColumnPropNameInRow="desc_OP_PLANOS" msprop:Generator_ColumnPropNameInTable="desc_OP_PLANOSColumn" msprop:Generator_UserColumnName="desc_OP_PLANOS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="RadAutoCompleteBoxPsFiscica" targetNamespace="http://tempuri.org/RadAutoCompleteBoxPsFiscica.xsd" xmlns:mstns="http://tempuri.org/RadAutoCompleteBoxPsFiscica.xsd" xmlns="http://tempuri.org/RadAutoCompleteBoxPsFiscica.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="conteltelecomConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="conteltelecomConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.conteltelecomConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PS_PESSOATableAdapter" GeneratorDataComponentClassName="PS_PESSOATableAdapter" Name="PS_PESSOA" UserDataComponentName="PS_PESSOATableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="conteltelecomConnectionString (Web.config)" DbObjectName="conteltelecom.dbo.PS_PESSOA" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT CAST(PS_PESSOA.id_PS_PESSOA AS VARCHAR(11)) + ' -' + PS_PESSOA.desc_PS_PESSOA AS desc_PS_PESSOA, PS_PESSOA.id_PS_PESSOA FROM PS_PESSOA INNER JOIN PS_FISICA ON PS_PESSOA.id_PS_PESSOA = PS_FISICA.id_PS_PESSOA WHERE (PS_PESSOA.tipoCadastro_PS_PESSOA = 0)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_PS_PESSOA" DataSetColumn="id_PS_PESSOA" />
+              <Mapping SourceColumn="desc_PS_PESSOA" DataSetColumn="desc_PS_PESSOA" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="RadAutoCompleteBoxPsFiscica" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="RadAutoCompleteBoxPsFiscica" msprop:Generator_UserDSName="RadAutoCompleteBoxPsFiscica">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PS_PESSOA" msprop:Generator_TableClassName="PS_PESSOADataTable" msprop:Generator_TableVarName="tablePS_PESSOA" msprop:Generator_RowChangedName="PS_PESSOARowChanged" msprop:Generator_TablePropName="PS_PESSOA" msprop:Generator_RowDeletingName="PS_PESSOARowDeleting" msprop:Generator_RowChangingName="PS_PESSOARowChanging" msprop:Generator_RowEvHandlerName="PS_PESSOARowChangeEventHandler" msprop:Generator_RowDeletedName="PS_PESSOARowDeleted" msprop:Generator_RowClassName="PS_PESSOARow" msprop:Generator_UserTableName="PS_PESSOA" msprop:Generator_RowEvArgName="PS_PESSOARowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_PS_PESSOA" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_PS_PESSOA" msprop:Generator_ColumnPropNameInRow="id_PS_PESSOA" msprop:Generator_ColumnPropNameInTable="id_PS_PESSOAColumn" msprop:Generator_UserColumnName="id_PS_PESSOA" type="xs:int" />
+              <xs:element name="desc_PS_PESSOA" msprop:Generator_ColumnVarNameInTable="columndesc_PS_PESSOA" msprop:Generator_ColumnPropNameInRow="desc_PS_PESSOA" msprop:Generator_ColumnPropNameInTable="desc_PS_PESSOAColumn" msprop:Generator_UserColumnName="desc_PS_PESSOA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PS_PESSOA" />
+      <xs:field xpath="mstns:id_PS_PESSOA" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

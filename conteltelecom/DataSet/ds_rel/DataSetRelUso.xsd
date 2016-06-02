@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetRelUso" targetNamespace="http://tempuri.org/DataSetRelUso.xsd" xmlns:mstns="http://tempuri.org/DataSetRelUso.xsd" xmlns="http://tempuri.org/DataSetRelUso.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="conteltelecomConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="conteltelecomConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.conteltelecomConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="naoUsar" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="naoUsar (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.naoUsar.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LI_LINHASTableAdapter" GeneratorDataComponentClassName="LI_LINHASTableAdapter" Name="LI_LINHAS" UserDataComponentName="LI_LINHASTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="conteltelecomConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        SF_VL_USO_1.codNumLinha_SF_VL_USO, ISNULL(SUM(CASE WHEN SF_TIPO_USO_CATEGORIAS_1.desc_SF_TIPO_USO_CATEGORIAS = 'MÓVEL' THEN SF_VL_USO_1.vlUso_SF_VL_USO END), 0) AS movel, 
+                         ISNULL(SUM(CASE WHEN SF_TIPO_USO_CATEGORIAS_1.desc_SF_TIPO_USO_CATEGORIAS = 'INTERURBANO' THEN SF_VL_USO_1.vlUso_SF_VL_USO END), 0) AS interurbano, 
+                         PS_JURIDICA_1.razaosocial_PS_JURIDICA, PS_CIDADES_1.desc_PS_CIDADES, RTRIM(SF_SERVICOS_FATURA_1.nomeUnidade_LI_LINHAS) AS nomeUnidade_LI_LINHAS, 
+                         SF_SERVICOS_FATURA_1.mesAnoRefereincia_SF_SERVICOS_FATURA, PS_JURIDICA_1.id_PS_PESSOA,
+                             (SELECT        TOP (1) ISNULL(SUM(CASE WHEN SF_TIPO_USO_CATEGORIAS.desc_SF_TIPO_USO_CATEGORIAS = 'MÓVEL' THEN vlUso_SF_VL_USO END), 0) 
+                                                         + ISNULL(SUM(CASE WHEN SF_TIPO_USO_CATEGORIAS.desc_SF_TIPO_USO_CATEGORIAS = 'INTERURBANO' THEN vlUso_SF_VL_USO END), 0) 
+                                                         + ISNULL(SUM(CASE WHEN SF_TIPO_USO_CATEGORIAS.desc_SF_TIPO_USO_CATEGORIAS = 'MÓVEL OUTRAS ÁREAS' THEN vlUso_SF_VL_USO END), 0) AS Expr1
+                               FROM            SF_VL_USO INNER JOIN
+                                                         SF_TIPO_USO ON SF_VL_USO.id_SF_TIPO_USO = SF_TIPO_USO.id_SF_TIPO_USO INNER JOIN
+                                                         SF_TIPO_USO_CATEGORIAS ON SF_TIPO_USO.id_SF_TIPO_USO_CATEGORIAS = SF_TIPO_USO_CATEGORIAS.id_SF_TIPO_USO_CATEGORIAS INNER JOIN
+                                                         SF_SERVICOS_FATURA ON SF_VL_USO.id_SF_SERVICOS_FATURA = SF_SERVICOS_FATURA.id_SF_SERVICOS_FATURA INNER JOIN
+                                                         PS_CLIENTES ON SF_SERVICOS_FATURA.codMatriz_PS_CLIENTES = PS_CLIENTES.codMatriz_PS_CLIENTES AND 
+                                                         SF_SERVICOS_FATURA.codMatriz_PS_CLIENTES = PS_CLIENTES.id_PS_PESSOA INNER JOIN
+                                                         PS_JURIDICA ON PS_CLIENTES.id_PS_JURIDICA = PS_JURIDICA.id_PS_JURIDICA INNER JOIN
+                                                         PS_CIDADES ON SF_SERVICOS_FATURA.id_PS_CIDADES = PS_CIDADES.id_PS_CIDADES
+                               WHERE        (SF_SERVICOS_FATURA.mesAnoRefereincia_SF_SERVICOS_FATURA = @mesAnoRefereincia_SF_SERVICOS_FATURA) AND (SF_SERVICOS_FATURA.numSequencia_SF_SERVICOS_FATURA = 0) 
+                                                         AND (SF_SERVICOS_FATURA.codMatriz_PS_CLIENTES = @codMatriz_PS_CLIENTES) AND 
+                                                         (SF_SERVICOS_FATURA.nomeUnidade_LI_LINHAS = SF_SERVICOS_FATURA_1.nomeUnidade_LI_LINHAS) AND 
+                                                         (SF_SERVICOS_FATURA.foraAnalise_LI_LINHAS = SF_SERVICOS_FATURA_1.foraAnalise_LI_LINHAS)) AS TOTALCIDADE, SF_SERVICOS_FATURA_1.foraAnalise_LI_LINHAS, 
+                         ISNULL(SUM(CASE WHEN SF_TIPO_USO_CATEGORIAS_1.desc_SF_TIPO_USO_CATEGORIAS = 'MÓVEL OUTRAS ÁREAS' THEN SF_VL_USO_1.vlUso_SF_VL_USO END), 0) AS MOVEISOUTRAS,
+                             (SELECT        TOP (1) ISNULL(SUM(CASE WHEN SF_TIPO_USO_CATEGORIAS_2.desc_SF_TIPO_USO_CATEGORIAS = 'MÓVEL' THEN SF_VL_USO_2.vlUso_SF_VL_USO END), 0) 
+                                                         + ISNULL(SUM(CASE WHEN SF_TIPO_USO_CATEGORIAS_2.desc_SF_TIPO_USO_CATEGORIAS = 'INTERURBANO' THEN SF_VL_USO_2.vlUso_SF_VL_USO END), 0) 
+                                                         + ISNULL(SUM(CASE WHEN SF_TIPO_USO_CATEGORIAS_2.desc_SF_TIPO_USO_CATEGORIAS = 'MÓVEL OUTRAS ÁREAS' THEN SF_VL_USO_2.vlUso_SF_VL_USO END), 0) AS Expr1
+                               FROM            SF_VL_USO AS SF_VL_USO_2 INNER JOIN
+                                                         SF_TIPO_USO AS SF_TIPO_USO_2 ON SF_TIPO_USO_2.id_SF_TIPO_USO = SF_TIPO_USO_2.id_SF_TIPO_USO INNER JOIN
+                                                         SF_TIPO_USO_CATEGORIAS AS SF_TIPO_USO_CATEGORIAS_2 ON SF_TIPO_USO_2.id_SF_TIPO_USO_CATEGORIAS = SF_TIPO_USO_CATEGORIAS_2.id_SF_TIPO_USO_CATEGORIAS INNER JOIN
+                                                         SF_SERVICOS_FATURA AS SF_SERVICOS_FATURA_2 ON SF_VL_USO_2.id_SF_SERVICOS_FATURA = SF_SERVICOS_FATURA_2.id_SF_SERVICOS_FATURA INNER JOIN
+                                                         PS_CLIENTES AS PS_CLIENTES_2 ON SF_SERVICOS_FATURA_2.codMatriz_PS_CLIENTES = PS_CLIENTES_2.codMatriz_PS_CLIENTES AND 
+                                                         SF_SERVICOS_FATURA_2.codMatriz_PS_CLIENTES = PS_CLIENTES_2.id_PS_PESSOA INNER JOIN
+                                                         PS_JURIDICA AS PS_JURIDICA_2 ON PS_CLIENTES_2.id_PS_JURIDICA = PS_JURIDICA_2.id_PS_JURIDICA INNER JOIN
+                                                         PS_CIDADES AS PS_CIDADES_2 ON SF_SERVICOS_FATURA_2.id_PS_CIDADES = PS_CIDADES_2.id_PS_CIDADES
+                               WHERE        (SF_SERVICOS_FATURA_2.mesAnoRefereincia_SF_SERVICOS_FATURA = @mesAnoRefereincia_SF_SERVICOS_FATURA) AND 
+                                                         (SF_SERVICOS_FATURA_2.codMatriz_PS_CLIENTES = @codMatriz_PS_CLIENTES) AND (SF_SERVICOS_FATURA_2.id_PS_CIDADES = SF_SERVICOS_FATURA_1.id_PS_CIDADES) AND 
+                                                         (SF_SERVICOS_FATURA_2.numSequencia_SF_SERVICOS_FATURA = 0) AND (SF_SERVICOS_FATURA_2.foraAnalise_LI_LINHAS = SF_SERVICOS_FATURA_1.foraAnalise_LI_LINHAS)) 
+                         AS TOTALCIDADE2
+FROM            PS_CLIENTES AS PS_CLIENTES_1 INNER JOIN
+                         SF_SERVICOS_FATURA AS SF_SERVICOS_FATURA_1 ON PS_CLIENTES_1.codMatriz_PS_CLIENTES = SF_SERVICOS_FATURA_1.codMatriz_PS_CLIENTES AND 
+                         PS_CLIENTES_1.id_PS_PESSOA = SF_SERVICOS_FATURA_1.codMatriz_PS_CLIENTES INNER JOIN
+                         PS_JURIDICA AS PS_JURIDICA_1 ON PS_CLIENTES_1.id_PS_JURIDICA = PS_JURIDICA_1.id_PS_JURIDICA INNER JOIN
+                         PS_CIDADES AS PS_CIDADES_1 ON SF_SERVICOS_FATURA_1.id_PS_CIDADES = PS_CIDADES_1.id_PS_CIDADES LEFT OUTER JOIN
+                         SF_VL_USO AS SF_VL_USO_1 INNER JOIN
+                         SF_TIPO_USO AS SF_TIPO_USO_1 ON SF_VL_USO_1.id_SF_TIPO_USO = SF_TIPO_USO_1.id_SF_TIPO_USO INNER JOIN
+                         SF_TIPO_USO_CATEGORIAS AS SF_TIPO_USO_CATEGORIAS_1 ON SF_TIPO_USO_1.id_SF_TIPO_USO_CATEGORIAS = SF_TIPO_USO_CATEGORIAS_1.id_SF_TIPO_USO_CATEGORIAS ON 
+                         SF_SERVICOS_FATURA_1.id_SF_SERVICOS_FATURA = SF_VL_USO_1.id_SF_SERVICOS_FATURA
+WHERE        (SF_SERVICOS_FATURA_1.mesAnoRefereincia_SF_SERVICOS_FATURA = @mesAnoRefereincia_SF_SERVICOS_FATURA) AND (SF_SERVICOS_FATURA_1.codMatriz_PS_CLIENTES = @codMatriz_PS_CLIENTES) 
+                         AND (SF_SERVICOS_FATURA_1.numSequencia_SF_SERVICOS_FATURA = 0)
+GROUP BY SF_VL_USO_1.codNumLinha_SF_VL_USO, PS_JURIDICA_1.razaosocial_PS_JURIDICA, PS_CIDADES_1.desc_PS_CIDADES, SF_SERVICOS_FATURA_1.nomeUnidade_LI_LINHAS, 
+                         SF_SERVICOS_FATURA_1.mesAnoRefereincia_SF_SERVICOS_FATURA, PS_JURIDICA_1.id_PS_PESSOA, PS_CLIENTES_1.id_PS_PESSOA, SF_SERVICOS_FATURA_1.foraAnalise_LI_LINHAS, 
+                         SF_SERVICOS_FATURA_1.id_PS_CIDADES, SF_SERVICOS_FATURA_1.numSequencia_SF_SERVICOS_FATURA</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="mesAnoRefereincia_SF_SERVICOS_FATURA" ColumnName="mesAnoRefereincia_SF_SERVICOS_FATURA" DataSourceName="conteltelecom.dbo.SF_SERVICOS_FATURA" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@mesAnoRefereincia_SF_SERVICOS_FATURA" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="mesAnoRefereincia_SF_SERVICOS_FATURA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="codMatriz_PS_CLIENTES" ColumnName="codMatriz_PS_CLIENTES" DataSourceName="conteltelecom.dbo.SF_SERVICOS_FATURA" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@codMatriz_PS_CLIENTES" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="codMatriz_PS_CLIENTES" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="razaosocial_PS_JURIDICA" DataSetColumn="razaosocial_PS_JURIDICA" />
+              <Mapping SourceColumn="codNumLinha_SF_VL_USO" DataSetColumn="codNumLinha_SF_VL_USO" />
+              <Mapping SourceColumn="movel" DataSetColumn="movel" />
+              <Mapping SourceColumn="interurbano" DataSetColumn="interurbano" />
+              <Mapping SourceColumn="desc_PS_CIDADES" DataSetColumn="desc_PS_CIDADES" />
+              <Mapping SourceColumn="mesAnoRefereincia_SF_SERVICOS_FATURA" DataSetColumn="mesAnoRefereincia_SF_SERVICOS_FATURA" />
+              <Mapping SourceColumn="id_PS_PESSOA" DataSetColumn="id_PS_PESSOA" />
+              <Mapping SourceColumn="TOTALCIDADE" DataSetColumn="TOTALCIDADE" />
+              <Mapping SourceColumn="foraAnalise_LI_LINHAS" DataSetColumn="foraAnalise_LI_LINHAS" />
+              <Mapping SourceColumn="MOVEISOUTRAS" DataSetColumn="MOVEISOUTRAS" />
+              <Mapping SourceColumn="TOTALCIDADE2" DataSetColumn="TOTALCIDADE2" />
+              <Mapping SourceColumn="nomeUnidade_LI_LINHAS" DataSetColumn="nomeUnidade_LI_LINHAS" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetRelUso" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetRelUso" msprop:Generator_UserDSName="DataSetRelUso">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="LI_LINHAS" msprop:Generator_TableClassName="LI_LINHASDataTable" msprop:Generator_TableVarName="tableLI_LINHAS" msprop:Generator_TablePropName="LI_LINHAS" msprop:Generator_RowDeletingName="LI_LINHASRowDeleting" msprop:Generator_RowChangingName="LI_LINHASRowChanging" msprop:Generator_RowEvHandlerName="LI_LINHASRowChangeEventHandler" msprop:Generator_RowDeletedName="LI_LINHASRowDeleted" msprop:Generator_UserTableName="LI_LINHAS" msprop:Generator_RowChangedName="LI_LINHASRowChanged" msprop:Generator_RowEvArgName="LI_LINHASRowChangeEvent" msprop:Generator_RowClassName="LI_LINHASRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="razaosocial_PS_JURIDICA" msprop:Generator_ColumnVarNameInTable="columnrazaosocial_PS_JURIDICA" msprop:Generator_ColumnPropNameInRow="razaosocial_PS_JURIDICA" msprop:Generator_ColumnPropNameInTable="razaosocial_PS_JURIDICAColumn" msprop:Generator_UserColumnName="razaosocial_PS_JURIDICA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="codNumLinha_SF_VL_USO" msprop:Generator_ColumnVarNameInTable="columncodNumLinha_SF_VL_USO" msprop:Generator_ColumnPropNameInRow="codNumLinha_SF_VL_USO" msprop:Generator_ColumnPropNameInTable="codNumLinha_SF_VL_USOColumn" msprop:Generator_UserColumnName="codNumLinha_SF_VL_USO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="movel" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnmovel" msprop:Generator_ColumnPropNameInRow="movel" msprop:Generator_ColumnPropNameInTable="movelColumn" msprop:Generator_UserColumnName="movel" type="xs:decimal" minOccurs="0" />
+              <xs:element name="interurbano" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columninterurbano" msprop:Generator_ColumnPropNameInRow="interurbano" msprop:Generator_ColumnPropNameInTable="interurbanoColumn" msprop:Generator_UserColumnName="interurbano" type="xs:decimal" minOccurs="0" />
+              <xs:element name="desc_PS_CIDADES" msprop:Generator_ColumnVarNameInTable="columndesc_PS_CIDADES" msprop:Generator_ColumnPropNameInRow="desc_PS_CIDADES" msprop:Generator_ColumnPropNameInTable="desc_PS_CIDADESColumn" msprop:Generator_UserColumnName="desc_PS_CIDADES">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="mesAnoRefereincia_SF_SERVICOS_FATURA" msprop:Generator_ColumnVarNameInTable="columnmesAnoRefereincia_SF_SERVICOS_FATURA" msprop:Generator_ColumnPropNameInRow="mesAnoRefereincia_SF_SERVICOS_FATURA" msprop:Generator_ColumnPropNameInTable="mesAnoRefereincia_SF_SERVICOS_FATURAColumn" msprop:Generator_UserColumnName="mesAnoRefereincia_SF_SERVICOS_FATURA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_PS_PESSOA" msprop:Generator_ColumnVarNameInTable="columnid_PS_PESSOA" msprop:Generator_ColumnPropNameInRow="id_PS_PESSOA" msprop:Generator_ColumnPropNameInTable="id_PS_PESSOAColumn" msprop:Generator_UserColumnName="id_PS_PESSOA" type="xs:int" />
+              <xs:element name="TOTALCIDADE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTOTALCIDADE" msprop:Generator_ColumnPropNameInRow="TOTALCIDADE" msprop:Generator_ColumnPropNameInTable="TOTALCIDADEColumn" msprop:Generator_UserColumnName="TOTALCIDADE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="foraAnalise_LI_LINHAS" msprop:Generator_ColumnVarNameInTable="columnforaAnalise_LI_LINHAS" msprop:Generator_ColumnPropNameInRow="foraAnalise_LI_LINHAS" msprop:Generator_ColumnPropNameInTable="foraAnalise_LI_LINHASColumn" msprop:Generator_UserColumnName="foraAnalise_LI_LINHAS" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="MOVEISOUTRAS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMOVEISOUTRAS" msprop:Generator_ColumnPropNameInRow="MOVEISOUTRAS" msprop:Generator_ColumnPropNameInTable="MOVEISOUTRASColumn" msprop:Generator_UserColumnName="MOVEISOUTRAS" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TOTALCIDADE2" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTOTALCIDADE2" msprop:Generator_ColumnPropNameInRow="TOTALCIDADE2" msprop:Generator_ColumnPropNameInTable="TOTALCIDADE2Column" msprop:Generator_UserColumnName="TOTALCIDADE2" type="xs:decimal" minOccurs="0" />
+              <xs:element name="nomeUnidade_LI_LINHAS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnnomeUnidade_LI_LINHAS" msprop:Generator_ColumnPropNameInRow="nomeUnidade_LI_LINHAS" msprop:Generator_ColumnPropNameInTable="nomeUnidade_LI_LINHASColumn" msprop:Generator_UserColumnName="nomeUnidade_LI_LINHAS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

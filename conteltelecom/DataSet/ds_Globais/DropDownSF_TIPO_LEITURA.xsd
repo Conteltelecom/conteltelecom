@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DropDownSF_TIPO_LEITURA" targetNamespace="http://tempuri.org/DropDownSF_TIPO_LEITURA.xsd" xmlns:mstns="http://tempuri.org/DropDownSF_TIPO_LEITURA.xsd" xmlns="http://tempuri.org/DropDownSF_TIPO_LEITURA.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="conteltelecomConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="conteltelecomConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.conteltelecomConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SF_TIPO_LEITURATableAdapter" GeneratorDataComponentClassName="SF_TIPO_LEITURATableAdapter" Name="SF_TIPO_LEITURA" UserDataComponentName="SF_TIPO_LEITURATableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="conteltelecomConnectionString (Web.config)" DbObjectName="conteltelecom.dbo.SF_TIPO_LEITURA" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT desc_SF_TIPO_LEITURA, id_SF_TIPO_LEITURA FROM SF_TIPO_LEITURA WHERE (st_SF_TIPO_LEITURA = 1)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="desc_SF_TIPO_LEITURA" DataSetColumn="desc_SF_TIPO_LEITURA" />
+              <Mapping SourceColumn="id_SF_TIPO_LEITURA" DataSetColumn="id_SF_TIPO_LEITURA" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DropDownSF_TIPO_LEITURA" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DropDownSF_TIPO_LEITURA" msprop:Generator_UserDSName="DropDownSF_TIPO_LEITURA">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SF_TIPO_LEITURA" msprop:Generator_TableClassName="SF_TIPO_LEITURADataTable" msprop:Generator_TableVarName="tableSF_TIPO_LEITURA" msprop:Generator_TablePropName="SF_TIPO_LEITURA" msprop:Generator_RowDeletingName="SF_TIPO_LEITURARowDeleting" msprop:Generator_RowChangingName="SF_TIPO_LEITURARowChanging" msprop:Generator_RowEvHandlerName="SF_TIPO_LEITURARowChangeEventHandler" msprop:Generator_RowDeletedName="SF_TIPO_LEITURARowDeleted" msprop:Generator_UserTableName="SF_TIPO_LEITURA" msprop:Generator_RowChangedName="SF_TIPO_LEITURARowChanged" msprop:Generator_RowEvArgName="SF_TIPO_LEITURARowChangeEvent" msprop:Generator_RowClassName="SF_TIPO_LEITURARow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="desc_SF_TIPO_LEITURA" msprop:Generator_ColumnVarNameInTable="columndesc_SF_TIPO_LEITURA" msprop:Generator_ColumnPropNameInRow="desc_SF_TIPO_LEITURA" msprop:Generator_ColumnPropNameInTable="desc_SF_TIPO_LEITURAColumn" msprop:Generator_UserColumnName="desc_SF_TIPO_LEITURA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_SF_TIPO_LEITURA" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_SF_TIPO_LEITURA" msprop:Generator_ColumnPropNameInRow="id_SF_TIPO_LEITURA" msprop:Generator_ColumnPropNameInTable="id_SF_TIPO_LEITURAColumn" msprop:Generator_UserColumnName="id_SF_TIPO_LEITURA" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SF_TIPO_LEITURA" />
+      <xs:field xpath="mstns:id_SF_TIPO_LEITURA" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

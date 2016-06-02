@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_ClientecodRazao" targetNamespace="http://tempuri.org/Ds_ClientecodRazao.xsd" xmlns:mstns="http://tempuri.org/Ds_ClientecodRazao.xsd" xmlns="http://tempuri.org/Ds_ClientecodRazao.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="conteltelecomConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="conteltelecomConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.conteltelecomConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="COD_PS_JURIDICATableAdapter" GeneratorDataComponentClassName="COD_PS_JURIDICATableAdapter" Name="COD_PS_JURIDICA" UserDataComponentName="COD_PS_JURIDICATableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="conteltelecomConnectionString (Web.config)" DbObjectName="conteltelecom.dbo.PS_CLIENTES" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT CAST(PS_JURIDICA.id_PS_PESSOA AS VARCHAR(5)) + ' -' + PS_JURIDICA.razaosocial_PS_JURIDICA AS razaosocial_PS_JURIDICA, PS_CLIENTES.codMatriz_PS_CLIENTES
+FROM            PS_JURIDICA INNER JOIN
+                         PS_CLIENTES ON PS_JURIDICA.id_PS_JURIDICA = PS_CLIENTES.id_PS_JURIDICA AND PS_JURIDICA.id_PS_PESSOA = PS_CLIENTES.codMatriz_PS_CLIENTES</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="razaosocial_PS_JURIDICA" DataSetColumn="razaosocial_PS_JURIDICA" />
+              <Mapping SourceColumn="codMatriz_PS_CLIENTES" DataSetColumn="codMatriz_PS_CLIENTES" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_ClientecodRazao" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Ds_ClientecodRazao" msprop:Generator_UserDSName="Ds_ClientecodRazao">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="COD_PS_JURIDICA" msprop:Generator_TableClassName="COD_PS_JURIDICADataTable" msprop:Generator_TableVarName="tableCOD_PS_JURIDICA" msprop:Generator_RowChangedName="COD_PS_JURIDICARowChanged" msprop:Generator_TablePropName="COD_PS_JURIDICA" msprop:Generator_RowDeletingName="COD_PS_JURIDICARowDeleting" msprop:Generator_RowChangingName="COD_PS_JURIDICARowChanging" msprop:Generator_RowEvHandlerName="COD_PS_JURIDICARowChangeEventHandler" msprop:Generator_RowDeletedName="COD_PS_JURIDICARowDeleted" msprop:Generator_RowClassName="COD_PS_JURIDICARow" msprop:Generator_UserTableName="COD_PS_JURIDICA" msprop:Generator_RowEvArgName="COD_PS_JURIDICARowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="razaosocial_PS_JURIDICA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnrazaosocial_PS_JURIDICA" msprop:Generator_ColumnPropNameInRow="razaosocial_PS_JURIDICA" msprop:Generator_ColumnPropNameInTable="razaosocial_PS_JURIDICAColumn" msprop:Generator_UserColumnName="razaosocial_PS_JURIDICA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="257" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="codMatriz_PS_CLIENTES" msprop:Generator_ColumnVarNameInTable="columncodMatriz_PS_CLIENTES" msprop:Generator_ColumnPropNameInRow="codMatriz_PS_CLIENTES" msprop:Generator_ColumnPropNameInTable="codMatriz_PS_CLIENTESColumn" msprop:Generator_UserColumnName="codMatriz_PS_CLIENTES" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
