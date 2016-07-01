@@ -23,7 +23,7 @@ Public Class cl_linhas
                 Dim dataItem As GridDataItem = DirectCast(e.Item, GridDataItem)
 
                 Dim hyperLink As HyperLink = DirectCast(dataItem("id_LI_LINHAS").Controls(0), HyperLink)
-                HttpContext.Current.Response.Redirect("~/web/clientes/cl_linhas_detalhes.aspx?id_cliente=" & Session("id_PS_CLIENTES") & "&id_LI_LINHAS=" & hyperLink.Text & "&modo=" & e.CommandName & "&consultaMatriz=2")
+                HttpContext.Current.Response.Redirect("~/web/clientes/cl_linhas_detalhes.aspx?id_cliente=" & Session("id_PS_CLIENTES") & "&id_LI_LINHAS=" & hyperLink.Text & "&modo=" & e.CommandName & "&consultaMatriz=2&codMatriz_PS_CLIENTES=" & Request.QueryString("codMatriz_PS_CLIENTES"))
 
             Case "PerformInsert"
 
@@ -74,9 +74,15 @@ Public Class cl_linhas
 
 
         If IsNothing(Request.QueryString("codMatriz_PS_CLIENTES")) = False Then
+            If Request.QueryString("codMatriz_PS_CLIENTES") <> "" Then
+                RadGridLinhas.MasterTableView.CommandItemDisplay = GridCommandItemDisplay.None
+                RadGridLinhas.Rebind()
+            Else
+                RadGridLinhas.MasterTableView.GetColumn("CNPJ_PS_JURIDICA").Visible = False
+                RadGridLinhas.Rebind()
 
-            RadGridLinhas.MasterTableView.CommandItemDisplay = GridCommandItemDisplay.None
-            RadGridLinhas.Rebind()
+            End If
+
         Else
             RadGridLinhas.MasterTableView.GetColumn("CNPJ_PS_JURIDICA").Visible = False
             RadGridLinhas.Rebind()

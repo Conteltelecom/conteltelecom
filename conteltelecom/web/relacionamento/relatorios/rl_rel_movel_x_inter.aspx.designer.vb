@@ -59,15 +59,6 @@ Partial Public Class rl_rel_movel_x_inter
     Protected WithEvents ReportViewerRelReducao As Global.Microsoft.Reporting.WebForms.ReportViewer
     
     '''<summary>
-    '''Controle ObjectDataSourceListaPendencias.
-    '''</summary>
-    '''<remarks>
-    '''Campo gerado automaticamente.
-    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-    '''</remarks>
-    Protected WithEvents ObjectDataSourceListaPendencias As Global.System.Web.UI.WebControls.ObjectDataSource
-    
-    '''<summary>
     '''Controle ObjectDataSource1.
     '''</summary>
     '''<remarks>

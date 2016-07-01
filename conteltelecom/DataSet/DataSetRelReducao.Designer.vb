@@ -1903,7 +1903,7 @@ Namespace DataSetRelReducaoTableAdapters
                 "URA.codMatriz_PS_CLIENTES WHERE (SF_SERVICOS_FATURA.mesAnoRefereincia_SF_SERVICO"& _ 
                 "S_FATURA = @mesAnoRefereincia_SF_SERVICOS_FATURA) AND (SF_SERVICOS_FATURA.codMat"& _ 
                 "riz_PS_CLIENTES = @codMatriz_PS_CLIENTES) AND (SF_SERVICOS_FATURA.numSequencia_S"& _ 
-                "F_SERVICOS_FATURA = 0)"
+                "F_SERVICOS_FATURA = 0)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"order by foraAnalise_LI_LINHAS "
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@mesAnoRefereincia_SF_SERVICOS_FATURA", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "mesAnoRefereincia_SF_SERVICOS_FATURA", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@codMatriz_PS_CLIENTES", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "codMatriz_PS_CLIENTES", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))

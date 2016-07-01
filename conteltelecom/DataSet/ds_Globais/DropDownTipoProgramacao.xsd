@@ -12,15 +12,15 @@
               <DbSource ConnectionRef="conteltelecomConnectionString (Web.config)" DbObjectName="conteltelecom.dbo.LI_TIPO_PROGRAMACAO" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT id_LI_TIPO_PROGRAMACAO, desc_LI_TIPO_PROGRAMACAO FROM LI_TIPO_PROGRAMACAO WHERE (st_LI_TIPO_PROGRAMACAO = 1)</CommandText>
+                    <CommandText>SELECT desc_LI_TIPO_PROGRAMACAO, id_LI_TIPO_PROGRAMACAO FROM LI_TIPO_PROGRAMACAO WHERE (st_LI_TIPO_PROGRAMACAO = 1)</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="id_LI_TIPO_PROGRAMACAO" DataSetColumn="id_LI_TIPO_PROGRAMACAO" />
               <Mapping SourceColumn="desc_LI_TIPO_PROGRAMACAO" DataSetColumn="desc_LI_TIPO_PROGRAMACAO" />
+              <Mapping SourceColumn="id_LI_TIPO_PROGRAMACAO" DataSetColumn="id_LI_TIPO_PROGRAMACAO" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -35,7 +35,6 @@
         <xs:element name="LI_TIPO_PROGRAMACAO" msprop:Generator_TableClassName="LI_TIPO_PROGRAMACAODataTable" msprop:Generator_TableVarName="tableLI_TIPO_PROGRAMACAO" msprop:Generator_TablePropName="LI_TIPO_PROGRAMACAO" msprop:Generator_RowDeletingName="LI_TIPO_PROGRAMACAORowDeleting" msprop:Generator_RowChangingName="LI_TIPO_PROGRAMACAORowChanging" msprop:Generator_RowEvHandlerName="LI_TIPO_PROGRAMACAORowChangeEventHandler" msprop:Generator_RowDeletedName="LI_TIPO_PROGRAMACAORowDeleted" msprop:Generator_UserTableName="LI_TIPO_PROGRAMACAO" msprop:Generator_RowChangedName="LI_TIPO_PROGRAMACAORowChanged" msprop:Generator_RowEvArgName="LI_TIPO_PROGRAMACAORowChangeEvent" msprop:Generator_RowClassName="LI_TIPO_PROGRAMACAORow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id_LI_TIPO_PROGRAMACAO" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_LI_TIPO_PROGRAMACAO" msprop:Generator_ColumnPropNameInRow="id_LI_TIPO_PROGRAMACAO" msprop:Generator_ColumnPropNameInTable="id_LI_TIPO_PROGRAMACAOColumn" msprop:Generator_UserColumnName="id_LI_TIPO_PROGRAMACAO" type="xs:int" />
               <xs:element name="desc_LI_TIPO_PROGRAMACAO" msprop:Generator_ColumnVarNameInTable="columndesc_LI_TIPO_PROGRAMACAO" msprop:Generator_ColumnPropNameInRow="desc_LI_TIPO_PROGRAMACAO" msprop:Generator_ColumnPropNameInTable="desc_LI_TIPO_PROGRAMACAOColumn" msprop:Generator_UserColumnName="desc_LI_TIPO_PROGRAMACAO">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -43,6 +42,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="id_LI_TIPO_PROGRAMACAO" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_LI_TIPO_PROGRAMACAO" msprop:Generator_ColumnPropNameInRow="id_LI_TIPO_PROGRAMACAO" msprop:Generator_ColumnPropNameInTable="id_LI_TIPO_PROGRAMACAOColumn" msprop:Generator_UserColumnName="id_LI_TIPO_PROGRAMACAO" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

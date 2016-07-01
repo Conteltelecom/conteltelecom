@@ -35,7 +35,7 @@ Public Class ps_cliente_detalhes
                 Dim TextBoxrazaosocial_PS_JURIDICA As TextBox = CType(RadDataForm1.InsertItem.FindControl("TextBoxrazaosocial_PS_JURIDICA_Ins"), TextBox)
                 Dim TextBoxCNPJ_PS_JURIDICA As RadMaskedTextBox = CType(RadDataForm1.InsertItem.FindControl("RadMaskedTextBoxCnpj_Ins"), RadMaskedTextBox)
                 Dim TextBoxInsEstadual_PS_JURIDICA As TextBox = CType(RadDataForm1.InsertItem.FindControl("TextBoxInsEstadual_PS_JURIDICA_Ins"), TextBox)
-                Dim TextBoxcodMatriz_PS_CLIENTES As TextBox = CType(RadDataForm1.InsertItem.FindControl("TextBoxcodMatriz_PS_CLIENTES_Ins"), TextBox)
+                Dim TextBoxcodMatriz_PS_CLIENTES As New TextBox
                 Dim autoCompleteBox As RadAutoCompleteBox
                 autoCompleteBox = DirectCast(RadDataForm1.InsertItem.FindControl("RadAutoCompleteBoxMatriz_ins"), RadAutoCompleteBox)
                 Dim idCompany As Integer = 0
@@ -49,10 +49,13 @@ Public Class ps_cliente_detalhes
                 End If
 
                 TextBoxcodMatriz_PS_CLIENTES = DirectCast(RadDataForm1.InsertItem.FindControl("TextBoxcodMatriz_PS_CLIENTES_ins"), TextBox)
+
                 TextBoxcodMatriz_PS_CLIENTES.Text = idCompany
+
                 If IsNothing(TextBoxcodMatriz_PS_CLIENTES.Text) Then
                     TextBoxcodMatriz_PS_CLIENTES.Text = 0
                 End If
+
                 Dim RadDropDownListuF As RadDropDownList = CType(RadDataForm1.InsertItem.FindControl("RadDropDownListuF_Ins"), RadDropDownList)
                 Dim RadDropDownListCidade As RadDropDownList = CType(RadDataForm1.InsertItem.FindControl("RadDropDownListCidade_Ins"), RadDropDownList)
                 Dim TextBoxbairro_PS_PESSOA As TextBox = CType(RadDataForm1.InsertItem.FindControl("TextBoxbairro_PS_PESSOA_Ins"), TextBox)
@@ -108,7 +111,7 @@ Public Class ps_cliente_detalhes
                     Next
 
                 End If
-                SqlDataSourceCliente.InsertParameters("codMatriz_PS_CLIENTES").DefaultValue = If(TextBoxcodMatriz_PS_CLIENTES.Text = "", id_PS_PESSOA, TextBoxcodMatriz_PS_CLIENTES.Text)
+                SqlDataSourceCliente.InsertParameters("codMatriz_PS_CLIENTES").DefaultValue = If(TextBoxcodMatriz_PS_CLIENTES.Text = "0", id_PS_PESSOA, idCompany)
                 SqlDataSourceCliente.InsertParameters("id_PS_PESSOA").DefaultValue = id_PS_PESSOA
                 SqlDataSourceCliente.Insert()
                 HttpContext.Current.Response.Redirect("~\web\pessoas\ps_cliente.aspx")

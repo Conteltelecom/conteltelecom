@@ -1,8 +1,11 @@
-﻿Public Class cl_linhas_x_clientes
+﻿Imports Telerik.Web.UI
+
+Public Class cl_linhas_x_clientes
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
     End Sub
+
 
 End Class

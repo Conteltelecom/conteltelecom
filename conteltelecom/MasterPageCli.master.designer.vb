@@ -32,6 +32,24 @@ Partial Public Class MasterPageCli
     Protected WithEvents NavClienteMatriz As Global.Telerik.Web.UI.RadNavigation
     
     '''<summary>
+    '''Controle Cadastros.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents Cadastros As Global.Telerik.Web.UI.NavigationNode
+    
+    '''<summary>
+    '''Controle Unidades.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents Unidades As Global.Telerik.Web.UI.NavigationNode
+    
+    '''<summary>
     '''Controle PlanosCliente.
     '''</summary>
     '''<remarks>
@@ -41,6 +59,15 @@ Partial Public Class MasterPageCli
     Protected WithEvents PlanosCliente As Global.Telerik.Web.UI.NavigationNode
     
     '''<summary>
+    '''Controle Linhas01.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents Linhas01 As Global.Telerik.Web.UI.NavigationNode
+    
+    '''<summary>
     '''Controle Linhas.
     '''</summary>
     '''<remarks>
@@ -48,6 +75,15 @@ Partial Public Class MasterPageCli
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
     Protected WithEvents Linhas As Global.Telerik.Web.UI.NavigationNode
+    
+    '''<summary>
+    '''Controle linhasCidades.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents linhasCidades As Global.Telerik.Web.UI.NavigationNode
     
     '''<summary>
     '''Controle Relatorios.
@@ -66,6 +102,15 @@ Partial Public Class MasterPageCli
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
     Protected WithEvents reducao As Global.Telerik.Web.UI.NavigationNode
+    
+    '''<summary>
+    '''Controle Pendecia.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents Pendecia As Global.Telerik.Web.UI.NavigationNode
     
     '''<summary>
     '''Controle unidade.

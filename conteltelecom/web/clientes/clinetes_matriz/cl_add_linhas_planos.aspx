@@ -193,7 +193,7 @@
 
 <ExpandCollapseColumn Visible="False" Display="False"></ExpandCollapseColumn>
             <Columns>
-                <telerik:GridClientSelectColumn ColumnGroupName="test" FilterControlAltText="Filter stPai column" UniqueName="stPai"></telerik:GridClientSelectColumn>
+                <telerik:GridClientSelectColumn ColumnGroupName="test" FilterControlAltText="Filter stPai column" UniqueName="stPai" ></telerik:GridClientSelectColumn>
                 <telerik:GridBoundColumn DataField="id_LI_LINHAS" DataType="System.Int32" FilterControlAltText="Filter id_LI_LINHAS column" HeaderText="ID" ReadOnly="True" SortExpression="id_LI_LINHAS" UniqueName="id_LI_LINHAS">
                 </telerik:GridBoundColumn>
                 <telerik:GridBoundColumn DataField="codLinha_LI_LINHAS" FilterControlAltText="Filter codLinha_LI_LINHAS column" HeaderText="CÓD/LINHAS" SortExpression="codLinha_LI_LINHAS" UniqueName="codLinha_LI_LINHAS">

@@ -55,7 +55,21 @@
                                            
                 </div>
                  </div>
+            <div class="form-group">
+                             <asp:Label ID="Label3" runat="server" Text="TIPO RELÁTORIO:" CssClass="col-xs-2 control-label" Font-Bold="true"></asp:Label>
+                     <div class="col-xs-4">
+                         <telerik:RadDropDownList ID="RadDropDownListTipoRel" runat="server">
+                             <Items>
+                                
+                                 <telerik:DropDownListItem Text="CLIENTE" Value ="1" />
+                                  <telerik:DropDownListItem Text="CONTEL" Value="2" />
+                             </Items>
+                         </telerik:RadDropDownList>
 
+                         </div>
+      <div class="col-xs-6">
+                         </div>
+                </div>
                   <div class="form-group">
                  <div class="col-xs-12" style="text-align: right">
               <telerik:RadImageButton ID="RadImageButtonGerar" class="col-xs-8" runat="server" Image-Url="~/img/Detalhes_32.png" Width="32px" Height="32px" OnClick="RadImageButtonGerar_Click"></telerik:RadImageButton>

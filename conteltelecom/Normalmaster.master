@@ -5,10 +5,12 @@
     </asp:ContentPlaceHolder>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderMenu" runat="server">
+
     <div style="margin: 2px"></div>
-    <telerik:RadNavigation runat="server" ID="Nav1" dir="rtl">
+    <telerik:RadNavigation runat="server" ID="Nav1" dir="rtl"  >
         <Nodes>
-            <telerik:NavigationNode Text="SAIR">
+            <telerik:NavigationNode Text="SAIR" NavigateUrl="~/logoff.aspx" >
+
             </telerik:NavigationNode>
         </Nodes>
        
@@ -21,10 +23,11 @@
 
           </div>
         </telerik:RadAjaxLoadingPanel>
-                 <telerik:RadAjaxPanel ID="RadAjaxPanel1" runat="server" LoadingPanelID="RadAjaxLoadingPanel1" Width="100%" EnableAJAX="true"  >   
+                 <telerik:RadAjaxPanel ID="RadAjaxPanel1" runat="server" LoadingPanelID="RadAjaxLoadingPanel1" Width="100%" EnableAJAX="true"  >
+                   
         <asp:ContentPlaceHolder ID="ContentPlaceHolderNormal" runat="server">
         </asp:ContentPlaceHolder>
-</telerik:RadAjaxPanel>
+  </telerik:RadAjaxPanel>   
     </div>
 
 </asp:Content>

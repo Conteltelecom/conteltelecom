@@ -4,9 +4,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder12" runat="server">
-
     
-
     <telerik:RadGrid ID="RadGridLinhas"  AllowMultiRowEdit="True"  runat="server" AutoGenerateColumns="False" Culture="pt-BR"  DataSourceID="SqlDataSourceContatosLinhas"  Skin="Bootstrap">
 <GroupingSettings CollapseAllTooltip="Collapse all groups"></GroupingSettings>
         <ExportSettings>
@@ -105,7 +103,8 @@
                         </telerik:GridTemplateColumn>
                          <telerik:GridTemplateColumn DataField="nomeUnidade_LI_LINHAS" FilterControlAltText="Filter numF_LI_LINHAS column" HeaderText="UNIDADE" UniqueName="nomeUnidade_LI_LINHAS">
                             <EditItemTemplate>
-                                <telerik:RadTextBox ID="nomeUnidade_LI_LINHASTextBox" runat="server" Text='<%# Bind("nomeUnidade_LI_LINHAS") %>' Width="100%"></telerik:RadTextBox>
+                                <telerik:RadDropDownList ID="RadDropDownListUniidades" DataSourceID="ObjectDataSourceUnidadesClinetes" runat="server"  AppendDataBoundItems="true"  DataTextField="desc_CL_UNIDADES" DataValueField="desc_CL_UNIDADES" DropDownHeight="150px" SelectedValue='<%# Bind("nomeUnidade_LI_LINHAS") %>' Skin="Bootstrap"  ></telerik:RadDropDownList>
+
                                                             </EditItemTemplate>
                             <ItemTemplate>
                                 <asp:Label ID="nomeUnidade_LI_LINHASLabel" runat="server" Text='<%# Eval("nomeUnidade_LI_LINHAS") %>'></asp:Label>
@@ -341,5 +340,11 @@
             <asp:Parameter Name="cod_PS_UF" Type="String" />
         </SelectParameters>
     </asp:SqlDataSource>
+
+    <asp:ObjectDataSource ID="ObjectDataSourceUnidadesClinetes" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="conteltelecom.DropDownUnidadesClientesTableAdapters.CL_UNIDADESTableAdapter">
+        <SelectParameters>
+            <asp:QueryStringParameter Name="codMatriz_PS_CLIENTES" QueryStringField="codMatriz_PS_CLIENTES" Type="Int32" />
+        </SelectParameters>
+    </asp:ObjectDataSource>
 
 </asp:Content>

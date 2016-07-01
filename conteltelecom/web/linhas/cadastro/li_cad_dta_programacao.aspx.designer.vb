@@ -48,4 +48,31 @@ Partial Public Class li_cad_dta_programacao
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
     Protected WithEvents ObjectDataSourceTipoUso As Global.System.Web.UI.WebControls.ObjectDataSource
+    
+    '''<summary>
+    '''Controle SqlDataSourceBuscaOBS.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents SqlDataSourceBuscaOBS As Global.System.Web.UI.WebControls.SqlDataSource
+    
+    '''<summary>
+    '''Controle SqlDataSourceInsertData.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents SqlDataSourceInsertData As Global.System.Web.UI.WebControls.SqlDataSource
+    
+    '''<summary>
+    '''Controle RadWindowManagerMsg.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents RadWindowManagerMsg As Global.Telerik.Web.UI.RadWindowManager
 End Class

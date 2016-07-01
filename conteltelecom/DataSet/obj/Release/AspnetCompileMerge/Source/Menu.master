@@ -1,0 +1,109 @@
+﻿<%@ Master Language="VB" MasterPageFile="~/Site.Master" AutoEventWireup="false" CodeBehind="Menu.master.vb" Inherits="conteltelecom.Menu" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderMenuhead" runat="server"></asp:ContentPlaceHolder>
+
+
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    <form id="form1" runat="server" >
+           <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server"></telerik:RadAjaxManager>
+           <telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
+    <div class="navbar navbar-inverse navbar-fixed-top" style="background-color: #f6701d !important;text-align:left">
+       <a href="#ToggleSideMenu" style="width:52px" id="ToggleSideMenu">
+                      <asp:Image ID="Image1"  runat="server" ImageUrl="~/img/Menu.png" />
+                    </a>
+                  <asp:Image ID="ImageLogo" Width="185px"  runat="server" ImageUrl="~/img/Logo.jpg" />
+      
+    </div>
+       
+    <div class="container body-content">
+    </div>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper" style="padding-top:48px">
+            <telerik:RadPanelBar ID="RadPanelBar1" runat="server" Skin="Bootstrap"   Height="100%">
+                    <Items>
+                        <telerik:RadPanelItem runat="server" Text="PESSOAS">
+                            <Items>
+                                <telerik:RadPanelItem runat="server" Text="CIDADES" NavigateUrl="~/web/pessoas/ps_cidades.aspx">
+                                </telerik:RadPanelItem>
+                                <telerik:RadPanelItem runat="server" Text="UF" NavigateUrl="~/web/pessoas/ps_uf.aspx">
+                                </telerik:RadPanelItem>
+                                <telerik:RadPanelItem runat="server" Text="PESSOAS" NavigateUrl="~/web/pessoas/ps_pessoas.aspx">
+                                </telerik:RadPanelItem>
+                            </Items>
+                        </telerik:RadPanelItem>
+                        <telerik:RadPanelItem runat="server" Text="OPERADORAS">
+                            <Items>
+                                <telerik:RadPanelItem runat="server" Text="CAD. OPERADORA">
+                                </telerik:RadPanelItem>
+                                <telerik:RadPanelItem runat="server" Text="CAD. PLANOS">
+                                </telerik:RadPanelItem>
+                            </Items>
+                        </telerik:RadPanelItem>
+                        <telerik:RadPanelItem runat="server" Text="FINANCEIRO">
+                            <Items>
+                                <telerik:RadPanelItem runat="server" Text="Child RadPanelItem 1">
+                                </telerik:RadPanelItem>
+                            </Items>
+                        </telerik:RadPanelItem>
+                        <telerik:RadPanelItem runat="server" Text="ATENDIMENTO">
+                            <Items>
+                                <telerik:RadPanelItem runat="server" Text="RELATÓRIOS">
+                                    <Items>
+                                        <telerik:RadPanelItem runat="server" Text="USO">
+                                        </telerik:RadPanelItem>
+                                        <telerik:RadPanelItem runat="server" Text="REDUÇÃO">
+                                        </telerik:RadPanelItem>
+                                        <telerik:RadPanelItem runat="server" Text="DESCRITIVO">
+                                        </telerik:RadPanelItem>
+                                    </Items>
+                                </telerik:RadPanelItem>
+                                <telerik:RadPanelItem runat="server" Text="FATURAS">
+                                    <Items>
+                                        <telerik:RadPanelItem runat="server" Text="SOLICITAÇÃO">
+                                        </telerik:RadPanelItem>
+                                        <telerik:RadPanelItem runat="server" Text="ANALISE">
+                                        </telerik:RadPanelItem>
+                                        <telerik:RadPanelItem runat="server" Text="CONTROLE">
+                                        </telerik:RadPanelItem>
+                                    </Items>
+                                </telerik:RadPanelItem>
+                            </Items>
+                        </telerik:RadPanelItem>
+                        <telerik:RadPanelItem runat="server" Text="RELACIONAMENTO">
+                        </telerik:RadPanelItem>
+                        <telerik:RadPanelItem runat="server" Text="CLIENTES">
+                            <Items>
+                                <telerik:RadPanelItem runat="server" NavigateUrl="~/web/pessoas/ps_cliente.aspx" Text="CLIENTES">
+                                </telerik:RadPanelItem>
+                                <telerik:RadPanelItem runat="server" Text="CONTATOS">
+                                </telerik:RadPanelItem>
+                            </Items>
+                        </telerik:RadPanelItem>
+                    </Items>
+                </telerik:RadPanelBar>
+         
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id=" page-content-wrapper"  style="padding-top:48px;">
+            
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderMenu" runat="server">
+                </asp:ContentPlaceHolder>
+           <br />
+            <hr />
+            <footer>
+            <p>&copy; 2016 - CONTELTELECOM</p>
+        </footer>
+        </div>
+        
+        <!-- /#page-content-wrapper -->
+    </div>
+       </form>
+
+
+
+</asp:Content>

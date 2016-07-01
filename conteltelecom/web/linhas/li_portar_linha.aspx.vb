@@ -18,4 +18,8 @@ Public Class li_portar_linha
             Next
         End If
     End Sub
+
+    Private Sub RadAutoCompleteBoxCliente_Init(sender As Object, e As EventArgs) Handles RadAutoCompleteBoxCliente.Init
+
+    End Sub
 End Class

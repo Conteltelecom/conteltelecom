@@ -30,11 +30,29 @@
         <div id="sidebar-wrapper" style="padding-top:48px">
             <telerik:RadPanelBar ID="RadPanelBar1" runat="server" Skin="Bootstrap"   Height="100%" RenderMode="Auto" >
                     <Items>
+                        <telerik:RadPanelItem runat="server" Text="ADMINISTRADOR">
+                            <Items>
+                                          <telerik:RadPanelItem Text="CAD. TIPO MENUS" NavigateUrl="~/web/administrador/configuracoes/cad_menus.aspx">
+
+                                          </telerik:RadPanelItem>
+                                 <telerik:RadPanelItem Text="CAD. PÁGINAS" NavigateUrl="~/web/administrador/configuracoes/adm_cad_paginas.aspx">
+
+                                          </telerik:RadPanelItem>
+                   
+                                      </Items>
+
+                            </telerik:RadPanelItem>
                           <telerik:RadPanelItem runat="server" Text="LINHAS">
                               <Items>
-                                   <telerik:RadPanelItem runat="server" Text="TP PROGRAMAÇÃO"  NavigateUrl="~/web/linhas/cadastro/li_cad_tipo_programacao.aspx">
+                                  <telerik:RadPanelItem runat="server" Text="CONFIGURAÇÕES">
+                                      <Items>
+                                          <telerik:RadPanelItem Text="TP PROGRAMAÇÃO" NavigateUrl="~/web/linhas/cadastro/li_cad_tipo_programacao.aspx">
 
-                                       </telerik:RadPanelItem>
+                                          </telerik:RadPanelItem>
+                                      </Items>
+                                  
+                                      </telerik:RadPanelItem>
+                                 
                               </Items>
                               </telerik:RadPanelItem>
                         <telerik:RadPanelItem runat="server" Text="PESSOAS">
@@ -135,9 +153,12 @@
                                <Items>
                                     <telerik:RadPanelItem runat="server" NavigateUrl="~/web/relacionamento/relatorios/rl_rel_movel_x_inter.aspx" Text="MOVEL x INTER.">
                                         </telerik:RadPanelItem>
+                                    <telerik:RadPanelItem runat="server" NavigateUrl="~/web/relacionamento/relatorios/RelUsoAnual.aspx" Text="USO POR DATA">
+                                        </telerik:RadPanelItem>
                                </Items>
                                      </telerik:RadPanelItem>
                             </Items>
+                         
                         </telerik:RadPanelItem>
 
                         <telerik:RadPanelItem runat="server" Text="CLIENTES">
@@ -153,9 +174,13 @@
 
                                     </Items>
                                 </telerik:RadPanelItem>
+                                
                             </Items>
 
                         </telerik:RadPanelItem>
+                         <telerik:RadPanelItem runat="server" Text="SISTEMA DE ATENDIMENTO" NavigateUrl="http://atendimento.conteltelecom.com.br:8080/atendimento/">
+                                   
+                                </telerik:RadPanelItem>
                     </Items>
                 </telerik:RadPanelBar>
          

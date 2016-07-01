@@ -1,16 +1,90 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
-<xs:schema id="DataSetBuscaUso" 
-                  targetNamespace="http://tempuri.org/DataSetBuscaUso.xsd"
-                  elementFormDefault="qualified"
-                  attributeFormDefault="qualified"
-                  xmlns="http://tempuri.org/DataSetBuscaUso.xsd"
-                  xmlns:mstns="http://tempuri.org/DataSetBuscaUso.xsd"
-                  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                  xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
-                  xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
-    <xs:element name="DataSetBuscaUso" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true">
-        <xs:complexType>
-            <xs:choice minOccurs="0" maxOccurs="unbounded"></xs:choice>
-        </xs:complexType>
-    </xs:element>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetBuscaUso" targetNamespace="http://tempuri.org/DataSetBuscaUso.xsd" xmlns:mstns="http://tempuri.org/DataSetBuscaUso.xsd" xmlns="http://tempuri.org/DataSetBuscaUso.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="conteltelecomConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="conteltelecomConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.conteltelecomConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LI_LINHASTableAdapter" GeneratorDataComponentClassName="LI_LINHASTableAdapter" Name="LI_LINHAS" UserDataComponentName="LI_LINHASTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="conteltelecomConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ISNULL(SUM(CASE WHEN SF_TIPO_USO_CATEGORIAS_1.desc_SF_TIPO_USO_CATEGORIAS = 'MÓVEL' THEN SF_VL_USO_1.vlUso_SF_VL_USO END), 0) 
+                         + ISNULL(SUM(CASE WHEN SF_TIPO_USO_CATEGORIAS_1.desc_SF_TIPO_USO_CATEGORIAS = 'INTERURBANO' THEN SF_VL_USO_1.vlUso_SF_VL_USO END), 0) 
+                         + ISNULL(SUM(CASE WHEN SF_TIPO_USO_CATEGORIAS_1.desc_SF_TIPO_USO_CATEGORIAS = 'MÓVEL OUTRAS ÁREAS' THEN SF_VL_USO_1.vlUso_SF_VL_USO END), 0) AS vlUso_SF_VL_USO, 
+                         PS_JURIDICA_1.razaosocial_PS_JURIDICA, SF_SERVICOS_FATURA_1.mesAnoRefereincia_SF_SERVICOS_FATURA, PS_JURIDICA_1.id_PS_PESSOA, SF_SERVICOS_FATURA_1.foraAnalise_LI_LINHAS, 
+                         SF_SERVICOS_FATURA_1.id_CL_TIPOS_CONTRATOS
+FROM            PS_CLIENTES AS PS_CLIENTES_1 INNER JOIN
+                         SF_SERVICOS_FATURA AS SF_SERVICOS_FATURA_1 ON PS_CLIENTES_1.codMatriz_PS_CLIENTES = SF_SERVICOS_FATURA_1.codMatriz_PS_CLIENTES AND 
+                         PS_CLIENTES_1.id_PS_PESSOA = SF_SERVICOS_FATURA_1.codMatriz_PS_CLIENTES INNER JOIN
+                         PS_JURIDICA AS PS_JURIDICA_1 ON PS_CLIENTES_1.id_PS_JURIDICA = PS_JURIDICA_1.id_PS_JURIDICA INNER JOIN
+                         PS_CIDADES AS PS_CIDADES_1 ON SF_SERVICOS_FATURA_1.id_PS_CIDADES = PS_CIDADES_1.id_PS_CIDADES LEFT OUTER JOIN
+                         SF_VL_USO AS SF_VL_USO_1 INNER JOIN
+                         SF_TIPO_USO AS SF_TIPO_USO_1 ON SF_VL_USO_1.id_SF_TIPO_USO = SF_TIPO_USO_1.id_SF_TIPO_USO INNER JOIN
+                         SF_TIPO_USO_CATEGORIAS AS SF_TIPO_USO_CATEGORIAS_1 ON SF_TIPO_USO_1.id_SF_TIPO_USO_CATEGORIAS = SF_TIPO_USO_CATEGORIAS_1.id_SF_TIPO_USO_CATEGORIAS ON 
+                         SF_SERVICOS_FATURA_1.id_SF_SERVICOS_FATURA = SF_VL_USO_1.id_SF_SERVICOS_FATURA
+WHERE        (SF_SERVICOS_FATURA_1.numSequencia_SF_SERVICOS_FATURA = 0) AND (DATEPART(MM, '01/' + SF_SERVICOS_FATURA_1.mesAnoRefereincia_SF_SERVICOS_FATURA) &gt;= @mesIni) AND (DATEPART(MM, 
+                         '01/' + SF_SERVICOS_FATURA_1.mesAnoRefereincia_SF_SERVICOS_FATURA) &lt;= @mesFim) AND (DATEPART(YYYY, '01/' + SF_SERVICOS_FATURA_1.mesAnoRefereincia_SF_SERVICOS_FATURA) &gt;= @AnoIni) 
+                         AND (DATEPART(YYYY, '01/' + SF_SERVICOS_FATURA_1.mesAnoRefereincia_SF_SERVICOS_FATURA) &lt;= @AnoFim) AND (SF_VL_USO_1.linhaVirtual_LI_LINHAS = 0)
+GROUP BY PS_JURIDICA_1.razaosocial_PS_JURIDICA, SF_SERVICOS_FATURA_1.mesAnoRefereincia_SF_SERVICOS_FATURA, PS_JURIDICA_1.id_PS_PESSOA, PS_CLIENTES_1.id_PS_PESSOA, 
+                         SF_SERVICOS_FATURA_1.foraAnalise_LI_LINHAS, SF_SERVICOS_FATURA_1.id_CL_TIPOS_CONTRATOS
+ORDER BY SF_SERVICOS_FATURA_1.mesAnoRefereincia_SF_SERVICOS_FATURA DESC, SF_SERVICOS_FATURA_1.foraAnalise_LI_LINHAS</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="mesIni" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="Decimal" Direction="Input" ParameterName="@mesIni" Precision="0" Scale="0" Size="0" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="mesFim" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="Decimal" Direction="Input" ParameterName="@mesFim" Precision="0" Scale="0" Size="0" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="AnoIni" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="Decimal" Direction="Input" ParameterName="@AnoIni" Precision="0" Scale="0" Size="0" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="AnoFim" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="Decimal" Direction="Input" ParameterName="@AnoFim" Precision="0" Scale="0" Size="0" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="vlUso_SF_VL_USO" DataSetColumn="vlUso_SF_VL_USO" />
+              <Mapping SourceColumn="mesAnoRefereincia_SF_SERVICOS_FATURA" DataSetColumn="mesAnoRefereincia_SF_SERVICOS_FATURA" />
+              <Mapping SourceColumn="razaosocial_PS_JURIDICA" DataSetColumn="razaosocial_PS_JURIDICA" />
+              <Mapping SourceColumn="id_PS_PESSOA" DataSetColumn="id_PS_PESSOA" />
+              <Mapping SourceColumn="foraAnalise_LI_LINHAS" DataSetColumn="foraAnalise_LI_LINHAS" />
+              <Mapping SourceColumn="id_CL_TIPOS_CONTRATOS" DataSetColumn="id_CL_TIPOS_CONTRATOS" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetBuscaUso" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetBuscaUso" msprop:Generator_UserDSName="DataSetBuscaUso">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="LI_LINHAS" msprop:Generator_TableClassName="LI_LINHASDataTable" msprop:Generator_TableVarName="tableLI_LINHAS" msprop:Generator_RowChangedName="LI_LINHASRowChanged" msprop:Generator_TablePropName="LI_LINHAS" msprop:Generator_RowDeletingName="LI_LINHASRowDeleting" msprop:Generator_RowChangingName="LI_LINHASRowChanging" msprop:Generator_RowEvHandlerName="LI_LINHASRowChangeEventHandler" msprop:Generator_RowDeletedName="LI_LINHASRowDeleted" msprop:Generator_RowClassName="LI_LINHASRow" msprop:Generator_UserTableName="LI_LINHAS" msprop:Generator_RowEvArgName="LI_LINHASRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="vlUso_SF_VL_USO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnvlUso_SF_VL_USO" msprop:Generator_ColumnPropNameInRow="vlUso_SF_VL_USO" msprop:Generator_ColumnPropNameInTable="vlUso_SF_VL_USOColumn" msprop:Generator_UserColumnName="vlUso_SF_VL_USO" type="xs:decimal" minOccurs="0" />
+              <xs:element name="mesAnoRefereincia_SF_SERVICOS_FATURA" msprop:Generator_ColumnVarNameInTable="columnmesAnoRefereincia_SF_SERVICOS_FATURA" msprop:Generator_ColumnPropNameInRow="mesAnoRefereincia_SF_SERVICOS_FATURA" msprop:Generator_ColumnPropNameInTable="mesAnoRefereincia_SF_SERVICOS_FATURAColumn" msprop:Generator_UserColumnName="mesAnoRefereincia_SF_SERVICOS_FATURA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="razaosocial_PS_JURIDICA" msprop:Generator_ColumnVarNameInTable="columnrazaosocial_PS_JURIDICA" msprop:Generator_ColumnPropNameInRow="razaosocial_PS_JURIDICA" msprop:Generator_ColumnPropNameInTable="razaosocial_PS_JURIDICAColumn" msprop:Generator_UserColumnName="razaosocial_PS_JURIDICA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_PS_PESSOA" msprop:Generator_ColumnVarNameInTable="columnid_PS_PESSOA" msprop:Generator_ColumnPropNameInRow="id_PS_PESSOA" msprop:Generator_ColumnPropNameInTable="id_PS_PESSOAColumn" msprop:Generator_UserColumnName="id_PS_PESSOA" type="xs:int" />
+              <xs:element name="foraAnalise_LI_LINHAS" msprop:Generator_ColumnVarNameInTable="columnforaAnalise_LI_LINHAS" msprop:Generator_ColumnPropNameInRow="foraAnalise_LI_LINHAS" msprop:Generator_ColumnPropNameInTable="foraAnalise_LI_LINHASColumn" msprop:Generator_UserColumnName="foraAnalise_LI_LINHAS" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="id_CL_TIPOS_CONTRATOS" msprop:Generator_ColumnVarNameInTable="columnid_CL_TIPOS_CONTRATOS" msprop:Generator_ColumnPropNameInRow="id_CL_TIPOS_CONTRATOS" msprop:Generator_ColumnPropNameInTable="id_CL_TIPOS_CONTRATOSColumn" msprop:Generator_UserColumnName="id_CL_TIPOS_CONTRATOS" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

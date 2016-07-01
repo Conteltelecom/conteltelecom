@@ -1,0 +1,46 @@
+﻿<%@ Master Language="VB" MasterPageFile="~/Menu.master" AutoEventWireup="false" CodeBehind="Normalmaster.master.vb" Inherits="conteltelecom.Normalmaster" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderMenuhead" runat="server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderHeadNormal" runat="server">
+
+    </asp:ContentPlaceHolder>
+    </asp:Content>
+
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderMenu" runat="server">
+    <div style="margin:2px"></div>
+    <telerik:RadNavigation runat="server" ID="Nav1" Height="60px"  >
+
+            <Nodes>
+
+                <telerik:NavigationNode>
+</telerik:NavigationNode> 
+        </Nodes>     
+        
+            <Nodes>
+
+                <telerik:NavigationNode >
+</telerik:NavigationNode> 
+
+        </Nodes>  
+           <Nodes>
+
+                <telerik:NavigationNode >
+</telerik:NavigationNode> 
+        </Nodes> 
+            <Nodes>
+
+                <telerik:NavigationNode >
+</telerik:NavigationNode> 
+        </Nodes> 
+    </telerik:RadNavigation>
+ <br> 
+    <div style="margin-left:10px; margin-right:10px">
+
+
+   <asp:ContentPlaceHolder ID="ContentPlaceHolderNormal" runat="server">
+   
+                      </asp:ContentPlaceHolder> 
+         
+        </div>
+
+</asp:Content>

@@ -1,0 +1,48 @@
+﻿<%@ Master Language="VB" MasterPageFile="~/Menu.master" AutoEventWireup="false" CodeBehind="MasterPageCli.master.vb" Inherits="conteltelecom.MasterPageCli" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderMenuhead" runat="server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
+
+
+
+</asp:Content>
+
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderMenu" runat="server">
+    <div style="margin:2px"></div>
+    <telerik:RadNavigation runat="server"  ID="Nav1"   Height="42px"  ImagePosition="Right" MenuButtonPosition="Right">
+
+            <Nodes>
+                <telerik:NavigationNode ID="GERAL" Text="GERAL"    NavigateUrl='<%# String.Format("~/web/pessoas/ps_cliente_detalhes.aspx?id_pessoas={0}", Session("id_pessoaNav"))%>'>
+</telerik:NavigationNode>
+                 
+        </Nodes>     
+        
+            <Nodes>
+
+                <telerik:NavigationNode ID="CONTATOS" Text="CONTATOS"  NavigateUrl='<%# String.Format("~/web/clientes/cli_contatos.aspx?id_pessoas={0}", Session("id_pessoaNav"))%>'>
+</telerik:NavigationNode> 
+
+        </Nodes>  
+           <Nodes>
+
+                <telerik:NavigationNode Text="RESPOSNAVEIS CONTEL">
+</telerik:NavigationNode> 
+        </Nodes> 
+            <Nodes>
+
+                <telerik:NavigationNode Text="LINHAS">
+</telerik:NavigationNode> 
+        </Nodes> 
+    </telerik:RadNavigation>
+ 
+<br>   
+     <div style="margin-left:10px;margin-right:10px">
+       
+   
+   <asp:ContentPlaceHolder ID="ContentPlaceHolder12" runat="server">
+   
+                      </asp:ContentPlaceHolder> 
+          </div>
+
+
+</asp:Content>

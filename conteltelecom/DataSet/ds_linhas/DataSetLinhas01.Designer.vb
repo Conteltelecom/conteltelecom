@@ -515,12 +515,6 @@ Partial Public Class DataSetLinhas01
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function FindByid_LI_LINHAS(ByVal id_LI_LINHAS As Integer) As LI_LINHAS01Row
-            Return CType(Me.Rows.Find(New Object() {id_LI_LINHAS}),LI_LINHAS01Row)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
             Dim cln As LI_LINHAS01DataTable = CType(MyBase.Clone,LI_LINHAS01DataTable)
             cln.InitVars
@@ -565,7 +559,7 @@ Partial Public Class DataSetLinhas01
             MyBase.Columns.Add(Me.columnid_PS_CLIENTES)
             Me.columnid_LI_LINHAS = New Global.System.Data.DataColumn("id_LI_LINHAS", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnid_LI_LINHAS)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid_LI_LINHAS}, true))
+            Me.columnnumContrato_LI_LINHAS.AllowDBNull = false
             Me.columnnumContrato_LI_LINHAS.MaxLength = 50
             Me.columncodLinha_LI_LINHAS.MaxLength = 15
             Me.columnid_OP_OPERADORAS.AutoIncrement = true
@@ -588,7 +582,6 @@ Partial Public Class DataSetLinhas01
             Me.columnid_LI_LINHAS.AutoIncrementStep = -1
             Me.columnid_LI_LINHAS.AllowDBNull = false
             Me.columnid_LI_LINHAS.ReadOnly = true
-            Me.columnid_LI_LINHAS.Unique = true
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -868,12 +861,6 @@ Partial Public Class DataSetLinhas01
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function FindByid_LI_LINHAS(ByVal id_LI_LINHAS As Integer) As LI_LINHAS02Row
-            Return CType(Me.Rows.Find(New Object() {id_LI_LINHAS}),LI_LINHAS02Row)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
             Dim cln As LI_LINHAS02DataTable = CType(MyBase.Clone,LI_LINHAS02DataTable)
             cln.InitVars
@@ -912,7 +899,6 @@ Partial Public Class DataSetLinhas01
             MyBase.Columns.Add(Me.columnid_PS_CLIENTES)
             Me.columnid_LI_LINHAS = New Global.System.Data.DataColumn("id_LI_LINHAS", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnid_LI_LINHAS)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid_LI_LINHAS}, true))
             Me.columnperIncial_LI_LINHAS.MaxLength = 50
             Me.columnid_PS_CLIENTES.AllowDBNull = false
             Me.columnid_LI_LINHAS.AutoIncrement = true
@@ -920,7 +906,6 @@ Partial Public Class DataSetLinhas01
             Me.columnid_LI_LINHAS.AutoIncrementStep = -1
             Me.columnid_LI_LINHAS.AllowDBNull = false
             Me.columnid_LI_LINHAS.ReadOnly = true
-            Me.columnid_LI_LINHAS.Unique = true
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1190,12 +1175,6 @@ Partial Public Class DataSetLinhas01
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function FindByid_LI_LINHAS(ByVal id_LI_LINHAS As Integer) As LI_LINHAS03Row
-            Return CType(Me.Rows.Find(New Object() {id_LI_LINHAS}),LI_LINHAS03Row)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
             Dim cln As LI_LINHAS03DataTable = CType(MyBase.Clone,LI_LINHAS03DataTable)
             cln.InitVars
@@ -1231,7 +1210,6 @@ Partial Public Class DataSetLinhas01
             MyBase.Columns.Add(Me.columnliCancelada_LI_LINHAS)
             Me.columnid_LI_LINHAS = New Global.System.Data.DataColumn("id_LI_LINHAS", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnid_LI_LINHAS)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid_LI_LINHAS}, true))
             Me.columnst_LI_LINHAS.AllowDBNull = false
             Me.columnnumF_LI_LINHAS.MaxLength = 50
             Me.columnliCancelada_LI_LINHAS.AllowDBNull = false
@@ -1240,7 +1218,6 @@ Partial Public Class DataSetLinhas01
             Me.columnid_LI_LINHAS.AutoIncrementStep = -1
             Me.columnid_LI_LINHAS.AllowDBNull = false
             Me.columnid_LI_LINHAS.ReadOnly = true
-            Me.columnid_LI_LINHAS.Unique = true
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1389,11 +1366,7 @@ Partial Public Class DataSetLinhas01
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property numContrato_LI_LINHAS() As String
             Get
-                Try 
-                    Return CType(Me(Me.tableLI_LINHAS01.numContrato_LI_LINHASColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("O valor da coluna 'numContrato_LI_LINHAS' na tabela 'LI_LINHAS01' é DBNull.", e)
-                End Try
+                Return CType(Me(Me.tableLI_LINHAS01.numContrato_LI_LINHASColumn),String)
             End Get
             Set
                 Me(Me.tableLI_LINHAS01.numContrato_LI_LINHASColumn) = value
@@ -1480,18 +1453,6 @@ Partial Public Class DataSetLinhas01
                 Me(Me.tableLI_LINHAS01.id_LI_LINHASColumn) = value
             End Set
         End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsnumContrato_LI_LINHASNull() As Boolean
-            Return Me.IsNull(Me.tableLI_LINHAS01.numContrato_LI_LINHASColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetnumContrato_LI_LINHASNull()
-            Me(Me.tableLI_LINHAS01.numContrato_LI_LINHASColumn) = Global.System.Convert.DBNull
-        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -2002,15 +1963,6 @@ Namespace DataSetLinhas01TableAdapters
             tableMapping.ColumnMappings.Add("id_PS_CLIENTES", "id_PS_CLIENTES")
             tableMapping.ColumnMappings.Add("id_LI_LINHAS", "id_LI_LINHAS")
             Me._adapter.TableMappings.Add(tableMapping)
-            Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
-            Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE       LI_LINHAS"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET                id_LI_TIPOS = @id_LI_TIPOS, numContrat"& _ 
-                "o_LI_LINHAS = @numContrato_LI_LINHAS"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (id_LI_LINHAS = @id_LI_LINHAS"& _ 
-                ")"
-            Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_LI_TIPOS", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "id_LI_TIPOS", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@numContrato_LI_LINHAS", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "numContrato_LI_LINHAS", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_LI_LINHAS", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "id_LI_LINHAS", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2026,14 +1978,13 @@ Namespace DataSetLinhas01TableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        LI_LINHAS.numContrato_LI_LINHAS, LI_LINHAS.codLinha_LI_LINHAS, OP_O"& _ 
-                "PERADORAS.id_OP_OPERADORAS, OP_OPERADORAS.desc_OP_OPERADORAS, LI_TIPOS.id_LI_TIP"& _ 
-                "OS, LI_TIPOS.desc_LI_TIPOS, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         LI_LINHAS.id_PS_CLIENTES,"& _ 
-                " LI_LINHAS.id_LI_LINHAS"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            LI_LINHAS INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                 "& _ 
-                "        OP_OPERADORAS ON LI_LINHAS.id_OP_OPERADORAS = OP_OPERADORAS.id_OP_OPERAD"& _ 
-                "ORAS INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         LI_TIPOS ON LI_LINHAS.id_LI_TIPOS = LI"& _ 
-                "_TIPOS.id_LI_TIPOS"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (LI_LINHAS.linhaVirtual_LI_LINHAS = 1) AND (LI_"& _ 
-                "LINHAS.id_LI_LINHAS = @id_LI_LINHAS)"
+            Me._commandCollection(0).CommandText = "SELECT LI_LINHAS.numContrato_LI_LINHAS, LI_LINHAS.codLinha_LI_LINHAS, OP_OPERADOR"& _ 
+                "AS.id_OP_OPERADORAS, OP_OPERADORAS.desc_OP_OPERADORAS, LI_TIPOS.id_LI_TIPOS, LI_"& _ 
+                "TIPOS.desc_LI_TIPOS, LI_LINHAS.id_PS_CLIENTES, LI_LINHAS.id_LI_LINHAS FROM LI_LI"& _ 
+                "NHAS INNER JOIN OP_OPERADORAS ON LI_LINHAS.id_OP_OPERADORAS = OP_OPERADORAS.id_O"& _ 
+                "P_OPERADORAS INNER JOIN LI_TIPOS ON LI_LINHAS.id_LI_TIPOS = LI_TIPOS.id_LI_TIPOS"& _ 
+                " WHERE (LI_LINHAS.linhaVirtual_LI_LINHAS = 1) AND (LI_LINHAS.id_LI_LINHAS = @id_"& _ 
+                "LI_LINHAS)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_LI_LINHAS", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "id_LI_LINHAS", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
@@ -2062,34 +2013,6 @@ Namespace DataSetLinhas01TableAdapters
             Dim dataTable As DataSetLinhas01.LI_LINHAS01DataTable = New DataSetLinhas01.LI_LINHAS01DataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As DataSetLinhas01.LI_LINHAS01DataTable) As Integer
-            Return Me.Adapter.Update(dataTable)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As DataSetLinhas01) As Integer
-            Return Me.Adapter.Update(dataSet, "LI_LINHAS01")
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataRow As Global.System.Data.DataRow) As Integer
-            Return Me.Adapter.Update(New Global.System.Data.DataRow() {dataRow})
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataRows() As Global.System.Data.DataRow) As Integer
-            Return Me.Adapter.Update(dataRows)
         End Function
     End Class
     
@@ -2677,8 +2600,6 @@ Namespace DataSetLinhas01TableAdapters
         
         Private _updateOrder As UpdateOrderOption
         
-        Private _lI_LINHAS01TableAdapter As LI_LINHAS01TableAdapter
-        
         Private _lI_LINHAS02TableAdapter As LI_LINHAS02TableAdapter
         
         Private _lI_LINHAS03TableAdapter As LI_LINHAS03TableAdapter
@@ -2695,20 +2616,6 @@ Namespace DataSetLinhas01TableAdapters
             End Get
             Set
                 Me._updateOrder = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-         Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
-            "a", "System.Drawing.Design.UITypeEditor")>  _
-        Public Property LI_LINHAS01TableAdapter() As LI_LINHAS01TableAdapter
-            Get
-                Return Me._lI_LINHAS01TableAdapter
-            End Get
-            Set
-                Me._lI_LINHAS01TableAdapter = value
             End Set
         End Property
         
@@ -2759,10 +2666,6 @@ Namespace DataSetLinhas01TableAdapters
                 If (Not (Me._connection) Is Nothing) Then
                     Return Me._connection
                 End If
-                If ((Not (Me._lI_LINHAS01TableAdapter) Is Nothing)  _
-                            AndAlso (Not (Me._lI_LINHAS01TableAdapter.Connection) Is Nothing)) Then
-                    Return Me._lI_LINHAS01TableAdapter.Connection
-                End If
                 If ((Not (Me._lI_LINHAS02TableAdapter) Is Nothing)  _
                             AndAlso (Not (Me._lI_LINHAS02TableAdapter.Connection) Is Nothing)) Then
                     Return Me._lI_LINHAS02TableAdapter.Connection
@@ -2784,9 +2687,6 @@ Namespace DataSetLinhas01TableAdapters
         Public ReadOnly Property TableAdapterInstanceCount() As Integer
             Get
                 Dim count As Integer = 0
-                If (Not (Me._lI_LINHAS01TableAdapter) Is Nothing) Then
-                    count = (count + 1)
-                End If
                 If (Not (Me._lI_LINHAS02TableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
@@ -2822,15 +2722,6 @@ Namespace DataSetLinhas01TableAdapters
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
-            If (Not (Me._lI_LINHAS01TableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.LI_LINHAS01.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
-                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
-                If ((Not (updatedRows) Is Nothing)  _
-                            AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._lI_LINHAS01TableAdapter.Update(updatedRows))
-                    allChangedRows.AddRange(updatedRows)
-                End If
-            End If
             Return result
         End Function
         
@@ -2857,14 +2748,6 @@ Namespace DataSetLinhas01TableAdapters
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
-            If (Not (Me._lI_LINHAS01TableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.LI_LINHAS01.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
-                If ((Not (addedRows) Is Nothing)  _
-                            AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._lI_LINHAS01TableAdapter.Update(addedRows))
-                    allAddedRows.AddRange(addedRows)
-                End If
-            End If
             Return result
         End Function
         
@@ -2875,14 +2758,6 @@ Namespace DataSetLinhas01TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Function UpdateDeletedRows(ByVal dataSet As DataSetLinhas01, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._lI_LINHAS01TableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet.LI_LINHAS01.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
-                If ((Not (deletedRows) Is Nothing)  _
-                            AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._lI_LINHAS01TableAdapter.Update(deletedRows))
-                    allChangedRows.AddRange(deletedRows)
-                End If
-            End If
             If (Not (Me._lI_LINHAS03TableAdapter) Is Nothing) Then
                 Dim deletedRows() As Global.System.Data.DataRow = dataSet.LI_LINHAS03.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
@@ -2940,11 +2815,6 @@ Namespace DataSetLinhas01TableAdapters
             If (dataSet.HasChanges = false) Then
                 Return 0
             End If
-            If ((Not (Me._lI_LINHAS01TableAdapter) Is Nothing)  _
-                        AndAlso (Me.MatchTableAdapterConnection(Me._lI_LINHAS01TableAdapter.Connection) = false)) Then
-                Throw New Global.System.ArgumentException("Todos os TableAdapters gerenciados por um TableAdapterManager devem usar a mesma "& _ 
-                        "cadeia de conexão.")
-            End If
             If ((Not (Me._lI_LINHAS02TableAdapter) Is Nothing)  _
                         AndAlso (Me.MatchTableAdapterConnection(Me._lI_LINHAS02TableAdapter.Connection) = false)) Then
                 Throw New Global.System.ArgumentException("Todos os TableAdapters gerenciados por um TableAdapterManager devem usar a mesma "& _ 
@@ -2987,15 +2857,6 @@ Namespace DataSetLinhas01TableAdapters
             Try 
                 '---- Prepare for update -----------
                 '
-                If (Not (Me._lI_LINHAS01TableAdapter) Is Nothing) Then
-                    revertConnections.Add(Me._lI_LINHAS01TableAdapter, Me._lI_LINHAS01TableAdapter.Connection)
-                    Me._lI_LINHAS01TableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
-                    Me._lI_LINHAS01TableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
-                    If Me._lI_LINHAS01TableAdapter.Adapter.AcceptChangesDuringUpdate Then
-                        Me._lI_LINHAS01TableAdapter.Adapter.AcceptChangesDuringUpdate = false
-                        adaptersWithAcceptChangesDuringUpdate.Add(Me._lI_LINHAS01TableAdapter.Adapter)
-                    End If
-                End If
                 If (Not (Me._lI_LINHAS02TableAdapter) Is Nothing) Then
                     revertConnections.Add(Me._lI_LINHAS02TableAdapter, Me._lI_LINHAS02TableAdapter.Connection)
                     Me._lI_LINHAS02TableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
@@ -3073,10 +2934,6 @@ Namespace DataSetLinhas01TableAdapters
             Finally
                 If workConnOpened Then
                     workConnection.Close
-                End If
-                If (Not (Me._lI_LINHAS01TableAdapter) Is Nothing) Then
-                    Me._lI_LINHAS01TableAdapter.Connection = CType(revertConnections(Me._lI_LINHAS01TableAdapter),Global.System.Data.SqlClient.SqlConnection)
-                    Me._lI_LINHAS01TableAdapter.Transaction = Nothing
                 End If
                 If (Not (Me._lI_LINHAS02TableAdapter) Is Nothing) Then
                     Me._lI_LINHAS02TableAdapter.Connection = CType(revertConnections(Me._lI_LINHAS02TableAdapter),Global.System.Data.SqlClient.SqlConnection)

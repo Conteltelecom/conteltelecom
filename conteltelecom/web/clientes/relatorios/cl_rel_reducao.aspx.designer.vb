@@ -68,6 +68,24 @@ Partial Public Class cl_rel_reducao
     Protected WithEvents RadDropDownListAno As Global.Telerik.Web.UI.RadDropDownList
     
     '''<summary>
+    '''Controle Label3.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents Label3 As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Controle RadDropDownListTipoRel.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents RadDropDownListTipoRel As Global.Telerik.Web.UI.RadDropDownList
+    
+    '''<summary>
     '''Controle RadImageButtonGerar.
     '''</summary>
     '''<remarks>

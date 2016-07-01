@@ -1,0 +1,16 @@
+﻿<%@ Master Language="VB" MasterPageFile="~/Menu.Master" AutoEventWireup="false" CodeBehind="Relatorios.master.vb" Inherits="conteltelecom.Relatorios" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderMenuhead" runat="server">
+
+        <asp:ContentPlaceHolder ID="headRelatorio" runat="server">
+                      
+   
+                        </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderMenu" runat="server">
+    
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolderRelatorio" runat="server">
+                      
+                          </asp:ContentPlaceHolder>
+    
+</asp:Content>

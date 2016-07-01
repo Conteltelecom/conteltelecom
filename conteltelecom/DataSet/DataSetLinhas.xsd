@@ -2,9 +2,10 @@
 <xs:schema id="DataSetLinhas" targetNamespace="http://tempuri.org/DataSetLinhas.xsd" xmlns:mstns="http://tempuri.org/DataSetLinhas.xsd" xmlns="http://tempuri.org/DataSetLinhas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="conteltelecomConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="conteltelecomConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.conteltelecomConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="Não usar2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Não usar2 (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.Não usar2.ConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Sp_BuscaRazaoSocialOperadora_x_LinhaTableAdapter" GeneratorDataComponentClassName="Sp_BuscaRazaoSocialOperadora_x_LinhaTableAdapter" Name="Sp_BuscaRazaoSocialOperadora_x_Linha" UserDataComponentName="Sp_BuscaRazaoSocialOperadora_x_LinhaTableAdapter">
@@ -14,7 +15,7 @@
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        LI_LINHAS.id_OP_OPERADORAS, LI_LINHAS.id_LI_TIPOS, LI_LINHAS.id_PS_CLIENTES, LI_LINHAS.id_PS_CIDADES, PS_CLIENTES.codMatriz_PS_CLIENTES, PS_CLIENTES.id_PS_PESSOA, 
                          PS_JURIDICA.razaosocial_PS_JURIDICA, OP_OPERADORAS.desc_OP_OPERADORAS, LI_LINHAS.vlInicial_id_LI_TIPOS, LI_LINHAS.foraAnalise_LI_LINHAS, LI_LINHAS.perIncial_LI_LINHAS, 
-                         LI_LINHAS.nomeUnidade_LI_LINHAS, LI_LINHAS.codLinha_LI_LINHAS
+                         LI_LINHAS.nomeUnidade_LI_LINHAS, LI_LINHAS.codLinha_LI_LINHAS, LI_LINHAS.linhaVirtual_LI_LINHAS
 FROM            LI_LINHAS INNER JOIN
                          PS_CLIENTES ON LI_LINHAS.id_PS_CLIENTES = PS_CLIENTES.id_PS_CLIENTES INNER JOIN
                          PS_JURIDICA ON PS_CLIENTES.id_PS_JURIDICA = PS_JURIDICA.id_PS_JURIDICA INNER JOIN
@@ -41,6 +42,7 @@ WHERE        (LI_LINHAS.id_LI_LINHAS = @id_LI_LINHAS)</CommandText>
               <Mapping SourceColumn="perIncial_LI_LINHAS" DataSetColumn="perIncial_LI_LINHAS" />
               <Mapping SourceColumn="nomeUnidade_LI_LINHAS" DataSetColumn="nomeUnidade_LI_LINHAS" />
               <Mapping SourceColumn="codLinha_LI_LINHAS" DataSetColumn="codLinha_LI_LINHAS" />
+              <Mapping SourceColumn="linhaVirtual_LI_LINHAS" DataSetColumn="linhaVirtual_LI_LINHAS" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -68,6 +70,26 @@ GROUP BY CL_CAD_CONTRATOS.id_CL_TIPOS_CONTRATOS, CL_CAD_CONTRATOS.vl_contrato, P
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Não usar2 (Web.config)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT LI_LINHAS.id_LI_LINHAS, LI_LINHAS.codLinha_LI_LINHAS, LI_LINHAS.vlInicial_id_LI_TIPOS, PS_CLIENTES.codMatriz_PS_CLIENTES, PS_JURIDICA.razaosocial_PS_JURIDICA FROM LI_LINHAS INNER JOIN PS_CLIENTES ON LI_LINHAS.id_PS_CLIENTES = PS_CLIENTES.id_PS_CLIENTES INNER JOIN PS_JURIDICA ON PS_CLIENTES.id_PS_JURIDICA = PS_JURIDICA.id_PS_JURIDICA WHERE (PS_CLIENTES.codMatriz_PS_CLIENTES IN (603, 608))</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_LI_LINHAS" DataSetColumn="id_LI_LINHAS" />
+              <Mapping SourceColumn="codLinha_LI_LINHAS" DataSetColumn="codLinha_LI_LINHAS" />
+              <Mapping SourceColumn="vlInicial_id_LI_TIPOS" DataSetColumn="vlInicial_id_LI_TIPOS" />
+              <Mapping SourceColumn="codMatriz_PS_CLIENTES" DataSetColumn="codMatriz_PS_CLIENTES" />
+              <Mapping SourceColumn="razaosocial_PS_JURIDICA" DataSetColumn="razaosocial_PS_JURIDICA" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -76,7 +98,7 @@ GROUP BY CL_CAD_CONTRATOS.id_CL_TIPOS_CONTRATOS, CL_CAD_CONTRATOS.vl_contrato, P
   <xs:element name="DataSetLinhas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetLinhas" msprop:Generator_UserDSName="DataSetLinhas">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Sp_BuscaRazaoSocialOperadora_x_Linha" msprop:Generator_TableClassName="Sp_BuscaRazaoSocialOperadora_x_LinhaDataTable" msprop:Generator_TableVarName="tableSp_BuscaRazaoSocialOperadora_x_Linha" msprop:Generator_TablePropName="Sp_BuscaRazaoSocialOperadora_x_Linha" msprop:Generator_RowDeletingName="Sp_BuscaRazaoSocialOperadora_x_LinhaRowDeleting" msprop:Generator_RowChangingName="Sp_BuscaRazaoSocialOperadora_x_LinhaRowChanging" msprop:Generator_RowEvHandlerName="Sp_BuscaRazaoSocialOperadora_x_LinhaRowChangeEventHandler" msprop:Generator_RowDeletedName="Sp_BuscaRazaoSocialOperadora_x_LinhaRowDeleted" msprop:Generator_UserTableName="Sp_BuscaRazaoSocialOperadora_x_Linha" msprop:Generator_RowChangedName="Sp_BuscaRazaoSocialOperadora_x_LinhaRowChanged" msprop:Generator_RowEvArgName="Sp_BuscaRazaoSocialOperadora_x_LinhaRowChangeEvent" msprop:Generator_RowClassName="Sp_BuscaRazaoSocialOperadora_x_LinhaRow">
+        <xs:element name="Sp_BuscaRazaoSocialOperadora_x_Linha" msprop:Generator_TableClassName="Sp_BuscaRazaoSocialOperadora_x_LinhaDataTable" msprop:Generator_TableVarName="tableSp_BuscaRazaoSocialOperadora_x_Linha" msprop:Generator_RowChangedName="Sp_BuscaRazaoSocialOperadora_x_LinhaRowChanged" msprop:Generator_TablePropName="Sp_BuscaRazaoSocialOperadora_x_Linha" msprop:Generator_RowDeletingName="Sp_BuscaRazaoSocialOperadora_x_LinhaRowDeleting" msprop:Generator_RowChangingName="Sp_BuscaRazaoSocialOperadora_x_LinhaRowChanging" msprop:Generator_RowEvHandlerName="Sp_BuscaRazaoSocialOperadora_x_LinhaRowChangeEventHandler" msprop:Generator_RowDeletedName="Sp_BuscaRazaoSocialOperadora_x_LinhaRowDeleted" msprop:Generator_RowClassName="Sp_BuscaRazaoSocialOperadora_x_LinhaRow" msprop:Generator_UserTableName="Sp_BuscaRazaoSocialOperadora_x_Linha" msprop:Generator_RowEvArgName="Sp_BuscaRazaoSocialOperadora_x_LinhaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_OP_OPERADORAS" msprop:Generator_ColumnVarNameInTable="columnid_OP_OPERADORAS" msprop:Generator_ColumnPropNameInRow="id_OP_OPERADORAS" msprop:Generator_ColumnPropNameInTable="id_OP_OPERADORASColumn" msprop:Generator_UserColumnName="id_OP_OPERADORAS" type="xs:int" minOccurs="0" />
@@ -122,10 +144,11 @@ GROUP BY CL_CAD_CONTRATOS.id_CL_TIPOS_CONTRATOS, CL_CAD_CONTRATOS.vl_contrato, P
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="linhaVirtual_LI_LINHAS" msprop:Generator_ColumnVarNameInTable="columnlinhaVirtual_LI_LINHAS" msprop:Generator_ColumnPropNameInRow="linhaVirtual_LI_LINHAS" msprop:Generator_ColumnPropNameInTable="linhaVirtual_LI_LINHASColumn" msprop:Generator_UserColumnName="linhaVirtual_LI_LINHAS" type="xs:unsignedByte" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="CL_CAD_CONTRATOS" msprop:Generator_TableClassName="CL_CAD_CONTRATOSDataTable" msprop:Generator_TableVarName="tableCL_CAD_CONTRATOS" msprop:Generator_TablePropName="CL_CAD_CONTRATOS" msprop:Generator_RowDeletingName="CL_CAD_CONTRATOSRowDeleting" msprop:Generator_RowChangingName="CL_CAD_CONTRATOSRowChanging" msprop:Generator_RowEvHandlerName="CL_CAD_CONTRATOSRowChangeEventHandler" msprop:Generator_RowDeletedName="CL_CAD_CONTRATOSRowDeleted" msprop:Generator_UserTableName="CL_CAD_CONTRATOS" msprop:Generator_RowChangedName="CL_CAD_CONTRATOSRowChanged" msprop:Generator_RowEvArgName="CL_CAD_CONTRATOSRowChangeEvent" msprop:Generator_RowClassName="CL_CAD_CONTRATOSRow">
+        <xs:element name="CL_CAD_CONTRATOS" msprop:Generator_TableClassName="CL_CAD_CONTRATOSDataTable" msprop:Generator_TableVarName="tableCL_CAD_CONTRATOS" msprop:Generator_RowChangedName="CL_CAD_CONTRATOSRowChanged" msprop:Generator_TablePropName="CL_CAD_CONTRATOS" msprop:Generator_RowDeletingName="CL_CAD_CONTRATOSRowDeleting" msprop:Generator_RowChangingName="CL_CAD_CONTRATOSRowChanging" msprop:Generator_RowEvHandlerName="CL_CAD_CONTRATOSRowChangeEventHandler" msprop:Generator_RowDeletedName="CL_CAD_CONTRATOSRowDeleted" msprop:Generator_RowClassName="CL_CAD_CONTRATOSRow" msprop:Generator_UserTableName="CL_CAD_CONTRATOS" msprop:Generator_RowEvArgName="CL_CAD_CONTRATOSRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_CL_CAD_CONTRATOS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnid_CL_CAD_CONTRATOS" msprop:Generator_ColumnPropNameInRow="id_CL_CAD_CONTRATOS" msprop:Generator_ColumnPropNameInTable="id_CL_CAD_CONTRATOSColumn" msprop:Generator_UserColumnName="id_CL_CAD_CONTRATOS" type="xs:int" minOccurs="0" />
@@ -134,7 +157,34 @@ GROUP BY CL_CAD_CONTRATOS.id_CL_TIPOS_CONTRATOS, CL_CAD_CONTRATOS.vl_contrato, P
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_LI_LINHAS" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_LI_LINHAS" msprop:Generator_ColumnPropNameInRow="id_LI_LINHAS" msprop:Generator_ColumnPropNameInTable="id_LI_LINHASColumn" msprop:Generator_UserColumnName="id_LI_LINHAS" type="xs:int" />
+              <xs:element name="codLinha_LI_LINHAS" msprop:Generator_ColumnVarNameInTable="columncodLinha_LI_LINHAS" msprop:Generator_ColumnPropNameInRow="codLinha_LI_LINHAS" msprop:Generator_ColumnPropNameInTable="codLinha_LI_LINHASColumn" msprop:Generator_UserColumnName="codLinha_LI_LINHAS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vlInicial_id_LI_TIPOS" msprop:Generator_ColumnVarNameInTable="columnvlInicial_id_LI_TIPOS" msprop:Generator_ColumnPropNameInRow="vlInicial_id_LI_TIPOS" msprop:Generator_ColumnPropNameInTable="vlInicial_id_LI_TIPOSColumn" msprop:Generator_UserColumnName="vlInicial_id_LI_TIPOS" type="xs:decimal" minOccurs="0" />
+              <xs:element name="codMatriz_PS_CLIENTES" msprop:Generator_ColumnVarNameInTable="columncodMatriz_PS_CLIENTES" msprop:Generator_ColumnPropNameInRow="codMatriz_PS_CLIENTES" msprop:Generator_ColumnPropNameInTable="codMatriz_PS_CLIENTESColumn" msprop:Generator_UserColumnName="codMatriz_PS_CLIENTES" type="xs:int" />
+              <xs:element name="razaosocial_PS_JURIDICA" msprop:Generator_ColumnVarNameInTable="columnrazaosocial_PS_JURIDICA" msprop:Generator_ColumnPropNameInRow="razaosocial_PS_JURIDICA" msprop:Generator_ColumnPropNameInTable="razaosocial_PS_JURIDICAColumn" msprop:Generator_UserColumnName="razaosocial_PS_JURIDICA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:id_LI_LINHAS" />
+    </xs:unique>
   </xs:element>
 </xs:schema>

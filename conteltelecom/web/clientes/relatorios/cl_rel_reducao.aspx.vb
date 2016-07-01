@@ -8,6 +8,9 @@ Public Class cl_rel_reducao
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
         If IsPostBack = False Then
+            Dim Parametros As Integer = 1
+
+
             RadDropDownListMes.SelectedValue = Date.Today.Month
             RadDropDownListAno.SelectedValue = Date.Today.Year
 
@@ -22,6 +25,13 @@ Public Class cl_rel_reducao
                 Session("codMatriz_PS_CLIENTES") = Request.QueryString("id_PS_PESSOA")
                 RadAutoCompleteBoxBuscaMatriz.Visible = False
                 Label2.Visible = False
+                If RadDropDownListTipoRel.SelectedValue = 2 Then
+                    Parametros = 2
+                End If
+                Dim prmReport As New ReportParameter("tipoRel", Parametros)
+
+                ReportViewerRelReducao.LocalReport.SetParameters(New ReportParameter() {prmReport})
+
                 ReportViewerRelReducao.LocalReport.Refresh()
             End If
 
@@ -48,6 +58,13 @@ Public Class cl_rel_reducao
         End If
 
         Session("mesAnoRefereincia_SF_SERVICOS_FATURA") = If(RadDropDownListMes.SelectedValue < 9, "0" & RadDropDownListMes.SelectedValue, RadDropDownListMes.SelectedValue) & "/" & RadDropDownListAno.SelectedValue
+        Dim Parametros As Integer = 1
+        If RadDropDownListTipoRel.SelectedValue = 2 Then
+            Parametros = 2
+        End If
+        Dim prmReport As New ReportParameter("tipoRel", Parametros)
+
+        ReportViewerRelReducao.LocalReport.SetParameters(New ReportParameter() {prmReport})
 
         ReportViewerRelReducao.LocalReport.Refresh()
 

@@ -303,6 +303,10 @@ Partial Public Class RelMovel_Interurbano
         
         Private columndesc_CL_TIPOS_CONTRATOS As Global.System.Data.DataColumn
         
+        Private columnvl_contrato As Global.System.Data.DataColumn
+        
+        Private columnExpr1 As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -419,6 +423,22 @@ Partial Public Class RelMovel_Interurbano
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property vl_contratoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnvl_contrato
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Expr1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnExpr1
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -455,9 +475,9 @@ Partial Public Class RelMovel_Interurbano
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function Addmovel_x_interubanoRow(ByVal movel As Decimal, ByVal interurbano As Decimal, ByVal razaosocial_PS_JURIDICA As String, ByVal mesAnoRefereincia_SF_SERVICOS_FATURA As String, ByVal id_PS_PESSOA As Integer, ByVal MOVEISOUTRAS As Decimal, ByVal TOTALCIDADE As Decimal, ByVal foraAnalise_LI_LINHAS As Byte, ByVal desc_CL_TIPOS_CONTRATOS As String) As movel_x_interubanoRow
+        Public Overloads Function Addmovel_x_interubanoRow(ByVal movel As Decimal, ByVal interurbano As Decimal, ByVal razaosocial_PS_JURIDICA As String, ByVal mesAnoRefereincia_SF_SERVICOS_FATURA As String, ByVal id_PS_PESSOA As Integer, ByVal MOVEISOUTRAS As Decimal, ByVal TOTALCIDADE As Decimal, ByVal foraAnalise_LI_LINHAS As Byte, ByVal desc_CL_TIPOS_CONTRATOS As String, ByVal vl_contrato As Decimal, ByVal Expr1 As Integer) As movel_x_interubanoRow
             Dim rowmovel_x_interubanoRow As movel_x_interubanoRow = CType(Me.NewRow,movel_x_interubanoRow)
-            Dim columnValuesArray() As Object = New Object() {movel, interurbano, razaosocial_PS_JURIDICA, mesAnoRefereincia_SF_SERVICOS_FATURA, id_PS_PESSOA, MOVEISOUTRAS, TOTALCIDADE, foraAnalise_LI_LINHAS, Nothing, desc_CL_TIPOS_CONTRATOS}
+            Dim columnValuesArray() As Object = New Object() {movel, interurbano, razaosocial_PS_JURIDICA, mesAnoRefereincia_SF_SERVICOS_FATURA, id_PS_PESSOA, MOVEISOUTRAS, TOTALCIDADE, foraAnalise_LI_LINHAS, Nothing, desc_CL_TIPOS_CONTRATOS, vl_contrato, Expr1}
             rowmovel_x_interubanoRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowmovel_x_interubanoRow)
             Return rowmovel_x_interubanoRow
@@ -490,6 +510,8 @@ Partial Public Class RelMovel_Interurbano
             Me.columnforaAnalise_LI_LINHAS = MyBase.Columns("foraAnalise_LI_LINHAS")
             Me.columnid_CL_TIPOS_CONTRATOS = MyBase.Columns("id_CL_TIPOS_CONTRATOS")
             Me.columndesc_CL_TIPOS_CONTRATOS = MyBase.Columns("desc_CL_TIPOS_CONTRATOS")
+            Me.columnvl_contrato = MyBase.Columns("vl_contrato")
+            Me.columnExpr1 = MyBase.Columns("Expr1")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -515,6 +537,10 @@ Partial Public Class RelMovel_Interurbano
             MyBase.Columns.Add(Me.columnid_CL_TIPOS_CONTRATOS)
             Me.columndesc_CL_TIPOS_CONTRATOS = New Global.System.Data.DataColumn("desc_CL_TIPOS_CONTRATOS", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columndesc_CL_TIPOS_CONTRATOS)
+            Me.columnvl_contrato = New Global.System.Data.DataColumn("vl_contrato", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnvl_contrato)
+            Me.columnExpr1 = New Global.System.Data.DataColumn("Expr1", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnExpr1)
             Me.columnmovel.ReadOnly = true
             Me.columninterurbano.ReadOnly = true
             Me.columnrazaosocial_PS_JURIDICA.MaxLength = 250
@@ -812,6 +838,36 @@ Partial Public Class RelMovel_Interurbano
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property vl_contrato() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tablemovel_x_interubano.vl_contratoColumn),Decimal)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("O valor da coluna 'vl_contrato' na tabela 'movel_x_interubano' é DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablemovel_x_interubano.vl_contratoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Expr1() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tablemovel_x_interubano.Expr1Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("O valor da coluna 'Expr1' na tabela 'movel_x_interubano' é DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablemovel_x_interubano.Expr1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsmovelNull() As Boolean
             Return Me.IsNull(Me.tablemovel_x_interubano.movelColumn)
         End Function
@@ -880,6 +936,30 @@ Partial Public Class RelMovel_Interurbano
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetforaAnalise_LI_LINHASNull()
             Me(Me.tablemovel_x_interubano.foraAnalise_LI_LINHASColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isvl_contratoNull() As Boolean
+            Return Me.IsNull(Me.tablemovel_x_interubano.vl_contratoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setvl_contratoNull()
+            Me(Me.tablemovel_x_interubano.vl_contratoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsExpr1Null() As Boolean
+            Return Me.IsNull(Me.tablemovel_x_interubano.Expr1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetExpr1Null()
+            Me(Me.tablemovel_x_interubano.Expr1Column) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -1059,6 +1139,8 @@ Namespace RelMovel_InterurbanoTableAdapters
             tableMapping.ColumnMappings.Add("foraAnalise_LI_LINHAS", "foraAnalise_LI_LINHAS")
             tableMapping.ColumnMappings.Add("id_CL_TIPOS_CONTRATOS", "id_CL_TIPOS_CONTRATOS")
             tableMapping.ColumnMappings.Add("desc_CL_TIPOS_CONTRATOS", "desc_CL_TIPOS_CONTRATOS")
+            tableMapping.ColumnMappings.Add("vl_contrato", "vl_contrato")
+            tableMapping.ColumnMappings.Add("Expr1", "Expr1")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -1086,22 +1168,25 @@ Namespace RelMovel_InterurbanoTableAdapters
                 "NULL(SUM(CASE WHEN SF_TIPO_USO_CATEGORIAS.desc_SF_TIPO_USO_CATEGORIAS = 'INTERUR"& _ 
                 "BANO' THEN vlUso_SF_VL_USO END), 0) AS TOTALCIDADE, SF_SERVICOS_FATURA.foraAnali"& _ 
                 "se_LI_LINHAS, CL_TIPOS_CONTRATOS.id_CL_TIPOS_CONTRATOS, CL_TIPOS_CONTRATOS.desc_"& _ 
-                "CL_TIPOS_CONTRATOS FROM SF_VL_USO INNER JOIN SF_TIPO_USO ON SF_VL_USO.id_SF_TIPO"& _ 
-                "_USO = SF_TIPO_USO.id_SF_TIPO_USO INNER JOIN SF_TIPO_USO_CATEGORIAS ON SF_TIPO_U"& _ 
-                "SO.id_SF_TIPO_USO_CATEGORIAS = SF_TIPO_USO_CATEGORIAS.id_SF_TIPO_USO_CATEGORIAS "& _ 
-                "INNER JOIN SF_SERVICOS_FATURA ON SF_VL_USO.id_SF_SERVICOS_FATURA = SF_SERVICOS_F"& _ 
-                "ATURA.id_SF_SERVICOS_FATURA INNER JOIN PS_CLIENTES ON SF_SERVICOS_FATURA.codMatr"& _ 
-                "iz_PS_CLIENTES = PS_CLIENTES.codMatriz_PS_CLIENTES AND SF_SERVICOS_FATURA.codMat"& _ 
-                "riz_PS_CLIENTES = PS_CLIENTES.id_PS_PESSOA INNER JOIN PS_JURIDICA ON PS_CLIENTES"& _ 
-                ".id_PS_JURIDICA = PS_JURIDICA.id_PS_JURIDICA INNER JOIN PS_CIDADES ON SF_SERVICO"& _ 
-                "S_FATURA.id_PS_CIDADES = PS_CIDADES.id_PS_CIDADES INNER JOIN CL_TIPOS_CONTRATOS "& _ 
-                "ON SF_SERVICOS_FATURA.id_CL_TIPOS_CONTRATOS = CL_TIPOS_CONTRATOS.id_CL_TIPOS_CON"& _ 
-                "TRATOS WHERE (SF_SERVICOS_FATURA.mesAnoRefereincia_SF_SERVICOS_FATURA = @mesAnoR"& _ 
-                "efereincia_SF_SERVICOS_FATURA) AND (SF_SERVICOS_FATURA.numSequencia_SF_SERVICOS_"& _ 
-                "FATURA = 0) GROUP BY PS_JURIDICA.razaosocial_PS_JURIDICA, SF_SERVICOS_FATURA.mes"& _ 
-                "AnoRefereincia_SF_SERVICOS_FATURA, PS_JURIDICA.id_PS_PESSOA, PS_CLIENTES.id_PS_P"& _ 
-                "ESSOA, SF_SERVICOS_FATURA.foraAnalise_LI_LINHAS, CL_TIPOS_CONTRATOS.id_CL_TIPOS_"& _ 
-                "CONTRATOS, CL_TIPOS_CONTRATOS.desc_CL_TIPOS_CONTRATOS"
+                "CL_TIPOS_CONTRATOS, SF_SERVICOS_FATURA.vl_contrato, SF_SERVICOS_FATURA.id_CL_TIP"& _ 
+                "OS_CONTRATOS AS Expr1 FROM SF_VL_USO INNER JOIN SF_TIPO_USO ON SF_VL_USO.id_SF_T"& _ 
+                "IPO_USO = SF_TIPO_USO.id_SF_TIPO_USO INNER JOIN SF_TIPO_USO_CATEGORIAS ON SF_TIP"& _ 
+                "O_USO.id_SF_TIPO_USO_CATEGORIAS = SF_TIPO_USO_CATEGORIAS.id_SF_TIPO_USO_CATEGORI"& _ 
+                "AS INNER JOIN SF_SERVICOS_FATURA ON SF_VL_USO.id_SF_SERVICOS_FATURA = SF_SERVICO"& _ 
+                "S_FATURA.id_SF_SERVICOS_FATURA INNER JOIN PS_CLIENTES ON SF_SERVICOS_FATURA.codM"& _ 
+                "atriz_PS_CLIENTES = PS_CLIENTES.codMatriz_PS_CLIENTES AND SF_SERVICOS_FATURA.cod"& _ 
+                "Matriz_PS_CLIENTES = PS_CLIENTES.id_PS_PESSOA INNER JOIN PS_JURIDICA ON PS_CLIEN"& _ 
+                "TES.id_PS_JURIDICA = PS_JURIDICA.id_PS_JURIDICA INNER JOIN PS_CIDADES ON SF_SERV"& _ 
+                "ICOS_FATURA.id_PS_CIDADES = PS_CIDADES.id_PS_CIDADES INNER JOIN CL_TIPOS_CONTRAT"& _ 
+                "OS ON SF_SERVICOS_FATURA.id_CL_TIPOS_CONTRATOS = CL_TIPOS_CONTRATOS.id_CL_TIPOS_"& _ 
+                "CONTRATOS WHERE (SF_SERVICOS_FATURA.mesAnoRefereincia_SF_SERVICOS_FATURA = @mesA"& _ 
+                "noRefereincia_SF_SERVICOS_FATURA) AND (SF_SERVICOS_FATURA.numSequencia_SF_SERVIC"& _ 
+                "OS_FATURA = 0) AND (SF_VL_USO.linhaVirtual_LI_LINHAS = 0) GROUP BY PS_JURIDICA.r"& _ 
+                "azaosocial_PS_JURIDICA, SF_SERVICOS_FATURA.mesAnoRefereincia_SF_SERVICOS_FATURA,"& _ 
+                " PS_JURIDICA.id_PS_PESSOA, PS_CLIENTES.id_PS_PESSOA, SF_SERVICOS_FATURA.foraAnal"& _ 
+                "ise_LI_LINHAS, CL_TIPOS_CONTRATOS.id_CL_TIPOS_CONTRATOS, CL_TIPOS_CONTRATOS.desc"& _ 
+                "_CL_TIPOS_CONTRATOS, SF_SERVICOS_FATURA.vl_contrato, SF_SERVICOS_FATURA.id_CL_TI"& _ 
+                "POS_CONTRATOS"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@mesAnoRefereincia_SF_SERVICOS_FATURA", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "mesAnoRefereincia_SF_SERVICOS_FATURA", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub

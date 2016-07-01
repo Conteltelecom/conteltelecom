@@ -132,8 +132,23 @@ Public Class cl_linhas_detalhes
 
 
     Sub VoltarPaginaAnterior()
-        If Request.QueryString("consultaMatriz") = 2 Then
-            HttpContext.Current.Response.Redirect("~/web/clientes/cl_linhas.aspx?id_pessoas=" & Session("id_pessoaNav") & "&consultaMatriz=2" & "&codMatriz_PS_CLIENTES=" & Request.QueryString("codMatriz_PS_CLIENTES"))
+        If Request.QueryString("consultaMatriz") = 2 Or Request.QueryString("consultaMatriz") Then
+
+
+
+            If IsNothing(Request.QueryString("codMatriz_PS_CLIENTES")) = False Then
+
+                If Request.QueryString("codMatriz_PS_CLIENTES") = "" Then
+                    HttpContext.Current.Response.Redirect("~/web/clientes/cl_linhas.aspx?id_pessoas=" & Session("id_pessoaNav") & "&consultaMatriz=0")
+                Else
+                    HttpContext.Current.Response.Redirect("~/web/clientes/cl_linhas.aspx?id_pessoas=" & Session("id_pessoaNav") & "&consultaMatriz=1" & "&codMatriz_PS_CLIENTES=" & Request.QueryString("codMatriz_PS_CLIENTES"))
+                End If
+
+            Else
+                HttpContext.Current.Response.Redirect("~/web/clientes/cl_linhas.aspx?id_pessoas=" & Session("id_pessoaNav") & "&consultaMatriz=2" & "&codMatriz_PS_CLIENTES=" & Request.QueryString("codMatriz_PS_CLIENTES"))
+            End If
+
+
         Else
             HttpContext.Current.Response.Redirect("~/web/clientes/cl_linhas.aspx?id_pessoas=" & Session("id_pessoaNav"))
         End If
@@ -163,7 +178,7 @@ Public Class cl_linhas_detalhes
         Dim diaVenc_LI_LINHASTextBox As New RadNumericTextBox
         Dim perIncial_LI_LINHASTextBox As New RadMaskedTextBox
         Dim numF_LI_LINHASTextBox As New RadTextBox
-        Dim nomeUnidade_LI_LINHASTextBox As New RadTextBox
+        Dim nomeUnidade_LI_LINHASTextBox As New RadDropDownList
 
 
         '*********************ForaAnalise*************************************
@@ -215,7 +230,7 @@ Public Class cl_linhas_detalhes
                         diaVenc_LI_LINHASTextBox = DirectCast(item.FindControl("diaVenc_LI_LINHASTextBox"), RadNumericTextBox)
                         perIncial_LI_LINHASTextBox = DirectCast(item.FindControl("perIncial_LI_LINHASTextBox"), RadMaskedTextBox)
                         numF_LI_LINHASTextBox = DirectCast(item.FindControl("numF_LI_LINHASTextBox"), RadTextBox)
-                        nomeUnidade_LI_LINHASTextBox = DirectCast(item.FindControl("nomeUnidade_LI_LINHASTextBox"), RadTextBox)
+                        nomeUnidade_LI_LINHASTextBox = DirectCast(item.FindControl("RadDropDownListUniidades"), RadDropDownList)
                         Exit Select
                     Case "ForaAnalise"
                         foraAnalise_LI_LINHAS = DirectCast(item("foraAnalise_LI_LINHAS").Controls(0), CheckBox)
@@ -263,7 +278,7 @@ Public Class cl_linhas_detalhes
                 SqlDataSourceContatosLinhas.UpdateParameters("id_LI_LINHAS").DefaultValue = Request.QueryString("id_LI_LINHAS")
                 SqlDataSourceContatosLinhas.UpdateParameters("id_OP_OPERADORAS").DefaultValue = id_OP_OPERADORASRadComboBox.SelectedValue
                 SqlDataSourceContatosLinhas.UpdateParameters("codLinha_LI_LINHAS").DefaultValue = codLinha_LI_LINHASTextBox.Text
-                SqlDataSourceContatosLinhas.UpdateParameters("nomeUnidade_LI_LINHAS").DefaultValue = nomeUnidade_LI_LINHASTextBox.Text
+                SqlDataSourceContatosLinhas.UpdateParameters("nomeUnidade_LI_LINHAS").DefaultValue = nomeUnidade_LI_LINHASTextBox.SelectedText
                 SqlDataSourceContatosLinhas.Update()
                 Call VoltarPaginaAnterior()
             End If

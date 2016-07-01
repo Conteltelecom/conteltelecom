@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="RadAutoCompleteBoxPaginas" targetNamespace="http://tempuri.org/RadAutoCompleteBoxPaginas.xsd" xmlns:mstns="http://tempuri.org/RadAutoCompleteBoxPaginas.xsd" xmlns="http://tempuri.org/RadAutoCompleteBoxPaginas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="conteltelecomConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="conteltelecomConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.conteltelecomConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CONFIG_CAD_PAGINASTableAdapter" GeneratorDataComponentClassName="CONFIG_CAD_PAGINASTableAdapter" Name="CONFIG_CAD_PAGINAS" UserDataComponentName="CONFIG_CAD_PAGINASTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="conteltelecomConnectionString (Web.config)" DbObjectName="conteltelecom.dbo.CONFIG_CAD_PAGINAS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT id_CONFIG_CAD_PAGINAS, url_CONFIG_CAD_PAGINAS FROM CONFIG_CAD_PAGINAS WHERE (st_CONFIG_CAD_PAGINAS = 1)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_CONFIG_CAD_PAGINAS" DataSetColumn="id_CONFIG_CAD_PAGINAS" />
+              <Mapping SourceColumn="url_CONFIG_CAD_PAGINAS" DataSetColumn="url_CONFIG_CAD_PAGINAS" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="RadAutoCompleteBoxPaginas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="RadAutoCompleteBoxPaginas" msprop:Generator_UserDSName="RadAutoCompleteBoxPaginas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CONFIG_CAD_PAGINAS" msprop:Generator_TableClassName="CONFIG_CAD_PAGINASDataTable" msprop:Generator_TableVarName="tableCONFIG_CAD_PAGINAS" msprop:Generator_TablePropName="CONFIG_CAD_PAGINAS" msprop:Generator_RowDeletingName="CONFIG_CAD_PAGINASRowDeleting" msprop:Generator_RowChangingName="CONFIG_CAD_PAGINASRowChanging" msprop:Generator_RowEvHandlerName="CONFIG_CAD_PAGINASRowChangeEventHandler" msprop:Generator_RowDeletedName="CONFIG_CAD_PAGINASRowDeleted" msprop:Generator_UserTableName="CONFIG_CAD_PAGINAS" msprop:Generator_RowChangedName="CONFIG_CAD_PAGINASRowChanged" msprop:Generator_RowEvArgName="CONFIG_CAD_PAGINASRowChangeEvent" msprop:Generator_RowClassName="CONFIG_CAD_PAGINASRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_CONFIG_CAD_PAGINAS" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_CONFIG_CAD_PAGINAS" msprop:Generator_ColumnPropNameInRow="id_CONFIG_CAD_PAGINAS" msprop:Generator_ColumnPropNameInTable="id_CONFIG_CAD_PAGINASColumn" msprop:Generator_UserColumnName="id_CONFIG_CAD_PAGINAS" type="xs:int" />
+              <xs:element name="url_CONFIG_CAD_PAGINAS" msprop:Generator_ColumnVarNameInTable="columnurl_CONFIG_CAD_PAGINAS" msprop:Generator_ColumnPropNameInRow="url_CONFIG_CAD_PAGINAS" msprop:Generator_ColumnPropNameInTable="url_CONFIG_CAD_PAGINASColumn" msprop:Generator_UserColumnName="url_CONFIG_CAD_PAGINAS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:CONFIG_CAD_PAGINAS" />
+      <xs:field xpath="mstns:id_CONFIG_CAD_PAGINAS" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

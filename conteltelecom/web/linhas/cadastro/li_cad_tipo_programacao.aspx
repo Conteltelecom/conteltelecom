@@ -34,6 +34,7 @@
                     <ItemTemplate>
                         <asp:Label ID="desc_LI_TIPO_PROGRAMACAOLabel" runat="server" Text='<%# Eval("desc_LI_TIPO_PROGRAMACAO") %>'></asp:Label>
                     </ItemTemplate>
+                    <HeaderStyle CssClass="col-xs-12" />
                 </telerik:GridTemplateColumn>
                 <telerik:GridCheckBoxColumn DataField="st_LI_TIPO_PROGRAMACAO" DataType="System.Int16" DefaultInsertValue="1" FilterControlAltText="Filter st_LI_TIPO_PROGRAMACAO column" HeaderText="ST" StringFalseValue="0" StringTrueValue="1" UniqueName="st_LI_TIPO_PROGRAMACAO">
                 </telerik:GridCheckBoxColumn>

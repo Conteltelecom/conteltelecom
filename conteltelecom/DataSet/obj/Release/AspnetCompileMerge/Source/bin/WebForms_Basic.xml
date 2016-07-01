@@ -1,0 +1,1631 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+conteltelecom
+</name>
+</assembly>
+<members>
+<member name="F:conteltelecom.AddPhoneNumber._ErrorMessage">
+<summary>
+Controle ErrorMessage.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.AddPhoneNumber._PhoneNumber">
+<summary>
+Controle PhoneNumber.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.Confirm._successPanel">
+<summary>
+Controle successPanel.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.Confirm._login">
+<summary>
+controle de login.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.Confirm._errorPanel">
+<summary>
+Controle errorPanel.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ForgotPassword._loginForm">
+<summary>
+Controle loginForm.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ForgotPassword._ErrorMessage">
+<summary>
+Controle ErrorMessage.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ForgotPassword._FailureText">
+<summary>
+Controle FailureText.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ForgotPassword._Email">
+<summary>
+Controle Email.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ForgotPassword._DisplayEmail">
+<summary>
+Controle DisplayEmail.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.Login._ErrorMessage">
+<summary>
+Controle de ErrorMessage.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.Login._FailureText">
+<summary>
+Controle FailureText.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.Login._Email">
+<summary>
+Email control.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.Login._Password">
+<summary>
+Password control.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.Login._RememberMe">
+<summary>
+Controle RememberMe.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.Login._RegisterHyperLink">
+<summary>
+Controle RegisterHyperLink.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.Login._OpenAuthLogin">
+<summary>
+Controle de OpenAuthLogin.
+</summary>
+<remarks>
+Campo autopreenchido.
+Para modificar, mova a declaração do campo do arquivo do designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.Manage._SuccessMessagePlaceHolder">
+ <summary>
+ controle SuccessMessagePlaceHolder.
+ </summary>
+ <remarks>
+ Campo gerado automaticamente.
+ Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+ </remarks>
+</member>
+<member name="F:conteltelecom.Manage._ChangePassword">
+ <summary>
+ Controle ChangePassword.
+ </summary>
+ <remarks>
+ Campo gerado automaticamente.
+ Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+ </remarks>
+</member>
+<member name="F:conteltelecom.Manage._CreatePassword">
+ <summary>
+ Controle CreatePassword.
+ </summary>
+ <remarks>
+ Campo gerado automaticamente.
+ Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+ </remarks>
+</member>
+<member name="F:conteltelecom.Manage._PhoneNumber">
+ <summary>
+ Controle PhoneNumber.
+ </summary>
+ <remarks>
+ Campo gerado automaticamente.
+ Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+ </remarks>
+</member>
+<member name="F:conteltelecom.ManageLogins._SuccessMessagePlaceholder">
+<summary>
+Controle SuccessMessagePlaceholder.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ManagePassword._setPassword">
+<summary>
+Controle setPassword.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ManagePassword._password">
+<summary>
+Controle password.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ManagePassword._confirmPassword">
+<summary>
+controle confirmPassword.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ManagePassword._changePasswordHolder">
+<summary>
+Controle changePasswordHolder.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ManagePassword._CurrentPasswordLabel">
+<summary>
+Controle CurrentPasswordLabel.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ManagePassword._CurrentPassword">
+<summary>
+Controle CurrentPassword.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ManagePassword._NewPasswordLabel">
+<summary>
+Controle NewPasswordLabel.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ManagePassword._NewPassword">
+<summary>
+Controle NewPassword.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ManagePassword._ConfirmNewPasswordLabel">
+<summary>
+Controle ConfirmNewPasswordLabel.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ManagePassword._ConfirmNewPassword">
+<summary>
+Controle ConfirmNewPassword.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.OpenAuthProviders._providerDetails">
+<summary>
+Controle de providerDetails.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.Register._ErrorMessage">
+<summary>
+Controle ErrorMessage.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.Register._Email">
+<summary>
+Email control.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.Register._Password">
+<summary>
+Password control.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.Register._ConfirmPassword">
+<summary>
+Controle ConfirmPassword.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.RegisterExternalLogin._email">
+<summary>
+email control.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ResetPassword._ErrorMessage">
+<summary>
+Controle ErrorMessage.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ResetPassword._Email">
+<summary>
+Email control.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ResetPassword._Password">
+<summary>
+Password control.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ResetPassword._ConfirmPassword">
+<summary>
+Controle ConfirmPassword.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ResetPasswordConfirmation._login">
+<summary>
+controle de login.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.TwoFactorAuthenticationSignIn._sendcode">
+<summary>
+Controle sendcode.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.TwoFactorAuthenticationSignIn._Providers">
+<summary>
+Controle Providers.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.TwoFactorAuthenticationSignIn._ProviderSubmit">
+<summary>
+Controle ProviderSubmit.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.TwoFactorAuthenticationSignIn._verifycode">
+<summary>
+Controle verifycode.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.TwoFactorAuthenticationSignIn._SelectedProvider">
+<summary>
+Controle SelectedProvider.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.TwoFactorAuthenticationSignIn._ErrorMessage">
+<summary>
+Controle ErrorMessage.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.TwoFactorAuthenticationSignIn._FailureText">
+<summary>
+Controle FailureText.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.TwoFactorAuthenticationSignIn._Code">
+<summary>
+Controle Code.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.TwoFactorAuthenticationSignIn._RememberBrowser">
+<summary>
+Controle RememberBrowser.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.TwoFactorAuthenticationSignIn._CodeSubmit">
+<summary>
+Controle CodeSubmit.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.VerifyPhoneNumber._ErrorMessage">
+<summary>
+Controle ErrorMessage.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.VerifyPhoneNumber._PhoneNumber">
+<summary>
+Controle PhoneNumber.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.VerifyPhoneNumber._Code">
+<summary>
+Controle Code.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do Designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="T:conteltelecom.BuscaCPF_Nomexsd">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:conteltelecom.BuscaCPF_Nomexsd.BuscaCPF_NomeDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:conteltelecom.BuscaCPF_Nomexsd.RadAutoCompleteBox_Ps_FisicaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:conteltelecom.BuscaCPF_Nomexsd.BuscaCPF_NomeRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:conteltelecom.BuscaCPF_Nomexsd.RadAutoCompleteBox_Ps_FisicaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:conteltelecom.BuscaCPF_Nomexsd.BuscaCPF_NomeRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:conteltelecom.BuscaCPF_Nomexsd.RadAutoCompleteBox_Ps_FisicaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:conteltelecom.BuscaCPF_NomexsdTableAdapters.BuscaCPF_NomeTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:conteltelecom.BuscaCPF_NomexsdTableAdapters.RadAutoCompleteBox_Ps_FisicaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:conteltelecom.BuscaCPF_NomexsdTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:conteltelecom.BuscaCPF_NomexsdTableAdapters.TableAdapterManager.UpdateUpdatedRows(conteltelecom.BuscaCPF_Nomexsd,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:conteltelecom.BuscaCPF_NomexsdTableAdapters.TableAdapterManager.UpdateInsertedRows(conteltelecom.BuscaCPF_Nomexsd,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:conteltelecom.BuscaCPF_NomexsdTableAdapters.TableAdapterManager.UpdateDeletedRows(conteltelecom.BuscaCPF_Nomexsd,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:conteltelecom.BuscaCPF_NomexsdTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:conteltelecom.BuscaCPF_NomexsdTableAdapters.TableAdapterManager.UpdateAll(conteltelecom.BuscaCPF_Nomexsd)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:conteltelecom.BuscaCPF_NomexsdTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:conteltelecom.BuscaCPF_NomexsdTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:conteltelecom.BuscaUltimaPessoa">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:conteltelecom.BuscaUltimaPessoaTableAdapters.QueriesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="F:conteltelecom.MasterPageCli._ContentPlaceHolder2">
+<summary>
+Controle ContentPlaceHolder2.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.MasterPageCli._Nav1">
+<summary>
+Controle Nav1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.MasterPageCli._GERAL">
+<summary>
+Controle GERAL.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.MasterPageCli._CONTATOS">
+<summary>
+Controle CONTATOS.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.MasterPageCli._ContentPlaceHolder12">
+<summary>
+Controle ContentPlaceHolder12.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.Menu._ContentPlaceHolderMenuhead">
+<summary>
+Controle ContentPlaceHolderMenuhead.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.Menu._form1">
+<summary>
+Controle form1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.Menu._RadAjaxManager1">
+<summary>
+Controle RadAjaxManager1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.Menu._RadScriptManager1">
+<summary>
+Controle RadScriptManager1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.Menu._Image1">
+<summary>
+Controle Image1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.Menu._ImageLogo">
+<summary>
+Controle ImageLogo.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.Menu._RadPanelBar1">
+<summary>
+Controle RadPanelBar1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.Menu._ContentPlaceHolderMenu">
+<summary>
+Controle ContentPlaceHolderMenu.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="T:conteltelecom.My.MyWebExtension">
+ <summary>
+ Módulo usado para definir as propriedades que estão disponíveis em My Namespace para projetos da web.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:conteltelecom.My.MyWebExtension.Computer">
+ <summary>
+ Retorna informações sobre o computador host.
+ </summary>
+</member>
+<member name="P:conteltelecom.My.MyWebExtension.User">
+ <summary>
+ Retorna informações sobre o usuário atual da web.
+ </summary>
+</member>
+<member name="P:conteltelecom.My.MyWebExtension.Request">
+ <summary>
+ Retorna um objeto Request.
+ </summary>
+</member>
+<member name="P:conteltelecom.My.MyWebExtension.Response">
+ <summary>
+ Retorna um objeto Response.
+ </summary>
+</member>
+<member name="P:conteltelecom.My.MyWebExtension.Log">
+ <summary>
+ Retorna o objeto de log Asp.
+ </summary>
+</member>
+<member name="F:conteltelecom.Normalmaster._ContentPlaceHolderHeadNormal">
+<summary>
+Controle ContentPlaceHolderHeadNormal.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.Normalmaster._Nav1">
+<summary>
+Controle Nav1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.Normalmaster._ContentPlaceHolderNormal">
+<summary>
+Controle ContentPlaceHolderNormal.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.SiteMaster._head">
+<summary>
+Controle head.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.SiteMaster._ContentPlaceHolder1">
+<summary>
+Controle ContentPlaceHolder1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="T:conteltelecom.ValidaCPF">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:conteltelecom.ValidaCPFTableAdapters.QueriesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="F:conteltelecom.Site_Mobile._head">
+<summary>
+Controle head.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.Site_Mobile._ContentPlaceHolder1">
+<summary>
+Controle ContentPlaceHolder1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.cli_contatos._RadDataFormContatos">
+<summary>
+Controle RadDataFormContatos.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.cli_contatos._RadGridContatos">
+<summary>
+Controle RadGridContatos.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.cli_contatos._SqlDataSourceRadgridContatos">
+<summary>
+Controle SqlDataSourceRadgridContatos.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.cli_contatos._SqlDataSourceBuscaPessoa">
+<summary>
+Controle SqlDataSourceBuscaPessoa.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.cli_contatos._SqlDataSourceDroPComboContatos">
+<summary>
+Controle SqlDataSourceDroPComboContatos.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.cl_contatos_detalhes._RadDataFormCidades">
+<summary>
+Controle RadDataFormCidades.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.cl_contatos_detalhes._SqlDataSourceContatosDetalhes">
+<summary>
+Controle SqlDataSourceContatosDetalhes.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cidades._Label2">
+<summary>
+Controle Label2.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cidades._TextBoxCodini">
+<summary>
+Controle TextBoxCodini.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cidades._Label3">
+<summary>
+Controle Label3.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cidades._TextBoxFim">
+<summary>
+Controle TextBoxFim.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cidades._LabelDescCidade">
+<summary>
+Controle LabelDescCidade.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cidades._TextBoxDesc">
+<summary>
+Controle TextBoxDesc.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cidades._Label5">
+<summary>
+Controle Label5.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cidades._RadDropDownListuF">
+<summary>
+Controle RadDropDownListuF.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cidades._HyperLinkPronptUF">
+<summary>
+Controle HyperLinkPronptUF.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cidades._RadButtonPesquisar">
+<summary>
+Controle RadButtonPesquisar.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cidades._RadButtonLimpar">
+<summary>
+Controle RadButtonLimpar.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cidades._UpdatePanel1">
+<summary>
+Controle UpdatePanel1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cidades._RadGridCidade">
+<summary>
+Controle RadGridCidade.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cidades._SqlDataSourcePs_cidades">
+<summary>
+Controle SqlDataSourcePs_cidades.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cidades._SqlDataSourceUF">
+<summary>
+Controle SqlDataSourceUF.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cidades_detalhes._RadDataFormCidades">
+<summary>
+Controle RadDataFormCidades.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cidades_detalhes._SqlDataSourceUF">
+<summary>
+Controle SqlDataSourceUF.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cidades_detalhes._SqlDataSourceCidades">
+<summary>
+Controle SqlDataSourceCidades.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cliente_detalhes._RadDataForm1">
+<summary>
+Controle RadDataForm1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cliente_detalhes._SqlDataSourceRepresentantes">
+<summary>
+Controle SqlDataSourceRepresentantes.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cliente_detalhes._SqlDataSourceBuscaAtendente">
+<summary>
+Controle SqlDataSourceBuscaAtendente.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cliente_detalhes._SqlDataSourcePessaoas">
+<summary>
+Controle SqlDataSourcePessaoas.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cliente_detalhes._SqlDataSourceUf">
+<summary>
+Controle SqlDataSourceUf.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cliente_detalhes._SqlDataSourceDropGrid">
+<summary>
+Controle SqlDataSourceDropGrid.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cliente_detalhes._SqlDataSourceUpdateInsert_PS_JURIDICA">
+<summary>
+Controle SqlDataSourceUpdateInsert_PS_JURIDICA.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cliente_detalhes._SqlDataSourceCliente">
+<summary>
+Controle SqlDataSourceCliente.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_pais._RadGridPais">
+<summary>
+Controle RadGridPais.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_pais._conteltelecom">
+<summary>
+Controle conteltelecom.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cliente._Label1">
+<summary>
+Controle Label1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cliente._TextBoxIni">
+<summary>
+Controle TextBoxIni.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cliente._FilteredTextBoxExtenderTextBoxCNPJI">
+<summary>
+Controle FilteredTextBoxExtenderTextBoxCNPJI.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cliente._Label2">
+<summary>
+Controle Label2.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cliente._TextBoxFim">
+<summary>
+Controle TextBoxFim.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cliente._FilteredTextBoxExtenderTextBoxFim">
+<summary>
+Controle FilteredTextBoxExtenderTextBoxFim.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cliente._LabelCodIni0">
+<summary>
+Controle LabelCodIni0.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cliente._TextBoxRazao">
+<summary>
+Controle TextBoxRazao.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cliente._Label4">
+<summary>
+Controle Label4.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cliente._TextBoxNomeFantasia">
+<summary>
+Controle TextBoxNomeFantasia.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cliente._LabelCnpj">
+<summary>
+Controle LabelCnpj.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cliente._RadMaskedTextBoxCnpjI">
+<summary>
+Controle RadMaskedTextBoxCnpjI.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cliente._Label3">
+<summary>
+Controle Label3.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cliente._RadDropDownListuF">
+<summary>
+Controle RadDropDownListuF.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cliente._HyperLinkPronptUF">
+<summary>
+Controle HyperLinkPronptUF.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cliente._Label7">
+<summary>
+Controle Label7.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cliente._RadDropDownListFiltroCidade">
+<summary>
+Controle RadDropDownListFiltroCidade.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cliente._HyperLinkFiltroCidade">
+<summary>
+Controle HyperLinkFiltroCidade.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cliente._RadButtonPesquisar">
+<summary>
+Controle RadButtonPesquisar.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cliente._RadButtonLimpar">
+<summary>
+Controle RadButtonLimpar.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cliente._RadGridPessoas">
+<summary>
+Controle RadGridPessoas.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cliente._SqlDataSourcePesoas">
+<summary>
+Controle SqlDataSourcePesoas.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cliente._SqlDataSourceUf">
+<summary>
+Controle SqlDataSourceUf.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_cliente._SqlDataSourceDropGrid">
+<summary>
+Controle SqlDataSourceDropGrid.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_pessoas_detalhes._RadDataFormPessoasDetalhes">
+<summary>
+Controle RadDataFormPessoasDetalhes.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_pessoas_detalhes._SqlDataSourcePessoasDetalhes">
+<summary>
+Controle SqlDataSourcePessoasDetalhes.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_pessoas_detalhes._SqlDataSourceTipoContato">
+<summary>
+Controle SqlDataSourceTipoContato.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_pessoas_detalhes._SqlDataSourcePs_fisica">
+<summary>
+Controle SqlDataSourcePs_fisica.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_pessoas_detalhes._SqlDataSourceUF">
+<summary>
+Controle SqlDataSourceUF.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_pessoas_detalhes._SqlDataSourceDropGrid">
+<summary>
+Controle SqlDataSourceDropGrid.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_pessoas_detalhes._SqlDataSourcePS_ESTADOCIVIL">
+<summary>
+Controle SqlDataSourcePS_ESTADOCIVIL.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_pessoas._LabelNome">
+<summary>
+Controle LabelNome.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_pessoas._TextBoxCodIni">
+<summary>
+Controle TextBoxCodIni.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_pessoas._Label1">
+<summary>
+Controle Label1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_pessoas._TextBoxCodFim">
+<summary>
+Controle TextBoxCodFim.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_pessoas._Label2">
+<summary>
+Controle Label2.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_pessoas._TextBoxDesc">
+<summary>
+Controle TextBoxDesc.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_pessoas._Label3">
+<summary>
+Controle Label3.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_pessoas._TextBoxCpf">
+<summary>
+Controle TextBoxCpf.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_pessoas._RadButtonPesquisar">
+<summary>
+Controle RadButtonPesquisar.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_pessoas._RadButtonLimpar">
+<summary>
+Controle RadButtonLimpar.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_pessoas._RadGridPessoaFisica">
+<summary>
+Controle RadGridPessoaFisica.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_pessoas._SqlDataSourcePs_PessoaFisica">
+<summary>
+Controle SqlDataSourcePs_PessoaFisica.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_uf._Label2">
+<summary>
+Controle Label2.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_uf._TextBoxDescricao">
+<summary>
+Controle TextBoxDescricao.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_uf._Label3">
+<summary>
+Controle Label3.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_uf._TextBoxDesc">
+<summary>
+Controle TextBoxDesc.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_uf._RadButtonPesquisar">
+<summary>
+Controle RadButtonPesquisar.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_uf._RadButtonLimpar">
+<summary>
+Controle RadButtonLimpar.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_uf._UpdatePanel1">
+<summary>
+Controle UpdatePanel1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_uf._RadGridUF">
+<summary>
+Controle RadGridUF.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_uf._SqlDataSourcePs_UF">
+<summary>
+Controle SqlDataSourcePs_UF.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_uf_detalhes._RadDataFormUF">
+<summary>
+Controle RadDataFormUF.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_uf_detalhes._SqlDataSourceUF">
+<summary>
+Controle SqlDataSourceUF.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+</members>
+</doc>

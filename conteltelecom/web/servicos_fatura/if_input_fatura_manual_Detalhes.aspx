@@ -18,7 +18,7 @@
     </script>
   <asp:UpdatePanel ID="UpdatePaneDetailTableServico" runat="server"><ContentTemplate >
                      
-    <telerik:RadGrid ID="RadGridServicosXFaturas" runat="server" AutoGenerateColumns="False" MasterTableView-ExpandCollapseColumn-Display="false" MasterTableView-ExpandCollapseColumn-Visible="false" Culture="pt-BR" DataSourceID="SqlDataSourceLinhas" GroupPanelPosition="Top" Skin="Bootstrap">
+    <telerik:RadGrid ID="RadGridServicosXFaturas" runat="server" AutoGenerateColumns="False" MasterTableView-ExpandCollapseColumn-Display="false" MasterTableView-ExpandCollapseColumn-Visible="false" Culture="pt-BR" DataSourceID="SqlDataSourceLinhas" Skin="Bootstrap" style="margin-bottom: 0px">
        
         <ClientSettings AllowKeyboardNavigation="true">
             <KeyboardNavigationSettings AllowSubmitOnEnter="false" />
@@ -123,7 +123,7 @@
 
                 </telerik:GridTableView>
               
-                <telerik:GridTableView runat="server" EditMode="InPlace" Width="100%" DataSourceID="SqlDataSourceUso" Name="DetailTableUso" CommandItemDisplay="top" EnableGroupsExpandAll="true" NoDetailRecordsText="INFORME O USO" NoMasterRecordsText="INFORME O USO" FooterStyle-CssClass="DetailClassFoter" AllowAutomaticInserts="True" AllowNaturalSort="False" ShowFooter="True" ShowGroupFooter="false" AllowAutomaticDeletes="True" AllowAutomaticUpdates="True" DataKeyNames="id_SF_VL_USO,id_SF_SERVICOS_FATURA">
+                <telerik:GridTableView runat="server" EditMode="InPlace" Width="100%" DataSourceID="SqlDataSourceUso" Name="DetailTableUso" CommandItemDisplay="top" EnableGroupsExpandAll="true" NoDetailRecordsText="INFORME O USO" NoMasterRecordsText="INFORME O USO" FooterStyle-CssClass="DetailClassFoter" AllowNaturalSort="False" ShowFooter="True" ShowGroupFooter="false" AllowAutomaticDeletes="True" DataKeyNames="id_SF_VL_USO,id_SF_SERVICOS_FATURA">
                     <ParentTableRelation>
                         <telerik:GridRelationFields DetailKeyField="id_SF_SERVICOS_FATURA" MasterKeyField="id_SF_SERVICOS_FATURA" />
                     </ParentTableRelation>
@@ -133,8 +133,8 @@
                         </telerik:GridBoundColumn>
                         <telerik:GridTemplateColumn DataField="codNumLinha_SF_VL_USO" FilterControlAltText="Filter numLinha_LI_LINHAS_USO column" HeaderText="CÓD/LINHAS" UniqueName="numLinha_LI_LINHAS_USO">
                             <EditItemTemplate>
-                                <telerik:RadComboBox ID="codNumLinha_SF_VL_USORadComboBox" runat="server" DataSourceID="SqlDataSourceLinhasXCod" DataTextField="numLinha_LI_LINHAS" DataValueField="numLinha_LI_LINHAS" Width="95%" SelectedValue='<%# Bind("codNumLinha_SF_VL_USO") %>'>
-                                </telerik:RadComboBox>
+                                <telerik:RadDropDownList ID="codNumLinha_SF_VL_USORadComboBox"  runat="server" DataSourceID="SqlDataSourceLinhasXCod"  DataTextField="numLinha_LI_LINHAS" DataValueField="id_LI_LINHAS" Width="95%" SelectedValue='<%# Bind("codNumLinha_SF_VL_USO") %>'>
+                                </telerik:RadDropDownList>
                                   <asp:RequiredFieldValidator ID="RequiredFieldValidatorcodNumLinha" ControlToValidate="codNumLinha_SF_VL_USORadComboBox" runat="server" ErrorMessage="*" Display="Dynamic" SetFocusOnError="true" ForeColor="RED"></asp:RequiredFieldValidator>
                             </EditItemTemplate>
                             <ItemTemplate>
@@ -196,7 +196,7 @@
                                 <telerik:RadImageButton ID="RadImageButtonDelete" runat="server" Width="32px" Height="32px" CommandName="Delete" Text="" Image-Url="~/img/delete_32.png"></telerik:RadImageButton>
                             </ItemTemplate>
                             <EditItemTemplate>
-                                <telerik:RadImageButton ID="RadImageButtonOK" runat="server" Width="32px" Height="32px" Text="" Image-Url="~/img/accept_32.png" CommandName='<%# IIf(DataBinder.Eval(Container, "OwnerTableView.IsItemInserted"), "PerformInsert", "Update") %>'></telerik:RadImageButton>
+                                <telerik:RadImageButton ID="RadImageButtonOK" runat="server" Width="32px" Height="32px" Text="" Image-Url="~/img/accept_32.png" CommandArgument="Uso" CommandName='<%# IIf(DataBinder.Eval(Container, "OwnerTableView.IsItemInserted"), "PerformInsert", "Update") %>'></telerik:RadImageButton>
                                 <telerik:RadImageButton ID="RadImageButtonCancel" runat="server" Width="32px" Height="32px" CommandName="Cancel" CausesValidation="false"  Text="" Image-Url="~/img/block_32.png"></telerik:RadImageButton>
                             </EditItemTemplate>
 
@@ -308,7 +308,7 @@
             <asp:Parameter Name="id_SF_VL_SERVICO" />
         </UpdateParameters>
     </asp:SqlDataSource>
-    <asp:SqlDataSource ID="SqlDataSourceUso" runat="server" CancelSelectOnNullParameter="False" ConnectionString="<%$ ConnectionStrings:conteltelecomConnectionString %>" SelectCommand="DetailTableUso" SelectCommandType="StoredProcedure" InsertCommand="INSERT INTO SF_VL_USO(id_SF_TIPO_USO, id_OP_OPERADORAS, vlUso_SF_VL_USO, minutos_SF_VL_USO, id_SF_SERVICOS_FATURA, codNumLinha_SF_VL_USO) VALUES (@id_SF_TIPO_USO, @id_OP_OPERADORAS, @vlUso_SF_VL_USO, @minutos_SF_VL_USO, @id_SF_SERVICOS_FATURA, @codNumLinha_SF_VL_USO)" UpdateCommand="UPDATE SF_VL_USO SET vlUso_SF_VL_USO = @vlUso_SF_VL_USO, minutos_SF_VL_USO = @minutos_SF_VL_USO, id_OP_OPERADORAS = @id_OP_OPERADORAS, codNumLinha_SF_VL_USO = @codNumLinha_SF_VL_USO WHERE (id_SF_VL_USO = @id_SF_VL_USO)" DeleteCommand="DELETE FROM SF_VL_USO WHERE (id_SF_VL_USO = @id_SF_VL_USO)">
+    <asp:SqlDataSource ID="SqlDataSourceUso" runat="server" CancelSelectOnNullParameter="False" ConnectionString="<%$ ConnectionStrings:conteltelecomConnectionString %>" SelectCommand="DetailTableUso" SelectCommandType="StoredProcedure" InsertCommand="INSERT INTO SF_VL_USO(id_SF_TIPO_USO, id_OP_OPERADORAS, vlUso_SF_VL_USO, minutos_SF_VL_USO, id_SF_SERVICOS_FATURA, codNumLinha_SF_VL_USO, linhaVirtual_LI_LINHAS) VALUES (@id_SF_TIPO_USO, @id_OP_OPERADORAS, @vlUso_SF_VL_USO, @minutos_SF_VL_USO, @id_SF_SERVICOS_FATURA, @codNumLinha_SF_VL_USO, @linhaVirtual_LI_LINHAS)" UpdateCommand="UPDATE SF_VL_USO SET vlUso_SF_VL_USO = @vlUso_SF_VL_USO, minutos_SF_VL_USO = @minutos_SF_VL_USO, id_OP_OPERADORAS = @id_OP_OPERADORAS, codNumLinha_SF_VL_USO = @codNumLinha_SF_VL_USO, linhaVirtual_LI_LINHAS = @linhaVirtual_LI_LINHAS, id_SF_TIPO_USO = @id_SF_TIPO_USO WHERE (id_SF_VL_USO = @id_SF_VL_USO)" DeleteCommand="DELETE FROM SF_VL_USO WHERE (id_SF_VL_USO = @id_SF_VL_USO)">
         <DeleteParameters>
             <asp:Parameter Name="id_SF_VL_USO" />
         </DeleteParameters>
@@ -319,6 +319,7 @@
             <asp:Parameter Name="minutos_SF_VL_USO" />
             <asp:Parameter Name="id_SF_SERVICOS_FATURA" />
             <asp:Parameter Name="codNumLinha_SF_VL_USO" />
+            <asp:Parameter Name="linhaVirtual_LI_LINHAS" />
         </InsertParameters>
         <SelectParameters>
             <asp:Parameter Name="id_SF_SERVICOS_FATURA" Type="Int32" />
@@ -328,6 +329,8 @@
             <asp:Parameter Name="minutos_SF_VL_USO" />
             <asp:Parameter Name="id_OP_OPERADORAS" />
             <asp:Parameter Name="codNumLinha_SF_VL_USO" />
+            <asp:Parameter Name="linhaVirtual_LI_LINHAS" />
+            <asp:Parameter Name="id_SF_TIPO_USO" />
             <asp:Parameter Name="id_SF_VL_USO" />
         </UpdateParameters>
     </asp:SqlDataSource>

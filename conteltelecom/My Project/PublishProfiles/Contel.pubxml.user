@@ -1,0 +1,1603 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este arquivo é usado pelo processo empacotar/publicar do seu projeto Web. É possível personalizar o comportamento desse processo
+ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>Y:\conteltelecom\conteltelecom</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Account/AddPhoneNumber.aspx">
+      <publishTime>05/17/2016 17:34:16</publishTime>
+    </File>
+    <File Include="Account/Confirm.aspx">
+      <publishTime>05/17/2016 17:34:16</publishTime>
+    </File>
+    <File Include="Account/css/logoLogin.png">
+      <publishTime>05/17/2016 13:57:44</publishTime>
+    </File>
+    <File Include="Account/css/reset.css">
+      <publishTime>05/17/2016 17:10:24</publishTime>
+    </File>
+    <File Include="Account/css/style.css">
+      <publishTime>05/17/2016 21:58:58</publishTime>
+    </File>
+    <File Include="Account/Forgot.aspx">
+      <publishTime>05/17/2016 17:34:16</publishTime>
+    </File>
+    <File Include="Account/Lockout.aspx">
+      <publishTime>05/17/2016 17:34:16</publishTime>
+    </File>
+    <File Include="Account/Login.aspx">
+      <publishTime>06/10/2016 13:27:22</publishTime>
+    </File>
+    <File Include="Account/LoginOld.aspx">
+      <publishTime>05/17/2016 21:31:36</publishTime>
+    </File>
+    <File Include="Account/Manage.aspx">
+      <publishTime>05/17/2016 17:34:16</publishTime>
+    </File>
+    <File Include="Account/ManageLogins.aspx">
+      <publishTime>05/17/2016 17:34:16</publishTime>
+    </File>
+    <File Include="Account/ManagePassword.aspx">
+      <publishTime>05/17/2016 17:34:16</publishTime>
+    </File>
+    <File Include="Account/OpenAuthProviders.ascx">
+      <publishTime>05/17/2016 17:34:16</publishTime>
+    </File>
+    <File Include="Account/Register.aspx">
+      <publishTime>05/17/2016 17:34:16</publishTime>
+    </File>
+    <File Include="Account/RegisterExternalLogin.aspx">
+      <publishTime>05/17/2016 17:34:16</publishTime>
+    </File>
+    <File Include="Account/ResetPassword.aspx">
+      <publishTime>05/17/2016 17:34:16</publishTime>
+    </File>
+    <File Include="Account/ResetPasswordConfirmation.aspx">
+      <publishTime>05/17/2016 17:34:16</publishTime>
+    </File>
+    <File Include="Account/TwoFactorAuthenticationSignIn.aspx">
+      <publishTime>05/17/2016 17:34:16</publishTime>
+    </File>
+    <File Include="Account/VerifyPhoneNumber.aspx">
+      <publishTime>05/17/2016 17:34:16</publishTime>
+    </File>
+    <File Include="Account/Web.config">
+      <publishTime>05/17/2016 17:34:16</publishTime>
+    </File>
+    <File Include="app.config">
+      <publishTime>02/29/2016 10:25:28</publishTime>
+    </File>
+    <File Include="ApplicationInsights.config">
+      <publishTime>01/28/2016 06:41:56</publishTime>
+    </File>
+    <File Include="App_Browsers/Intelligencia.UrlRewriter.dll">
+      <publishTime>05/25/2016 10:52:54</publishTime>
+    </File>
+    <File Include="App_Code/Controles.vb">
+      <publishTime>09/04/2016 18:06:58</publishTime>
+    </File>
+    <File Include="App_Code/Criptografia.vb">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="App_Code/Filtros.vb">
+      <publishTime>03/02/2016 13:16:56</publishTime>
+    </File>
+    <File Include="App_Code/FormRewriter.vb">
+      <publishTime>05/25/2016 10:54:22</publishTime>
+    </File>
+    <File Include="App_Code/Validacoes.vb">
+      <publishTime>04/05/2016 09:27:32</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/0.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/1.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/2.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/3.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/4.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/5.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/6.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/7.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/8.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/9.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/A.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/B.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/C.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/D.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/E.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/F.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/G.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/H.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/I.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/J.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/K.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/L.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/M.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/N.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/O.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/P.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/Q.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/R.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/S.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/T.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/U.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/V.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/W.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/X.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/Y.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/Z.wav">
+      <publishTime>05/04/2016 09:57:16</publishTime>
+    </File>
+    <File Include="App_Data/RadSpell/de-DE.tdf">
+      <publishTime>05/04/2016 10:02:26</publishTime>
+    </File>
+    <File Include="App_Data/RadSpell/en-US.tdf">
+      <publishTime>05/04/2016 10:02:26</publishTime>
+    </File>
+    <File Include="App_Data/RadSpell/fr-FR.tdf">
+      <publishTime>05/04/2016 10:02:26</publishTime>
+    </File>
+    <File Include="App_Start/BundleConfig.vb">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="App_Start/IdentityConfig.vb">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="App_Start/RouteConfig.vb">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="App_Start/Startup.Auth.vb">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/AjaxControlToolkit.dll">
+      <publishTime>02/22/2016 09:01:50</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>02/06/2016 05:48:06</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>06/02/2016 07:48:06</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>01/28/2016 06:41:56</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.compiled">
+      <publishTime>03/09/2016 16:48:33</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.dll">
+      <publishTime>03/09/2016 16:48:33</publishTime>
+    </File>
+    <File Include="bin/AspNet.ScriptManager.bootstrap.dll">
+      <publishTime>02/08/2016 08:20:06</publishTime>
+    </File>
+    <File Include="bin/AspNet.ScriptManager.jQuery.dll">
+      <publishTime>02/06/2016 05:48:12</publishTime>
+    </File>
+    <File Include="bin/conteltelecom.dll">
+      <publishTime>06/28/2016 17:16:53</publishTime>
+    </File>
+    <File Include="bin/conteltelecom.dll.config">
+      <publishTime>06/28/2016 10:35:34</publishTime>
+    </File>
+    <File Include="bin/conteltelecom.pdb">
+      <publishTime>06/28/2016 17:16:53</publishTime>
+    </File>
+    <File Include="bin/de/Microsoft.SqlServer.Types.resources.dll">
+      <publishTime>02/21/2014 06:26:06</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>01/28/2016 06:41:30</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>01/28/2016 06:41:30</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.xml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.xml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/es/Microsoft.SqlServer.Types.resources.dll">
+      <publishTime>02/21/2014 06:25:54</publishTime>
+    </File>
+    <File Include="bin/fr/Microsoft.SqlServer.Types.resources.dll">
+      <publishTime>02/21/2014 06:27:18</publishTime>
+    </File>
+    <File Include="bin/Intelligencia.UrlRewriter.dll">
+      <publishTime>05/25/2016 10:54:48</publishTime>
+    </File>
+    <File Include="bin/it/Microsoft.SqlServer.Types.resources.dll">
+      <publishTime>02/21/2014 06:26:02</publishTime>
+    </File>
+    <File Include="bin/ja/Microsoft.SqlServer.Types.resources.dll">
+      <publishTime>02/21/2014 06:25:22</publishTime>
+    </File>
+    <File Include="bin/ko/Microsoft.SqlServer.Types.resources.dll">
+      <publishTime>02/21/2014 06:27:16</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>02/06/2016 05:48:16</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>01/28/2016 06:41:52</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.xml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>01/28/2016 06:41:52</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>01/28/2016 06:41:54</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.xml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>01/28/2016 06:41:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.xml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>01/28/2016 06:41:54</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.xml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AnalysisServices.AdomdClient.dll">
+      <publishTime>04/23/2015 10:19:18</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>01/28/2016 06:41:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.xml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.FriendlyUrls.dll">
+      <publishTime>01/28/2016 06:41:26</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.FriendlyUrls.xml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>01/28/2016 06:41:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.xml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
+      <publishTime>01/28/2016 06:41:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.xml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
+      <publishTime>01/28/2016 06:41:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.xml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Web.Optimization.WebForms.dll">
+      <publishTime>01/28/2016 06:41:26</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>02/06/2016 05:48:28</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml">
+      <publishTime>06/02/2016 07:48:28</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>01/28/2016 06:41:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>01/28/2016 06:41:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.xml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
+      <publishTime>01/28/2016 06:41:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Cookies.xml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>01/28/2016 06:41:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Facebook.dll">
+      <publishTime>01/28/2016 06:41:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Facebook.xml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Google.dll">
+      <publishTime>01/28/2016 06:41:36</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Google.xml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.MicrosoftAccount.dll">
+      <publishTime>01/28/2016 06:41:36</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.MicrosoftAccount.xml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>01/28/2016 06:41:36</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.xml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Twitter.dll">
+      <publishTime>01/28/2016 06:41:36</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Twitter.xml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.xml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.xml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ReportViewer.WebForms.dll">
+      <publishTime>05/29/2015 21:27:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ScriptManager.MSAjax.dll">
+      <publishTime>01/28/2016 06:41:24</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ScriptManager.WebForms.dll">
+      <publishTime>01/28/2016 06:41:26</publishTime>
+    </File>
+    <File Include="bin/Microsoft.SqlServer.Types.dll">
+      <publishTime>02/21/2014 06:28:46</publishTime>
+    </File>
+    <File Include="bin/Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll">
+      <publishTime>07/07/2015 00:51:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>01/28/2016 06:41:06</publishTime>
+    </File>
+    <File Include="bin/MySql.Web.dll">
+      <publishTime>10/02/2015 16:53:10</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>02/06/2016 05:48:36</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.xml">
+      <publishTime>06/02/2016 07:48:36</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>01/28/2016 06:41:36</publishTime>
+    </File>
+    <File Include="bin/pt-br/Microsoft.AspNet.FriendlyUrls.resources.dll">
+      <publishTime>06/02/2016 07:45:26</publishTime>
+    </File>
+    <File Include="bin/pt-br/Microsoft.AspNet.Identity.Core.resources.dll">
+      <publishTime>06/02/2016 07:45:26</publishTime>
+    </File>
+    <File Include="bin/pt-br/Microsoft.AspNet.Identity.EntityFramework.resources.dll">
+      <publishTime>06/02/2016 07:45:26</publishTime>
+    </File>
+    <File Include="bin/pt-br/Microsoft.AspNet.Identity.Owin.resources.dll">
+      <publishTime>06/02/2016 07:45:26</publishTime>
+    </File>
+    <File Include="bin/pt-br/Microsoft.Owin.Host.SystemWeb.resources.dll">
+      <publishTime>06/02/2016 07:45:26</publishTime>
+    </File>
+    <File Include="bin/pt-br/Microsoft.Owin.resources.dll">
+      <publishTime>06/02/2016 07:45:26</publishTime>
+    </File>
+    <File Include="bin/pt-br/Microsoft.Owin.Security.Facebook.resources.dll">
+      <publishTime>06/02/2016 07:45:26</publishTime>
+    </File>
+    <File Include="bin/pt-br/Microsoft.Owin.Security.Google.resources.dll">
+      <publishTime>06/02/2016 07:45:26</publishTime>
+    </File>
+    <File Include="bin/pt-br/Microsoft.Owin.Security.MicrosoftAccount.resources.dll">
+      <publishTime>06/02/2016 07:45:26</publishTime>
+    </File>
+    <File Include="bin/pt-br/Microsoft.Owin.Security.resources.dll">
+      <publishTime>06/02/2016 07:45:26</publishTime>
+    </File>
+    <File Include="bin/pt-br/Microsoft.Owin.Security.Twitter.resources.dll">
+      <publishTime>06/02/2016 07:45:26</publishTime>
+    </File>
+    <File Include="bin/pt-br/Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll">
+      <publishTime>07/07/2015 01:32:24</publishTime>
+    </File>
+    <File Include="bin/pt-br/System.Web.Optimization.resources.dll">
+      <publishTime>06/02/2016 07:45:26</publishTime>
+    </File>
+    <File Include="bin/pt/Microsoft.ReportViewer.WebForms.resources.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/pt/Microsoft.SqlServer.Types.resources.dll">
+      <publishTime>02/21/2014 06:25:24</publishTime>
+    </File>
+    <File Include="bin/rdcl/clientes/RelReducao.rdlc">
+      <publishTime>05/02/2016 14:15:30</publishTime>
+    </File>
+    <File Include="bin/rdcl/clientes/RelUso .rdlc">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/rdcl/clientes/RelUso.rdlc">
+      <publishTime>05/03/2016 10:56:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>02/06/2016 05:48:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>02/06/2016 05:48:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>02/06/2016 05:48:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>02/06/2016 05:48:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>02/06/2016 05:48:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>02/06/2016 05:48:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>02/06/2016 05:48:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>02/06/2016 05:48:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>02/06/2016 05:48:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>02/06/2016 05:48:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>02/06/2016 05:48:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>02/06/2016 05:48:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>02/06/2016 05:48:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>02/06/2016 05:48:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>02/06/2016 05:48:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>02/06/2016 05:48:26</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>02/06/2016 05:48:26</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Console.dll">
+      <publishTime>02/06/2016 05:48:26</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>02/06/2016 05:48:26</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>02/06/2016 05:48:26</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>02/06/2016 05:48:26</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>02/06/2016 05:48:26</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>02/06/2016 05:48:26</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>02/06/2016 05:48:26</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>02/06/2016 05:48:26</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>02/06/2016 05:48:26</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>02/06/2016 05:48:26</publishTime>
+    </File>
+    <File Include="bin/ru/Microsoft.SqlServer.Types.resources.dll">
+      <publishTime>02/21/2014 06:25:46</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>01/28/2016 06:41:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.xml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.Providers.dll">
+      <publishTime>01/28/2016 06:41:34</publishTime>
+    </File>
+    <File Include="bin/System.Web.Providers.xml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Telerik.Reporting.dll">
+      <publishTime>05/04/2016 11:14:56</publishTime>
+    </File>
+    <File Include="bin/Telerik.Reporting.pdb">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Telerik.Reporting.xml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Telerik.ReportViewer.WebForms.dll">
+      <publishTime>05/04/2016 11:15:12</publishTime>
+    </File>
+    <File Include="bin/Telerik.ReportViewer.WebForms.pdb">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Telerik.ReportViewer.WebForms.xml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Telerik.Web.Spreadsheet.dll">
+      <publishTime>05/04/2016 00:04:28</publishTime>
+    </File>
+    <File Include="bin/Telerik.Web.Spreadsheet.xml">
+      <publishTime>08/01/2016 13:50:02</publishTime>
+    </File>
+    <File Include="bin/Telerik.Web.UI.dll">
+      <publishTime>05/03/2016 10:35:08</publishTime>
+    </File>
+    <File Include="bin/Telerik.Web.UI.Skins.dll">
+      <publishTime>05/03/2016 10:35:08</publishTime>
+    </File>
+    <File Include="bin/Telerik.Web.UI.xml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Telerik.Windows.Documents.Core.dll">
+      <publishTime>05/04/2016 00:04:28</publishTime>
+    </File>
+    <File Include="bin/Telerik.Windows.Documents.Core.xml">
+      <publishTime>05/01/2016 22:01:40</publishTime>
+    </File>
+    <File Include="bin/Telerik.Windows.Documents.Fixed.dll">
+      <publishTime>05/04/2016 00:04:28</publishTime>
+    </File>
+    <File Include="bin/Telerik.Windows.Documents.Fixed.xml">
+      <publishTime>05/01/2016 22:01:46</publishTime>
+    </File>
+    <File Include="bin/Telerik.Windows.Documents.Flow.dll">
+      <publishTime>05/04/2016 00:04:30</publishTime>
+    </File>
+    <File Include="bin/Telerik.Windows.Documents.Flow.FormatProviders.Pdf.dll">
+      <publishTime>05/04/2016 00:04:30</publishTime>
+    </File>
+    <File Include="bin/Telerik.Windows.Documents.Flow.FormatProviders.Pdf.xml">
+      <publishTime>05/01/2016 22:01:54</publishTime>
+    </File>
+    <File Include="bin/Telerik.Windows.Documents.Flow.xml">
+      <publishTime>05/01/2016 22:01:50</publishTime>
+    </File>
+    <File Include="bin/Telerik.Windows.Documents.Spreadsheet.dll">
+      <publishTime>05/04/2016 00:04:30</publishTime>
+    </File>
+    <File Include="bin/Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll">
+      <publishTime>05/04/2016 00:04:30</publishTime>
+    </File>
+    <File Include="bin/Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.xml">
+      <publishTime>05/01/2016 22:02:00</publishTime>
+    </File>
+    <File Include="bin/Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll">
+      <publishTime>05/04/2016 00:04:30</publishTime>
+    </File>
+    <File Include="bin/Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.xml">
+      <publishTime>05/01/2016 22:02:02</publishTime>
+    </File>
+    <File Include="bin/Telerik.Windows.Documents.Spreadsheet.xml">
+      <publishTime>05/01/2016 22:02:00</publishTime>
+    </File>
+    <File Include="bin/Telerik.Windows.Zip.dll">
+      <publishTime>05/04/2016 00:04:30</publishTime>
+    </File>
+    <File Include="bin/Telerik.Windows.Zip.Extensions.dll">
+      <publishTime>05/04/2016 00:04:30</publishTime>
+    </File>
+    <File Include="bin/Telerik.Windows.Zip.Extensions.xml">
+      <publishTime>05/01/2016 22:01:38</publishTime>
+    </File>
+    <File Include="bin/Telerik.Windows.Zip.xml">
+      <publishTime>05/01/2016 22:01:36</publishTime>
+    </File>
+    <File Include="bin/WebForms_Basic.xml">
+      <publishTime>06/28/2016 17:16:53</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>02/06/2016 05:49:08</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/Microsoft.SqlServer.Types.resources.dll">
+      <publishTime>02/21/2014 06:27:58</publishTime>
+    </File>
+    <File Include="bin/zh-Hant/Microsoft.SqlServer.Types.resources.dll">
+      <publishTime>02/21/2014 06:28:10</publishTime>
+    </File>
+    <File Include="Bundle.config">
+      <publishTime>01/28/2016 06:40:56</publishTime>
+    </File>
+    <File Include="ConsultaCliente.master">
+      <publishTime>05/04/2016 11:42:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css">
+      <publishTime>02/08/2016 08:20:06</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css.map">
+      <publishTime>02/08/2016 08:20:06</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css">
+      <publishTime>02/08/2016 08:20:06</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css.map">
+      <publishTime>02/08/2016 08:20:06</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>04/27/2016 09:48:42</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css.map">
+      <publishTime>02/08/2016 08:20:06</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>05/20/2016 17:17:22</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css.map">
+      <publishTime>02/08/2016 08:20:06</publishTime>
+    </File>
+    <File Include="Content/cl_cadastro_contratos.aspx">
+      <publishTime>04/13/2016 14:36:38</publishTime>
+    </File>
+    <File Include="Content/ring.gif">
+      <publishTime>05/09/2016 10:07:36</publishTime>
+    </File>
+    <File Include="Content/simple-sidebar.css">
+      <publishTime>02/29/2016 11:59:24</publishTime>
+    </File>
+    <File Include="Content/themes/base/accordion.css">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/all.css">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/autocomplete.css">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/base.css">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/button.css">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/core.css">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/datepicker.css">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/dialog.css">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/draggable.css">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_flat_0_aaaaaa_40x100.png">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_flat_75_ffffff_40x100.png">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_55_fbf9ee_1x400.png">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_75_dadada_1x400.png">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_95_fef1ec_1x400.png">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_222222_256x240.png">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_2e83ff_256x240.png">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_454545_256x240.png">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_888888_256x240.png">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_cd0a0a_256x240.png">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/menu.css">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/progressbar.css">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/resizable.css">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/selectable.css">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/selectmenu.css">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/slider.css">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/sortable.css">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/spinner.css">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/tabs.css">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/theme.css">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/tooltip.css">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="DataSet/BuscaCPF_Nomexsd.Designer.vb">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/BuscaCPF_Nomexsd.vb">
+      <publishTime>01/04/2016 15:53:50</publishTime>
+    </File>
+    <File Include="DataSet/BuscaCPF_Nomexsd.xsc">
+      <publishTime>05/06/2016 08:52:54</publishTime>
+    </File>
+    <File Include="DataSet/BuscaCPF_Nomexsd.xsd">
+      <publishTime>04/01/2016 15:53:50</publishTime>
+    </File>
+    <File Include="DataSet/BuscaCPF_Nomexsd.xss">
+      <publishTime>05/06/2016 08:52:54</publishTime>
+    </File>
+    <File Include="DataSet/BuscaUltimaPessoa.Designer.vb">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/BuscaUltimaPessoa.xsc">
+      <publishTime>02/29/2016 16:05:04</publishTime>
+    </File>
+    <File Include="DataSet/BuscaUltimaPessoa.xsd">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/BuscaUltimaPessoa.xss">
+      <publishTime>02/29/2016 16:05:04</publishTime>
+    </File>
+    <File Include="DataSet/cl_clientes/CadPlanosClientes.xsc">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/cl_clientes/CadPlanosClientes.xss">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/DataSetLinhas.Designer.vb">
+      <publishTime>02/05/2016 13:46:06</publishTime>
+    </File>
+    <File Include="DataSet/DataSetLinhas.xsc">
+      <publishTime>06/28/2016 10:40:18</publishTime>
+    </File>
+    <File Include="DataSet/DataSetLinhas.xsd">
+      <publishTime>05/02/2016 13:46:06</publishTime>
+    </File>
+    <File Include="DataSet/DataSetLinhas.xss">
+      <publishTime>06/28/2016 10:40:18</publishTime>
+    </File>
+    <File Include="DataSet/DataSetRelReducao.Designer.vb">
+      <publishTime>02/05/2016 15:10:09</publishTime>
+    </File>
+    <File Include="DataSet/DataSetRelReducao.xsc">
+      <publishTime>06/24/2016 14:57:16</publishTime>
+    </File>
+    <File Include="DataSet/DataSetRelReducao.xsd">
+      <publishTime>05/03/2016 14:46:05</publishTime>
+    </File>
+    <File Include="DataSet/DataSetRelReducao.xss">
+      <publishTime>06/24/2016 14:57:16</publishTime>
+    </File>
+    <File Include="DataSet/DataSetValidaMes.Designer.vb">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/DataSetValidaMes.xsc">
+      <publishTime>04/18/2016 11:47:46</publishTime>
+    </File>
+    <File Include="DataSet/DataSetValidaMes.xsd">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/DataSetValidaMes.xss">
+      <publishTime>04/18/2016 11:47:46</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/DropDownCDContratos.Designer.vb">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/DropDownCDContratos.xsc">
+      <publishTime>04/19/2016 10:13:10</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/DropDownCDContratos.xsd">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/DropDownCDContratos.xss">
+      <publishTime>04/19/2016 10:13:10</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/DropDownCidade.Designer.vb">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/DropDownCidade.xsc">
+      <publishTime>04/27/2016 19:40:17</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/DropDownCidade.xsd">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/DropDownCidade.xss">
+      <publishTime>04/27/2016 19:40:17</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/DropDownOperadoras.xsc">
+      <publishTime>05/06/2016 16:29:56</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/DropDownOperadoras.xsd">
+      <publishTime>06/05/2016 16:29:56</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/DropDownOperadoras.xss">
+      <publishTime>05/06/2016 16:29:56</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/DropDownPlanos.xsc">
+      <publishTime>05/10/2016 16:59:13</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/DropDownPlanos.xss">
+      <publishTime>05/10/2016 16:59:13</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/DropDownSF_TIPO_LEITURA.xsc">
+      <publishTime>05/23/2016 15:25:23</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/DropDownSF_TIPO_LEITURA.xss">
+      <publishTime>05/23/2016 15:25:23</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/DropDownSF_TIPO_USO_CAT.Designer.vb">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/DropDownSF_TIPO_USO_CAT.xsc">
+      <publishTime>04/25/2016 08:21:42</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/DropDownSF_TIPO_USO_CAT.xsd">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/DropDownSF_TIPO_USO_CAT.xss">
+      <publishTime>04/25/2016 08:21:42</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/DropDownTipoContato.Designer.vb">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/DropDownTipoContato.xsc">
+      <publishTime>04/29/2016 10:06:09</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/DropDownTipoContato.xsd">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/DropDownTipoContato.xss">
+      <publishTime>04/29/2016 10:06:09</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/DropDownTipoProgramacao.xsc">
+      <publishTime>06/08/2016 09:53:45</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/DropDownTipoProgramacao.xss">
+      <publishTime>06/08/2016 09:53:45</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/DropDownUF.Designer.vb">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/DropDownUF.xsc">
+      <publishTime>04/27/2016 16:50:38</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/DropDownUF.xsd">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/DropDownUF.xss">
+      <publishTime>04/27/2016 16:50:38</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/DropDownUnidades.xsc">
+      <publishTime>06/15/2016 14:39:03</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/DropDownUnidades.xss">
+      <publishTime>06/15/2016 14:39:03</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/DropDownUnidadesClientes.xsc">
+      <publishTime>06/23/2016 10:27:09</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/DropDownUnidadesClientes.xss">
+      <publishTime>06/23/2016 10:27:09</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/Ds_ClientecodRazao.Designer.vb">
+      <publishTime>02/05/2016 14:42:35</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/Ds_ClientecodRazao.xsc">
+      <publishTime>05/02/2016 14:42:35</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/Ds_ClientecodRazao.xsd">
+      <publishTime>05/02/2016 14:42:35</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/Ds_ClientecodRazao.xss">
+      <publishTime>05/02/2016 14:42:35</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/RadAutoCompleteBoxPsFiscica.Designer.vb">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/RadAutoCompleteBoxPsFiscica.xsc">
+      <publishTime>05/11/2016 15:06:41</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/RadAutoCompleteBoxPsFiscica.xsd">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/RadAutoCompleteBoxPsFiscica.xss">
+      <publishTime>05/11/2016 15:06:41</publishTime>
+    </File>
+    <File Include="DataSet/ds_linhas/DataSetLinhas01.Designer.vb">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/ds_linhas/DataSetLinhas01.xsc">
+      <publishTime>06/22/2016 14:45:51</publishTime>
+    </File>
+    <File Include="DataSet/ds_linhas/DataSetLinhas01.xsd">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/ds_linhas/DataSetLinhas01.xss">
+      <publishTime>06/22/2016 14:45:51</publishTime>
+    </File>
+    <File Include="DataSet/ds_rel/DataSetAnual.xsc">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/ds_rel/DataSetAnual.xss">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/ds_rel/DataSetRelUso.Designer.vb">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/ds_rel/DataSetRelUso.xsc">
+      <publishTime>06/24/2016 17:27:05</publishTime>
+    </File>
+    <File Include="DataSet/ds_rel/DataSetRelUso.xsd">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/ds_rel/DataSetRelUso.xss">
+      <publishTime>06/24/2016 17:27:05</publishTime>
+    </File>
+    <File Include="DataSet/ds_rel/ds_relDescritivo.Designer.vb">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/ds_rel/ds_relDescritivo.xsc">
+      <publishTime>06/14/2016 11:43:59</publishTime>
+    </File>
+    <File Include="DataSet/ds_rel/ds_relDescritivo.xsd">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/ds_rel/ds_relDescritivo.xss">
+      <publishTime>06/14/2016 11:43:59</publishTime>
+    </File>
+    <File Include="DataSet/ds_rel/Relacionamento/DataSetAnual.xsc">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/ds_rel/Relacionamento/DataSetAnual.xss">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/ds_rel/Relacionamento/DataSetBuscaUso.xsc">
+      <publishTime>06/27/2016 11:21:40</publishTime>
+    </File>
+    <File Include="DataSet/ds_rel/Relacionamento/DataSetBuscaUso.xss">
+      <publishTime>06/27/2016 11:21:40</publishTime>
+    </File>
+    <File Include="DataSet/ds_rel/RelMovel_Interurbano.Designer.vb">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/ds_rel/RelMovel_Interurbano.xsc">
+      <publishTime>06/22/2016 10:56:34</publishTime>
+    </File>
+    <File Include="DataSet/ds_rel/RelMovel_Interurbano.xsd">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/ds_rel/RelMovel_Interurbano.xss">
+      <publishTime>06/22/2016 10:56:34</publishTime>
+    </File>
+    <File Include="DataSet/ps_pessoa/ps_contatos/radgridBuscacontatos.Designer.vb">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/ps_pessoa/ps_contatos/radgridBuscacontatos.xsc">
+      <publishTime>04/29/2016 11:10:21</publishTime>
+    </File>
+    <File Include="DataSet/ps_pessoa/ps_contatos/radgridBuscacontatos.xsd">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/ps_pessoa/ps_contatos/radgridBuscacontatos.xss">
+      <publishTime>04/29/2016 11:10:21</publishTime>
+    </File>
+    <File Include="DataSet/ValidaCPF.Designer.vb">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DataSet/ValidaCPF.xsc">
+      <publishTime>03/02/2016 16:36:08</publishTime>
+    </File>
+    <File Include="DataSet/ValidaCPF.xsd">
+      <publishTime>03/02/2016 16:36:08</publishTime>
+    </File>
+    <File Include="DataSet/ValidaCPF.xss">
+      <publishTime>03/02/2016 16:36:08</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>04/22/2016 14:09:18</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>01/28/2016 06:40:56</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>02/08/2016 08:20:06</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>02/08/2016 08:20:06</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>02/08/2016 08:20:06</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>02/08/2016 08:20:06</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>02/08/2016 08:20:06</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>01/28/2016 06:40:56</publishTime>
+    </File>
+    <File Include="img/accept.png">
+      <publishTime>02/23/2016 12:57:18</publishTime>
+    </File>
+    <File Include="img/accept_32.png">
+      <publishTime>01/28/2016 07:53:28</publishTime>
+    </File>
+    <File Include="img/add.png">
+      <publishTime>04/23/2016 10:56:24</publishTime>
+    </File>
+    <File Include="img/back.png">
+      <publishTime>01/28/2016 07:53:28</publishTime>
+    </File>
+    <File Include="img/block.png">
+      <publishTime>02/23/2016 12:59:48</publishTime>
+    </File>
+    <File Include="img/block_32.png">
+      <publishTime>01/28/2016 07:53:28</publishTime>
+    </File>
+    <File Include="img/delete.png">
+      <publishTime>03/08/2016 10:07:30</publishTime>
+    </File>
+    <File Include="img/delete_32.png">
+      <publishTime>03/31/2016 18:58:40</publishTime>
+    </File>
+    <File Include="img/Detalhes_32.png">
+      <publishTime>04/01/2016 14:52:52</publishTime>
+    </File>
+    <File Include="img/duplicar.png">
+      <publishTime>05/04/2016 11:34:32</publishTime>
+    </File>
+    <File Include="img/Editar.png">
+      <publishTime>02/23/2016 11:54:16</publishTime>
+    </File>
+    <File Include="img/edit_32.png">
+      <publishTime>03/30/2016 08:29:58</publishTime>
+    </File>
+    <File Include="img/Email.png">
+      <publishTime>01/28/2016 07:53:30</publishTime>
+    </File>
+    <File Include="img/historico_32.png">
+      <publishTime>06/28/2016 11:51:13</publishTime>
+    </File>
+    <File Include="img/home_w.png">
+      <publishTime>03/28/2016 16:53:46</publishTime>
+    </File>
+    <File Include="img/Limpar.png">
+      <publishTime>02/23/2016 13:39:42</publishTime>
+    </File>
+    <File Include="img/Logo.jpg">
+      <publishTime>04/23/2016 10:54:50</publishTime>
+    </File>
+    <File Include="img/logo02.png">
+      <publishTime>04/21/2016 08:10:20</publishTime>
+    </File>
+    <File Include="img/logoTeste.png">
+      <publishTime>04/23/2016 10:57:20</publishTime>
+    </File>
+    <File Include="img/Manutencao.png">
+      <publishTime>05/03/2016 08:48:34</publishTime>
+    </File>
+    <File Include="img/Menu.png">
+      <publishTime>02/29/2016 08:46:54</publishTime>
+    </File>
+    <File Include="img/OK.png">
+      <publishTime>02/15/2016 10:56:26</publishTime>
+    </File>
+    <File Include="img/portabilidade.png">
+      <publishTime>03/24/2016 16:13:50</publishTime>
+    </File>
+    <File Include="img/process.png">
+      <publishTime>04/23/2016 10:58:44</publishTime>
+    </File>
+    <File Include="img/promotion.png">
+      <publishTime>01/28/2016 07:53:30</publishTime>
+    </File>
+    <File Include="img/save_32.png">
+      <publishTime>03/31/2016 16:50:22</publishTime>
+    </File>
+    <File Include="img/search.png">
+      <publishTime>02/23/2016 13:36:32</publishTime>
+    </File>
+    <File Include="img/search_page.png">
+      <publishTime>02/23/2016 13:41:48</publishTime>
+    </File>
+    <File Include="img/Word.png">
+      <publishTime>05/20/2016 07:55:42</publishTime>
+    </File>
+    <File Include="MasterPageCli.master">
+      <publishTime>06/27/2016 14:51:01</publishTime>
+    </File>
+    <File Include="Menu.master">
+      <publishTime>06/20/2016 15:45:38</publishTime>
+    </File>
+    <File Include="Models/IdentityModels.vb">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Normalmaster.master">
+      <publishTime>06/23/2016 11:36:01</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>04/18/2016 08:01:44</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>03/09/2016 16:48:09</publishTime>
+    </File>
+    <File Include="rdcl/clientes/RelDiscritivo .rdlc">
+      <publishTime>06/22/2016 14:48:21</publishTime>
+    </File>
+    <File Include="rdcl/clientes/RelReducao.rdlc">
+      <publishTime>06/28/2016 17:06:04</publishTime>
+    </File>
+    <File Include="rdcl/clientes/RelReducaoPendecias.rdlc">
+      <publishTime>05/10/2016 08:07:41</publishTime>
+    </File>
+    <File Include="rdcl/clientes/RelUso .rdlc">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="rdcl/clientes/RelUso.rdlc">
+      <publishTime>06/28/2016 17:06:42</publishTime>
+    </File>
+    <File Include="rdcl/Models/IdentityModels.vb">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="rdcl/relacionamento/RelMovel_x_Inter.rdlc">
+      <publishTime>06/23/2016 09:30:34</publishTime>
+    </File>
+    <File Include="rdcl/relacionamento/RelUsoAnual.rdlc">
+      <publishTime>06/28/2016 17:05:05</publishTime>
+    </File>
+    <File Include="rdcl/relacionamento/RelUsoXAno .rdlc">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="rdcl/RelUso - Cópia .rdlc">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="rdcl/RelUso.rdlc">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Relatorios.Master">
+      <publishTime>05/20/2016 10:38:04</publishTime>
+    </File>
+    <File Include="Scripts/ai.0.15.0-build58334.js">
+      <publishTime>01/28/2016 06:41:58</publishTime>
+    </File>
+    <File Include="Scripts/ai.0.15.0-build58334.min.js">
+      <publishTime>01/28/2016 06:41:58</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>02/28/2016 21:46:38</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>02/28/2016 21:46:40</publishTime>
+    </File>
+    <File Include="Scripts/JavaScriptMsg.js">
+      <publishTime>05/12/2016 09:39:36</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.1.js">
+      <publishTime>02/19/2016 05:23:48</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.1.min.js">
+      <publishTime>02/19/2016 05:23:48</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.1.min.map">
+      <publishTime>02/19/2016 05:23:48</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.2.0.js">
+      <publishTime>02/06/2016 05:48:08</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.2.0.min.js">
+      <publishTime>02/06/2016 05:48:08</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.2.0.min.map">
+      <publishTime>02/06/2016 05:48:08</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.11.4.js">
+      <publishTime>02/11/2016 04:07:58</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.11.4.min.js">
+      <publishTime>02/11/2016 04:07:56</publishTime>
+    </File>
+    <File Include="Scripts/jquery.js">
+      <publishTime>02/28/2016 21:46:40</publishTime>
+    </File>
+    <File Include="Scripts/jquery.maskedinput.min.js">
+      <publishTime>02/19/2016 05:23:48</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.8.3.js">
+      <publishTime>02/06/2016 05:48:32</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>02/06/2016 05:49:06</publishTime>
+    </File>
+    <File Include="Scripts/respond.matchmedia.addListener.js">
+      <publishTime>02/06/2016 05:49:06</publishTime>
+    </File>
+    <File Include="Scripts/respond.matchmedia.addListener.min.js">
+      <publishTime>02/06/2016 05:49:06</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>02/06/2016 05:49:06</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/DetailsView.js">
+      <publishTime>01/28/2016 06:41:26</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/Focus.js">
+      <publishTime>01/28/2016 06:41:26</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/GridView.js">
+      <publishTime>01/28/2016 06:41:26</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/Menu.js">
+      <publishTime>01/28/2016 06:41:26</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MenuStandards.js">
+      <publishTime>01/28/2016 06:41:26</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjax.js">
+      <publishTime>01/28/2016 06:41:24</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxApplicationServices.js">
+      <publishTime>01/28/2016 06:41:24</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxComponentModel.js">
+      <publishTime>01/28/2016 06:41:24</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxCore.js">
+      <publishTime>01/28/2016 06:41:24</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxGlobalization.js">
+      <publishTime>01/28/2016 06:41:24</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxHistory.js">
+      <publishTime>01/28/2016 06:41:24</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxNetwork.js">
+      <publishTime>01/28/2016 06:41:24</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxSerialization.js">
+      <publishTime>01/28/2016 06:41:24</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxTimer.js">
+      <publishTime>01/28/2016 06:41:24</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxWebForms.js">
+      <publishTime>01/28/2016 06:41:24</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxWebServices.js">
+      <publishTime>01/28/2016 06:41:24</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/SmartNav.js">
+      <publishTime>01/28/2016 06:41:26</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/TreeView.js">
+      <publishTime>01/28/2016 06:41:26</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/WebForms.js">
+      <publishTime>01/28/2016 06:41:26</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/WebParts.js">
+      <publishTime>01/28/2016 06:41:26</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/WebUIValidation.js">
+      <publishTime>01/28/2016 06:41:26</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>05/04/2016 11:47:16</publishTime>
+    </File>
+    <File Include="Site.Master">
+      <publishTime>05/20/2016 15:44:24</publishTime>
+    </File>
+    <File Include="Site.Mobile.Master">
+      <publishTime>03/04/2016 10:16:44</publishTime>
+    </File>
+    <File Include="TemaWebForms/Label.skin">
+      <publishTime>02/08/2016 12:04:48</publishTime>
+    </File>
+    <File Include="TemaWebForms/webforms.css">
+      <publishTime>02/08/2016 13:55:02</publishTime>
+    </File>
+    <File Include="ViewSwitcher.ascx">
+      <publishTime>01/28/2016 06:40:58</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>06/28/2016 10:35:34</publishTime>
+    </File>
+    <File Include="web/atendimento/sinc_clientes.aspx">
+      <publishTime>06/23/2016 12:59:14</publishTime>
+    </File>
+    <File Include="web/clientes/clinetes_matriz/cad_planos_x_clientes.aspx">
+      <publishTime>06/02/2016 10:50:03</publishTime>
+    </File>
+    <File Include="web/clientes/clinetes_matriz/cl_add_linhas_planos.aspx">
+      <publishTime>06/24/2016 14:43:17</publishTime>
+    </File>
+    <File Include="web/clientes/cli_contatos.aspx">
+      <publishTime>04/18/2016 08:54:28</publishTime>
+    </File>
+    <File Include="web/clientes/cl_cadastro_contratos.aspx">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="web/clientes/cl_configuracoes/cl_cad_unidades .aspx">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="web/clientes/cl_configuracoes/cl_cad_unidades.aspx">
+      <publishTime>06/23/2016 10:27:10</publishTime>
+    </File>
+    <File Include="web/clientes/cl_configuracoes/cl_tipos_contratos.aspx">
+      <publishTime>04/22/2016 08:01:34</publishTime>
+    </File>
+    <File Include="web/clientes/cl_contatos_detalhes.aspx">
+      <publishTime>03/07/2016 15:17:54</publishTime>
+    </File>
+    <File Include="web/clientes/cl_contratos.aspx">
+      <publishTime>04/20/2016 12:07:45</publishTime>
+    </File>
+    <File Include="web/clientes/cl_linhas.aspx">
+      <publishTime>05/31/2016 08:47:31</publishTime>
+    </File>
+    <File Include="web/clientes/cl_linhas.aspx.designer.vb">
+      <publishTime>11/05/2016 08:58:16</publishTime>
+    </File>
+    <File Include="web/clientes/cl_linhas.aspx.vb">
+      <publishTime>11/05/2016 10:07:11</publishTime>
+    </File>
+    <File Include="web/clientes/cl_linhas_detalhes.aspx">
+      <publishTime>06/27/2016 09:21:01</publishTime>
+    </File>
+    <File Include="web/clientes/cl_linhas_virtuais.aspx">
+      <publishTime>05/25/2016 15:26:27</publishTime>
+    </File>
+    <File Include="web/clientes/cl_linhas_virtuais_detalhes.aspx">
+      <publishTime>05/25/2016 15:26:27</publishTime>
+    </File>
+    <File Include="web/clientes/cl_tipos_contratos.aspx">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="web/clientes/filtros/cl_filtros.aspx">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="web/clientes/filtros/cl_rel_filtros.aspx">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="web/clientes/rdcl/WebForm1.aspx">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="web/clientes/relatorios/cl_rel_reducao.aspx">
+      <publishTime>06/09/2016 10:53:51</publishTime>
+    </File>
+    <File Include="web/clientes/relatorios/cl_rel_reducaoPendecias.aspx">
+      <publishTime>05/18/2016 15:56:40</publishTime>
+    </File>
+    <File Include="web/clientes/relatorios/cl_rel_reducaoPendecias.aspx.designer.vb">
+      <publishTime>09/05/2016 16:32:45</publishTime>
+    </File>
+    <File Include="web/clientes/relatorios/cl_rel_uso.aspx">
+      <publishTime>06/02/2016 13:45:19</publishTime>
+    </File>
+    <File Include="web/clientes/relatorios/configuracoes/atualizar_infoamacoes_relatorio.aspx">
+      <publishTime>06/24/2016 16:58:27</publishTime>
+    </File>
+    <File Include="web/clientes/relatorios/rel_descritivo.aspx">
+      <publishTime>06/02/2016 13:51:59</publishTime>
+    </File>
+    <File Include="web/financeiro/bling/export_clientes_bling.aspx">
+      <publishTime>04/01/2016 14:29:36</publishTime>
+    </File>
+    <File Include="web/linhas/cadastro/li_cad_dta_programacao.aspx">
+      <publishTime>06/28/2016 16:43:36</publishTime>
+    </File>
+    <File Include="web/linhas/cadastro/li_cad_tipo_programacao.aspx">
+      <publishTime>06/13/2016 14:27:29</publishTime>
+    </File>
+    <File Include="web/linhas/cadastro/li_dta_programacao_historico.aspx">
+      <publishTime>06/28/2016 17:16:33</publishTime>
+    </File>
+    <File Include="web/linhas/cl_linhas_x_clientes.aspx">
+      <publishTime>05/25/2016 14:30:19</publishTime>
+    </File>
+    <File Include="web/linhas/li_portar_linha.aspx">
+      <publishTime>03/24/2016 15:59:12</publishTime>
+    </File>
+    <File Include="web/operadoras/cad_operadoras.aspx">
+      <publishTime>05/10/2016 16:32:01</publishTime>
+    </File>
+    <File Include="web/operadoras/op_planos.aspx">
+      <publishTime>05/16/2016 14:00:33</publishTime>
+    </File>
+    <File Include="web/pessoas/ps_cidades.aspx">
+      <publishTime>05/05/2016 17:26:25</publishTime>
+    </File>
+    <File Include="web/pessoas/ps_cidades_detalhes.aspx">
+      <publishTime>03/30/2016 08:59:20</publishTime>
+    </File>
+    <File Include="web/pessoas/ps_cliente.aspx">
+      <publishTime>05/20/2016 15:51:53</publishTime>
+    </File>
+    <File Include="web/pessoas/ps_cliente_detalhes.aspx">
+      <publishTime>05/11/2016 15:19:26</publishTime>
+    </File>
+    <File Include="web/pessoas/ps_empresa.aspx">
+      <publishTime>02/13/2016 17:50:28</publishTime>
+    </File>
+    <File Include="web/pessoas/ps_pais.aspx">
+      <publishTime>01/29/2016 14:32:06</publishTime>
+    </File>
+    <File Include="web/pessoas/ps_pessoas.aspx">
+      <publishTime>03/30/2016 09:00:22</publishTime>
+    </File>
+    <File Include="web/pessoas/ps_pessoas_detalhes.aspx">
+      <publishTime>03/30/2016 09:02:08</publishTime>
+    </File>
+    <File Include="web/pessoas/ps_uf.aspx">
+      <publishTime>04/10/2016 17:34:42</publishTime>
+    </File>
+    <File Include="web/pessoas/ps_uf_detalhes.aspx">
+      <publishTime>03/30/2016 08:56:52</publishTime>
+    </File>
+    <File Include="web/relacionamento/li_linhas_X_cidades.aspx">
+      <publishTime>06/03/2016 15:51:15</publishTime>
+    </File>
+    <File Include="web/relacionamento/relatorios/RelUsoAnual.aspx">
+      <publishTime>06/22/2016 14:46:55</publishTime>
+    </File>
+    <File Include="web/relacionamento/relatorios/rl_rel_movel_x_inter.aspx">
+      <publishTime>06/01/2016 14:17:46</publishTime>
+    </File>
+    <File Include="web/relacionamento/relatorios/rl_uso_Anual.aspx">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="web/servicos_fatura/configuracoes/cadatro_tipo_uso_rel.aspx">
+      <publishTime>04/25/2016 09:00:49</publishTime>
+    </File>
+    <File Include="web/servicos_fatura/configuracoes/sf_agrupamento_tipo_uso.aspx">
+      <publishTime>04/25/2016 08:51:50</publishTime>
+    </File>
+    <File Include="web/servicos_fatura/configuracoes/sf_cad_leiaute.aspx">
+      <publishTime>05/23/2016 15:47:39</publishTime>
+    </File>
+    <File Include="web/servicos_fatura/configuracoes/sf_cad_leiaute_detalhes.aspx">
+      <publishTime>05/23/2016 17:19:40</publishTime>
+    </File>
+    <File Include="web/servicos_fatura/configuracoes/sf_leiaute_cad_variaveis.aspx">
+      <publishTime>05/20/2016 13:02:50</publishTime>
+    </File>
+    <File Include="web/servicos_fatura/configuracoes/sf_tipo_uso.aspx">
+      <publishTime>04/25/2016 09:27:09</publishTime>
+    </File>
+    <File Include="web/servicos_fatura/if_input_fatura_manual.aspx">
+      <publishTime>06/21/2016 16:40:26</publishTime>
+    </File>
+    <File Include="web/servicos_fatura/if_input_fatura_manual_Detalhes.aspx">
+      <publishTime>06/24/2016 11:02:03</publishTime>
+    </File>
+    <File Include="web/servicos_fatura/sf_tipo_uso.aspx">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="web/servicos_fatura/solicitacao_fatura.aspx">
+      <publishTime>05/09/2016 16:49:08</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

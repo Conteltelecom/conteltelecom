@@ -43,7 +43,7 @@ Public Class if_input_fatura_manual_Detalhes
                 Next
             End If
 
-            RadWindowManagerMsg.RadAlert("PROCESSO CONCLUIDO COM SUCESSO", 400,Nothing , "MESNAGEM", "confirmDeleteBackFn", "~/img/accept_32.png")
+            RadWindowManagerMsg.RadAlert("PROCESSO CONCLUIDO COM SUCESSO", 400, Nothing, "MESNAGEM", "confirmDeleteBackFn", "~/img/accept_32.png")
         End If
 
         If e.CommandName = "Update" And e.CommandArgument = "Master" Then
@@ -61,9 +61,47 @@ Public Class if_input_fatura_manual_Detalhes
 
             End If
         End If
-        If e.CommandName = "DeleteChecked" Then
-            DeleteChecked()
+
+
+        If (e.CommandName = "Update" Or e.CommandName = "PerformInsert") And e.CommandArgument = "Uso" Then
+            Dim eitem As GridEditableItem = TryCast(e.Item, GridEditableItem)
+            Dim codNumLinha_SF_VL_USORadComboBox As RadDropDownList = TryCast(eitem.FindControl("codNumLinha_SF_VL_USORadComboBox"), RadDropDownList)
+            Dim id_SF_TIPO_USORadComboBox As RadComboBox = TryCast(eitem.FindControl("id_SF_TIPO_USORadComboBox"), RadComboBox)
+            Dim id_OP_OPERADORASRadComboBox As RadComboBox = TryCast(eitem.FindControl("id_OP_OPERADORASRadComboBox"), RadComboBox)
+            Dim vlUso_SF_VL_USORadNumericTextBox As RadNumericTextBox = TryCast(eitem.FindControl("vlUso_SF_VL_USORadNumericTextBox"), RadNumericTextBox)
+            Dim minutos_SF_VL_USORadNumericTextBox As RadNumericTextBox = TryCast(eitem.FindControl("minutos_SF_VL_USORadNumericTextBox"), RadNumericTextBox)
+
+
+            If e.CommandName = "Update" Then
+                SqlDataSourceUso.UpdateParameters("linhaVirtual_LI_LINHAS").DefaultValue = codNumLinha_SF_VL_USORadComboBox.SelectedValue.ToString.Substring(0, 1).ToString
+                SqlDataSourceUso.UpdateParameters("codNumLinha_SF_VL_USO").DefaultValue = codNumLinha_SF_VL_USORadComboBox.SelectedText
+                SqlDataSourceUso.UpdateParameters("minutos_SF_VL_USO").DefaultValue = minutos_SF_VL_USORadNumericTextBox.Text
+                SqlDataSourceUso.UpdateParameters("vlUso_SF_VL_USO").DefaultValue = vlUso_SF_VL_USORadNumericTextBox.Text
+                SqlDataSourceUso.UpdateParameters("id_OP_OPERADORAS").DefaultValue = id_OP_OPERADORASRadComboBox.SelectedValue
+                SqlDataSourceUso.UpdateParameters("id_SF_VL_USO").DefaultValue = eitem.GetDataKeyValue("id_SF_VL_USO").ToString
+                SqlDataSourceUso.UpdateParameters("id_SF_TIPO_USO").DefaultValue = id_SF_TIPO_USORadComboBox.SelectedValue
+
+                SqlDataSourceUso.Update()
+
+
+            ElseIf e.CommandName = "PerformInsert" Then
+
+                SqlDataSourceUso.InsertParameters("linhaVirtual_LI_LINHAS").DefaultValue = codNumLinha_SF_VL_USORadComboBox.SelectedValue.ToString.Substring(0, 1).ToString
+                SqlDataSourceUso.InsertParameters("codNumLinha_SF_VL_USO").DefaultValue = codNumLinha_SF_VL_USORadComboBox.SelectedText
+                SqlDataSourceUso.InsertParameters("minutos_SF_VL_USO").DefaultValue = minutos_SF_VL_USORadNumericTextBox.Text
+                SqlDataSourceUso.InsertParameters("vlUso_SF_VL_USO").DefaultValue = vlUso_SF_VL_USORadNumericTextBox.Text
+                SqlDataSourceUso.InsertParameters("id_OP_OPERADORAS").DefaultValue = id_OP_OPERADORASRadComboBox.SelectedValue
+                SqlDataSourceUso.InsertParameters("id_SF_SERVICOS_FATURA").DefaultValue = Request.QueryString("id_SF_SERVICOS_FATURA")
+                SqlDataSourceUso.InsertParameters("id_SF_TIPO_USO").DefaultValue = id_SF_TIPO_USORadComboBox.SelectedValue
+
+                SqlDataSourceUso.Insert()
+            End If
+
         End If
+
+        If e.CommandName = "DeleteChecked" Then
+                DeleteChecked()
+            End If
     End Sub
 
     Private Sub RadGridServicosXFaturas_ItemDataBound(sender As Object, e As GridItemEventArgs) Handles RadGridServicosXFaturas.ItemDataBound
@@ -79,9 +117,10 @@ Public Class if_input_fatura_manual_Detalhes
             End If
 
 
-            If TypeOf e.Item Is GridEditableItem AndAlso e.Item.IsInEditMode AndAlso e.Item.OwnerTableView.Name = "DetailTableServico" Then
+            If TypeOf e.Item Is GridEditableItem AndAlso e.Item.IsInEditMode AndAlso e.Item.OwnerTableView.Name = "DetailTableUso" Then
 
                 Dim editItem As GridEditableItem = DirectCast(e.Item, GridEditableItem)
+
 
             End If
 
@@ -108,5 +147,6 @@ Public Class if_input_fatura_manual_Detalhes
     Protected Sub DeleteChecked()
         HttpContext.Current.Response.Redirect(Session("NovaURL"))
     End Sub
+
 
 End Class

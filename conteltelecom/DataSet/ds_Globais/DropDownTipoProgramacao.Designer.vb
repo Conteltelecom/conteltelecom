@@ -283,9 +283,9 @@ Partial Public Class DropDownTipoProgramacao
     Partial Public Class LI_TIPO_PROGRAMACAODataTable
         Inherits Global.System.Data.TypedTableBase(Of LI_TIPO_PROGRAMACAORow)
         
-        Private columnid_LI_TIPO_PROGRAMACAO As Global.System.Data.DataColumn
-        
         Private columndesc_LI_TIPO_PROGRAMACAO As Global.System.Data.DataColumn
+        
+        Private columnid_LI_TIPO_PROGRAMACAO As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -324,17 +324,17 @@ Partial Public Class DropDownTipoProgramacao
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property id_LI_TIPO_PROGRAMACAOColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property desc_LI_TIPO_PROGRAMACAOColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnid_LI_TIPO_PROGRAMACAO
+                Return Me.columndesc_LI_TIPO_PROGRAMACAO
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property desc_LI_TIPO_PROGRAMACAOColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property id_LI_TIPO_PROGRAMACAOColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columndesc_LI_TIPO_PROGRAMACAO
+                Return Me.columnid_LI_TIPO_PROGRAMACAO
             End Get
         End Property
         
@@ -377,7 +377,7 @@ Partial Public Class DropDownTipoProgramacao
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Overloads Function AddLI_TIPO_PROGRAMACAORow(ByVal desc_LI_TIPO_PROGRAMACAO As String) As LI_TIPO_PROGRAMACAORow
             Dim rowLI_TIPO_PROGRAMACAORow As LI_TIPO_PROGRAMACAORow = CType(Me.NewRow,LI_TIPO_PROGRAMACAORow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, desc_LI_TIPO_PROGRAMACAO}
+            Dim columnValuesArray() As Object = New Object() {desc_LI_TIPO_PROGRAMACAO, Nothing}
             rowLI_TIPO_PROGRAMACAORow.ItemArray = columnValuesArray
             Me.Rows.Add(rowLI_TIPO_PROGRAMACAORow)
             Return rowLI_TIPO_PROGRAMACAORow
@@ -406,26 +406,26 @@ Partial Public Class DropDownTipoProgramacao
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub InitVars()
-            Me.columnid_LI_TIPO_PROGRAMACAO = MyBase.Columns("id_LI_TIPO_PROGRAMACAO")
             Me.columndesc_LI_TIPO_PROGRAMACAO = MyBase.Columns("desc_LI_TIPO_PROGRAMACAO")
+            Me.columnid_LI_TIPO_PROGRAMACAO = MyBase.Columns("id_LI_TIPO_PROGRAMACAO")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnid_LI_TIPO_PROGRAMACAO = New Global.System.Data.DataColumn("id_LI_TIPO_PROGRAMACAO", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnid_LI_TIPO_PROGRAMACAO)
             Me.columndesc_LI_TIPO_PROGRAMACAO = New Global.System.Data.DataColumn("desc_LI_TIPO_PROGRAMACAO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columndesc_LI_TIPO_PROGRAMACAO)
+            Me.columnid_LI_TIPO_PROGRAMACAO = New Global.System.Data.DataColumn("id_LI_TIPO_PROGRAMACAO", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_LI_TIPO_PROGRAMACAO)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid_LI_TIPO_PROGRAMACAO}, true))
+            Me.columndesc_LI_TIPO_PROGRAMACAO.AllowDBNull = false
+            Me.columndesc_LI_TIPO_PROGRAMACAO.MaxLength = 150
             Me.columnid_LI_TIPO_PROGRAMACAO.AutoIncrement = true
             Me.columnid_LI_TIPO_PROGRAMACAO.AutoIncrementSeed = -1
             Me.columnid_LI_TIPO_PROGRAMACAO.AutoIncrementStep = -1
             Me.columnid_LI_TIPO_PROGRAMACAO.AllowDBNull = false
             Me.columnid_LI_TIPO_PROGRAMACAO.ReadOnly = true
             Me.columnid_LI_TIPO_PROGRAMACAO.Unique = true
-            Me.columndesc_LI_TIPO_PROGRAMACAO.AllowDBNull = false
-            Me.columndesc_LI_TIPO_PROGRAMACAO.MaxLength = 150
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -572,23 +572,23 @@ Partial Public Class DropDownTipoProgramacao
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property id_LI_TIPO_PROGRAMACAO() As Integer
-            Get
-                Return CType(Me(Me.tableLI_TIPO_PROGRAMACAO.id_LI_TIPO_PROGRAMACAOColumn),Integer)
-            End Get
-            Set
-                Me(Me.tableLI_TIPO_PROGRAMACAO.id_LI_TIPO_PROGRAMACAOColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property desc_LI_TIPO_PROGRAMACAO() As String
             Get
                 Return CType(Me(Me.tableLI_TIPO_PROGRAMACAO.desc_LI_TIPO_PROGRAMACAOColumn),String)
             End Get
             Set
                 Me(Me.tableLI_TIPO_PROGRAMACAO.desc_LI_TIPO_PROGRAMACAOColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_LI_TIPO_PROGRAMACAO() As Integer
+            Get
+                Return CType(Me(Me.tableLI_TIPO_PROGRAMACAO.id_LI_TIPO_PROGRAMACAOColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableLI_TIPO_PROGRAMACAO.id_LI_TIPO_PROGRAMACAOColumn) = value
             End Set
         End Property
     End Class
@@ -759,8 +759,8 @@ Namespace DropDownTipoProgramacaoTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "LI_TIPO_PROGRAMACAO"
-            tableMapping.ColumnMappings.Add("id_LI_TIPO_PROGRAMACAO", "id_LI_TIPO_PROGRAMACAO")
             tableMapping.ColumnMappings.Add("desc_LI_TIPO_PROGRAMACAO", "desc_LI_TIPO_PROGRAMACAO")
+            tableMapping.ColumnMappings.Add("id_LI_TIPO_PROGRAMACAO", "id_LI_TIPO_PROGRAMACAO")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -777,7 +777,7 @@ Namespace DropDownTipoProgramacaoTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT id_LI_TIPO_PROGRAMACAO, desc_LI_TIPO_PROGRAMACAO FROM LI_TIPO_PROGRAMACAO "& _ 
+            Me._commandCollection(0).CommandText = "SELECT desc_LI_TIPO_PROGRAMACAO, id_LI_TIPO_PROGRAMACAO FROM LI_TIPO_PROGRAMACAO "& _ 
                 "WHERE (st_LI_TIPO_PROGRAMACAO = 1)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub

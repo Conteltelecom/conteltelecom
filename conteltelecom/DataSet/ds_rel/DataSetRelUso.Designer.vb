@@ -1170,100 +1170,77 @@ Namespace DataSetRelUsoTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        SF_VL_USO_1.codNumLinha_SF_VL_USO, ISNULL(SUM(CASE WHEN SF_TIPO_USO"& _ 
-                "_CATEGORIAS_1.desc_SF_TIPO_USO_CATEGORIAS = 'MÓVEL' THEN SF_VL_USO_1.vlUso_SF_VL"& _ 
-                "_USO END), 0) AS movel, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         ISNULL(SUM(CASE WHEN SF_TIPO_"& _ 
-                "USO_CATEGORIAS_1.desc_SF_TIPO_USO_CATEGORIAS = 'INTERURBANO' THEN SF_VL_USO_1.vl"& _ 
-                "Uso_SF_VL_USO END), 0) AS interurbano, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         PS_JURIDICA_1."& _ 
-                "razaosocial_PS_JURIDICA, PS_CIDADES_1.desc_PS_CIDADES, RTRIM(SF_SERVICOS_FATURA_"& _ 
-                "1.nomeUnidade_LI_LINHAS) AS nomeUnidade_LI_LINHAS, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         SF"& _ 
-                "_SERVICOS_FATURA_1.mesAnoRefereincia_SF_SERVICOS_FATURA, PS_JURIDICA_1.id_PS_PES"& _ 
-                "SOA,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                             (SELECT        TOP (1) ISNULL(SUM(CASE WHEN S"& _ 
-                "F_TIPO_USO_CATEGORIAS.desc_SF_TIPO_USO_CATEGORIAS = 'MÓVEL' THEN vlUso_SF_VL_USO"& _ 
-                " END), 0) "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                                                         + ISNULL(SU"& _ 
-                "M(CASE WHEN SF_TIPO_USO_CATEGORIAS.desc_SF_TIPO_USO_CATEGORIAS = 'INTERURBANO' T"& _ 
-                "HEN vlUso_SF_VL_USO END), 0) "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                                                 "& _ 
-                "        + ISNULL(SUM(CASE WHEN SF_TIPO_USO_CATEGORIAS.desc_SF_TIPO_USO_CATEGORIA"& _ 
-                "S = 'MÓVEL OUTRAS ÁREAS' THEN vlUso_SF_VL_USO END), 0) AS Expr1"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"               "& _ 
-                "                FROM            SF_VL_USO INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                          "& _ 
-                "                               SF_TIPO_USO ON SF_VL_USO.id_SF_TIPO_USO = SF_TIPO"& _ 
-                "_USO.id_SF_TIPO_USO INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                                                "& _ 
-                "         SF_TIPO_USO_CATEGORIAS ON SF_TIPO_USO.id_SF_TIPO_USO_CATEGORIAS = SF_TI"& _ 
-                "PO_USO_CATEGORIAS.id_SF_TIPO_USO_CATEGORIAS INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                        "& _ 
-                "                                 SF_SERVICOS_FATURA ON SF_VL_USO.id_SF_SERVICOS_"& _ 
-                "FATURA = SF_SERVICOS_FATURA.id_SF_SERVICOS_FATURA INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  "& _ 
-                "                                       PS_CLIENTES ON SF_SERVICOS_FATURA.codMatr"& _ 
-                "iz_PS_CLIENTES = PS_CLIENTES.codMatriz_PS_CLIENTES AND "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                       "& _ 
-                "                                  SF_SERVICOS_FATURA.codMatriz_PS_CLIENTES = PS_"& _ 
-                "CLIENTES.id_PS_PESSOA INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                                              "& _ 
-                "           PS_JURIDICA ON PS_CLIENTES.id_PS_JURIDICA = PS_JURIDICA.id_PS_JURIDIC"& _ 
-                "A INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                                                         PS_CIDADE"& _ 
-                "S ON SF_SERVICOS_FATURA.id_PS_CIDADES = PS_CIDADES.id_PS_CIDADES"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"              "& _ 
-                "                 WHERE        (SF_SERVICOS_FATURA.mesAnoRefereincia_SF_SERVICOS_"& _ 
-                "FATURA = @mesAnoRefereincia_SF_SERVICOS_FATURA) AND (SF_SERVICOS_FATURA.numSeque"& _ 
-                "ncia_SF_SERVICOS_FATURA = 0) "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                                                 "& _ 
-                "        AND (SF_SERVICOS_FATURA.codMatriz_PS_CLIENTES = @codMatriz_PS_CLIENTES) "& _ 
-                "AND "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                                                         (SF_SERVICOS_FATU"& _ 
-                "RA.nomeUnidade_LI_LINHAS = SF_SERVICOS_FATURA_1.nomeUnidade_LI_LINHAS) AND "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"   "& _ 
-                "                                                      (SF_SERVICOS_FATURA.foraAn"& _ 
-                "alise_LI_LINHAS = SF_SERVICOS_FATURA_1.foraAnalise_LI_LINHAS)) AS TOTALCIDADE, S"& _ 
-                "F_SERVICOS_FATURA_1.foraAnalise_LI_LINHAS, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         ISNULL(SUM"& _ 
-                "(CASE WHEN SF_TIPO_USO_CATEGORIAS_1.desc_SF_TIPO_USO_CATEGORIAS = 'MÓVEL OUTRAS "& _ 
-                "ÁREAS' THEN SF_VL_USO_1.vlUso_SF_VL_USO END), 0) AS MOVEISOUTRAS,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"             "& _ 
-                "                (SELECT        TOP (1) ISNULL(SUM(CASE WHEN SF_TIPO_USO_CATEGORI"& _ 
-                "AS_2.desc_SF_TIPO_USO_CATEGORIAS = 'MÓVEL' THEN SF_VL_USO_2.vlUso_SF_VL_USO END)"& _ 
-                ", 0) "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                                                         + ISNULL(SUM(CAS"& _ 
-                "E WHEN SF_TIPO_USO_CATEGORIAS_2.desc_SF_TIPO_USO_CATEGORIAS = 'INTERURBANO' THEN"& _ 
-                " SF_VL_USO_2.vlUso_SF_VL_USO END), 0) "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                                        "& _ 
-                "                 + ISNULL(SUM(CASE WHEN SF_TIPO_USO_CATEGORIAS_2.desc_SF_TIPO_US"& _ 
-                "O_CATEGORIAS = 'MÓVEL OUTRAS ÁREAS' THEN SF_VL_USO_2.vlUso_SF_VL_USO END), 0) AS"& _ 
-                " Expr1"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                               FROM            SF_VL_USO AS SF_VL_USO_2 "& _ 
-                "INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                                                         SF_TIPO_USO"& _ 
-                " AS SF_TIPO_USO_2 ON SF_TIPO_USO_2.id_SF_TIPO_USO = SF_TIPO_USO_2.id_SF_TIPO_USO"& _ 
-                " INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                                                         SF_TIPO_US"& _ 
+            Me._commandCollection(0).CommandText = "SELECT SF_VL_USO_1.codNumLinha_SF_VL_USO, ISNULL(SUM(CASE WHEN SF_TIPO_USO_CATEGO"& _ 
+                "RIAS_1.desc_SF_TIPO_USO_CATEGORIAS = 'MÓVEL' THEN SF_VL_USO_1.vlUso_SF_VL_USO EN"& _ 
+                "D), 0) AS movel, ISNULL(SUM(CASE WHEN SF_TIPO_USO_CATEGORIAS_1.desc_SF_TIPO_USO_"& _ 
+                "CATEGORIAS = 'INTERURBANO' THEN SF_VL_USO_1.vlUso_SF_VL_USO END), 0) AS interurb"& _ 
+                "ano, PS_JURIDICA_1.razaosocial_PS_JURIDICA, PS_CIDADES_1.desc_PS_CIDADES, LTRIM("& _ 
+                "RTRIM(SF_SERVICOS_FATURA_1.nomeUnidade_LI_LINHAS)) AS nomeUnidade_LI_LINHAS, SF_"& _ 
+                "SERVICOS_FATURA_1.mesAnoRefereincia_SF_SERVICOS_FATURA, PS_JURIDICA_1.id_PS_PESS"& _ 
+                "OA, (SELECT TOP (1) ISNULL(SUM(CASE WHEN SF_TIPO_USO_CATEGORIAS.desc_SF_TIPO_USO"& _ 
+                "_CATEGORIAS = 'MÓVEL' THEN vlUso_SF_VL_USO END), 0) + ISNULL(SUM(CASE WHEN SF_TI"& _ 
+                "PO_USO_CATEGORIAS.desc_SF_TIPO_USO_CATEGORIAS = 'INTERURBANO' THEN vlUso_SF_VL_U"& _ 
+                "SO END), 0) + ISNULL(SUM(CASE WHEN SF_TIPO_USO_CATEGORIAS.desc_SF_TIPO_USO_CATEG"& _ 
+                "ORIAS = 'MÓVEL OUTRAS ÁREAS' THEN vlUso_SF_VL_USO END), 0) AS Expr1 FROM SF_VL_U"& _ 
+                "SO INNER JOIN SF_TIPO_USO ON SF_VL_USO.id_SF_TIPO_USO = SF_TIPO_USO.id_SF_TIPO_U"& _ 
+                "SO INNER JOIN SF_TIPO_USO_CATEGORIAS ON SF_TIPO_USO.id_SF_TIPO_USO_CATEGORIAS = "& _ 
+                "SF_TIPO_USO_CATEGORIAS.id_SF_TIPO_USO_CATEGORIAS INNER JOIN SF_SERVICOS_FATURA O"& _ 
+                "N SF_VL_USO.id_SF_SERVICOS_FATURA = SF_SERVICOS_FATURA.id_SF_SERVICOS_FATURA INN"& _ 
+                "ER JOIN PS_CLIENTES ON SF_SERVICOS_FATURA.codMatriz_PS_CLIENTES = PS_CLIENTES.co"& _ 
+                "dMatriz_PS_CLIENTES AND SF_SERVICOS_FATURA.codMatriz_PS_CLIENTES = PS_CLIENTES.i"& _ 
+                "d_PS_PESSOA INNER JOIN PS_JURIDICA ON PS_CLIENTES.id_PS_JURIDICA = PS_JURIDICA.i"& _ 
+                "d_PS_JURIDICA INNER JOIN PS_CIDADES ON SF_SERVICOS_FATURA.id_PS_CIDADES = PS_CID"& _ 
+                "ADES.id_PS_CIDADES WHERE (SF_SERVICOS_FATURA.mesAnoRefereincia_SF_SERVICOS_FATUR"& _ 
+                "A = @mesAnoRefereincia_SF_SERVICOS_FATURA) AND (SF_SERVICOS_FATURA.numSequencia_"& _ 
+                "SF_SERVICOS_FATURA = 0) AND (SF_SERVICOS_FATURA.codMatriz_PS_CLIENTES = @codMatr"& _ 
+                "iz_PS_CLIENTES) AND (SF_VL_USO.linhaVirtual_LI_LINHAS = 0) AND (SF_SERVICOS_FATU"& _ 
+                "RA.nomeUnidade_LI_LINHAS = SF_SERVICOS_FATURA_1.nomeUnidade_LI_LINHAS) AND (SF_S"& _ 
+                "ERVICOS_FATURA.foraAnalise_LI_LINHAS = SF_SERVICOS_FATURA_1.foraAnalise_LI_LINHA"& _ 
+                "S)) AS TOTALCIDADE, SF_SERVICOS_FATURA_1.foraAnalise_LI_LINHAS, ISNULL(SUM(CASE "& _ 
+                "WHEN SF_TIPO_USO_CATEGORIAS_1.desc_SF_TIPO_USO_CATEGORIAS = 'MÓVEL OUTRAS ÁREAS'"& _ 
+                " THEN SF_VL_USO_1.vlUso_SF_VL_USO END), 0) AS MOVEISOUTRAS, (SELECT TOP (1) ISNU"& _ 
+                "LL(SUM(CASE WHEN SF_TIPO_USO_CATEGORIAS_2.desc_SF_TIPO_USO_CATEGORIAS = 'MÓVEL' "& _ 
+                "THEN SF_VL_USO_2.vlUso_SF_VL_USO END), 0) + ISNULL(SUM(CASE WHEN SF_TIPO_USO_CAT"& _ 
+                "EGORIAS_2.desc_SF_TIPO_USO_CATEGORIAS = 'INTERURBANO' THEN SF_VL_USO_2.vlUso_SF_"& _ 
+                "VL_USO END), 0) + ISNULL(SUM(CASE WHEN SF_TIPO_USO_CATEGORIAS_2.desc_SF_TIPO_USO"& _ 
+                "_CATEGORIAS = 'MÓVEL OUTRAS ÁREAS' THEN SF_VL_USO_2.vlUso_SF_VL_USO END), 0) AS "& _ 
+                "Expr1 FROM SF_VL_USO AS SF_VL_USO_2 INNER JOIN SF_TIPO_USO AS SF_TIPO_USO_2 ON S"& _ 
+                "F_TIPO_USO_2.id_SF_TIPO_USO = SF_TIPO_USO_2.id_SF_TIPO_USO INNER JOIN SF_TIPO_US"& _ 
                 "O_CATEGORIAS AS SF_TIPO_USO_CATEGORIAS_2 ON SF_TIPO_USO_2.id_SF_TIPO_USO_CATEGOR"& _ 
-                "IAS = SF_TIPO_USO_CATEGORIAS_2.id_SF_TIPO_USO_CATEGORIAS INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"           "& _ 
-                "                                              SF_SERVICOS_FATURA AS SF_SERVICOS_"& _ 
-                "FATURA_2 ON SF_VL_USO_2.id_SF_SERVICOS_FATURA = SF_SERVICOS_FATURA_2.id_SF_SERVI"& _ 
-                "COS_FATURA INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                                                         "& _ 
-                "PS_CLIENTES AS PS_CLIENTES_2 ON SF_SERVICOS_FATURA_2.codMatriz_PS_CLIENTES = PS_"& _ 
-                "CLIENTES_2.codMatriz_PS_CLIENTES AND "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                                         "& _ 
-                "                SF_SERVICOS_FATURA_2.codMatriz_PS_CLIENTES = PS_CLIENTES_2.id_PS"& _ 
-                "_PESSOA INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                                                         PS_"& _ 
-                "JURIDICA AS PS_JURIDICA_2 ON PS_CLIENTES_2.id_PS_JURIDICA = PS_JURIDICA_2.id_PS_"& _ 
-                "JURIDICA INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                                                         PS"& _ 
-                "_CIDADES AS PS_CIDADES_2 ON SF_SERVICOS_FATURA_2.id_PS_CIDADES = PS_CIDADES_2.id"& _ 
-                "_PS_CIDADES"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                               WHERE        (SF_SERVICOS_FATURA_2.m"& _ 
-                "esAnoRefereincia_SF_SERVICOS_FATURA = @mesAnoRefereincia_SF_SERVICOS_FATURA) AND"& _ 
-                " "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                                                         (SF_SERVICOS_FATURA_"& _ 
-                "2.codMatriz_PS_CLIENTES = @codMatriz_PS_CLIENTES) AND (SF_SERVICOS_FATURA_2.id_P"& _ 
-                "S_CIDADES = SF_SERVICOS_FATURA_1.id_PS_CIDADES) AND "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                          "& _ 
-                "                               (SF_SERVICOS_FATURA_2.numSequencia_SF_SERVICOS_FA"& _ 
-                "TURA = 0) AND (SF_SERVICOS_FATURA_2.foraAnalise_LI_LINHAS = SF_SERVICOS_FATURA_1"& _ 
-                ".foraAnalise_LI_LINHAS)) "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         AS TOTALCIDADE2"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM       "& _ 
-                "     PS_CLIENTES AS PS_CLIENTES_1 INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         SF_SERVIC"& _ 
-                "OS_FATURA AS SF_SERVICOS_FATURA_1 ON PS_CLIENTES_1.codMatriz_PS_CLIENTES = SF_SE"& _ 
-                "RVICOS_FATURA_1.codMatriz_PS_CLIENTES AND "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         PS_CLIENTES"& _ 
-                "_1.id_PS_PESSOA = SF_SERVICOS_FATURA_1.codMatriz_PS_CLIENTES INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"       "& _ 
-                "                  PS_JURIDICA AS PS_JURIDICA_1 ON PS_CLIENTES_1.id_PS_JURIDICA ="& _ 
-                " PS_JURIDICA_1.id_PS_JURIDICA INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         PS_CIDADES AS"& _ 
-                " PS_CIDADES_1 ON SF_SERVICOS_FATURA_1.id_PS_CIDADES = PS_CIDADES_1.id_PS_CIDADES"& _ 
-                " LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         SF_VL_USO AS SF_VL_USO_1 INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)& _ 
-                "                         SF_TIPO_USO AS SF_TIPO_USO_1 ON SF_VL_USO_1.id_SF_TIPO_"& _ 
-                "USO = SF_TIPO_USO_1.id_SF_TIPO_USO INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         SF_TIPO_"& _ 
-                "USO_CATEGORIAS AS SF_TIPO_USO_CATEGORIAS_1 ON SF_TIPO_USO_1.id_SF_TIPO_USO_CATEG"& _ 
-                "ORIAS = SF_TIPO_USO_CATEGORIAS_1.id_SF_TIPO_USO_CATEGORIAS ON "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                "& _ 
-                "         SF_SERVICOS_FATURA_1.id_SF_SERVICOS_FATURA = SF_VL_USO_1.id_SF_SERVICOS"& _ 
-                "_FATURA"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (SF_SERVICOS_FATURA_1.mesAnoRefereincia_SF_SERVICOS_FATURA"& _ 
-                " = @mesAnoRefereincia_SF_SERVICOS_FATURA) AND (SF_SERVICOS_FATURA_1.codMatriz_PS"& _ 
-                "_CLIENTES = @codMatriz_PS_CLIENTES) "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         AND (SF_SERVICOS_"& _ 
-                "FATURA_1.numSequencia_SF_SERVICOS_FATURA = 0)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"GROUP BY SF_VL_USO_1.codNumLinha_"& _ 
-                "SF_VL_USO, PS_JURIDICA_1.razaosocial_PS_JURIDICA, PS_CIDADES_1.desc_PS_CIDADES, "& _ 
-                "SF_SERVICOS_FATURA_1.nomeUnidade_LI_LINHAS, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         SF_SERVIC"& _ 
-                "OS_FATURA_1.mesAnoRefereincia_SF_SERVICOS_FATURA, PS_JURIDICA_1.id_PS_PESSOA, PS"& _ 
-                "_CLIENTES_1.id_PS_PESSOA, SF_SERVICOS_FATURA_1.foraAnalise_LI_LINHAS, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"        "& _ 
-                "                 SF_SERVICOS_FATURA_1.id_PS_CIDADES, SF_SERVICOS_FATURA_1.numSeq"& _ 
-                "uencia_SF_SERVICOS_FATURA"
+                "IAS = SF_TIPO_USO_CATEGORIAS_2.id_SF_TIPO_USO_CATEGORIAS INNER JOIN SF_SERVICOS_"& _ 
+                "FATURA AS SF_SERVICOS_FATURA_2 ON SF_VL_USO_2.id_SF_SERVICOS_FATURA = SF_SERVICO"& _ 
+                "S_FATURA_2.id_SF_SERVICOS_FATURA INNER JOIN PS_CLIENTES AS PS_CLIENTES_2 ON SF_S"& _ 
+                "ERVICOS_FATURA_2.codMatriz_PS_CLIENTES = PS_CLIENTES_2.codMatriz_PS_CLIENTES AND"& _ 
+                " SF_SERVICOS_FATURA_2.codMatriz_PS_CLIENTES = PS_CLIENTES_2.id_PS_PESSOA INNER J"& _ 
+                "OIN PS_JURIDICA AS PS_JURIDICA_2 ON PS_CLIENTES_2.id_PS_JURIDICA = PS_JURIDICA_2"& _ 
+                ".id_PS_JURIDICA INNER JOIN PS_CIDADES AS PS_CIDADES_2 ON SF_SERVICOS_FATURA_2.id"& _ 
+                "_PS_CIDADES = PS_CIDADES_2.id_PS_CIDADES WHERE (SF_SERVICOS_FATURA_2.mesAnoRefer"& _ 
+                "eincia_SF_SERVICOS_FATURA = @mesAnoRefereincia_SF_SERVICOS_FATURA) AND (SF_SERVI"& _ 
+                "COS_FATURA_2.codMatriz_PS_CLIENTES = @codMatriz_PS_CLIENTES) AND (SF_SERVICOS_FA"& _ 
+                "TURA_2.id_PS_CIDADES = SF_SERVICOS_FATURA_1.id_PS_CIDADES) AND (SF_SERVICOS_FATU"& _ 
+                "RA_2.numSequencia_SF_SERVICOS_FATURA = 0) AND (SF_VL_USO_2.linhaVirtual_LI_LINHA"& _ 
+                "S = 0) AND (SF_SERVICOS_FATURA_2.foraAnalise_LI_LINHAS = SF_SERVICOS_FATURA_1.fo"& _ 
+                "raAnalise_LI_LINHAS)) AS TOTALCIDADE2 FROM PS_CLIENTES AS PS_CLIENTES_1 INNER JO"& _ 
+                "IN SF_SERVICOS_FATURA AS SF_SERVICOS_FATURA_1 ON PS_CLIENTES_1.codMatriz_PS_CLIE"& _ 
+                "NTES = SF_SERVICOS_FATURA_1.codMatriz_PS_CLIENTES AND PS_CLIENTES_1.id_PS_PESSOA"& _ 
+                " = SF_SERVICOS_FATURA_1.codMatriz_PS_CLIENTES INNER JOIN PS_JURIDICA AS PS_JURID"& _ 
+                "ICA_1 ON PS_CLIENTES_1.id_PS_JURIDICA = PS_JURIDICA_1.id_PS_JURIDICA INNER JOIN "& _ 
+                "PS_CIDADES AS PS_CIDADES_1 ON SF_SERVICOS_FATURA_1.id_PS_CIDADES = PS_CIDADES_1."& _ 
+                "id_PS_CIDADES LEFT OUTER JOIN SF_VL_USO AS SF_VL_USO_1 INNER JOIN SF_TIPO_USO AS"& _ 
+                " SF_TIPO_USO_1 ON SF_VL_USO_1.id_SF_TIPO_USO = SF_TIPO_USO_1.id_SF_TIPO_USO INNE"& _ 
+                "R JOIN SF_TIPO_USO_CATEGORIAS AS SF_TIPO_USO_CATEGORIAS_1 ON SF_TIPO_USO_1.id_SF"& _ 
+                "_TIPO_USO_CATEGORIAS = SF_TIPO_USO_CATEGORIAS_1.id_SF_TIPO_USO_CATEGORIAS ON SF_"& _ 
+                "SERVICOS_FATURA_1.id_SF_SERVICOS_FATURA = SF_VL_USO_1.id_SF_SERVICOS_FATURA WHER"& _ 
+                "E (SF_SERVICOS_FATURA_1.mesAnoRefereincia_SF_SERVICOS_FATURA = @mesAnoRefereinci"& _ 
+                "a_SF_SERVICOS_FATURA) AND (SF_SERVICOS_FATURA_1.codMatriz_PS_CLIENTES = @codMatr"& _ 
+                "iz_PS_CLIENTES) AND (SF_SERVICOS_FATURA_1.numSequencia_SF_SERVICOS_FATURA = 0) A"& _ 
+                "ND (SF_VL_USO_1.linhaVirtual_LI_LINHAS = 0) GROUP BY SF_VL_USO_1.codNumLinha_SF_"& _ 
+                "VL_USO, PS_JURIDICA_1.razaosocial_PS_JURIDICA, PS_CIDADES_1.desc_PS_CIDADES, SF_"& _ 
+                "SERVICOS_FATURA_1.nomeUnidade_LI_LINHAS, SF_SERVICOS_FATURA_1.mesAnoRefereincia_"& _ 
+                "SF_SERVICOS_FATURA, PS_JURIDICA_1.id_PS_PESSOA, PS_CLIENTES_1.id_PS_PESSOA, SF_S"& _ 
+                "ERVICOS_FATURA_1.foraAnalise_LI_LINHAS, SF_SERVICOS_FATURA_1.id_PS_CIDADES, SF_S"& _ 
+                "ERVICOS_FATURA_1.numSequencia_SF_SERVICOS_FATURA, SF_VL_USO_1.linhaVirtual_LI_LI"& _ 
+                "NHAS"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@mesAnoRefereincia_SF_SERVICOS_FATURA", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "mesAnoRefereincia_SF_SERVICOS_FATURA", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@codMatriz_PS_CLIENTES", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "codMatriz_PS_CLIENTES", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))

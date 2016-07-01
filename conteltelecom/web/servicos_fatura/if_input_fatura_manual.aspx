@@ -24,7 +24,6 @@
                <div class="col-lg-4">
                    <asp:TextBox ID="TextBoxRazao" CssClass="form-control"   runat="server" ></asp:TextBox>
                    </div> 
-            
                      <asp:Label ID="Label1" CssClass="col-lg-2 control-label"  Font-Bold="true" runat="server" Text="CNPJ:" ></asp:Label>
                <div class="col-lg-4">
                  <telerik:RadMaskedTextBox ID="RadMaskedTextBoxCnpjI" Width="100%" Mask="##.###.###/####-##" CssClass="form-control"   runat="server" Skin="Bootstrap"></telerik:RadMaskedTextBox> 
@@ -82,9 +81,9 @@
 
     <hr />
     <br />
-    <asp:UpdatePanel ID="UpdatePanelGridFauturas" runat="server" UpdateMode="Conditional" >
+      <asp:UpdatePanel ID="UpdatePanelGridFauturas" runat="server" UpdateMode="Conditional" >
         <ContentTemplate>
-            <telerik:RadGrid ID="RadGridFaturas" runat="server" AutoGenerateColumns="False" Culture="pt-BR" DataSourceID="SqlDataSourceLinhas" GroupPanelPosition="Top" Skin="Bootstrap" CellSpacing="-1" GridLines="Both">
+            <telerik:RadGrid ID="RadGridFaturas" runat="server" AutoGenerateColumns="False" Culture="pt-BR" DataSourceID="SqlDataSourceLinhas" Skin="Bootstrap" CellSpacing="-1" GridLines="Both">
 <GroupingSettings CollapseAllTooltip="Collapse all groups"></GroupingSettings>
         <ExportSettings>
             <Pdf PageWidth="">
@@ -100,7 +99,6 @@
                     <ItemTemplate>
                         <asp:Label ID="id_SF_SERVICOS_FATURALabel" runat="server" Text='<%# Eval("id_SF_SERVICOS_FATURA") %>'></asp:Label>
                     </ItemTemplate>
-                    <HeaderStyle CssClass="col-xs-1" />
                 </telerik:GridTemplateColumn>
                 <telerik:GridTemplateColumn DataField="codLinha_LI_LINHAS" FilterControlAltText="Filter codLinha_LI_LINHAS column" HeaderText="CÓD/LINHA" SortExpression="codLinha_LI_LINHAS" UniqueName="codLinha_LI_LINHAS">
                     <EditItemTemplate>
@@ -109,19 +107,42 @@
                     </EditItemTemplate>
                     <ItemTemplate>
                         <asp:Label ID="codLinha_LI_LINHASLabel" runat="server" Text='<%# Eval("codLinha_LI_LINHAS") %>'></asp:Label>
+                      <asp:Label ID="desc_OP_OPERADORASLabelEdit" runat="server" Text='<%# Eval("desc_OP_OPERADORAS")  %>' Visible="false"></asp:Label>
                     </ItemTemplate>
-                    <HeaderStyle CssClass="col-xs-2" />
+                    <HeaderStyle CssClass="col-xs-3" />
+          
                 </telerik:GridTemplateColumn>
-                <telerik:GridTemplateColumn DataField="desc_OP_OPERADORAS"  FilterControlAltText="Filter desc_OP_OPERADORAS column" HeaderText="OPERADORA" SortExpression="desc_OP_OPERADORAS" UniqueName="desc_OP_OPERADORAS" DefaultInsertValue="OI">
+                <telerik:GridTemplateColumn DataField="dtaPerIni_SF_SERVICOS_FATURA"  FilterControlAltText="Filter desc_OP_OPERADORAS column" HeaderText="DT INICIAL" SortExpression="dtaPerIni_SF_SERVICOS_FATURA" UniqueName="dtaPerIni_SF_SERVICOS_FATURA" Visible="False">
                     <EditItemTemplate>
-                         <asp:Label ID="desc_OP_OPERADORASLabelEdit" runat="server" Text='<%# Eval("desc_OP_OPERADORAS") %>'></asp:Label>
-                                      </EditItemTemplate>
+                        <telerik:RadDatePicker ID="RadDatePickerDataInicial" Runat="server" Culture="pt-BR" SelectedDate='<%# System.DateTime.Today %>'  DbSelectedDate='<%# Bind("dtaPerIni_SF_SERVICOS_FATURA") %>'>
+                        </telerik:RadDatePicker>
+                    </EditItemTemplate>
                     <ItemTemplate>
-                        <asp:Label ID="desc_OP_OPERADORASLabel" runat="server" Text='<%# Eval("desc_OP_OPERADORAS") %>'></asp:Label>
+                        <asp:Label ID="dtaPerIni_SF_SERVICOS_FATURALabel" runat="server" Text='<%# Eval("dtaPerIni_SF_SERVICOS_FATURA", "{0:d}") %>'></asp:Label>
                     </ItemTemplate>
-                    <HeaderStyle CssClass="col-xs-2" />
+                    <HeaderStyle CssClass="col-xs-1" />
                 </telerik:GridTemplateColumn>
-                <telerik:GridTemplateColumn DataField="razaosocial_PS_JURIDICA" FilterControlAltText="Filter razaosocial_PS_JURIDICA column" HeaderText="RAZÃO SOCIAL" SortExpression="razaosocial_PS_JURIDICA" UniqueName="razaosocial_PS_JURIDICA">
+                <telerik:GridTemplateColumn DataField="dtaPerFim_SF_SERVICOS_FATURA"  FilterControlAltText="Filter desc_OP_OPERADORAS column" HeaderText="DT FIM" SortExpression="dtaPerFim_SF_SERVICOS_FATURA" UniqueName="dtaPerFim_SF_SERVICOS_FATURA" Visible="False" >
+                    <EditItemTemplate>
+                        <telerik:RadDatePicker ID="RadDatePickerDataIniFinal" SelectedDate='<%# System.DateTime.Today %>'  Runat="server" Culture="pt-BR" DbSelectedDate='<%# Bind("dtaPerFim_SF_SERVICOS_FATURA") %>'>
+                        </telerik:RadDatePicker>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="dtaPerFim_SF_SERVICOS_FATURALabel"  runat="server" Text='<%# Eval("dtaPerFim_SF_SERVICOS_FATURA", "{0:d}") %>'></asp:Label>
+                    </ItemTemplate>
+                   <HeaderStyle CssClass="col-xs-1" />
+                </telerik:GridTemplateColumn>
+                <telerik:GridTemplateColumn DataField="dtVencimento_SF_SERVICOS_FATURA"  FilterControlAltText="Filter desc_OP_OPERADORAS column" HeaderText="DT VENCIMENTO" SortExpression="dtVencimento_SF_SERVICOS_FATURA" UniqueName="dtVencimento_SF_SERVICOS_FATURA" Visible="False" >
+                    <EditItemTemplate>
+                        <telerik:RadDatePicker ID="RadDatePickerdtVencimento_SF_SERVICOS_FATURA" SelectedDate='<%# System.DateTime.Today %>'  Runat="server" Culture="pt-BR" DbSelectedDate='<%# Bind("dtVencimento_SF_SERVICOS_FATURA") %>'>
+                        </telerik:RadDatePicker>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="dtVencimento_SF_SERVICOS_FATURALabel" runat="server" Text='<%# Eval("dtVencimento_SF_SERVICOS_FATURA", "{0:d}") %>'></asp:Label>
+                    </ItemTemplate>
+                    <HeaderStyle CssClass="col-xs-1" />
+                </telerik:GridTemplateColumn>
+                <telerik:GridTemplateColumn DataField="razaosocial_PS_JURIDICA"  FilterControlAltText="Filter razaosocial_PS_JURIDICA column" HeaderText="RAZÃO SOCIAL" SortExpression="razaosocial_PS_JURIDICA" UniqueName="razaosocial_PS_JURIDICA">
                     <EditItemTemplate>
                          <asp:Label ID="razaosocial_PS_JURIDICALabelEdit" runat="server" Text='<%# Eval("razaosocial_PS_JURIDICA") %>'> </asp:Label>
                     </EditItemTemplate>
@@ -129,8 +150,9 @@
                         <asp:Label ID="razaosocial_PS_JURIDICALabel" runat="server" Text='<%# Eval("razaosocial_PS_JURIDICA") %>'> </asp:Label>
                     </ItemTemplate>
                     <HeaderStyle CssClass="col-xs-3" />
+                   
                 </telerik:GridTemplateColumn>
-                <telerik:GridTemplateColumn DataField="mesAnoRefereincia_SF_SERVICOS_FATURA" FilterControlAltText="Filter mesAnoRefereincia_SF_SERVICOS_FATURA column" HeaderText="MÊS/ANO" SortExpression="mesAnoRefereincia_SF_SERVICOS_FATURA" UniqueName="mesAnoRefereincia_SF_SERVICOS_FATURA">
+                <telerik:GridTemplateColumn DataField="mesAnoRefereincia_SF_SERVICOS_FATURA" FilterControlAltText="Filter mesAnoRefereincia_SF_SERVICOS_FATURA column" HeaderText="MÊS/ANO" SortExpression="mesAnoRefereincia_SF_SERVICOS_FATURA" UniqueName="mesAnoRefereincia_SF_SERVICOS_FATURA" ReadOnly="false">
                     <EditItemTemplate>
                        <telerik:RadMaskedTextBox ID="RadMaskedTextBoxmesAno"  Mask="<1..12>/<2000..2050>"  Width="95%" OnTextChanged="RadMaskedTextBoxmesAno_TextChanged"  runat="server" Text='<%#Bind("mesAnoRefereincia_SF_SERVICOS_FATURA") %>'></telerik:RadMaskedTextBox>
                     <asp:RequiredFieldValidator ID="RequiRadMaskedTextBoxmesAno" ControlToValidate="RadMaskedTextBoxmesAno" runat="server" ErrorMessage="*" Display="Dynamic" SetFocusOnError="true" ForeColor="RED"></asp:RequiredFieldValidator>
@@ -140,8 +162,10 @@
                         <asp:Label ID="mesAnoRefereincia_SF_SERVICOS_FATURALabel" runat="server" Text='<%# Eval("mesAnoRefereincia_SF_SERVICOS_FATURA") %>'></asp:Label>
                     </ItemTemplate>
                     <HeaderStyle CssClass="col-xs-2" />
+               
                 </telerik:GridTemplateColumn>
                 <telerik:GridBoundColumn DataField="tpConta" FilterControlAltText="Filter tpConta column" HeaderText="TP CONTA" ReadOnly="True" UniqueName="tpConta">
+                    <HeaderStyle CssClass="col-xs-2" />
                 </telerik:GridBoundColumn>
                 <telerik:GridTemplateColumn DataField="vltotalLinha_SF_SERVICOS_FATURA" FilterControlAltText="Filter vltotalLinha_SF_SERVICOS_FATURA column" HeaderText="VL TOTAL R$" UniqueName="vltotalLinha_SF_SERVICOS_FATURA">
                     <EditItemTemplate>
@@ -152,6 +176,7 @@
                     <ItemTemplate>
                         <asp:Label ID="vltotalLinha_SF_SERVICOS_FATURALabel" runat="server" Text='<%# Eval("vltotalLinha_SF_SERVICOS_FATURA") %>'></asp:Label>
                     </ItemTemplate>
+                    <HeaderStyle CssClass="col-xs-2" />
                 </telerik:GridTemplateColumn>
                 <telerik:GridTemplateColumn >  
 <ItemTemplate >
@@ -171,6 +196,7 @@
 </EditFormSettings> 
         </MasterTableView>
      </telerik:RadGrid>
+  
         </ContentTemplate>
 
     </asp:UpdatePanel>
@@ -199,6 +225,10 @@
             
               <asp:Parameter Name="nomeUnidade_LI_LINHAS" Type="String" />
               <asp:Parameter Name="codLinha_LI_LINHAS" Type="String" />
+            
+              <asp:Parameter DbType="Date" Name="dtaPerIni_SF_SERVICOS_FATURA" />
+              <asp:Parameter DbType="Date" Name="dtaPerFim_SF_SERVICOS_FATURA" />
+              <asp:Parameter DbType="Date" Name="dtVencimento_SF_SERVICOS_FATURA" />
             
           </InsertParameters>
           <SelectParameters>
@@ -231,7 +261,7 @@
          </SelectParameters>
      </asp:SqlDataSource>
     
-     <asp:SqlDataSource ID="SqlDataSourceUso" runat="server" ConnectionString="<%$ ConnectionStrings:conteltelecomConnectionString %>" InsertCommand="INSERT INTO SF_VL_USO(id_SF_TIPO_USO, id_OP_OPERADORAS, vlUso_SF_VL_USO, minutos_SF_VL_USO, id_SF_SERVICOS_FATURA, codNumLinha_SF_VL_USO) VALUES (@id_SF_TIPO_USO, @id_OP_OPERADORAS, @vlUso_SF_VL_USO, @minutos_SF_VL_USO, @id_SF_SERVICOS_FATURA, @codNumLinha_SF_VL_USO)" SelectCommand="SELECT SF_VL_USO.id_SF_TIPO_USO, SF_VL_USO.id_OP_OPERADORAS, SF_VL_USO.vlUso_SF_VL_USO, SF_VL_USO.minutos_SF_VL_USO, SF_VL_USO.codNumLinha_SF_VL_USO FROM SF_VL_USO INNER JOIN SF_SERVICOS_FATURA ON SF_VL_USO.id_SF_SERVICOS_FATURA = SF_SERVICOS_FATURA.id_SF_SERVICOS_FATURA WHERE (SF_SERVICOS_FATURA.id_LI_LINHAS = @id_LI_LINHAS) AND (SF_SERVICOS_FATURA.mesAnoRefereincia_SF_SERVICOS_FATURA = @mesAnoRefereincia_SF_SERVICOS_FATURA) AND (SF_SERVICOS_FATURA.numSequencia_SF_SERVICOS_FATURA = 1)">
+     <asp:SqlDataSource ID="SqlDataSourceUso" runat="server" ConnectionString="<%$ ConnectionStrings:conteltelecomConnectionString %>" InsertCommand="INSERT INTO SF_VL_USO(id_SF_TIPO_USO, id_OP_OPERADORAS, vlUso_SF_VL_USO, minutos_SF_VL_USO, id_SF_SERVICOS_FATURA, codNumLinha_SF_VL_USO) VALUES (@id_SF_TIPO_USO, @id_OP_OPERADORAS, @vlUso_SF_VL_USO, @minutos_SF_VL_USO, @id_SF_SERVICOS_FATURA, @codNumLinha_SF_VL_USO)" SelectCommand="SELECT SF_VL_USO.id_SF_TIPO_USO, SF_VL_USO.id_OP_OPERADORAS, SF_VL_USO.vlUso_SF_VL_USO, SF_VL_USO.minutos_SF_VL_USO, SF_VL_USO.codNumLinha_SF_VL_USO FROM SF_VL_USO INNER JOIN SF_SERVICOS_FATURA ON SF_VL_USO.id_SF_SERVICOS_FATURA = SF_SERVICOS_FATURA.id_SF_SERVICOS_FATURA WHERE (SF_SERVICOS_FATURA.id_LI_LINHAS = @id_LI_LINHAS) AND (SF_SERVICOS_FATURA.mesAnoRefereincia_SF_SERVICOS_FATURA = @mesAnoRefereincia_SF_SERVICOS_FATURA) AND (SF_SERVICOS_FATURA.numSequencia_SF_SERVICOS_FATURA = 0)">
          <InsertParameters>
              <asp:Parameter Name="id_SF_TIPO_USO" />
              <asp:Parameter Name="id_OP_OPERADORAS" />
