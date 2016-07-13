@@ -122,6 +122,15 @@ Partial Public Class atualizar_infoamacoes_relatorio
     Protected WithEvents SqlDataSourceUso As Global.System.Web.UI.WebControls.SqlDataSource
     
     '''<summary>
+    '''Controle SqlDataSourceIdLinha.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents SqlDataSourceIdLinha As Global.System.Web.UI.WebControls.SqlDataSource
+    
+    '''<summary>
     '''Controle RadWindowManagerMsgSite.
     '''</summary>
     '''<remarks>

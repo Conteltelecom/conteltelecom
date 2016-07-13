@@ -79,19 +79,22 @@ ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.mic
       <publishTime>05/25/2016 10:52:54</publishTime>
     </File>
     <File Include="App_Code/Controles.vb">
-      <publishTime>09/04/2016 18:06:58</publishTime>
+      <publishTime>04/09/2016 18:06:58</publishTime>
     </File>
     <File Include="App_Code/Criptografia.vb">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="App_Code/Filtros.vb">
-      <publishTime>03/02/2016 13:16:56</publishTime>
+      <publishTime>02/03/2016 13:16:56</publishTime>
     </File>
     <File Include="App_Code/FormRewriter.vb">
       <publishTime>05/25/2016 10:54:22</publishTime>
     </File>
+    <File Include="App_Code/JavaScript.vb">
+      <publishTime>07/08/2016 13:43:30</publishTime>
+    </File>
     <File Include="App_Code/Validacoes.vb">
-      <publishTime>04/05/2016 09:27:32</publishTime>
+      <publishTime>05/04/2016 09:27:32</publishTime>
     </File>
     <File Include="App_Data/RadCaptcha/0.wav">
       <publishTime>05/04/2016 09:57:16</publishTime>
@@ -229,16 +232,16 @@ ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.mic
       <publishTime>02/06/2016 05:48:06</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.pdb">
-      <publishTime>06/02/2016 07:48:06</publishTime>
+      <publishTime>02/06/2016 07:48:06</publishTime>
     </File>
     <File Include="bin/ApplicationInsights.config">
       <publishTime>01/28/2016 06:41:56</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>03/09/2016 16:48:33</publishTime>
+      <publishTime>09/03/2016 16:48:33</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>03/09/2016 16:48:33</publishTime>
+      <publishTime>09/03/2016 16:48:33</publishTime>
     </File>
     <File Include="bin/AspNet.ScriptManager.bootstrap.dll">
       <publishTime>02/08/2016 08:20:06</publishTime>
@@ -247,13 +250,13 @@ ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.mic
       <publishTime>02/06/2016 05:48:12</publishTime>
     </File>
     <File Include="bin/conteltelecom.dll">
-      <publishTime>06/28/2016 17:16:53</publishTime>
+      <publishTime>07/13/2016 11:56:18</publishTime>
     </File>
     <File Include="bin/conteltelecom.dll.config">
-      <publishTime>06/28/2016 10:35:34</publishTime>
+      <publishTime>07/07/2016 11:52:46</publishTime>
     </File>
     <File Include="bin/conteltelecom.pdb">
-      <publishTime>06/28/2016 17:16:53</publishTime>
+      <publishTime>07/13/2016 11:56:18</publishTime>
     </File>
     <File Include="bin/de/Microsoft.SqlServer.Types.resources.dll">
       <publishTime>02/21/2014 06:26:06</publishTime>
@@ -358,7 +361,7 @@ ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.mic
       <publishTime>02/06/2016 05:48:28</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml">
-      <publishTime>06/02/2016 07:48:28</publishTime>
+      <publishTime>02/06/2016 07:48:28</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.dll">
       <publishTime>01/28/2016 06:41:34</publishTime>
@@ -442,49 +445,49 @@ ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.mic
       <publishTime>02/06/2016 05:48:36</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.xml">
-      <publishTime>06/02/2016 07:48:36</publishTime>
+      <publishTime>02/06/2016 07:48:36</publishTime>
     </File>
     <File Include="bin/Owin.dll">
       <publishTime>01/28/2016 06:41:36</publishTime>
     </File>
     <File Include="bin/pt-br/Microsoft.AspNet.FriendlyUrls.resources.dll">
-      <publishTime>06/02/2016 07:45:26</publishTime>
+      <publishTime>02/06/2016 07:45:26</publishTime>
     </File>
     <File Include="bin/pt-br/Microsoft.AspNet.Identity.Core.resources.dll">
-      <publishTime>06/02/2016 07:45:26</publishTime>
+      <publishTime>02/06/2016 07:45:26</publishTime>
     </File>
     <File Include="bin/pt-br/Microsoft.AspNet.Identity.EntityFramework.resources.dll">
-      <publishTime>06/02/2016 07:45:26</publishTime>
+      <publishTime>02/06/2016 07:45:26</publishTime>
     </File>
     <File Include="bin/pt-br/Microsoft.AspNet.Identity.Owin.resources.dll">
-      <publishTime>06/02/2016 07:45:26</publishTime>
+      <publishTime>02/06/2016 07:45:26</publishTime>
     </File>
     <File Include="bin/pt-br/Microsoft.Owin.Host.SystemWeb.resources.dll">
-      <publishTime>06/02/2016 07:45:26</publishTime>
+      <publishTime>02/06/2016 07:45:26</publishTime>
     </File>
     <File Include="bin/pt-br/Microsoft.Owin.resources.dll">
-      <publishTime>06/02/2016 07:45:26</publishTime>
+      <publishTime>02/06/2016 07:45:26</publishTime>
     </File>
     <File Include="bin/pt-br/Microsoft.Owin.Security.Facebook.resources.dll">
-      <publishTime>06/02/2016 07:45:26</publishTime>
+      <publishTime>02/06/2016 07:45:26</publishTime>
     </File>
     <File Include="bin/pt-br/Microsoft.Owin.Security.Google.resources.dll">
-      <publishTime>06/02/2016 07:45:26</publishTime>
+      <publishTime>02/06/2016 07:45:26</publishTime>
     </File>
     <File Include="bin/pt-br/Microsoft.Owin.Security.MicrosoftAccount.resources.dll">
-      <publishTime>06/02/2016 07:45:26</publishTime>
+      <publishTime>02/06/2016 07:45:26</publishTime>
     </File>
     <File Include="bin/pt-br/Microsoft.Owin.Security.resources.dll">
-      <publishTime>06/02/2016 07:45:26</publishTime>
+      <publishTime>02/06/2016 07:45:26</publishTime>
     </File>
     <File Include="bin/pt-br/Microsoft.Owin.Security.Twitter.resources.dll">
-      <publishTime>06/02/2016 07:45:26</publishTime>
+      <publishTime>02/06/2016 07:45:26</publishTime>
     </File>
     <File Include="bin/pt-br/Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll">
       <publishTime>07/07/2015 01:32:24</publishTime>
     </File>
     <File Include="bin/pt-br/System.Web.Optimization.resources.dll">
-      <publishTime>06/02/2016 07:45:26</publishTime>
+      <publishTime>02/06/2016 07:45:26</publishTime>
     </File>
     <File Include="bin/pt/Microsoft.ReportViewer.WebForms.resources.dll">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -493,13 +496,13 @@ ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.mic
       <publishTime>02/21/2014 06:25:24</publishTime>
     </File>
     <File Include="bin/rdcl/clientes/RelReducao.rdlc">
-      <publishTime>05/02/2016 14:15:30</publishTime>
+      <publishTime>02/05/2016 14:15:30</publishTime>
     </File>
     <File Include="bin/rdcl/clientes/RelUso .rdlc">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/rdcl/clientes/RelUso.rdlc">
-      <publishTime>05/03/2016 10:56:20</publishTime>
+      <publishTime>03/05/2016 10:56:20</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>02/06/2016 05:48:24</publishTime>
@@ -585,6 +588,9 @@ ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.mic
     <File Include="bin/ru/Microsoft.SqlServer.Types.resources.dll">
       <publishTime>02/21/2014 06:25:46</publishTime>
     </File>
+    <File Include="bin/System.DirectoryServices.dll">
+      <publishTime>07/01/2016 10:02:56</publishTime>
+    </File>
     <File Include="bin/System.Web.Optimization.dll">
       <publishTime>01/28/2016 06:41:24</publishTime>
     </File>
@@ -619,7 +625,7 @@ ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.mic
       <publishTime>05/04/2016 00:04:28</publishTime>
     </File>
     <File Include="bin/Telerik.Web.Spreadsheet.xml">
-      <publishTime>08/01/2016 13:50:02</publishTime>
+      <publishTime>01/08/2016 13:50:02</publishTime>
     </File>
     <File Include="bin/Telerik.Web.UI.dll">
       <publishTime>05/03/2016 10:35:08</publishTime>
@@ -634,13 +640,13 @@ ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.mic
       <publishTime>05/04/2016 00:04:28</publishTime>
     </File>
     <File Include="bin/Telerik.Windows.Documents.Core.xml">
-      <publishTime>05/01/2016 22:01:40</publishTime>
+      <publishTime>01/05/2016 22:01:40</publishTime>
     </File>
     <File Include="bin/Telerik.Windows.Documents.Fixed.dll">
       <publishTime>05/04/2016 00:04:28</publishTime>
     </File>
     <File Include="bin/Telerik.Windows.Documents.Fixed.xml">
-      <publishTime>05/01/2016 22:01:46</publishTime>
+      <publishTime>01/05/2016 22:01:46</publishTime>
     </File>
     <File Include="bin/Telerik.Windows.Documents.Flow.dll">
       <publishTime>05/04/2016 00:04:30</publishTime>
@@ -649,10 +655,10 @@ ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.mic
       <publishTime>05/04/2016 00:04:30</publishTime>
     </File>
     <File Include="bin/Telerik.Windows.Documents.Flow.FormatProviders.Pdf.xml">
-      <publishTime>05/01/2016 22:01:54</publishTime>
+      <publishTime>01/05/2016 22:01:54</publishTime>
     </File>
     <File Include="bin/Telerik.Windows.Documents.Flow.xml">
-      <publishTime>05/01/2016 22:01:50</publishTime>
+      <publishTime>01/05/2016 22:01:50</publishTime>
     </File>
     <File Include="bin/Telerik.Windows.Documents.Spreadsheet.dll">
       <publishTime>05/04/2016 00:04:30</publishTime>
@@ -661,16 +667,16 @@ ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.mic
       <publishTime>05/04/2016 00:04:30</publishTime>
     </File>
     <File Include="bin/Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.xml">
-      <publishTime>05/01/2016 22:02:00</publishTime>
+      <publishTime>01/05/2016 22:02:00</publishTime>
     </File>
     <File Include="bin/Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll">
       <publishTime>05/04/2016 00:04:30</publishTime>
     </File>
     <File Include="bin/Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.xml">
-      <publishTime>05/01/2016 22:02:02</publishTime>
+      <publishTime>01/05/2016 22:02:02</publishTime>
     </File>
     <File Include="bin/Telerik.Windows.Documents.Spreadsheet.xml">
-      <publishTime>05/01/2016 22:02:00</publishTime>
+      <publishTime>01/05/2016 22:02:00</publishTime>
     </File>
     <File Include="bin/Telerik.Windows.Zip.dll">
       <publishTime>05/04/2016 00:04:30</publishTime>
@@ -679,13 +685,13 @@ ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.mic
       <publishTime>05/04/2016 00:04:30</publishTime>
     </File>
     <File Include="bin/Telerik.Windows.Zip.Extensions.xml">
-      <publishTime>05/01/2016 22:01:38</publishTime>
+      <publishTime>01/05/2016 22:01:38</publishTime>
     </File>
     <File Include="bin/Telerik.Windows.Zip.xml">
-      <publishTime>05/01/2016 22:01:36</publishTime>
+      <publishTime>01/05/2016 22:01:36</publishTime>
     </File>
     <File Include="bin/WebForms_Basic.xml">
-      <publishTime>06/28/2016 17:16:53</publishTime>
+      <publishTime>07/13/2016 11:56:18</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>02/06/2016 05:49:08</publishTime>
@@ -838,13 +844,13 @@ ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.mic
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="DataSet/BuscaCPF_Nomexsd.vb">
-      <publishTime>01/04/2016 15:53:50</publishTime>
+      <publishTime>04/01/2016 15:53:50</publishTime>
     </File>
     <File Include="DataSet/BuscaCPF_Nomexsd.xsc">
       <publishTime>05/06/2016 08:52:54</publishTime>
     </File>
     <File Include="DataSet/BuscaCPF_Nomexsd.xsd">
-      <publishTime>04/01/2016 15:53:50</publishTime>
+      <publishTime>01/04/2016 15:53:50</publishTime>
     </File>
     <File Include="DataSet/BuscaCPF_Nomexsd.xss">
       <publishTime>05/06/2016 08:52:54</publishTime>
@@ -868,28 +874,28 @@ ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.mic
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="DataSet/DataSetLinhas.Designer.vb">
-      <publishTime>02/05/2016 13:46:06</publishTime>
-    </File>
-    <File Include="DataSet/DataSetLinhas.xsc">
-      <publishTime>06/28/2016 10:40:18</publishTime>
-    </File>
-    <File Include="DataSet/DataSetLinhas.xsd">
       <publishTime>05/02/2016 13:46:06</publishTime>
     </File>
+    <File Include="DataSet/DataSetLinhas.xsc">
+      <publishTime>07/12/2016 14:20:11</publishTime>
+    </File>
+    <File Include="DataSet/DataSetLinhas.xsd">
+      <publishTime>02/05/2016 13:46:06</publishTime>
+    </File>
     <File Include="DataSet/DataSetLinhas.xss">
-      <publishTime>06/28/2016 10:40:18</publishTime>
+      <publishTime>07/12/2016 14:20:11</publishTime>
     </File>
     <File Include="DataSet/DataSetRelReducao.Designer.vb">
-      <publishTime>02/05/2016 15:10:09</publishTime>
+      <publishTime>05/02/2016 15:10:09</publishTime>
     </File>
     <File Include="DataSet/DataSetRelReducao.xsc">
-      <publishTime>06/24/2016 14:57:16</publishTime>
+      <publishTime>07/08/2016 13:54:18</publishTime>
     </File>
     <File Include="DataSet/DataSetRelReducao.xsd">
-      <publishTime>05/03/2016 14:46:05</publishTime>
+      <publishTime>03/05/2016 14:46:05</publishTime>
     </File>
     <File Include="DataSet/DataSetRelReducao.xss">
-      <publishTime>06/24/2016 14:57:16</publishTime>
+      <publishTime>07/08/2016 13:54:18</publishTime>
     </File>
     <File Include="DataSet/DataSetValidaMes.Designer.vb">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -931,7 +937,7 @@ ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.mic
       <publishTime>05/06/2016 16:29:56</publishTime>
     </File>
     <File Include="DataSet/ds_Globais/DropDownOperadoras.xsd">
-      <publishTime>06/05/2016 16:29:56</publishTime>
+      <publishTime>05/06/2016 16:29:56</publishTime>
     </File>
     <File Include="DataSet/ds_Globais/DropDownOperadoras.xss">
       <publishTime>05/06/2016 16:29:56</publishTime>
@@ -1003,16 +1009,22 @@ ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.mic
       <publishTime>06/23/2016 10:27:09</publishTime>
     </File>
     <File Include="DataSet/ds_Globais/Ds_ClientecodRazao.Designer.vb">
-      <publishTime>02/05/2016 14:42:35</publishTime>
+      <publishTime>05/02/2016 14:42:35</publishTime>
     </File>
     <File Include="DataSet/ds_Globais/Ds_ClientecodRazao.xsc">
       <publishTime>05/02/2016 14:42:35</publishTime>
     </File>
     <File Include="DataSet/ds_Globais/Ds_ClientecodRazao.xsd">
-      <publishTime>05/02/2016 14:42:35</publishTime>
+      <publishTime>02/05/2016 14:42:35</publishTime>
     </File>
     <File Include="DataSet/ds_Globais/Ds_ClientecodRazao.xss">
       <publishTime>05/02/2016 14:42:35</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/RadAutoCompleteBoxPaginas.xsc">
+      <publishTime>06/30/2016 17:28:52</publishTime>
+    </File>
+    <File Include="DataSet/ds_Globais/RadAutoCompleteBoxPaginas.xss">
+      <publishTime>06/30/2016 17:28:52</publishTime>
     </File>
     <File Include="DataSet/ds_Globais/RadAutoCompleteBoxPsFiscica.Designer.vb">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -1030,13 +1042,13 @@ ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.mic
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="DataSet/ds_linhas/DataSetLinhas01.xsc">
-      <publishTime>06/22/2016 14:45:51</publishTime>
+      <publishTime>07/12/2016 09:35:36</publishTime>
     </File>
     <File Include="DataSet/ds_linhas/DataSetLinhas01.xsd">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="DataSet/ds_linhas/DataSetLinhas01.xss">
-      <publishTime>06/22/2016 14:45:51</publishTime>
+      <publishTime>07/12/2016 09:35:36</publishTime>
     </File>
     <File Include="DataSet/ds_rel/DataSetAnual.xsc">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -1048,25 +1060,25 @@ ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.mic
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="DataSet/ds_rel/DataSetRelUso.xsc">
-      <publishTime>06/24/2016 17:27:05</publishTime>
+      <publishTime>07/04/2016 11:33:07</publishTime>
     </File>
     <File Include="DataSet/ds_rel/DataSetRelUso.xsd">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="DataSet/ds_rel/DataSetRelUso.xss">
-      <publishTime>06/24/2016 17:27:05</publishTime>
+      <publishTime>07/04/2016 11:33:07</publishTime>
     </File>
     <File Include="DataSet/ds_rel/ds_relDescritivo.Designer.vb">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="DataSet/ds_rel/ds_relDescritivo.xsc">
-      <publishTime>06/14/2016 11:43:59</publishTime>
+      <publishTime>07/13/2016 11:39:44</publishTime>
     </File>
     <File Include="DataSet/ds_rel/ds_relDescritivo.xsd">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="DataSet/ds_rel/ds_relDescritivo.xss">
-      <publishTime>06/14/2016 11:43:59</publishTime>
+      <publishTime>07/13/2016 11:39:44</publishTime>
     </File>
     <File Include="DataSet/ds_rel/Relacionamento/DataSetAnual.xsc">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -1075,10 +1087,16 @@ ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.mic
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="DataSet/ds_rel/Relacionamento/DataSetBuscaUso.xsc">
-      <publishTime>06/27/2016 11:21:40</publishTime>
+      <publishTime>07/04/2016 11:33:07</publishTime>
     </File>
     <File Include="DataSet/ds_rel/Relacionamento/DataSetBuscaUso.xss">
-      <publishTime>06/27/2016 11:21:40</publishTime>
+      <publishTime>07/04/2016 11:33:07</publishTime>
+    </File>
+    <File Include="DataSet/ds_rel/Relacionamento/DataSetProjecao.xsc">
+      <publishTime>07/07/2016 08:23:09</publishTime>
+    </File>
+    <File Include="DataSet/ds_rel/Relacionamento/DataSetProjecao.xss">
+      <publishTime>07/07/2016 08:23:09</publishTime>
     </File>
     <File Include="DataSet/ds_rel/RelMovel_Interurbano.Designer.vb">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -1108,16 +1126,19 @@ ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.mic
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="DataSet/ValidaCPF.xsc">
-      <publishTime>03/02/2016 16:36:08</publishTime>
+      <publishTime>07/01/2016 18:04:10</publishTime>
     </File>
     <File Include="DataSet/ValidaCPF.xsd">
-      <publishTime>03/02/2016 16:36:08</publishTime>
+      <publishTime>02/03/2016 16:36:08</publishTime>
     </File>
     <File Include="DataSet/ValidaCPF.xss">
-      <publishTime>03/02/2016 16:36:08</publishTime>
+      <publishTime>07/01/2016 18:04:10</publishTime>
     </File>
     <File Include="Default.aspx">
       <publishTime>04/22/2016 14:09:18</publishTime>
+    </File>
+    <File Include="download_page.aspx">
+      <publishTime>07/08/2016 08:15:46</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>01/28/2016 06:40:56</publishTime>
@@ -1166,6 +1187,9 @@ ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.mic
     </File>
     <File Include="img/Detalhes_32.png">
       <publishTime>04/01/2016 14:52:52</publishTime>
+    </File>
+    <File Include="img/downloading_32.png">
+      <publishTime>07/08/2016 10:43:18</publishTime>
     </File>
     <File Include="img/duplicar.png">
       <publishTime>05/04/2016 11:34:32</publishTime>
@@ -1227,29 +1251,32 @@ ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.mic
     <File Include="img/Word.png">
       <publishTime>05/20/2016 07:55:42</publishTime>
     </File>
+    <File Include="logoff.aspx">
+      <publishTime>07/01/2016 14:59:13</publishTime>
+    </File>
     <File Include="MasterPageCli.master">
-      <publishTime>06/27/2016 14:51:01</publishTime>
+      <publishTime>07/08/2016 10:15:44</publishTime>
     </File>
     <File Include="Menu.master">
-      <publishTime>06/20/2016 15:45:38</publishTime>
+      <publishTime>07/12/2016 15:06:26</publishTime>
     </File>
     <File Include="Models/IdentityModels.vb">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Normalmaster.master">
-      <publishTime>06/23/2016 11:36:01</publishTime>
+      <publishTime>07/12/2016 15:16:56</publishTime>
     </File>
     <File Include="packages.config">
       <publishTime>04/18/2016 08:01:44</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>03/09/2016 16:48:09</publishTime>
+      <publishTime>09/03/2016 16:48:09</publishTime>
     </File>
     <File Include="rdcl/clientes/RelDiscritivo .rdlc">
       <publishTime>06/22/2016 14:48:21</publishTime>
     </File>
     <File Include="rdcl/clientes/RelReducao.rdlc">
-      <publishTime>06/28/2016 17:06:04</publishTime>
+      <publishTime>07/11/2016 16:06:19</publishTime>
     </File>
     <File Include="rdcl/clientes/RelReducaoPendecias.rdlc">
       <publishTime>05/10/2016 08:07:41</publishTime>
@@ -1264,13 +1291,16 @@ ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.mic
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="rdcl/relacionamento/RelMovel_x_Inter.rdlc">
-      <publishTime>06/23/2016 09:30:34</publishTime>
+      <publishTime>06/28/2016 17:04:17</publishTime>
     </File>
     <File Include="rdcl/relacionamento/RelUsoAnual.rdlc">
-      <publishTime>06/28/2016 17:05:05</publishTime>
+      <publishTime>07/01/2016 15:50:22</publishTime>
     </File>
     <File Include="rdcl/relacionamento/RelUsoXAno .rdlc">
       <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="rdcl/relacionamento/Rel_Projecao.rdlc">
+      <publishTime>07/07/2016 10:26:22</publishTime>
     </File>
     <File Include="rdcl/RelUso - Cópia .rdlc">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -1413,17 +1443,35 @@ ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.mic
     <File Include="Site.Mobile.Master">
       <publishTime>03/04/2016 10:16:44</publishTime>
     </File>
+    <File Include="System.DirectoryServices.dll">
+      <publishTime>09/26/2012 03:16:08</publishTime>
+    </File>
     <File Include="TemaWebForms/Label.skin">
-      <publishTime>02/08/2016 12:04:48</publishTime>
+      <publishTime>08/02/2016 12:04:48</publishTime>
     </File>
     <File Include="TemaWebForms/webforms.css">
-      <publishTime>02/08/2016 13:55:02</publishTime>
+      <publishTime>08/02/2016 13:55:02</publishTime>
     </File>
     <File Include="ViewSwitcher.ascx">
       <publishTime>01/28/2016 06:40:58</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>06/28/2016 10:35:34</publishTime>
+      <publishTime>07/07/2016 11:52:46</publishTime>
+    </File>
+    <File Include="web/administrador/configuracoes/adm_cad_paginas.aspx">
+      <publishTime>06/30/2016 16:40:49</publishTime>
+    </File>
+    <File Include="web/administrador/configuracoes/adm_paginas_menu.aspx">
+      <publishTime>06/30/2016 17:28:53</publishTime>
+    </File>
+    <File Include="web/administrador/configuracoes/cad_menus.aspx">
+      <publishTime>06/30/2016 15:53:12</publishTime>
+    </File>
+    <File Include="web/administrador/configuracoes/cad_tipo_bloqueios.aspx">
+      <publishTime>07/12/2016 15:52:38</publishTime>
+    </File>
+    <File Include="web/administrador/configuracoes/cad_usuarios.aspx">
+      <publishTime>07/12/2016 11:49:43</publishTime>
     </File>
     <File Include="web/atendimento/sinc_clientes.aspx">
       <publishTime>06/23/2016 12:59:14</publishTime>
@@ -1453,16 +1501,16 @@ ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.mic
       <publishTime>03/07/2016 15:17:54</publishTime>
     </File>
     <File Include="web/clientes/cl_contratos.aspx">
-      <publishTime>04/20/2016 12:07:45</publishTime>
+      <publishTime>07/11/2016 08:36:56</publishTime>
     </File>
     <File Include="web/clientes/cl_linhas.aspx">
       <publishTime>05/31/2016 08:47:31</publishTime>
     </File>
     <File Include="web/clientes/cl_linhas.aspx.designer.vb">
-      <publishTime>11/05/2016 08:58:16</publishTime>
+      <publishTime>05/11/2016 08:58:16</publishTime>
     </File>
     <File Include="web/clientes/cl_linhas.aspx.vb">
-      <publishTime>11/05/2016 10:07:11</publishTime>
+      <publishTime>05/11/2016 10:07:11</publishTime>
     </File>
     <File Include="web/clientes/cl_linhas_detalhes.aspx">
       <publishTime>06/27/2016 09:21:01</publishTime>
@@ -1486,28 +1534,28 @@ ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.mic
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="web/clientes/relatorios/cl_rel_reducao.aspx">
-      <publishTime>06/09/2016 10:53:51</publishTime>
+      <publishTime>07/08/2016 14:46:30</publishTime>
     </File>
     <File Include="web/clientes/relatorios/cl_rel_reducaoPendecias.aspx">
-      <publishTime>05/18/2016 15:56:40</publishTime>
+      <publishTime>07/01/2016 15:22:30</publishTime>
     </File>
     <File Include="web/clientes/relatorios/cl_rel_reducaoPendecias.aspx.designer.vb">
-      <publishTime>09/05/2016 16:32:45</publishTime>
+      <publishTime>05/09/2016 16:32:45</publishTime>
     </File>
     <File Include="web/clientes/relatorios/cl_rel_uso.aspx">
-      <publishTime>06/02/2016 13:45:19</publishTime>
+      <publishTime>07/01/2016 15:22:50</publishTime>
     </File>
     <File Include="web/clientes/relatorios/configuracoes/atualizar_infoamacoes_relatorio.aspx">
-      <publishTime>06/24/2016 16:58:27</publishTime>
+      <publishTime>07/04/2016 14:37:52</publishTime>
     </File>
     <File Include="web/clientes/relatorios/rel_descritivo.aspx">
-      <publishTime>06/02/2016 13:51:59</publishTime>
+      <publishTime>07/13/2016 11:51:40</publishTime>
     </File>
     <File Include="web/financeiro/bling/export_clientes_bling.aspx">
       <publishTime>04/01/2016 14:29:36</publishTime>
     </File>
     <File Include="web/linhas/cadastro/li_cad_dta_programacao.aspx">
-      <publishTime>06/28/2016 16:43:36</publishTime>
+      <publishTime>07/07/2016 11:01:01</publishTime>
     </File>
     <File Include="web/linhas/cadastro/li_cad_tipo_programacao.aspx">
       <publishTime>06/13/2016 14:27:29</publishTime>
@@ -1528,7 +1576,7 @@ ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.mic
       <publishTime>05/16/2016 14:00:33</publishTime>
     </File>
     <File Include="web/pessoas/ps_cidades.aspx">
-      <publishTime>05/05/2016 17:26:25</publishTime>
+      <publishTime>07/04/2016 09:30:34</publishTime>
     </File>
     <File Include="web/pessoas/ps_cidades_detalhes.aspx">
       <publishTime>03/30/2016 08:59:20</publishTime>
@@ -1561,13 +1609,19 @@ ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.mic
       <publishTime>06/03/2016 15:51:15</publishTime>
     </File>
     <File Include="web/relacionamento/relatorios/RelUsoAnual.aspx">
-      <publishTime>06/22/2016 14:46:55</publishTime>
+      <publishTime>07/01/2016 15:21:06</publishTime>
+    </File>
+    <File Include="web/relacionamento/relatorios/rel_projecao.aspx">
+      <publishTime>07/07/2016 09:57:16</publishTime>
     </File>
     <File Include="web/relacionamento/relatorios/rl_rel_movel_x_inter.aspx">
-      <publishTime>06/01/2016 14:17:46</publishTime>
+      <publishTime>07/01/2016 15:21:27</publishTime>
     </File>
     <File Include="web/relacionamento/relatorios/rl_uso_Anual.aspx">
       <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="web/servicos_fatura/bloqueio_faturas.aspx">
+      <publishTime>07/13/2016 10:01:01</publishTime>
     </File>
     <File Include="web/servicos_fatura/configuracoes/cadatro_tipo_uso_rel.aspx">
       <publishTime>04/25/2016 09:00:49</publishTime>
@@ -1591,7 +1645,7 @@ ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.mic
       <publishTime>06/21/2016 16:40:26</publishTime>
     </File>
     <File Include="web/servicos_fatura/if_input_fatura_manual_Detalhes.aspx">
-      <publishTime>06/24/2016 11:02:03</publishTime>
+      <publishTime>07/04/2016 09:34:34</publishTime>
     </File>
     <File Include="web/servicos_fatura/sf_tipo_uso.aspx">
       <publishTime>01/01/0001 00:00:00</publishTime>

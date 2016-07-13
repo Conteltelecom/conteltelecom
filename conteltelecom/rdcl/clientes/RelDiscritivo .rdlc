@@ -34,7 +34,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=RTrim(UCase(Fields!desc_CL_PLANOS_CLIENTE.Value)) &amp; " " &amp; RTrim(UCase(Fields!desc_OP_PLANOS.Value)) &amp; " VALOR DO PLANO R$" &amp; Fields!valor_CL_PLANOS_CLIENTE.Value</Value>
+                              <Value>=RTrim(UCase(Fields!desc_CL_PLANOS_CLIENTE.Value)) &amp; " " &amp; RTrim(UCase(Fields!desc_OP_PLANOS.Value))</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -1090,7 +1090,7 @@
             <Value>=Fields!tipoinfo.Value</Value>
           </SortExpression>
         </SortExpressions>
-        <Top>0.31749cm</Top>
+        <Top>0.31748cm</Top>
         <Height>5.4cm</Height>
         <Width>18.00521cm</Width>
         <Style>
@@ -1119,7 +1119,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox27</rd:DefaultName>
-        <Top>5.54109cm</Top>
+        <Top>5.54108cm</Top>
         <Height>0.6cm</Height>
         <Width>18.35435cm</Width>
         <ZIndex>1</ZIndex>
@@ -1228,9 +1228,37 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>RELATÓRIO DESCRITIVO</Value>
+                      <Value xml:space="preserve"> </Value>
                       <Style>
-                        <FontSize>26pt</FontSize>
+                        <FontSize>14pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Value>=RTrim(Fields!desc_PS_PESSOA.Value) &amp; " DESCRITIVO - " &amp;  RTrim(Fields!mesAnoRefereincia_SF_SERVICOS_FATURA.Value)</Value>
+                      <Style>
+                        <FontSize>14pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Value xml:space="preserve"> </Value>
+                      <Style>
+                        <FontSize>14pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Left</TextAlign>
+                  </Style>
+                </Paragraph>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value />
+                      <Style>
+                        <FontSize>14pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
@@ -1241,7 +1269,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox3</rd:DefaultName>
-              <Left>2.57764cm</Left>
+              <Left>2.62753cm</Left>
               <Height>1.18772cm</Height>
               <Width>15.77563cm</Width>
               <Style>
@@ -1271,7 +1299,7 @@
           <KeepTogether>true</KeepTogether>
           <Top>0.58209cm</Top>
           <Height>1.28474cm</Height>
-          <Width>18.35327cm</Width>
+          <Width>18.40316cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -1383,6 +1411,26 @@
         </Field>
         <Field Name="desc_OP_PLANOS">
           <DataField>desc_OP_PLANOS</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="minutos_SF_VL_USO">
+          <DataField>minutos_SF_VL_USO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="desc_PS_PESSOA">
+          <DataField>desc_PS_PESSOA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="id_SF_VL_SERVICO">
+          <DataField>id_SF_VL_SERVICO</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="contaRetificada_SF_SERVICOS_FATURA">
+          <DataField>contaRetificada_SF_SERVICOS_FATURA</DataField>
+          <rd:TypeName>System.Byte</rd:TypeName>
+        </Field>
+        <Field Name="mesAnoRefereincia_SF_SERVICOS_FATURA">
+          <DataField>mesAnoRefereincia_SF_SERVICOS_FATURA</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>

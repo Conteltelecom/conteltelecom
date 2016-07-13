@@ -32,7 +32,7 @@
         Try
             If IsNumeric(cpf.ToString) = True Then
 
-                ' Dim iCpf As Int64 = Convert.ToInt64(cpf)
+                Dim iCpf As Int64 = Convert.ToInt64(cpf)
 
 
                 Return String.Format("{0:###\.###\.###-##}", cpf)
@@ -75,12 +75,26 @@
 
             If IsNumeric(Fone.ToString) = True Then
                 Dim iFone As Int64 = Convert.ToInt64(Fone)
-                If iFone.ToString.Length > 10 Then
 
-                    Return String.Format("{0:(##\) #####\-####}", iFone)
+
+
+                If iFone.ToString.Length > 10 Then
+                    If iFone.ToString.Substring(0, 1) = 0 Then
+                        Return String.Format("{0:####\ ###\ ####}", iFone)
+                    Else
+
+                        Return String.Format("{0:(##\) #####\-####}", iFone)
+                    End If
+
+
                 Else
                     If iFone.ToString.Length < 9 Then
-                        Return String.Format("{0:(##\) ###\-####}", iFone)
+                        If iFone.ToString.Substring(0, 1) = 0 Then
+                            Return String.Format("{0:####\ ######}", iFone)
+                        Else
+                            Return String.Format("{0:(##\) ###\-####}", iFone)
+                        End If
+
                     Else
                         Return String.Format("{0:(##\) ####\-####}", iFone)
                     End If
@@ -234,7 +248,7 @@
         Dim CustomersTableAdapter1 As conteltelecom.DataSetLinhasTableAdapters.Sp_BuscaRazaoSocialOperadora_x_LinhaTableAdapter
         CustomersTableAdapter1 = New conteltelecom.DataSetLinhasTableAdapters.Sp_BuscaRazaoSocialOperadora_x_LinhaTableAdapter
 
-        For Each q In CustomersTableAdapter1.GetData(If(IsNumeric(id_LI_LINHAS) = True, id_LI_LINHAS, Nothing))
+        For Each q In CustomersTableAdapter1.GetDataBy(If(IsNumeric(id_LI_LINHAS) = True, id_LI_LINHAS, Nothing))
 
             If IsDBNull(q("razaosocial_PS_JURIDICA")) = False Then
                 RazaoSocial.Text = q("razaosocial_PS_JURIDICA")
@@ -285,7 +299,16 @@
         Return False
 
     End Function
+    Function SomenteNumeros(ByVal strNumero As String) As String
 
+        Dim re As New Regex("[0-9]")
+        Dim s As New StringBuilder()
+
+        For Each m As Match In re.Matches(strNumero)
+            s.Append(m.Value)
+        Next
+        Return (s.ToString)
+    End Function
     Public Function BuscaValorContrato(ByRef vl_contrato As Double, ByRef id_CL_TIPOS_CONTRATOS As Integer, ByVal codMatriz_PS_CLIENTES As Integer) As Boolean
 
         Dim CustomersTableAdapter1 As conteltelecom.DataSetLinhasTableAdapters.CL_CAD_CONTRATOSTableAdapter

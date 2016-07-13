@@ -80,6 +80,7 @@ Public Class if_input_fatura_manual_Detalhes
                 SqlDataSourceUso.UpdateParameters("id_OP_OPERADORAS").DefaultValue = id_OP_OPERADORASRadComboBox.SelectedValue
                 SqlDataSourceUso.UpdateParameters("id_SF_VL_USO").DefaultValue = eitem.GetDataKeyValue("id_SF_VL_USO").ToString
                 SqlDataSourceUso.UpdateParameters("id_SF_TIPO_USO").DefaultValue = id_SF_TIPO_USORadComboBox.SelectedValue
+                SqlDataSourceUso.UpdateParameters("id_LI_LINHAS").DefaultValue = codNumLinha_SF_VL_USORadComboBox.SelectedValue.ToString.Substring(1).ToString
 
                 SqlDataSourceUso.Update()
 
@@ -93,7 +94,7 @@ Public Class if_input_fatura_manual_Detalhes
                 SqlDataSourceUso.InsertParameters("id_OP_OPERADORAS").DefaultValue = id_OP_OPERADORASRadComboBox.SelectedValue
                 SqlDataSourceUso.InsertParameters("id_SF_SERVICOS_FATURA").DefaultValue = Request.QueryString("id_SF_SERVICOS_FATURA")
                 SqlDataSourceUso.InsertParameters("id_SF_TIPO_USO").DefaultValue = id_SF_TIPO_USORadComboBox.SelectedValue
-
+                SqlDataSourceUso.InsertParameters("id_LI_LINHAS").DefaultValue = codNumLinha_SF_VL_USORadComboBox.SelectedValue.ToString.Substring(1).ToString
                 SqlDataSourceUso.Insert()
             End If
 

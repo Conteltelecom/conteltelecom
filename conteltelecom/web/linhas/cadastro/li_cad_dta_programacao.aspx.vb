@@ -28,8 +28,8 @@ Public Class li_cad_dta_programacao
                 Dim RadDatePickerLdn As RadDatePicker = DirectCast(dataItem.FindControl("RadDatePickerLdn"), RadDatePicker)
                 Dim observacoesTextBox As RadTextBox = DirectCast(dataItem.FindControl("observacoesTextBox"), RadTextBox)
 
-                SqlDataSourceCadDtaProg.InsertParameters("dtMovel_LI_CAD_PROGRAMACAO").DefaultValue = RadDatePickerMovel.DateInput.SelectedDate
-                SqlDataSourceCadDtaProg.InsertParameters("dtLdn_LI_CAD_PROGRAMACAO").DefaultValue = RadDatePickerLdn.DateInput.SelectedDate
+                SqlDataSourceCadDtaProg.InsertParameters("dtMovel_LI_CAD_PROGRAMACAO").DefaultValue = If(RadDatePickerMovel.DateInput.SelectedDate <> "", RadDatePickerMovel.DateInput.SelectedDate, DBNull.Value)
+                SqlDataSourceCadDtaProg.InsertParameters("dtLdn_LI_CAD_PROGRAMACAO").DefaultValue = If(RadDatePickerLdn.DateInput.SelectedDate <> "", RadDatePickerLdn.DateInput.SelectedDate, DBNull.Value)
                 SqlDataSourceCadDtaProg.InsertParameters("obs_LI_CAD_PROGRAMACAO").DefaultValue = observacoesTextBox.Text
                 SqlDataSourceCadDtaProg.Insert()
                 RadGridCadDtaProg.MasterTableView.ClearEditItems()

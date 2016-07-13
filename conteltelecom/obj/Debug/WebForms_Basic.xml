@@ -768,6 +768,56 @@ Update Order Option
 Used to sort self-referenced table's rows
 </summary>
 </member>
+<member name="T:conteltelecom.DataSetLinhas01">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:conteltelecom.DataSetLinhas01.LI_LINHAS01DataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:conteltelecom.DataSetLinhas01.LI_LINHAS02DataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:conteltelecom.DataSetLinhas01.LI_LINHAS03DataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:conteltelecom.DataSetLinhas01.LI_LINHAS01Row">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:conteltelecom.DataSetLinhas01.LI_LINHAS02Row">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:conteltelecom.DataSetLinhas01.LI_LINHAS03Row">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:conteltelecom.DataSetLinhas01.LI_LINHAS01RowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:conteltelecom.DataSetLinhas01.LI_LINHAS02RowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:conteltelecom.DataSetLinhas01.LI_LINHAS03RowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:conteltelecom.DataSetBuscaUso">
 <summary>
 Represents a strongly typed in-memory cache of data.
@@ -1883,56 +1933,6 @@ Update Order Option
 Used to sort self-referenced table's rows
 </summary>
 </member>
-<member name="T:conteltelecom.DataSetLinhas01">
-<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member>
-<member name="T:conteltelecom.DataSetLinhas01.LI_LINHAS01DataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:conteltelecom.DataSetLinhas01.LI_LINHAS02DataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:conteltelecom.DataSetLinhas01.LI_LINHAS03DataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:conteltelecom.DataSetLinhas01.LI_LINHAS01Row">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:conteltelecom.DataSetLinhas01.LI_LINHAS02Row">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:conteltelecom.DataSetLinhas01.LI_LINHAS03Row">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:conteltelecom.DataSetLinhas01.LI_LINHAS01RowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:conteltelecom.DataSetLinhas01.LI_LINHAS02RowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:conteltelecom.DataSetLinhas01.LI_LINHAS03RowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
 <member name="T:conteltelecom.DataSetLinhas01TableAdapters.LI_LINHAS01TableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
@@ -2118,6 +2118,71 @@ Update Order Option
 Used to sort self-referenced table's rows
 </summary>
 </member>
+<member name="T:conteltelecom.DataSetProjecao">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:conteltelecom.DataSetProjecao.SF_VL_USODataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:conteltelecom.DataSetProjecao.SF_VL_USORow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:conteltelecom.DataSetProjecao.SF_VL_USORowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:conteltelecom.DataSetProjecaoTableAdapters.SF_VL_USOTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:conteltelecom.DataSetProjecaoTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:conteltelecom.DataSetProjecaoTableAdapters.TableAdapterManager.UpdateUpdatedRows(conteltelecom.DataSetProjecao,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:conteltelecom.DataSetProjecaoTableAdapters.TableAdapterManager.UpdateInsertedRows(conteltelecom.DataSetProjecao,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:conteltelecom.DataSetProjecaoTableAdapters.TableAdapterManager.UpdateDeletedRows(conteltelecom.DataSetProjecao,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:conteltelecom.DataSetProjecaoTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:conteltelecom.DataSetProjecaoTableAdapters.TableAdapterManager.UpdateAll(conteltelecom.DataSetProjecao)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:conteltelecom.DataSetProjecaoTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:conteltelecom.DataSetProjecaoTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
 <member name="T:conteltelecom.RelMovel_Interurbano">
 <summary>
 Represents a strongly typed in-memory cache of data.
@@ -2247,6 +2312,15 @@ Update Order Option
 <summary>
 Used to sort self-referenced table's rows
 </summary>
+</member>
+<member name="F:conteltelecom.download_page._form1">
+<summary>
+Controle de form1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+</remarks>
 </member>
 <member name="F:conteltelecom.login._ImageLogo">
 <summary>
@@ -2395,6 +2469,15 @@ Modificar a declaração do campo de movimento do arquivo de designer para o arq
 <member name="F:conteltelecom.MasterPageCli._Pendecia">
 <summary>
 Controle Pendecia.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.MasterPageCli._Projecao">
+<summary>
+Controle Projecao.
 </summary>
 <remarks>
 Campo gerado automaticamente.
@@ -2854,6 +2937,51 @@ Campo gerado automaticamente.
 Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
 </remarks>
 </member>
+<member name="F:conteltelecom.cad_tipo_bloqueios._RadGridCadBloqueios">
+<summary>
+Controle RadGridCadBloqueios.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.cad_tipo_bloqueios._SqlDataSourceCadBloqueios">
+<summary>
+Controle SqlDataSourceCadBloqueios.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.cad_usuarios._RadGridCadUseuarios">
+<summary>
+Controle RadGridCadUseuarios.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.cad_usuarios._SqlDataSourceCriaUsuarios">
+<summary>
+Controle SqlDataSourceCriaUsuarios.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.cad_usuarios._SqlDataSourceBuscaPessoasEmpresa">
+<summary>
+Controle SqlDataSourceBuscaPessoasEmpresa.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
 <member name="F:conteltelecom.sinc_clientes._ButtonSincronizar">
 <summary>
 Controle ButtonSincronizar.
@@ -3151,6 +3279,15 @@ Campo gerado automaticamente.
 Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
 </remarks>
 </member>
+<member name="F:conteltelecom.cl_contratos._RadWindowManagerMsg">
+<summary>
+Controle RadWindowManagerMsg.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
 <member name="F:conteltelecom.cl_contratos._RadGridContratos">
 <summary>
 Controle RadGridContratos.
@@ -3172,6 +3309,15 @@ Modificar a declaração do campo de movimento do arquivo de designer para o arq
 <member name="F:conteltelecom.cl_contratos._ObjectDataSourceBuscaContratos">
 <summary>
 Controle ObjectDataSourceBuscaContratos.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.cl_contratos._SqlDataSourceAnexos">
+<summary>
+Controle SqlDataSourceAnexos.
 </summary>
 <remarks>
 Campo gerado automaticamente.
@@ -3592,6 +3738,24 @@ Campo gerado automaticamente.
 Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
 </remarks>
 </member>
+<member name="F:conteltelecom.cl_rel_reducao._SqlDataSourceBuscaLinhas">
+<summary>
+Controle SqlDataSourceBuscaLinhas.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.cl_rel_reducao._SqlDataSourceValidaLInha">
+<summary>
+Controle SqlDataSourceValidaLInha.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
 <member name="F:conteltelecom.cl_rel_uso._Label2">
 <summary>
 Controle Label2.
@@ -3802,6 +3966,15 @@ Modificar a declaração do campo de movimento do arquivo de designer para o arq
 <member name="F:conteltelecom.atualizar_infoamacoes_relatorio._SqlDataSourceUso">
 <summary>
 Controle SqlDataSourceUso.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.atualizar_infoamacoes_relatorio._SqlDataSourceIdLinha">
+<summary>
+Controle SqlDataSourceIdLinha.
 </summary>
 <remarks>
 Campo gerado automaticamente.
@@ -4555,6 +4728,96 @@ Campo gerado automaticamente.
 Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
 </remarks>
 </member>
+<member name="F:conteltelecom.rel_projecao._Label1">
+<summary>
+Controle Label1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.rel_projecao._RadDropDownListMes">
+<summary>
+Controle RadDropDownListMes.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.rel_projecao._Label4">
+<summary>
+Controle Label4.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.rel_projecao._RadDropDownListAno">
+<summary>
+Controle RadDropDownListAno.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.rel_projecao._RadImageButtonGerar">
+<summary>
+Controle RadImageButtonGerar.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.rel_projecao._ReportViewer1">
+<summary>
+Controle ReportViewer1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.rel_projecao._ObjectDataSourceProjecao">
+<summary>
+Controle ObjectDataSourceProjecao.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.rel_projecao._SqlDataSourceBuscaLinhas">
+<summary>
+Controle SqlDataSourceBuscaLinhas.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.rel_projecao._SqlDataSourceValorUso">
+<summary>
+Controle SqlDataSourceValorUso.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.rel_projecao._SqlDataSourceMes">
+<summary>
+Controle SqlDataSourceMes.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
 <member name="F:conteltelecom.rl_rel_movel_x_inter._Label1">
 <summary>
 Controle Label1.
@@ -4600,9 +4863,108 @@ Campo gerado automaticamente.
 Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
 </remarks>
 </member>
+<member name="F:conteltelecom.rl_rel_movel_x_inter._ObjectDataSourceListaPendencias">
+<summary>
+Controle ObjectDataSourceListaPendencias.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
 <member name="F:conteltelecom.rl_rel_movel_x_inter._ObjectDataSource1">
 <summary>
 Controle ObjectDataSource1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.bloqueio_faturas._Label2">
+<summary>
+Controle Label2.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.bloqueio_faturas._Label1">
+<summary>
+Controle Label1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.bloqueio_faturas._RadDropDownListMes">
+<summary>
+Controle RadDropDownListMes.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.bloqueio_faturas._Label4">
+<summary>
+Controle Label4.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.bloqueio_faturas._RadDropDownListAno">
+<summary>
+Controle RadDropDownListAno.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.bloqueio_faturas._Label3">
+<summary>
+Controle Label3.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.bloqueio_faturas._RadDropDownListTipoRel">
+<summary>
+Controle RadDropDownListTipoRel.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.bloqueio_faturas._RadGridBloquiosFatura">
+<summary>
+Controle RadGridBloquiosFatura.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.bloqueio_faturas._SqlDataSourceBuscaClientes">
+<summary>
+Controle SqlDataSourceBuscaClientes.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.bloqueio_faturas._SqlDataSourceBuscaValorMes">
+<summary>
+Controle SqlDataSourceBuscaValorMes.
 </summary>
 <remarks>
 Campo gerado automaticamente.
@@ -4915,60 +5277,6 @@ Campo gerado automaticamente.
 Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
 </remarks>
 </member>
-<member name="F:conteltelecom.ps_cidades._Label2">
-<summary>
-Controle Label2.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
-<member name="F:conteltelecom.ps_cidades._TextBoxCodini">
-<summary>
-Controle TextBoxCodini.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
-<member name="F:conteltelecom.ps_cidades._Label3">
-<summary>
-Controle Label3.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
-<member name="F:conteltelecom.ps_cidades._TextBoxFim">
-<summary>
-Controle TextBoxFim.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
-<member name="F:conteltelecom.ps_cidades._LabelDescCidade">
-<summary>
-Controle LabelDescCidade.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
-<member name="F:conteltelecom.ps_cidades._TextBoxDesc">
-<summary>
-Controle TextBoxDesc.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
 <member name="F:conteltelecom.ps_cidades._Label5">
 <summary>
 Controle Label5.
@@ -4999,15 +5307,6 @@ Modificar a declaração do campo de movimento do arquivo de designer para o arq
 <member name="F:conteltelecom.ps_cidades._RadButtonLimpar">
 <summary>
 Controle RadButtonLimpar.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
-<member name="F:conteltelecom.ps_cidades._UpdatePanel1">
-<summary>
-Controle UpdatePanel1.
 </summary>
 <remarks>
 Campo gerado automaticamente.
@@ -5089,6 +5388,15 @@ Modificar a declaração do campo de movimento do arquivo de designer para o arq
 <member name="F:conteltelecom.ps_pais._conteltelecom">
 <summary>
 Controle conteltelecom.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:conteltelecom.ps_pessoas_detalhes._RadGridPessoas">
+<summary>
+Controle RadGridPessoas.
 </summary>
 <remarks>
 Campo gerado automaticamente.

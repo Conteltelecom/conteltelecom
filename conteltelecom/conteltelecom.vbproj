@@ -597,6 +597,8 @@
     <Content Include="Content\themes\base\tabs.css" />
     <Content Include="Content\themes\base\theme.css" />
     <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="download_page.aspx" />
+    <Content Include="img\downloading_32.png" />
     <Content Include="logoff.aspx" />
     <Content Include="img\accept.png" />
     <Content Include="img\accept_32.png" />
@@ -630,6 +632,8 @@
     <Content Include="web\administrador\configuracoes\adm_cad_paginas.aspx" />
     <Content Include="web\administrador\configuracoes\adm_paginas_menu.aspx" />
     <Content Include="web\administrador\configuracoes\cad_menus.aspx" />
+    <Content Include="web\administrador\configuracoes\cad_tipo_bloqueios.aspx" />
+    <Content Include="web\administrador\configuracoes\cad_usuarios.aspx" />
     <Content Include="web\atendimento\sinc_clientes.aspx" />
     <Content Include="web\clientes\clinetes_matriz\cad_planos_x_clientes.aspx" />
     <Content Include="web\clientes\clinetes_matriz\cl_add_linhas_planos.aspx" />
@@ -659,7 +663,9 @@
     <Content Include="web\pessoas\ps_cliente_detalhes.aspx" />
     <Content Include="web\relacionamento\li_linhas_X_cidades.aspx" />
     <Content Include="web\relacionamento\relatorios\RelUsoAnual.aspx" />
+    <Content Include="web\relacionamento\relatorios\rel_projecao.aspx" />
     <Content Include="web\relacionamento\relatorios\rl_rel_movel_x_inter.aspx" />
+    <Content Include="web\servicos_fatura\bloqueio_faturas.aspx" />
     <Content Include="web\servicos_fatura\configuracoes\cadatro_tipo_uso_rel.aspx" />
     <Content Include="web\servicos_fatura\configuracoes\sf_agrupamento_tipo_uso.aspx" />
     <Content Include="web\servicos_fatura\configuracoes\sf_cad_leiaute_detalhes.aspx" />
@@ -948,6 +954,17 @@
     <Content Include="DataSet\ds_rel\RelMovel_Interurbano.xsc">
       <DependentUpon>RelMovel_Interurbano.xsd</DependentUpon>
     </Content>
+    <Content Include="DataSet\ds_rel\Relacionamento\DataSetProjecao.xsc">
+      <DependentUpon>DataSetProjecao.xsd</DependentUpon>
+    </Content>
+    <None Include="DataSet\ds_rel\Relacionamento\DataSetProjecao.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetProjecao.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="DataSet\ds_rel\Relacionamento\DataSetProjecao.xss">
+      <DependentUpon>DataSetProjecao.xsd</DependentUpon>
+    </Content>
     <None Include="DataSet\ds_rel\RelMovel_Interurbano.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -1173,10 +1190,21 @@
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="App_Code\Anexos.vb" />
     <Compile Include="App_Code\Criptografia.vb" />
     <Content Include="App_Code\FormRewriter.vb" />
+    <Compile Include="App_Code\JavaScript.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\listas\ListRelProjecao.vb" />
+    <Compile Include="App_Code\Sql.vb" />
     <Compile Include="App_Code\Validacoes.vb" />
-    <Compile Include="App_Code\autenticacao.vb" />
+    <Compile Include="App_Code\autenticacao.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\VarSession.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="DataSet\App_Start\BundleConfig.vb" />
     <Compile Include="DataSet\App_Start\IdentityConfig.vb" />
     <Compile Include="DataSet\App_Start\RouteConfig.vb" />
@@ -1202,6 +1230,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RadAutoCompleteBoxPaginas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\ds_Globais\RadAutoCompleteBoxPsFiscica.vb">
+      <DependentUpon>RadAutoCompleteBoxPsFiscica.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\ds_linhas\DataSetLinhas01.vb">
+      <DependentUpon>DataSetLinhas01.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataSet\ds_rel\Relacionamento\DataSetBuscaUso.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -1306,6 +1340,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ds_relDescritivo.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSet\ds_rel\Relacionamento\DataSetProjecao.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetProjecao.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSet\ds_rel\RelMovel_Interurbano.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1315,6 +1354,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>radgridBuscacontatos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="download_page.aspx.designer.vb">
+      <DependentUpon>download_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="download_page.aspx.vb">
+      <DependentUpon>download_page.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="logoff.aspx.designer.vb">
       <DependentUpon>logoff.aspx</DependentUpon>
@@ -1436,6 +1482,20 @@
     </Compile>
     <Compile Include="web\administrador\configuracoes\cad_menus.aspx.vb">
       <DependentUpon>cad_menus.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="web\administrador\configuracoes\cad_tipo_bloqueios.aspx.designer.vb">
+      <DependentUpon>cad_tipo_bloqueios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\administrador\configuracoes\cad_tipo_bloqueios.aspx.vb">
+      <DependentUpon>cad_tipo_bloqueios.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="web\administrador\configuracoes\cad_usuarios.aspx.designer.vb">
+      <DependentUpon>cad_usuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\administrador\configuracoes\cad_usuarios.aspx.vb">
+      <DependentUpon>cad_usuarios.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="web\atendimento\sinc_clientes.aspx.designer.vb">
@@ -1642,12 +1702,26 @@
       <DependentUpon>RelUsoAnual.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="web\relacionamento\relatorios\rel_projecao.aspx.designer.vb">
+      <DependentUpon>rel_projecao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\relacionamento\relatorios\rel_projecao.aspx.vb">
+      <DependentUpon>rel_projecao.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="web\relacionamento\relatorios\rl_rel_movel_x_inter.aspx.designer.vb">
       <DependentUpon>rl_rel_movel_x_inter.aspx</DependentUpon>
     </Compile>
     <Compile Include="web\relacionamento\relatorios\rl_rel_movel_x_inter.aspx.vb">
       <DependentUpon>rl_rel_movel_x_inter.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\servicos_fatura\bloqueio_faturas.aspx.designer.vb">
+      <DependentUpon>bloqueio_faturas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\servicos_fatura\bloqueio_faturas.aspx.vb">
+      <DependentUpon>bloqueio_faturas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="web\servicos_fatura\configuracoes\cadatro_tipo_uso_rel.aspx.designer.vb">
       <DependentUpon>cadatro_tipo_uso_rel.aspx</DependentUpon>
@@ -1788,6 +1862,7 @@
     <EmbeddedResource Include="rdcl\clientes\RelReducaoPendecias.rdlc" />
     <CodeAnalysisDictionary Include="rdcl\clientes\RelReducao.rdlc" />
     <EmbeddedResource Include="rdcl\clientes\RelUso.rdlc" />
+    <EmbeddedResource Include="rdcl\relacionamento\Rel_Projecao.rdlc" />
     <EmbeddedResource Include="rdcl\relacionamento\RelUsoAnual.rdlc" />
     <EmbeddedResource Include="rdcl\relacionamento\RelMovel_x_Inter.rdlc" />
   </ItemGroup>
@@ -1806,7 +1881,6 @@
     <Content Include="ViewSwitcher.ascx" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Anexos\Contratos\" />
     <Folder Include="App_Themes\" />
     <Folder Include="bin\rdcl\clientes\" />
     <Folder Include="DataSet\cl_clientes\" />
@@ -1852,7 +1926,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
     </VisualStudio>
   </ProjectExtensions>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

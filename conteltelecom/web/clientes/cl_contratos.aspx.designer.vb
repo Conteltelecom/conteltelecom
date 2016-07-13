@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class cl_contratos
     
     '''<summary>
+    '''Controle RadWindowManagerMsg.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents RadWindowManagerMsg As Global.Telerik.Web.UI.RadWindowManager
+    
+    '''<summary>
     '''Controle RadGridContratos.
     '''</summary>
     '''<remarks>
@@ -39,4 +48,13 @@ Partial Public Class cl_contratos
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
     Protected WithEvents ObjectDataSourceBuscaContratos As Global.System.Web.UI.WebControls.ObjectDataSource
+    
+    '''<summary>
+    '''Controle SqlDataSourceAnexos.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents SqlDataSourceAnexos As Global.System.Web.UI.WebControls.SqlDataSource
 End Class

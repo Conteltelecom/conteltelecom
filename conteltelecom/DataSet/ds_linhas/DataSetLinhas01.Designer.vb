@@ -561,7 +561,7 @@ Partial Public Class DataSetLinhas01
             MyBase.Columns.Add(Me.columnid_LI_LINHAS)
             Me.columnnumContrato_LI_LINHAS.AllowDBNull = false
             Me.columnnumContrato_LI_LINHAS.MaxLength = 50
-            Me.columncodLinha_LI_LINHAS.MaxLength = 15
+            Me.columncodLinha_LI_LINHAS.MaxLength = 50
             Me.columnid_OP_OPERADORAS.AutoIncrement = true
             Me.columnid_OP_OPERADORAS.AutoIncrementSeed = -1
             Me.columnid_OP_OPERADORAS.AutoIncrementStep = -1

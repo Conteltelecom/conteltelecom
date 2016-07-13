@@ -147,4 +147,22 @@ Partial Public Class cl_rel_reducao
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
     Protected WithEvents ObjectDataSource1 As Global.System.Web.UI.WebControls.ObjectDataSource
+    
+    '''<summary>
+    '''Controle SqlDataSourceBuscaLinhas.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents SqlDataSourceBuscaLinhas As Global.System.Web.UI.WebControls.SqlDataSource
+    
+    '''<summary>
+    '''Controle SqlDataSourceValidaLInha.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents SqlDataSourceValidaLInha As Global.System.Web.UI.WebControls.SqlDataSource
 End Class

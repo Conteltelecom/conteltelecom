@@ -645,7 +645,7 @@ Partial Public Class DataSetLinhas
             Me.columndesc_OP_OPERADORAS.MaxLength = 100
             Me.columnperIncial_LI_LINHAS.MaxLength = 50
             Me.columnnomeUnidade_LI_LINHAS.MaxLength = 150
-            Me.columncodLinha_LI_LINHAS.MaxLength = 15
+            Me.columncodLinha_LI_LINHAS.MaxLength = 50
             Me.columnlinhaVirtual_LI_LINHAS.AllowDBNull = false
         End Sub
         
@@ -2164,7 +2164,7 @@ Namespace DataSetLinhasTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        LI_LINHAS.id_OP_OPERADORAS, LI_LINHAS.id_LI_TIPOS, LI_LINHAS.id_PS_"& _ 
@@ -2181,14 +2181,30 @@ Namespace DataSetLinhasTableAdapters
                 "LINHAS = @id_LI_LINHAS)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_LI_LINHAS", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "id_LI_LINHAS", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT        LI_LINHAS.id_OP_OPERADORAS, LI_LINHAS.id_LI_TIPOS, LI_LINHAS.id_PS_"& _ 
+                "CLIENTES, LI_LINHAS.id_PS_CIDADES, PS_CLIENTES.codMatriz_PS_CLIENTES, PS_CLIENTE"& _ 
+                "S.id_PS_PESSOA, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         PS_JURIDICA.razaosocial_PS_JURIDICA, "& _ 
+                "OP_OPERADORAS.desc_OP_OPERADORAS, LI_LINHAS.vlInicial_id_LI_TIPOS, LI_LINHAS.for"& _ 
+                "aAnalise_LI_LINHAS, LI_LINHAS.perIncial_LI_LINHAS, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         LI"& _ 
+                "_LINHAS.nomeUnidade_LI_LINHAS, LI_LINHAS.codLinha_LI_LINHAS, LI_LINHAS.linhaVirt"& _ 
+                "ual_LI_LINHAS"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            LI_LINHAS INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         PS"& _ 
+                "_CLIENTES ON LI_LINHAS.id_PS_CLIENTES = PS_CLIENTES.id_PS_CLIENTES INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&" "& _ 
+                "                        PS_JURIDICA ON PS_CLIENTES.id_PS_JURIDICA = PS_JURIDICA."& _ 
+                "id_PS_JURIDICA INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         OP_OPERADORAS ON LI_LINHAS.i"& _ 
+                "d_OP_OPERADORAS = OP_OPERADORAS.id_OP_OPERADORAS"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (LI_LINHAS.id_LI_"& _ 
+                "LINHAS = @id_LI_LINHAS)"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_LI_LINHAS", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "id_LI_LINHAS", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As DataSetLinhas.Sp_BuscaRazaoSocialOperadora_x_LinhaDataTable, ByVal id_LI_LINHAS As Integer) As Integer
-            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillBy(ByVal dataTable As DataSetLinhas.Sp_BuscaRazaoSocialOperadora_x_LinhaDataTable, ByVal id_LI_LINHAS As Integer) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
             Me.Adapter.SelectCommand.Parameters(0).Value = CType(id_LI_LINHAS,Integer)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -2200,13 +2216,35 @@ Namespace DataSetLinhasTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData(ByVal id_LI_LINHAS As Integer) As DataSetLinhas.Sp_BuscaRazaoSocialOperadora_x_LinhaDataTable
-            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataBy(ByVal id_LI_LINHAS As Integer) As DataSetLinhas.Sp_BuscaRazaoSocialOperadora_x_LinhaDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
             Me.Adapter.SelectCommand.Parameters(0).Value = CType(id_LI_LINHAS,Integer)
             Dim dataTable As DataSetLinhas.Sp_BuscaRazaoSocialOperadora_x_LinhaDataTable = New DataSetLinhas.Sp_BuscaRazaoSocialOperadora_x_LinhaDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Fill(ByVal id_LI_LINHAS As Integer) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(0)
+            command.Parameters(0).Value = CType(id_LI_LINHAS,Integer)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
         End Function
     End Class
     

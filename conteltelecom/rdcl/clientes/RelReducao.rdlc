@@ -793,7 +793,7 @@
                               <Value>=IIf(Count(Fields!vltotalLinha_SF_SERVICOS_FATURA.Value=1)&gt;0,(Sum(Fields!vlInicial_id_LI_TIPOS.Value))-CDec((ReportItems!vltotalLinha_SF_SERVICOS_FATURA2.Value)),(Sum(Fields!vlInicial_id_LI_TIPOS.Value))-ReportItems!SumValorinicial.Value)</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
-                                <Format>'R$' #,0.00;('R$' #,0.00)</Format>
+                                <Format>'R$' #,0.00;'R$' -#,0.00</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -958,11 +958,12 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=CDec((IIf(Fields!tpcontrato.Value=1,Fields!VALOR.Value,(IIf(Count(Fields!vltotalLinha_SF_SERVICOS_FATURA.Value=1)&gt;0,(Sum(Fields!vlInicial_id_LI_TIPOS.Value))-CDec((ReportItems!vltotalLinha_SF_SERVICOS_FATURA2.Value)),(Sum(Fields!vlInicial_id_LI_TIPOS.Value))-ReportItems!SumValorinicial.Value))
-*(Fields!VALOR.Value)/100)))</Value>
+                              <Value>=IIf(CDec((IIf(Fields!tpcontrato.Value=1,Fields!VALOR.Value,(IIf(Count(Fields!vltotalLinha_SF_SERVICOS_FATURA.Value=1)&gt;0,(Sum(Fields!vlInicial_id_LI_TIPOS.Value))-CDec((ReportItems!vltotalLinha_SF_SERVICOS_FATURA2.Value)),(Sum(Fields!vlInicial_id_LI_TIPOS.Value))-ReportItems!SumValorinicial.Value))
+*(Fields!VALOR.Value)/100)))&lt;0,0,CDec((IIf(Fields!tpcontrato.Value=1,Fields!VALOR.Value,(IIf(Count(Fields!vltotalLinha_SF_SERVICOS_FATURA.Value=1)&gt;0,(Sum(Fields!vlInicial_id_LI_TIPOS.Value))-CDec((ReportItems!vltotalLinha_SF_SERVICOS_FATURA2.Value)),(Sum(Fields!vlInicial_id_LI_TIPOS.Value))-ReportItems!SumValorinicial.Value))
+*(Fields!VALOR.Value)/100))))</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
-                                <Format>'R$' #,0.00;('R$' #,0.00)</Format>
+                                <Format>'R$' #,0.00;'R$' -#,0.00</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>

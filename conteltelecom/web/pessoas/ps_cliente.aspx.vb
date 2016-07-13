@@ -47,7 +47,7 @@ Public Class ps_cliente
 
         If e.CommandName = "InitInsert" Then
             Session("id_pessoaNav") = "0"
-            HttpContext.Current.Response.Redirect("~/Account/login.aspx")
+            HttpContext.Current.Response.Redirect("~\web\pessoas\ps_cliente_detalhes.aspx?id_cliente=0")
 
         End If
         If e.CommandName = "Pesquisar" Or e.CommandName = "DetalhesFilho" Then

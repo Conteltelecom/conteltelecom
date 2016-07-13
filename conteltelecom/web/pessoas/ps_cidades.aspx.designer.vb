@@ -14,60 +14,6 @@ Option Explicit On
 Partial Public Class ps_cidades
     
     '''<summary>
-    '''Controle Label2.
-    '''</summary>
-    '''<remarks>
-    '''Campo gerado automaticamente.
-    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-    '''</remarks>
-    Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''Controle TextBoxCodini.
-    '''</summary>
-    '''<remarks>
-    '''Campo gerado automaticamente.
-    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-    '''</remarks>
-    Protected WithEvents TextBoxCodini As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
-    '''Controle Label3.
-    '''</summary>
-    '''<remarks>
-    '''Campo gerado automaticamente.
-    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-    '''</remarks>
-    Protected WithEvents Label3 As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''Controle TextBoxFim.
-    '''</summary>
-    '''<remarks>
-    '''Campo gerado automaticamente.
-    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-    '''</remarks>
-    Protected WithEvents TextBoxFim As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
-    '''Controle LabelDescCidade.
-    '''</summary>
-    '''<remarks>
-    '''Campo gerado automaticamente.
-    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-    '''</remarks>
-    Protected WithEvents LabelDescCidade As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''Controle TextBoxDesc.
-    '''</summary>
-    '''<remarks>
-    '''Campo gerado automaticamente.
-    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-    '''</remarks>
-    Protected WithEvents TextBoxDesc As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
     '''Controle Label5.
     '''</summary>
     '''<remarks>
@@ -102,15 +48,6 @@ Partial Public Class ps_cidades
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
     Protected WithEvents RadButtonLimpar As Global.Telerik.Web.UI.RadButton
-    
-    '''<summary>
-    '''Controle UpdatePanel1.
-    '''</summary>
-    '''<remarks>
-    '''Campo gerado automaticamente.
-    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-    '''</remarks>
-    Protected WithEvents UpdatePanel1 As Global.System.Web.UI.UpdatePanel
     
     '''<summary>
     '''Controle RadGridCidade.

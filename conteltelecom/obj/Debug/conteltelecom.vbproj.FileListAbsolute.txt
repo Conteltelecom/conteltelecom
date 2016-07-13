@@ -1,3 +1,10 @@
+C:\Sites\conteltelecom\conteltelecom\obj\Debug\conteltelecom.vbprojResolveAssemblyReference.cache
+C:\Sites\conteltelecom\conteltelecom\obj\Debug\conteltelecom.Resources.resources
+C:\Sites\conteltelecom\conteltelecom\obj\Debug\conteltelecom.vbproj.GenerateResource.Cache
+C:\Sites\conteltelecom\conteltelecom\obj\Debug\conteltelecom.dll.licenses
+C:\Sites\conteltelecom\conteltelecom\obj\Debug\RdlCompile.cache
+C:\Sites\conteltelecom\conteltelecom\obj\Debug\RdlCompile.compiled
+C:\Sites\conteltelecom\conteltelecom\obj\Debug\WebForms_Basic.xml
 C:\Sites\conteltelecom\conteltelecom\bin\ApplicationInsights.config
 C:\Sites\conteltelecom\conteltelecom\bin\roslyn\csc.exe
 C:\Sites\conteltelecom\conteltelecom\bin\roslyn\csc.exe.config
@@ -45,12 +52,5 @@ C:\Sites\conteltelecom\conteltelecom\bin\pt\Microsoft.SqlServer.Types.resources.
 C:\Sites\conteltelecom\conteltelecom\bin\ru\Microsoft.SqlServer.Types.resources.dll
 C:\Sites\conteltelecom\conteltelecom\bin\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 C:\Sites\conteltelecom\conteltelecom\bin\zh-Hant\Microsoft.SqlServer.Types.resources.dll
-C:\Sites\conteltelecom\conteltelecom\obj\Debug\conteltelecom.vbprojResolveAssemblyReference.cache
-C:\Sites\conteltelecom\conteltelecom\obj\Debug\conteltelecom.Resources.resources
-C:\Sites\conteltelecom\conteltelecom\obj\Debug\conteltelecom.vbproj.GenerateResource.Cache
-C:\Sites\conteltelecom\conteltelecom\obj\Debug\conteltelecom.dll.licenses
-C:\Sites\conteltelecom\conteltelecom\obj\Debug\RdlCompile.cache
-C:\Sites\conteltelecom\conteltelecom\obj\Debug\RdlCompile.compiled
 C:\Sites\conteltelecom\conteltelecom\obj\Debug\conteltelecom.dll
-C:\Sites\conteltelecom\conteltelecom\obj\Debug\WebForms_Basic.xml
 C:\Sites\conteltelecom\conteltelecom\obj\Debug\conteltelecom.pdb

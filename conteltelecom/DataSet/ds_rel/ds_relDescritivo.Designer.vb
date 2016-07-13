@@ -315,6 +315,16 @@ Partial Public Class ds_relDescritivo
         
         Private columndesc_OP_PLANOS As Global.System.Data.DataColumn
         
+        Private columnminutos_SF_VL_USO As Global.System.Data.DataColumn
+        
+        Private columndesc_PS_PESSOA As Global.System.Data.DataColumn
+        
+        Private columnid_SF_VL_SERVICO As Global.System.Data.DataColumn
+        
+        Private columncontaRetificada_SF_SERVICOS_FATURA As Global.System.Data.DataColumn
+        
+        Private columnmesAnoRefereincia_SF_SERVICOS_FATURA As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -479,6 +489,46 @@ Partial Public Class ds_relDescritivo
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property minutos_SF_VL_USOColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnminutos_SF_VL_USO
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property desc_PS_PESSOAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columndesc_PS_PESSOA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_SF_VL_SERVICOColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_SF_VL_SERVICO
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property contaRetificada_SF_SERVICOS_FATURAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columncontaRetificada_SF_SERVICOS_FATURA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property mesAnoRefereincia_SF_SERVICOS_FATURAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnmesAnoRefereincia_SF_SERVICOS_FATURA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -531,9 +581,14 @@ Partial Public Class ds_relDescritivo
                     ByVal tipoinfo As Integer,  _
                     ByVal qtDias_SF_VL_SERVICO As Byte,  _
                     ByVal valor_CL_PLANOS_CLIENTE As Decimal,  _
-                    ByVal desc_OP_PLANOS As String) As RelDiscritivoRow
+                    ByVal desc_OP_PLANOS As String,  _
+                    ByVal minutos_SF_VL_USO As String,  _
+                    ByVal desc_PS_PESSOA As String,  _
+                    ByVal id_SF_VL_SERVICO As Integer,  _
+                    ByVal contaRetificada_SF_SERVICOS_FATURA As Byte,  _
+                    ByVal mesAnoRefereincia_SF_SERVICOS_FATURA As String) As RelDiscritivoRow
             Dim rowRelDiscritivoRow As RelDiscritivoRow = CType(Me.NewRow,RelDiscritivoRow)
-            Dim columnValuesArray() As Object = New Object() {ordem_CL_PLANOS_CLIENTE, desc_CL_PLANOS_CLIENTE, idLinhasPai_LI_LINHAS, id_LI_LINHAS, numLinha_LI_LINHAS, codLinha_LI_LINHAS, desc_PS_CIDADES, CNPJ_PS_JURIDICA, razaosocial_PS_JURIDICA, desc_SF_VL_SERVICO, vl_SF_VL_SERVICO, vlDesconto_SF_VL_SERVICO, tipoinfo, qtDias_SF_VL_SERVICO, valor_CL_PLANOS_CLIENTE, desc_OP_PLANOS}
+            Dim columnValuesArray() As Object = New Object() {ordem_CL_PLANOS_CLIENTE, desc_CL_PLANOS_CLIENTE, idLinhasPai_LI_LINHAS, id_LI_LINHAS, numLinha_LI_LINHAS, codLinha_LI_LINHAS, desc_PS_CIDADES, CNPJ_PS_JURIDICA, razaosocial_PS_JURIDICA, desc_SF_VL_SERVICO, vl_SF_VL_SERVICO, vlDesconto_SF_VL_SERVICO, tipoinfo, qtDias_SF_VL_SERVICO, valor_CL_PLANOS_CLIENTE, desc_OP_PLANOS, minutos_SF_VL_USO, desc_PS_PESSOA, id_SF_VL_SERVICO, contaRetificada_SF_SERVICOS_FATURA, mesAnoRefereincia_SF_SERVICOS_FATURA}
             rowRelDiscritivoRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowRelDiscritivoRow)
             Return rowRelDiscritivoRow
@@ -572,6 +627,11 @@ Partial Public Class ds_relDescritivo
             Me.columnqtDias_SF_VL_SERVICO = MyBase.Columns("qtDias_SF_VL_SERVICO")
             Me.columnvalor_CL_PLANOS_CLIENTE = MyBase.Columns("valor_CL_PLANOS_CLIENTE")
             Me.columndesc_OP_PLANOS = MyBase.Columns("desc_OP_PLANOS")
+            Me.columnminutos_SF_VL_USO = MyBase.Columns("minutos_SF_VL_USO")
+            Me.columndesc_PS_PESSOA = MyBase.Columns("desc_PS_PESSOA")
+            Me.columnid_SF_VL_SERVICO = MyBase.Columns("id_SF_VL_SERVICO")
+            Me.columncontaRetificada_SF_SERVICOS_FATURA = MyBase.Columns("contaRetificada_SF_SERVICOS_FATURA")
+            Me.columnmesAnoRefereincia_SF_SERVICOS_FATURA = MyBase.Columns("mesAnoRefereincia_SF_SERVICOS_FATURA")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -609,6 +669,16 @@ Partial Public Class ds_relDescritivo
             MyBase.Columns.Add(Me.columnvalor_CL_PLANOS_CLIENTE)
             Me.columndesc_OP_PLANOS = New Global.System.Data.DataColumn("desc_OP_PLANOS", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columndesc_OP_PLANOS)
+            Me.columnminutos_SF_VL_USO = New Global.System.Data.DataColumn("minutos_SF_VL_USO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnminutos_SF_VL_USO)
+            Me.columndesc_PS_PESSOA = New Global.System.Data.DataColumn("desc_PS_PESSOA", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columndesc_PS_PESSOA)
+            Me.columnid_SF_VL_SERVICO = New Global.System.Data.DataColumn("id_SF_VL_SERVICO", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_SF_VL_SERVICO)
+            Me.columncontaRetificada_SF_SERVICOS_FATURA = New Global.System.Data.DataColumn("contaRetificada_SF_SERVICOS_FATURA", GetType(Byte), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncontaRetificada_SF_SERVICOS_FATURA)
+            Me.columnmesAnoRefereincia_SF_SERVICOS_FATURA = New Global.System.Data.DataColumn("mesAnoRefereincia_SF_SERVICOS_FATURA", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnmesAnoRefereincia_SF_SERVICOS_FATURA)
             Me.columndesc_CL_PLANOS_CLIENTE.ReadOnly = true
             Me.columndesc_CL_PLANOS_CLIENTE.MaxLength = 301
             Me.columnnumLinha_LI_LINHAS.MaxLength = 15
@@ -622,6 +692,14 @@ Partial Public Class ds_relDescritivo
             Me.columnvalor_CL_PLANOS_CLIENTE.ReadOnly = true
             Me.columndesc_OP_PLANOS.ReadOnly = true
             Me.columndesc_OP_PLANOS.MaxLength = 150
+            Me.columnminutos_SF_VL_USO.ReadOnly = true
+            Me.columnminutos_SF_VL_USO.MaxLength = 113
+            Me.columndesc_PS_PESSOA.ReadOnly = true
+            Me.columndesc_PS_PESSOA.MaxLength = 150
+            Me.columnid_SF_VL_SERVICO.ReadOnly = true
+            Me.columncontaRetificada_SF_SERVICOS_FATURA.ReadOnly = true
+            Me.columnmesAnoRefereincia_SF_SERVICOS_FATURA.ReadOnly = true
+            Me.columnmesAnoRefereincia_SF_SERVICOS_FATURA.MaxLength = 50
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1008,6 +1086,83 @@ Partial Public Class ds_relDescritivo
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property minutos_SF_VL_USO() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRelDiscritivo.minutos_SF_VL_USOColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("O valor da coluna 'minutos_SF_VL_USO' na tabela 'RelDiscritivo' é DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRelDiscritivo.minutos_SF_VL_USOColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property desc_PS_PESSOA() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRelDiscritivo.desc_PS_PESSOAColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("O valor da coluna 'desc_PS_PESSOA' na tabela 'RelDiscritivo' é DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRelDiscritivo.desc_PS_PESSOAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_SF_VL_SERVICO() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRelDiscritivo.id_SF_VL_SERVICOColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("O valor da coluna 'id_SF_VL_SERVICO' na tabela 'RelDiscritivo' é DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRelDiscritivo.id_SF_VL_SERVICOColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property contaRetificada_SF_SERVICOS_FATURA() As Byte
+            Get
+                Try 
+                    Return CType(Me(Me.tableRelDiscritivo.contaRetificada_SF_SERVICOS_FATURAColumn),Byte)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("O valor da coluna 'contaRetificada_SF_SERVICOS_FATURA' na tabela 'RelDiscritivo' "& _ 
+                            "é DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRelDiscritivo.contaRetificada_SF_SERVICOS_FATURAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property mesAnoRefereincia_SF_SERVICOS_FATURA() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRelDiscritivo.mesAnoRefereincia_SF_SERVICOS_FATURAColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("O valor da coluna 'mesAnoRefereincia_SF_SERVICOS_FATURA' na tabela 'RelDiscritivo"& _ 
+                            "' é DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRelDiscritivo.mesAnoRefereincia_SF_SERVICOS_FATURAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function Isordem_CL_PLANOS_CLIENTENull() As Boolean
             Return Me.IsNull(Me.tableRelDiscritivo.ordem_CL_PLANOS_CLIENTEColumn)
         End Function
@@ -1197,6 +1352,66 @@ Partial Public Class ds_relDescritivo
         Public Sub Setdesc_OP_PLANOSNull()
             Me(Me.tableRelDiscritivo.desc_OP_PLANOSColumn) = Global.System.Convert.DBNull
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isminutos_SF_VL_USONull() As Boolean
+            Return Me.IsNull(Me.tableRelDiscritivo.minutos_SF_VL_USOColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setminutos_SF_VL_USONull()
+            Me(Me.tableRelDiscritivo.minutos_SF_VL_USOColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isdesc_PS_PESSOANull() As Boolean
+            Return Me.IsNull(Me.tableRelDiscritivo.desc_PS_PESSOAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setdesc_PS_PESSOANull()
+            Me(Me.tableRelDiscritivo.desc_PS_PESSOAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_SF_VL_SERVICONull() As Boolean
+            Return Me.IsNull(Me.tableRelDiscritivo.id_SF_VL_SERVICOColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_SF_VL_SERVICONull()
+            Me(Me.tableRelDiscritivo.id_SF_VL_SERVICOColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IscontaRetificada_SF_SERVICOS_FATURANull() As Boolean
+            Return Me.IsNull(Me.tableRelDiscritivo.contaRetificada_SF_SERVICOS_FATURAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetcontaRetificada_SF_SERVICOS_FATURANull()
+            Me(Me.tableRelDiscritivo.contaRetificada_SF_SERVICOS_FATURAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsmesAnoRefereincia_SF_SERVICOS_FATURANull() As Boolean
+            Return Me.IsNull(Me.tableRelDiscritivo.mesAnoRefereincia_SF_SERVICOS_FATURAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetmesAnoRefereincia_SF_SERVICOS_FATURANull()
+            Me(Me.tableRelDiscritivo.mesAnoRefereincia_SF_SERVICOS_FATURAColumn) = Global.System.Convert.DBNull
+        End Sub
     End Class
     
     '''<summary>
@@ -1381,6 +1596,11 @@ Namespace ds_relDescritivoTableAdapters
             tableMapping.ColumnMappings.Add("qtDias_SF_VL_SERVICO", "qtDias_SF_VL_SERVICO")
             tableMapping.ColumnMappings.Add("valor_CL_PLANOS_CLIENTE", "valor_CL_PLANOS_CLIENTE")
             tableMapping.ColumnMappings.Add("desc_OP_PLANOS", "desc_OP_PLANOS")
+            tableMapping.ColumnMappings.Add("minutos_SF_VL_USO", "minutos_SF_VL_USO")
+            tableMapping.ColumnMappings.Add("desc_PS_PESSOA", "desc_PS_PESSOA")
+            tableMapping.ColumnMappings.Add("id_SF_VL_SERVICO", "id_SF_VL_SERVICO")
+            tableMapping.ColumnMappings.Add("contaRetificada_SF_SERVICOS_FATURA", "contaRetificada_SF_SERVICOS_FATURA")
+            tableMapping.ColumnMappings.Add("mesAnoRefereincia_SF_SERVICOS_FATURA", "mesAnoRefereincia_SF_SERVICOS_FATURA")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -1404,46 +1624,56 @@ Namespace ds_relDescritivoTableAdapters
                 "l_PS_JURIDICA, 0 AS tipoinfo, SF_VL_SERVICO.vl_SF_VL_SERVICO, SF_VL_SERVICO.vlDe"& _ 
                 "sconto_SF_VL_SERVICO, SF_VL_SERVICO.desc_SF_VL_SERVICO, SF_VL_SERVICO.qtDias_SF_"& _ 
                 "VL_SERVICO, CL_PLANOS_CLIENTE_1.valor_CL_PLANOS_CLIENTE, OP_PLANOS.desc_OP_PLANO"& _ 
-                "S FROM OP_PLANOS INNER JOIN PS_JURIDICA AS PS_JURIDICA_1 INNER JOIN PS_CLIENTES "& _ 
-                "AS PS_CLIENTES_1 ON PS_JURIDICA_1.id_PS_JURIDICA = PS_CLIENTES_1.id_PS_JURIDICA "& _ 
-                "INNER JOIN CL_PLANOS_CLIENTE AS CL_PLANOS_CLIENTE_1 INNER JOIN CL_PLANOSxLINHAS "& _ 
-                "AS CL_PLANOSxLINHAS_1 ON CL_PLANOS_CLIENTE_1.id_CL_PLANOS_CLIENTE = CL_PLANOSxLI"& _ 
-                "NHAS_1.id_CL_PLANOS_CLIENTE INNER JOIN LI_LINHAS AS LI_LINHAS_2 ON CL_PLANOSxLIN"& _ 
-                "HAS_1.id_LI_LINHAS = LI_LINHAS_2.id_LI_LINHAS INNER JOIN LI_LINHAS AS LI_LINHAS_"& _ 
-                "1 ON CL_PLANOSxLINHAS_1.idLinhasPai_LI_LINHAS = LI_LINHAS_1.id_LI_LINHAS INNER J"& _ 
-                "OIN PS_CIDADES AS PS_CIDADES_1 ON LI_LINHAS_1.id_PS_CIDADES = PS_CIDADES_1.id_PS"& _ 
-                "_CIDADES ON PS_CLIENTES_1.id_PS_PESSOA = CL_PLANOS_CLIENTE_1.id_PS_PESSOA ON OP_"& _ 
-                "PLANOS.id_OP_PLANOS = CL_PLANOS_CLIENTE_1.id_OP_PLANOS LEFT OUTER JOIN SF_VL_SER"& _ 
-                "VICO INNER JOIN SF_SERVICOS_FATURA AS SF_SERVICOS_FATURA_1 ON SF_VL_SERVICO.id_S"& _ 
-                "F_SERVICOS_FATURA = SF_SERVICOS_FATURA_1.id_SF_SERVICOS_FATURA ON CL_PLANOSxLINH"& _ 
-                "AS_1.id_LI_LINHAS = SF_SERVICOS_FATURA_1.id_LI_LINHAS WHERE (SF_SERVICOS_FATURA_"& _ 
-                "1.mesAnoRefereincia_SF_SERVICOS_FATURA = @mesAnoRefereincia_SF_SERVICOS_FATURA) "& _ 
-                "AND (SF_SERVICOS_FATURA_1.codMatriz_PS_CLIENTES = @codMatriz_PS_CLIENTES) AND (S"& _ 
-                "F_SERVICOS_FATURA_1.numSequencia_SF_SERVICOS_FATURA = 0) UNION ALL SELECT CL_PLA"& _ 
-                "NOSxLINHAS.idLinhasPai_LI_LINHAS, CL_PLANOSxLINHAS.id_LI_LINHAS, CL_PLANOS_CLIEN"& _ 
-                "TE.desc_CL_PLANOS_CLIENTE, CL_PLANOS_CLIENTE.ordem_CL_PLANOS_CLIENTE, LI_LINHAS."& _ 
-                "numLinha_LI_LINHAS, LI_LINHAS_1.codLinha_LI_LINHAS, PS_CIDADES.desc_PS_CIDADES, "& _ 
-                "PS_JURIDICA.CNPJ_PS_JURIDICA, PS_JURIDICA.razaosocial_PS_JURIDICA, 1 AS tipoinfo"& _ 
-                ", SF_VL_USO.vlUso_SF_VL_USO AS vl_SF_VL_SERVICO, 0 AS vlDesconto_SF_VL_SERVICO, "& _ 
-                "SF_TIPO_USO.desc_SF_TIPO_USO AS desc_SF_VL_SERVICO, '' AS qtDias_SF_VL_SERVICO, "& _ 
-                "CL_PLANOS_CLIENTE.valor_CL_PLANOS_CLIENTE, OP_PLANOS_1.desc_OP_PLANOS FROM OP_PL"& _ 
-                "ANOS AS OP_PLANOS_1 INNER JOIN PS_JURIDICA INNER JOIN PS_CLIENTES ON PS_JURIDICA"& _ 
-                ".id_PS_JURIDICA = PS_CLIENTES.id_PS_JURIDICA INNER JOIN CL_PLANOS_CLIENTE INNER "& _ 
-                "JOIN CL_PLANOSxLINHAS ON CL_PLANOS_CLIENTE.id_CL_PLANOS_CLIENTE = CL_PLANOSxLINH"& _ 
-                "AS.id_CL_PLANOS_CLIENTE INNER JOIN LI_LINHAS ON CL_PLANOSxLINHAS.id_LI_LINHAS = "& _ 
-                "LI_LINHAS.id_LI_LINHAS INNER JOIN LI_LINHAS AS LI_LINHAS_1 ON CL_PLANOSxLINHAS.i"& _ 
-                "dLinhasPai_LI_LINHAS = LI_LINHAS_1.id_LI_LINHAS INNER JOIN PS_CIDADES ON LI_LINH"& _ 
-                "AS_1.id_PS_CIDADES = PS_CIDADES.id_PS_CIDADES ON PS_CLIENTES.id_PS_PESSOA = CL_P"& _ 
-                "LANOS_CLIENTE.id_PS_PESSOA ON OP_PLANOS_1.id_OP_PLANOS = CL_PLANOS_CLIENTE.id_OP"& _ 
-                "_PLANOS LEFT OUTER JOIN SF_SERVICOS_FATURA INNER JOIN SF_VL_USO ON SF_SERVICOS_F"& _ 
-                "ATURA.id_SF_SERVICOS_FATURA = SF_VL_USO.id_SF_SERVICOS_FATURA INNER JOIN SF_TIPO"& _ 
-                "_USO ON SF_VL_USO.id_SF_TIPO_USO = SF_TIPO_USO.id_SF_TIPO_USO ON CL_PLANOSxLINHA"& _ 
-                "S.id_LI_LINHAS = SF_SERVICOS_FATURA.id_LI_LINHAS WHERE (SF_SERVICOS_FATURA.mesAn"& _ 
-                "oRefereincia_SF_SERVICOS_FATURA = @mesAnoRefereincia_SF_SERVICOS_FATURA) AND (SF"& _ 
-                "_SERVICOS_FATURA.codMatriz_PS_CLIENTES = @codMatriz_PS_CLIENTES) AND (SF_SERVICO"& _ 
-                "S_FATURA.numSequencia_SF_SERVICOS_FATURA = 0)"
+                "S, '' AS minutos_SF_VL_USO, PS_PESSOA.desc_PS_PESSOA, SF_VL_SERVICO.id_SF_VL_SER"& _ 
+                "VICO, SF_SERVICOS_FATURA_1.contaRetificada_SF_SERVICOS_FATURA, SF_SERVICOS_FATUR"& _ 
+                "A_1.mesAnoRefereincia_SF_SERVICOS_FATURA FROM OP_PLANOS INNER JOIN PS_JURIDICA A"& _ 
+                "S PS_JURIDICA_1 INNER JOIN PS_CLIENTES AS PS_CLIENTES_1 ON PS_JURIDICA_1.id_PS_J"& _ 
+                "URIDICA = PS_CLIENTES_1.id_PS_JURIDICA INNER JOIN CL_PLANOS_CLIENTE AS CL_PLANOS"& _ 
+                "_CLIENTE_1 INNER JOIN CL_PLANOSxLINHAS AS CL_PLANOSxLINHAS_1 ON CL_PLANOS_CLIENT"& _ 
+                "E_1.id_CL_PLANOS_CLIENTE = CL_PLANOSxLINHAS_1.id_CL_PLANOS_CLIENTE INNER JOIN LI"& _ 
+                "_LINHAS AS LI_LINHAS_2 ON CL_PLANOSxLINHAS_1.id_LI_LINHAS = LI_LINHAS_2.id_LI_LI"& _ 
+                "NHAS INNER JOIN LI_LINHAS AS LI_LINHAS_1 ON CL_PLANOSxLINHAS_1.idLinhasPai_LI_LI"& _ 
+                "NHAS = LI_LINHAS_1.id_LI_LINHAS INNER JOIN PS_CIDADES AS PS_CIDADES_1 ON LI_LINH"& _ 
+                "AS_1.id_PS_CIDADES = PS_CIDADES_1.id_PS_CIDADES ON PS_CLIENTES_1.id_PS_PESSOA = "& _ 
+                "CL_PLANOS_CLIENTE_1.id_PS_PESSOA ON OP_PLANOS.id_OP_PLANOS = CL_PLANOS_CLIENTE_1"& _ 
+                ".id_OP_PLANOS INNER JOIN PS_PESSOA ON PS_CLIENTES_1.codMatriz_PS_CLIENTES = PS_P"& _ 
+                "ESSOA.id_PS_PESSOA LEFT OUTER JOIN SF_VL_SERVICO INNER JOIN SF_SERVICOS_FATURA A"& _ 
+                "S SF_SERVICOS_FATURA_1 ON SF_VL_SERVICO.id_SF_SERVICOS_FATURA = SF_SERVICOS_FATU"& _ 
+                "RA_1.id_SF_SERVICOS_FATURA ON CL_PLANOSxLINHAS_1.id_LI_LINHAS = SF_SERVICOS_FATU"& _ 
+                "RA_1.id_LI_LINHAS WHERE (SF_SERVICOS_FATURA_1.mesAnoRefereincia_SF_SERVICOS_FATU"& _ 
+                "RA = @mesAnoRefereincia_SF_SERVICOS_FATURA) AND (SF_SERVICOS_FATURA_1.codMatriz_"& _ 
+                "PS_CLIENTES = @codMatriz_PS_CLIENTES) AND (SF_SERVICOS_FATURA_1.numSequencia_SF_"& _ 
+                "SERVICOS_FATURA = 0) UNION ALL SELECT CL_PLANOSxLINHAS.idLinhasPai_LI_LINHAS, CL"& _ 
+                "_PLANOSxLINHAS.id_LI_LINHAS, CL_PLANOS_CLIENTE.desc_CL_PLANOS_CLIENTE, CL_PLANOS"& _ 
+                "_CLIENTE.ordem_CL_PLANOS_CLIENTE, LI_LINHAS.numLinha_LI_LINHAS, LI_LINHAS_1.codL"& _ 
+                "inha_LI_LINHAS, PS_CIDADES.desc_PS_CIDADES, PS_JURIDICA.CNPJ_PS_JURIDICA, PS_JUR"& _ 
+                "IDICA.razaosocial_PS_JURIDICA, 1 AS tipoinfo, SF_VL_USO.vlUso_SF_VL_USO AS vl_SF"& _ 
+                "_VL_SERVICO, 0 AS vlDesconto_SF_VL_SERVICO, SF_TIPO_USO.desc_SF_TIPO_USO AS desc"& _ 
+                "_SF_VL_SERVICO, '' AS qtDias_SF_VL_SERVICO, CL_PLANOS_CLIENTE.valor_CL_PLANOS_CL"& _ 
+                "IENTE, OP_PLANOS_1.desc_OP_PLANOS, OP_OPERADORAS.desc_OP_OPERADORAS + ' -' + CAS"& _ 
+                "T(SF_VL_USO.minutos_SF_VL_USO AS VARCHAR(11)) AS minutos_SF_VL_USO, PS_PESSOA_1."& _ 
+                "desc_PS_PESSOA, SF_VL_USO.id_SF_VL_USO AS id_SF_VL_SERVICO, SF_SERVICOS_FATURA.c"& _ 
+                "ontaRetificada_SF_SERVICOS_FATURA, SF_SERVICOS_FATURA.mesAnoRefereincia_SF_SERVI"& _ 
+                "COS_FATURA FROM OP_OPERADORAS INNER JOIN SF_SERVICOS_FATURA INNER JOIN SF_VL_USO"& _ 
+                " ON SF_SERVICOS_FATURA.id_SF_SERVICOS_FATURA = SF_VL_USO.id_SF_SERVICOS_FATURA I"& _ 
+                "NNER JOIN SF_TIPO_USO ON SF_VL_USO.id_SF_TIPO_USO = SF_TIPO_USO.id_SF_TIPO_USO O"& _ 
+                "N OP_OPERADORAS.id_OP_OPERADORAS = SF_VL_USO.id_OP_OPERADORAS RIGHT OUTER JOIN O"& _ 
+                "P_PLANOS AS OP_PLANOS_1 INNER JOIN PS_JURIDICA INNER JOIN PS_CLIENTES ON PS_JURI"& _ 
+                "DICA.id_PS_JURIDICA = PS_CLIENTES.id_PS_JURIDICA INNER JOIN CL_PLANOS_CLIENTE IN"& _ 
+                "NER JOIN CL_PLANOSxLINHAS ON CL_PLANOS_CLIENTE.id_CL_PLANOS_CLIENTE = CL_PLANOSx"& _ 
+                "LINHAS.id_CL_PLANOS_CLIENTE INNER JOIN LI_LINHAS ON CL_PLANOSxLINHAS.id_LI_LINHA"& _ 
+                "S = LI_LINHAS.id_LI_LINHAS INNER JOIN LI_LINHAS AS LI_LINHAS_1 ON CL_PLANOSxLINH"& _ 
+                "AS.idLinhasPai_LI_LINHAS = LI_LINHAS_1.id_LI_LINHAS INNER JOIN PS_CIDADES ON LI_"& _ 
+                "LINHAS_1.id_PS_CIDADES = PS_CIDADES.id_PS_CIDADES ON PS_CLIENTES.id_PS_PESSOA = "& _ 
+                "CL_PLANOS_CLIENTE.id_PS_PESSOA ON OP_PLANOS_1.id_OP_PLANOS = CL_PLANOS_CLIENTE.i"& _ 
+                "d_OP_PLANOS INNER JOIN PS_PESSOA AS PS_PESSOA_1 ON PS_CLIENTES.codMatriz_PS_CLIE"& _ 
+                "NTES = PS_PESSOA_1.id_PS_PESSOA ON SF_SERVICOS_FATURA.id_LI_LINHAS = CL_PLANOSxL"& _ 
+                "INHAS.id_LI_LINHAS WHERE (SF_SERVICOS_FATURA.mesAnoRefereincia_SF_SERVICOS_FATUR"& _ 
+                "A = @mesAnoRefereincia_SF_SERVICOS_FATURA) AND (SF_SERVICOS_FATURA.codMatriz_PS_"& _ 
+                "CLIENTES = @codMatriz_PS_CLIENTES) AND (SF_SERVICOS_FATURA.numSequencia_SF_SERVI"& _ 
+                "COS_FATURA = 0)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@mesAnoRefereincia_SF_SERVICOS_FATURA", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@mesAnoRefereincia_SF_SERVICOS_FATURA", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "mesAnoRefereincia_SF_SERVICOS_FATURA", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@codMatriz_PS_CLIENTES", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         

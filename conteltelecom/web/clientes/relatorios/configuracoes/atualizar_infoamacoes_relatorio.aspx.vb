@@ -262,7 +262,7 @@ Public Class atualizar_infoamacoes_relatorio
                 End Try
             Next
             ajustaUso()
-
+            ajustaUsoIdLinha()
             e.Canceled = True
             RadWindowManagerMsgSite.RadAlert("REGISTROS ALTERADOS COM SUCESSO", 400, Nothing, "MESNAGEM", Nothing)
         End If
@@ -275,7 +275,26 @@ Public Class atualizar_infoamacoes_relatorio
             checkBox.Attributes("onclick") = "selectAllDetailTables(this)"
         End If
     End Sub
+    Function ajustaUsoIdLinha() As Boolean
 
+        Dim dvSqlContratos As DataView = CType(SqlDataSourceIdLinha.Select(DataSourceSelectArguments.Empty), DataView)
+
+        If dvSqlContratos IsNot Nothing Or dvSqlContratos.Count < 0 Then
+
+            For Each drvSql As DataRowView In dvSqlContratos
+
+                SqlDataSourceIdLinha.UpdateParameters("id_LI_LINHAS").DefaultValue = drvSql("id_LI_LINHAS")
+
+                SqlDataSourceIdLinha.UpdateParameters("codNumLinha_SF_VL_USO").DefaultValue = drvSql("codLinha_LI_LINHAS")
+                SqlDataSourceIdLinha.Update()
+            Next
+
+        End If
+
+
+        Return True
+
+    End Function
     Function ajustaUso() As Boolean
 
         Dim dvSqlContratos As DataView = CType(SqlDataSourceUso.Select(DataSourceSelectArguments.Empty), DataView)
@@ -284,6 +303,7 @@ Public Class atualizar_infoamacoes_relatorio
 
             For Each drvSql As DataRowView In dvSqlContratos
 
+                SqlDataSourceUso.UpdateParameters("id_LI_LINHAS").DefaultValue = drvSql("id_LI_LINHAS")
 
                 SqlDataSourceUso.UpdateParameters("codNumLinha_SF_VL_USO").DefaultValue = drvSql("codLinha_LI_LINHAS")
                 SqlDataSourceUso.Update()

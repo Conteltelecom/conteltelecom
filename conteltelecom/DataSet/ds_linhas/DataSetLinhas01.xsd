@@ -142,7 +142,7 @@ WHERE        (id_LI_LINHAS = @id_LI_LINHAS)</CommandText>
   <xs:element name="DataSetLinhas01" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetLinhas01" msprop:Generator_UserDSName="DataSetLinhas01">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="LI_LINHAS02" msprop:Generator_TableClassName="LI_LINHAS02DataTable" msprop:Generator_TableVarName="tableLI_LINHAS02" msprop:Generator_RowChangedName="LI_LINHAS02RowChanged" msprop:Generator_TablePropName="LI_LINHAS02" msprop:Generator_RowDeletingName="LI_LINHAS02RowDeleting" msprop:Generator_RowChangingName="LI_LINHAS02RowChanging" msprop:Generator_RowEvHandlerName="LI_LINHAS02RowChangeEventHandler" msprop:Generator_RowDeletedName="LI_LINHAS02RowDeleted" msprop:Generator_RowClassName="LI_LINHAS02Row" msprop:Generator_UserTableName="LI_LINHAS02" msprop:Generator_RowEvArgName="LI_LINHAS02RowChangeEvent">
+        <xs:element name="LI_LINHAS02" msprop:Generator_TableClassName="LI_LINHAS02DataTable" msprop:Generator_TableVarName="tableLI_LINHAS02" msprop:Generator_TablePropName="LI_LINHAS02" msprop:Generator_RowDeletingName="LI_LINHAS02RowDeleting" msprop:Generator_RowChangingName="LI_LINHAS02RowChanging" msprop:Generator_RowEvHandlerName="LI_LINHAS02RowChangeEventHandler" msprop:Generator_RowDeletedName="LI_LINHAS02RowDeleted" msprop:Generator_UserTableName="LI_LINHAS02" msprop:Generator_RowChangedName="LI_LINHAS02RowChanged" msprop:Generator_RowEvArgName="LI_LINHAS02RowChangeEvent" msprop:Generator_RowClassName="LI_LINHAS02Row">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="vlInicial_id_LI_TIPOS" msprop:Generator_ColumnVarNameInTable="columnvlInicial_id_LI_TIPOS" msprop:Generator_ColumnPropNameInRow="vlInicial_id_LI_TIPOS" msprop:Generator_ColumnPropNameInTable="vlInicial_id_LI_TIPOSColumn" msprop:Generator_UserColumnName="vlInicial_id_LI_TIPOS" type="xs:decimal" minOccurs="0" />
@@ -160,7 +160,7 @@ WHERE        (id_LI_LINHAS = @id_LI_LINHAS)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="LI_LINHAS03" msprop:Generator_TableClassName="LI_LINHAS03DataTable" msprop:Generator_TableVarName="tableLI_LINHAS03" msprop:Generator_RowChangedName="LI_LINHAS03RowChanged" msprop:Generator_TablePropName="LI_LINHAS03" msprop:Generator_RowDeletingName="LI_LINHAS03RowDeleting" msprop:Generator_RowChangingName="LI_LINHAS03RowChanging" msprop:Generator_RowEvHandlerName="LI_LINHAS03RowChangeEventHandler" msprop:Generator_RowDeletedName="LI_LINHAS03RowDeleted" msprop:Generator_RowClassName="LI_LINHAS03Row" msprop:Generator_UserTableName="LI_LINHAS03" msprop:Generator_RowEvArgName="LI_LINHAS03RowChangeEvent">
+        <xs:element name="LI_LINHAS03" msprop:Generator_TableClassName="LI_LINHAS03DataTable" msprop:Generator_TableVarName="tableLI_LINHAS03" msprop:Generator_TablePropName="LI_LINHAS03" msprop:Generator_RowDeletingName="LI_LINHAS03RowDeleting" msprop:Generator_RowChangingName="LI_LINHAS03RowChanging" msprop:Generator_RowEvHandlerName="LI_LINHAS03RowChangeEventHandler" msprop:Generator_RowDeletedName="LI_LINHAS03RowDeleted" msprop:Generator_UserTableName="LI_LINHAS03" msprop:Generator_RowChangedName="LI_LINHAS03RowChanged" msprop:Generator_RowEvArgName="LI_LINHAS03RowChangeEvent" msprop:Generator_RowClassName="LI_LINHAS03Row">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="foraAnalise_LI_LINHAS" msprop:Generator_ColumnVarNameInTable="columnforaAnalise_LI_LINHAS" msprop:Generator_ColumnPropNameInRow="foraAnalise_LI_LINHAS" msprop:Generator_ColumnPropNameInTable="foraAnalise_LI_LINHASColumn" msprop:Generator_UserColumnName="foraAnalise_LI_LINHAS" type="xs:unsignedByte" minOccurs="0" />
@@ -177,7 +177,7 @@ WHERE        (id_LI_LINHAS = @id_LI_LINHAS)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="LI_LINHAS01" msprop:Generator_TableClassName="LI_LINHAS01DataTable" msprop:Generator_TableVarName="tableLI_LINHAS01" msprop:Generator_RowChangedName="LI_LINHAS01RowChanged" msprop:Generator_TablePropName="LI_LINHAS01" msprop:Generator_RowDeletingName="LI_LINHAS01RowDeleting" msprop:Generator_RowChangingName="LI_LINHAS01RowChanging" msprop:Generator_RowEvHandlerName="LI_LINHAS01RowChangeEventHandler" msprop:Generator_RowDeletedName="LI_LINHAS01RowDeleted" msprop:Generator_RowClassName="LI_LINHAS01Row" msprop:Generator_UserTableName="LI_LINHAS01" msprop:Generator_RowEvArgName="LI_LINHAS01RowChangeEvent">
+        <xs:element name="LI_LINHAS01" msprop:Generator_TableClassName="LI_LINHAS01DataTable" msprop:Generator_TableVarName="tableLI_LINHAS01" msprop:Generator_TablePropName="LI_LINHAS01" msprop:Generator_RowDeletingName="LI_LINHAS01RowDeleting" msprop:Generator_RowChangingName="LI_LINHAS01RowChanging" msprop:Generator_RowEvHandlerName="LI_LINHAS01RowChangeEventHandler" msprop:Generator_RowDeletedName="LI_LINHAS01RowDeleted" msprop:Generator_UserTableName="LI_LINHAS01" msprop:Generator_RowChangedName="LI_LINHAS01RowChanged" msprop:Generator_RowEvArgName="LI_LINHAS01RowChangeEvent" msprop:Generator_RowClassName="LI_LINHAS01Row">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="numContrato_LI_LINHAS" msprop:Generator_ColumnVarNameInTable="columnnumContrato_LI_LINHAS" msprop:Generator_ColumnPropNameInRow="numContrato_LI_LINHAS" msprop:Generator_ColumnPropNameInTable="numContrato_LI_LINHASColumn" msprop:Generator_UserColumnName="numContrato_LI_LINHAS">
@@ -190,7 +190,7 @@ WHERE        (id_LI_LINHAS = @id_LI_LINHAS)</CommandText>
               <xs:element name="codLinha_LI_LINHAS" msprop:Generator_ColumnVarNameInTable="columncodLinha_LI_LINHAS" msprop:Generator_ColumnPropNameInRow="codLinha_LI_LINHAS" msprop:Generator_ColumnPropNameInTable="codLinha_LI_LINHASColumn" msprop:Generator_UserColumnName="codLinha_LI_LINHAS" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="15" />
+                    <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class ps_pessoas_detalhes
     
     '''<summary>
+    '''Controle RadGridPessoas.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents RadGridPessoas As Global.Telerik.Web.UI.RadGrid
+    
+    '''<summary>
     '''Controle RadDataFormPessoasDetalhes.
     '''</summary>
     '''<remarks>
