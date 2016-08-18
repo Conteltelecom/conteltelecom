@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Relatorios.master" CodeBehind="cl_rel_uso.aspx.vb" Inherits="conteltelecom.cl_rel_uso" %>
+﻿<%@ Page Title="RELATÓRIO DE USO" Language="vb" AutoEventWireup="false" MasterPageFile="~/Relatorios.master" CodeBehind="cl_rel_uso.aspx.vb" Inherits="conteltelecom.cl_rel_uso" %>
 
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 

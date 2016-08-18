@@ -4,7 +4,7 @@ Friend Class ListRelProjecao
     Public Property Desc_PS_CIDADES As String
     Public Property NomeUnidade_LI_LINHAS As String
 
-
+    Public Property Id_LI_LINHAS As Integer
     Public Property DtLdn_LI_CAD_PROGRAMACAO As Date
     Public Property DtPeriodoTarifacao As String
     Public Property ValorMes01 As Decimal
@@ -23,7 +23,7 @@ Friend Class ListRelProjecao
     Public Sub New(ByVal numLinha_LI_LINHAS As String, ByVal desc_PS_CIDADES As String,
                  ByVal nomeUnidade_LI_LINHAS As String, ByVal tipoUso As Integer, ByVal dtLdn_LI_CAD_PROGRAMACAO As Date,
                  ByVal dtPeriodoTarifacao As String, ByVal valorMes01 As Decimal, ByVal valorMes02 As Decimal, ByVal valorMes03 As Decimal,
-                  ByVal valorUso As Decimal, ByVal PossuiUso As Integer, ByVal MesReferencia As String, ByVal mesReferencia1 As String, ByVal mesReferencia2 As String, ByVal mesReferencia3 As String)
+                  ByVal valorUso As Decimal, ByVal PossuiUso As Integer, ByVal MesReferencia As String, ByVal mesReferencia1 As String, ByVal mesReferencia2 As String, ByVal mesReferencia3 As String, ByVal id_LI_LINHAS As Integer)
 
 
         Me.NumLinha_LI_LINHAS = numLinha_LI_LINHAS
@@ -39,5 +39,6 @@ Friend Class ListRelProjecao
         Me.MesReferencia1 = mesReferencia1
         Me.MesReferencia2 = mesReferencia2
         Me.MesReferencia3 = mesReferencia3
+        Me.id_LI_LINHAS = id_LI_LINHAS
     End Sub
 End Class

@@ -202,7 +202,7 @@ Partial Public Class DataSetRelUso
         Me.DataSetName = "DataSetRelUso"
         Me.Prefix = ""
         Me.Namespace = "http://tempuri.org/DataSetRelUso.xsd"
-        Me.EnforceConstraints = true
+        Me.EnforceConstraints = false
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
         Me.tableLI_LINHAS = New LI_LINHASDataTable()
         MyBase.Tables.Add(Me.tableLI_LINHAS)

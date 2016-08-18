@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Relatorios.master" CodeBehind="rel_projecao.aspx.vb" Inherits="conteltelecom.rel_projecao" %>
+﻿<%@ Page Title="RELATÓRIO DE PROJEÇÃO" Language="vb" AutoEventWireup="false" MasterPageFile="~/Relatorios.master" CodeBehind="rel_projecao.aspx.vb" Inherits="conteltelecom.rel_projecao" %>
 
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="headRelatorio" runat="server">
@@ -72,15 +72,15 @@
             <asp:QueryStringParameter Name="codMatriz_PS_CLIENTES" QueryStringField="codMatriz_PS_CLIENTES" />
         </SelectParameters>
 </asp:SqlDataSource>
-    <asp:SqlDataSource ID="SqlDataSourceValorUso" runat="server" ConnectionString="<%$ ConnectionStrings:conteltelecom %>" SelectCommand="SELECT SUM(SF_VL_USO.vlUso_SF_VL_USO) AS vlUso_SF_VL_USO, SF_VL_USO.id_LI_LINHAS, SF_SERVICOS_FATURA.dtaPerFim_SF_SERVICOS_FATURA, SF_SERVICOS_FATURA.dtaPerIni_SF_SERVICOS_FATURA, SF_TIPO_USO_CATEGORIAS.id_SF_TIPO_USO_CATEGORIAS, SF_SERVICOS_FATURA.mesAnoRefereincia_SF_SERVICOS_FATURA FROM SF_VL_USO INNER JOIN SF_SERVICOS_FATURA ON SF_VL_USO.id_SF_SERVICOS_FATURA = SF_SERVICOS_FATURA.id_SF_SERVICOS_FATURA INNER JOIN SF_TIPO_USO ON SF_VL_USO.id_SF_TIPO_USO = SF_TIPO_USO.id_SF_TIPO_USO INNER JOIN SF_TIPO_USO_CATEGORIAS ON SF_TIPO_USO.id_SF_TIPO_USO_CATEGORIAS = SF_TIPO_USO_CATEGORIAS.id_SF_TIPO_USO_CATEGORIAS WHERE (SF_VL_USO.linhaVirtual_LI_LINHAS = 0) AND (SF_VL_USO.id_LI_LINHAS = @id_LI_LINHAS) AND (SF_SERVICOS_FATURA.mesAnoRefereincia_SF_SERVICOS_FATURA = @mesAnoRefereincia_SF_SERVICOS_FATURA) AND (SF_TIPO_USO_CATEGORIAS.id_SF_TIPO_USO_CATEGORIAS = @id_SF_TIPO_USO_CATEGORIAS) GROUP BY SF_VL_USO.id_LI_LINHAS, SF_SERVICOS_FATURA.dtaPerFim_SF_SERVICOS_FATURA, SF_SERVICOS_FATURA.dtaPerIni_SF_SERVICOS_FATURA, SF_TIPO_USO_CATEGORIAS.id_SF_TIPO_USO_CATEGORIAS, SF_SERVICOS_FATURA.mesAnoRefereincia_SF_SERVICOS_FATURA">
+    <asp:SqlDataSource ID="SqlDataSourceValorUso" runat="server" ConnectionString="<%$ ConnectionStrings:conteltelecom %>" SelectCommand="SELECT dtLdn_LI_CAD_PROGRAMACAO, dtMovel_LI_CAD_PROGRAMACAO, vlUso_LI_CAD_PROGRAMACAO, vlUsomoVEL_LI_CAD_PROGRAMACAO, dtInc_LI_CAD_PROGRAMACAO, dtTarifFim_LI_CAD_PROGRAMACAO, dtTarifIni_LI_CAD_PROGRAMACAO, mesAnoRefereincia_SF_SERVICOS_FATURA FROM LI_CAD_PROGRAMACAO WHERE (id_LI_LINHAS = @id_LI_LINHAS) AND (tpLancamento_LI_CAD_PROGRAMACAO = 0)">
         <SelectParameters>
             <asp:Parameter Name="id_LI_LINHAS" />
-            <asp:Parameter Name="mesAnoRefereincia_SF_SERVICOS_FATURA" />
-            <asp:Parameter Name="id_SF_TIPO_USO_CATEGORIAS" />
         </SelectParameters>
     </asp:SqlDataSource>
-    <asp:SqlDataSource ID="SqlDataSourceMes" runat="server" ConnectionString="<%$ ConnectionStrings:conteltelecom %>" SelectCommand="SELECT dtMovel_LI_CAD_PROGRAMACAO, dtLdn_LI_CAD_PROGRAMACAO FROM LI_CAD_PROGRAMACAO WHERE (id_LI_LINHAS = @id_LI_LINHAS) AND (tpLancamento_LI_CAD_PROGRAMACAO = 0)">
+    <asp:SqlDataSource ID="SqlDataSourceMes" runat="server" ConnectionString="<%$ ConnectionStrings:conteltelecom %>" SelectCommand="SELECT SUM(SF_VL_USO.vlUso_SF_VL_USO) AS vlUso_SF_VL_USO FROM SF_VL_USO INNER JOIN SF_SERVICOS_FATURA ON SF_VL_USO.id_SF_SERVICOS_FATURA = SF_SERVICOS_FATURA.id_SF_SERVICOS_FATURA INNER JOIN SF_TIPO_USO ON SF_VL_USO.id_SF_TIPO_USO = SF_TIPO_USO.id_SF_TIPO_USO INNER JOIN SF_TIPO_USO_CATEGORIAS ON SF_TIPO_USO.id_SF_TIPO_USO_CATEGORIAS = SF_TIPO_USO_CATEGORIAS.id_SF_TIPO_USO_CATEGORIAS WHERE (SF_TIPO_USO_CATEGORIAS.id_SF_TIPO_USO_CATEGORIAS = @id_SF_TIPO_USO_CATEGORIAS) AND (SF_SERVICOS_FATURA.mesAnoRefereincia_SF_SERVICOS_FATURA = @mesAnoRefereincia_SF_SERVICOS_FATURA) AND (SF_SERVICOS_FATURA.id_LI_LINHAS = @id_LI_LINHAS) GROUP BY SF_SERVICOS_FATURA.mesAnoRefereincia_SF_SERVICOS_FATURA, SF_SERVICOS_FATURA.id_LI_LINHAS, SF_TIPO_USO_CATEGORIAS.id_SF_TIPO_USO_CATEGORIAS">
         <SelectParameters>
+            <asp:Parameter Name="id_SF_TIPO_USO_CATEGORIAS" />
+            <asp:Parameter Name="mesAnoRefereincia_SF_SERVICOS_FATURA" />
             <asp:Parameter Name="id_LI_LINHAS" />
         </SelectParameters>
     </asp:SqlDataSource>

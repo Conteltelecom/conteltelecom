@@ -1235,7 +1235,7 @@
                       </Style>
                     </TextRun>
                     <TextRun>
-                      <Value>=RTrim(Fields!desc_PS_PESSOA.Value) &amp; " DESCRITIVO - " &amp;  RTrim(Fields!mesAnoRefereincia_SF_SERVICOS_FATURA.Value)</Value>
+                      <Value>=RTrim(Fields!desc_PS_PESSOA.Value ) &amp; " DESCRITIVO - " &amp;   UCase(MonthName(Month("01/" &amp;Fields!mesAnoRefereincia_SF_SERVICOS_FATURA.Value),false)) &amp; "/" &amp; Year("01/" &amp;Fields!mesAnoRefereincia_SF_SERVICOS_FATURA.Value)</Value>
                       <Style>
                         <FontSize>14pt</FontSize>
                         <FontWeight>Bold</FontWeight>

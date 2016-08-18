@@ -35,8 +35,10 @@
                         
                         <telerik:GridTemplateColumn DataField="id_LI_TIPOS" FilterControlAltText="Filter id_LI_TIPOS column" HeaderText="TIPO" UniqueName="id_LI_TIPOS">
                             <EditItemTemplate>
-                                <telerik:RadComboBox ID="id_LI_TIPOSRadComboBox" AppendDataBoundItems="false"  runat="server" DataSourceID="SqlDataSourceTipoLinha" DataTextField="desc_LI_TIPOS" DataValueField="id_LI_TIPOS" SelectedValue='<%# Bind("id_LI_TIPOS") %>' Width="100%">
+                                <telerik:RadComboBox ID="id_LI_TIPOSRadComboBox" AppendDataBoundItems="false" OnSelectedIndexChanged="id_LI_TIPOSRadComboBox_SelectedIndexChanged"  runat="server" DataSourceID="SqlDataSourceTipoLinha" DataTextField="desc_LI_TIPOS" DataValueField="id_LI_TIPOS" SelectedValue='<%# Bind("id_LI_TIPOS") %>' Width="80%">
                                 </telerik:RadComboBox>
+                                <asp:HyperLink ID="HyperLinkNovoRamal" runat="server" Visible="false"   ImageUrl="~/img/add.png" NavigateUrl='<%# String.Format("~/web/linhas/cadastro/cad_ramais.aspx?id_LI_LINHAS={0}", Request.QueryString("id_LI_LINHAS")) %>'  Target="_blank"  >HyperLink</asp:HyperLink>
+
                             </EditItemTemplate>
                             <ItemTemplate>
                                 <asp:Label ID="id_LI_TIPOSLabel" runat="server" Text='<%# Eval("desc_LI_TIPOS") %>'></asp:Label>
@@ -103,7 +105,7 @@
                         </telerik:GridTemplateColumn>
                          <telerik:GridTemplateColumn DataField="nomeUnidade_LI_LINHAS" FilterControlAltText="Filter numF_LI_LINHAS column" HeaderText="UNIDADE" UniqueName="nomeUnidade_LI_LINHAS">
                             <EditItemTemplate>
-                                <telerik:RadDropDownList ID="RadDropDownListUniidades" DataSourceID="ObjectDataSourceUnidadesClinetes" runat="server"  AppendDataBoundItems="true"  DataTextField="desc_CL_UNIDADES" DataValueField="desc_CL_UNIDADES" DropDownHeight="150px" SelectedValue='<%# Bind("nomeUnidade_LI_LINHAS") %>' Skin="Bootstrap"  ></telerik:RadDropDownList>
+                                <telerik:RadDropDownList ID="RadDropDownListUniidades" DataSourceID="ObjectDataSourceUnidadesClinetes" runat="server"  AppendDataBoundItems="true"  DataTextField="desc_CL_UNIDADES" DataValueField="desc_CL_UNIDADES" DropDownHeight="150px" SelectedValue='<%# Bind("nomeUnidade_LI_LINHAS") %>' Skin="Bootstrap" Width="100%"  ></telerik:RadDropDownList>
 
                                                             </EditItemTemplate>
                             <ItemTemplate>

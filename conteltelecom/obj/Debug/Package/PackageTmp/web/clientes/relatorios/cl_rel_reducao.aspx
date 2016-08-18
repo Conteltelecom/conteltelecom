@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Relatorios.master" CodeBehind="cl_rel_reducao.aspx.vb" Inherits="conteltelecom.cl_rel_reducao" %>
+﻿<%@ Page Title="RELATÓRIO DE REDUÇÃO" Language="vb" AutoEventWireup="false" MasterPageFile="~/Relatorios.master" CodeBehind="cl_rel_reducao.aspx.vb" Inherits="conteltelecom.cl_rel_reducao" %>
 
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="headRelatorio" runat="server">
@@ -108,11 +108,10 @@
          </SelectParameters>
      </asp:ObjectDataSource>
     <div style="width:100%; height:100%">
-        <rsweb:ReportViewer ID="ReportViewerRelReducao"  SizeToReportContent="true"  Width="100%" Height ="95%" ZoomPercent="100" ZoomMode="Percent" runat="server"  Font-Names="Verdana" Font-Size="8pt" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt">
+        <rsweb:ReportViewer ID="ReportViewerRelReducao"  SizeToReportContent="True"  Width="100%" Height ="95%" runat="server"  Font-Names="Verdana" Font-Size="8pt" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt">
         <LocalReport ReportPath="rdcl\clientes\RelReducao.rdlc">
             <DataSources>
                 <rsweb:ReportDataSource DataSourceId="ObjectDataSource1" Name="RelReducao"  />
-                <rsweb:ReportDataSource DataSourceId="ObjectDataSourceListaPendencias" Name="ds_ListaPendecia" />
             </DataSources>
         </LocalReport>
 </rsweb:ReportViewer>

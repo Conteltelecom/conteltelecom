@@ -1,5 +1,6 @@
 ﻿Imports Telerik.Web.UI
 Imports System.Windows.Forms
+Imports conteltelecom.Validacoes
 Public Class rel_descritivo
     Inherits System.Web.UI.Page
     Dim listaOc As List(Of RelDescritivo)
@@ -8,22 +9,36 @@ Public Class rel_descritivo
 
         If IsPostBack = False Then
 
+            If IsNothing(Request.QueryString("descritivoPorLinha")) = False Then
 
 
-            If IsNothing(Request.QueryString("id_PS_PESSOA")) = True Then
-                Session("codMatriz_PS_CLIENTES") = ""
+                MontaDescritivo()
+
+
+
             Else
 
-                RadDropDownListMes.SelectedValue = Date.Today.Month
-                RadDropDownListAno.SelectedValue = Date.Today.Year
-                Session("mesAnoRefereincia_SF_SERVICOS_FATURA") = If(RadDropDownListMes.SelectedValue < 9, "0" & RadDropDownListMes.SelectedValue, RadDropDownListMes.SelectedValue) & "/" & RadDropDownListAno.SelectedValue
-                Session("codMatriz_PS_CLIENTES") = Request.QueryString("id_PS_PESSOA")
-                RadAutoCompleteBoxBuscaMatriz.Visible = False
-                Label2.Visible = False
-                ' RadImageButtonGerar_Click(RadImageButtonGerar, EventArgs.Empty)
-                ' ReportViewer1.LocalReport.Refresh()
+                If IsNothing(Request.QueryString("id_PS_PESSOA")) = True Then
+                    Session("codMatriz_PS_CLIENTES") = ""
+                Else
+
+                    RadDropDownListMes.SelectedValue = Date.Today.Month
+                    RadDropDownListAno.SelectedValue = Date.Today.Year
+                    Session("mesAnoRefereincia_SF_SERVICOS_FATURA") = If(RadDropDownListMes.SelectedValue < 9, "0" & RadDropDownListMes.SelectedValue, RadDropDownListMes.SelectedValue) & "/" & RadDropDownListAno.SelectedValue
+                    Session("codMatriz_PS_CLIENTES") = Request.QueryString("id_PS_PESSOA")
+                    RadAutoCompleteBoxBuscaMatriz.Visible = False
+                    Label2.Visible = False
+                    ' RadImageButtonGerar_Click(RadImageButtonGerar, EventArgs.Empty)
+                    ' ReportViewer1.LocalReport.Refresh()
+
+                End If
+
 
             End If
+
+
+
+
 
 
 
@@ -52,16 +67,53 @@ Public Class rel_descritivo
 
 
     Protected Sub RadImageButtonGerarWord_Click(sender As Object, e As ImageButtonClickEventArgs) Handles RadImageButtonGerarWord.Click
+        MontaDescritivo()
+    End Sub
+
+    Sub MontaDescritivo()
+
         Dim ClsValidacoes As New Validacoes
+        Dim sqldatasetBusca As New SqlDataSource
+        If IsNothing(Request.QueryString("descritivoPorLinha")) = False Then
+
+            If Request.QueryString("descritivoPorLinha") = "1" Then
+                sqldatasetBusca = SqlDataSourceDescritivoPorLinhas
+                Session("codMatriz_PS_CLIENTES") = Request.QueryString("codMatriz_PS_CLIENTES")
+                Session("mesAnoRefereincia_SF_SERVICOS_FATURA") = Request.QueryString("mesAnoRefereincia_SF_SERVICOS_FATURA")
+                sqldatasetBusca.SelectParameters("id_LI_LINHAS").DefaultValue = Request.QueryString("id_LI_LINHAS")
+            Else
+                sqldatasetBusca = SqlDataSourceBusca
+                Session("codMatriz_PS_CLIENTES") = Request.QueryString("codMatriz_PS_CLIENTES")
+                Session("mesAnoRefereincia_SF_SERVICOS_FATURA") = Request.QueryString("mesAnoRefereincia_SF_SERVICOS_FATURA")
+            End If
+
+        Else
+            sqldatasetBusca = SqlDataSourceBusca
+            Session("mesAnoRefereincia_SF_SERVICOS_FATURA") = If(RadDropDownListMes.SelectedValue < 9, "0" & RadDropDownListMes.SelectedValue, RadDropDownListMes.SelectedValue) & "/" & RadDropDownListAno.SelectedValue
+        End If
+
+
         Dim nomeFantasia As String = ""
-        Dim CNPJ As Int64
+
         Dim Formatado As String
         Dim Agrupamento As New List(Of Integer)()
-        Session("mesAnoRefereincia_SF_SERVICOS_FATURA") = If(RadDropDownListMes.SelectedValue < 9, "0" & RadDropDownListMes.SelectedValue, RadDropDownListMes.SelectedValue) & "/" & RadDropDownListAno.SelectedValue
+        Dim NomeAgrupamento As String
+        Dim RazaoSocial As String
+        Dim Cnpj As String
+        Dim Cidades As String
+        Dim CodLinha As String
+        Dim NumLInha As String
+        Dim DescricaoServico As String = ""
+        Dim Ordem As String
+        Dim Valor2 As Decimal
+        Dim ContaRetificada As Integer
+        Dim tipoinfo As Integer
+        Dim Id_SF_VL_SERVICO As Integer
 
-        SqlDataSourceBusca.SelectParameters("mesAnoRefereincia_SF_SERVICOS_FATURA").DefaultValue = Session("mesAnoRefereincia_SF_SERVICOS_FATURA")
-        SqlDataSourceBusca.SelectParameters("codMatriz_PS_CLIENTES").DefaultValue = Session("codMatriz_PS_CLIENTES")
-        Dim dvSql As DataView = CType(SqlDataSourceBusca.Select(DataSourceSelectArguments.Empty), DataView)
+        sqldatasetBusca.SelectParameters("mesAnoRefereincia_SF_SERVICOS_FATURA").DefaultValue = Session("mesAnoRefereincia_SF_SERVICOS_FATURA")
+        sqldatasetBusca.SelectParameters("codMatriz_PS_CLIENTES").DefaultValue = Session("codMatriz_PS_CLIENTES")
+
+        Dim dvSql As DataView = CType(sqldatasetBusca.Select(DataSourceSelectArguments.Empty), DataView)
         listaOc = New List(Of RelDescritivo)()
         For Each q As DataRowView In dvSql
             nomeFantasia = q("desc_PS_PESSOA").ToString.TrimEnd
@@ -69,11 +121,48 @@ Public Class rel_descritivo
 
                 Agrupamento.Add(q("ordem_CL_PLANOS_CLIENTE"))
             End If
-            CNPJ = q("CNPJ_PS_JURIDICA").ToString.TrimEnd
+            Valor2 = CDec(q("vl_SF_VL_SERVICO")) - CDec(q("vlDesconto_SF_VL_SERVICO"))
+
+            Cnpj = q("CNPJ_PS_JURIDICA").ToString.TrimEnd
             Formatado = Validacoes.CNPJFormat(CNPJ)
-            listaOc.Add(New RelDescritivo(q("desc_CL_PLANOS_CLIENTE").ToString.TrimEnd & " " & q("desc_OP_PLANOS").ToString.TrimEnd _
-                        , q("razaosocial_PS_JURIDICA").ToString.TrimEnd, "CNPJ:  " & Formatado, "CIDADE: " & q("desc_PS_CIDADES").ToString.TrimEnd, q("codLinha_LI_LINHAS").ToString.TrimEnd, q("numLinha_LI_LINHAS").ToString.TrimEnd,
-              q("desc_SF_VL_SERVICO") & " " & (If(q("tipoinfo") = 0, If(CInt(q("qtDias_SF_VL_SERVICO")) < 30, q("qtDias_SF_VL_SERVICO") & " DIAS", ""), q("minutos_SF_VL_USO") & " min") & " — R$ " & CDec(q("vl_SF_VL_SERVICO")) - CDec(q("vlDesconto_SF_VL_SERVICO"))), q("ordem_CL_PLANOS_CLIENTE"), CDec(q("vl_SF_VL_SERVICO")) - CDec(q("vlDesconto_SF_VL_SERVICO")), q("contaRetificada_SF_SERVICOS_FATURA"), q("tipoinfo"), q("id_SF_VL_SERVICO")))
+            NomeAgrupamento = q("desc_CL_PLANOS_CLIENTE").ToString.TrimEnd & " " & q("desc_OP_PLANOS").ToString.TrimEnd
+            RazaoSocial = q("razaosocial_PS_JURIDICA").ToString.TrimEnd
+            Cnpj = "Cnpj : " & Formatado
+            ContaRetificada = q("contaRetificada_SF_SERVICOS_FATURA")
+            Cidades = "CIDADE: " & q("desc_PS_CIDADES").ToString.TrimEnd
+            CodLinha = q("codLinha_LI_LINHAS").ToString.TrimEnd
+            NumLInha = q("numLinha_LI_LINHAS").ToString.TrimEnd
+            tipoinfo = q("tipoinfo")
+            Ordem = q("ordem_CL_PLANOS_CLIENTE")
+            Id_SF_VL_SERVICO = q("id_SF_VL_SERVICO")
+
+
+
+            '   Tráfego Fronteiriço OI -0 min — R$ 0, 0(se não tiver valor nenhum não precisa aparecer o serviço)
+            DescricaoServico = q("desc_SF_VL_SERVICO") & " "
+                If q("tipoinfo") = 0 Then
+                    If (CInt(q("qtDias_SF_VL_SERVICO")) < 30 And CInt(q("qtDias_SF_VL_SERVICO")) > 0) = True Then
+                        DescricaoServico = DescricaoServico & q("qtDias_SF_VL_SERVICO") & " Dias"
+                    End If
+
+                Else
+                    If IsNothing(q("minutos_SF_VL_USO")) = False Then
+
+                        Dim Min As Integer
+                        Min = SomenteNumeros(q("minutos_SF_VL_USO"))
+
+                    'If CInt(Min) > 0 Then   removido regra para minutos locais
+                    DescricaoServico = DescricaoServico & q("minutos_SF_VL_USO") & " Min"
+                    'End If
+                End If
+                End If
+                DescricaoServico = DescricaoServico & "— R$ " & CDec(q("vl_SF_VL_SERVICO")) - CDec(q("vlDesconto_SF_VL_SERVICO"))
+
+
+
+            listaOc.Add(New RelDescritivo(NomeAgrupamento, RazaoSocial,
+             Cnpj, Cidades, CodLinha, NumLInha, DescricaoServico, Ordem,
+             Valor2, ContaRetificada, tipoinfo, Id_SF_VL_SERVICO))
 
 
         Next
@@ -101,22 +190,27 @@ Public Class rel_descritivo
         '       Dim strNomeArquivo As String = "RelatórioDescritivo" & ".doc"
         '      HttpContext.Current.Response.AddHeader("Content-Disposition", "inline;filename=" & strNomeArquivo)
         ' Dim strHTMLContent As StringBuilder = New StringBuilder()
-        HttpContext.Current.Response.Write("<font style='font-size:10.0pt; font-family:Calibri;'>")
+        HttpContext.Current.Response.Write("<font style='font-size:11.0pt; font-family:Calibri;'>")
         HttpContext.Current.Response.Write("<STYLE TYPE ='text/css' >.blue {background-color: #FFD700;font-size:11.0pt; font-family:Calibri; }.silver {background-color: #D8D8D8; ;font-size:11.0pt}
 
 .azul{
 color: #0000FF;
 font-size:12.0pt; font-family:Calibri;
 }
+.Font10{
+
+font-size:10.0pt; font-family:Calibri;
+}
 </STYLE>")
 
-        HttpContext.Current.Response.Write("<b> <font CLASS=azul'>" & nomeFantasia & " — DESCRITIVO ".ToString() & Session("mesAnoRefereincia_SF_SERVICOS_FATURA") & "</font></b>")
+        HttpContext.Current.Response.Write("<b> <font CLASS=azul'>" & nomeFantasia & " — DESCRITIVO ".ToString() & MonthName(CDate("01/" & (Session("mesAnoRefereincia_SF_SERVICOS_FATURA"))).Month, False).ToUpper & "/" & CDate("01/" & (Session("mesAnoRefereincia_SF_SERVICOS_FATURA"))).Year & "</font></b>")
         Dim num As Integer
         Dim contador As Integer = 0
         Dim controle As Integer
         Dim linhaAtual As String
         Dim codlinhaAtual As String
-        Dim valor As Decimal
+        Dim TotalGeral As Decimal
+        Dim Valor As Decimal
 
 
 
@@ -136,8 +230,8 @@ font-size:12.0pt; font-family:Calibri;
                         HttpContext.Current.Response.Write("<p><b><font CLASS='silver'>" & Server.HtmlDecode(p1.NomeAgrupamento.ToString()) & "</font></b> <br/>")
 
 
-                        HttpContext.Current.Response.Write(p1.Cnpj & " <br/>")
-                        HttpContext.Current.Response.Write(p1.Cidades.ToString() & " <br/></p>")
+                        HttpContext.Current.Response.Write("<font CLASS=Font10'>" & p1.Cnpj & "</font> <br/>")
+                        HttpContext.Current.Response.Write("<font CLASS=Font10'>" & p1.Cidades.ToString() & "</font> <br/><br/>")
 
                         controle = 1
                     End If
@@ -153,7 +247,7 @@ font-size:12.0pt; font-family:Calibri;
                             codlinhaAtual = p2.CodLinha.ToString()
                             linhaAtual = Trim(ClsValidacoes.TelefoneFormat2(p2.NumLInha.ToString))
 
-                            If ClsValidacoes.SomenteNumeros(codlinhaAtual.ToString.Trim) <> ClsValidacoes.SomenteNumeros(linhaAtual.ToString.Trim) Then
+                            If SomenteNumeros(codlinhaAtual.ToString.Trim) <> SomenteNumeros(linhaAtual.ToString.Trim) Then
 
                                 HttpContext.Current.Response.Write("<b><font CLASS='blue'>" & p2.CodLinha.ToString() & If(p2.ContaRetificada = 1, " CONTA RETIFICADA", "") & "</font></b> <br/>")
                                 HttpContext.Current.Response.Write("<b>" & Trim(ClsValidacoes.TelefoneFormat2(p2.NumLInha.ToString())) & "</b><br/>")
@@ -162,32 +256,43 @@ font-size:12.0pt; font-family:Calibri;
                             End If
                             contador = 1
                             If p2.Valor < 0 Then
-                                HttpContext.Current.Response.Write("<font color=red>" & p2.DescricaoServico.ToString() & "</font> <br/>")
+                                If p2.DescricaoServico.ToString() <> "" Then
+                                    HttpContext.Current.Response.Write("<font color=red>" & p2.DescricaoServico.ToString() & "</font> <br/>")
+                                End If
+
                             Else
-                                HttpContext.Current.Response.Write(p2.DescricaoServico.ToString() & "<br/>")
+                                If p2.DescricaoServico.ToString() <> "" Then
+                                    HttpContext.Current.Response.Write(p2.DescricaoServico.ToString() & "<br/>")
+                                End If
                             End If
 
 
-                        Else
+                                Else
 
                             If p2.Valor < 0 Then
-                                HttpContext.Current.Response.Write("<font color=red>" & p2.DescricaoServico.ToString() & "</font> <br/>")
+                                If p2.DescricaoServico.ToString() <> "" Then
+                                    HttpContext.Current.Response.Write("<font color=red>" & p2.DescricaoServico.ToString() & "</font> <br/>")
+                                End If
                             Else
-                                HttpContext.Current.Response.Write(p2.DescricaoServico.ToString() & "<br/>")
+                                If p2.DescricaoServico.ToString() <> "" Then
+
+                                    HttpContext.Current.Response.Write(p2.DescricaoServico.ToString() & "<br/>")
+                                End If
                             End If
 
-                        End If
+                            End If
                         valor = valor + p2.Valor
                         Dim removerLista As List(Of RelDescritivo) = listaFiltrada1
-                        removerLista.RemoveAll(Function(p As RelDescritivo) p.NumLInha = p2.NumLInha)
+                        removerLista.RemoveAll(Function(p As RelDescritivo) p.NumLInha = p2.NumLInha And p.CodLinha = p2.CodLinha)
 
                     Next
                     contador = 0
                     HttpContext.Current.Response.Write("".ToString())
-                    HttpContext.Current.Response.Write("<b><font size=7.0pt>TOTAL — R$".ToString() & valor & "</font></b>")
+                    HttpContext.Current.Response.Write("<b><font size=7.0pt>TOTAL — R$ ".ToString() & valor & "</font></b>")
                     HttpContext.Current.Response.Write("".ToString() & " <br/>")
                     HttpContext.Current.Response.Write("".ToString() & " <br/>")
-                    valor = 0
+                    TotalGeral = TotalGeral + Valor
+                    Valor = 0
                     Exit For
                 Next
             End While
@@ -197,6 +302,7 @@ font-size:12.0pt; font-family:Calibri;
 
         HttpContext.Current.Response.[End]()
         HttpContext.Current.Response.Flush()
+
     End Sub
     Private Sub ExibirResultado(ByVal lista As List(Of RelDescritivo), ByVal info As String)
         For Each p As RelDescritivo In lista
@@ -204,6 +310,8 @@ font-size:12.0pt; font-family:Calibri;
         Next
 
     End Sub
+
+
 
 
 

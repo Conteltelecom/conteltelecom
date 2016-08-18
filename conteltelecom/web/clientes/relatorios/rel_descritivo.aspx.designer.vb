@@ -120,4 +120,13 @@ Partial Public Class rel_descritivo
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
     Protected WithEvents ObjectDataSource1 As Global.System.Web.UI.WebControls.ObjectDataSource
+    
+    '''<summary>
+    '''Controle SqlDataSourceDescritivoPorLinhas.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents SqlDataSourceDescritivoPorLinhas As Global.System.Web.UI.WebControls.SqlDataSource
 End Class

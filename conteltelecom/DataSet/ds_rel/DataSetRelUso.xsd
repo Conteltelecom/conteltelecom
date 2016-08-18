@@ -43,7 +43,7 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="DataSetRelUso" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetRelUso" msprop:Generator_UserDSName="DataSetRelUso">
+  <xs:element name="DataSetRelUso" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:EnforceConstraints="False" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetRelUso" msprop:Generator_UserDSName="DataSetRelUso">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="LI_LINHAS" msprop:Generator_TableClassName="LI_LINHASDataTable" msprop:Generator_TableVarName="tableLI_LINHAS" msprop:Generator_RowChangedName="LI_LINHASRowChanged" msprop:Generator_TablePropName="LI_LINHAS" msprop:Generator_RowDeletingName="LI_LINHASRowDeleting" msprop:Generator_RowChangingName="LI_LINHASRowChanging" msprop:Generator_RowEvHandlerName="LI_LINHASRowChangeEventHandler" msprop:Generator_RowDeletedName="LI_LINHASRowDeleted" msprop:Generator_RowClassName="LI_LINHASRow" msprop:Generator_UserTableName="LI_LINHAS" msprop:Generator_RowEvArgName="LI_LINHASRowChangeEvent">

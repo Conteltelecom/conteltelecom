@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Normalmaster.master" CodeBehind="if_input_fatura_manual.aspx.vb" Inherits="conteltelecom.if_input_fatura_manual" %>
+﻿<%@ Page Title="LANÇAMENTO DE FATURAS" Language="vb" AutoEventWireup="false" MasterPageFile="~/Normalmaster.master" CodeBehind="if_input_fatura_manual.aspx.vb" Inherits="conteltelecom.if_input_fatura_manual" %>
   <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="asp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderHeadNormal" runat="server">
 </asp:Content>
@@ -73,17 +73,18 @@
              </div> 
         
    </fieldset>
-  
- 
-                        
-        
-               
+     
 
     <hr />
     <br />
       <asp:UpdatePanel ID="UpdatePanelGridFauturas" runat="server" UpdateMode="Conditional" >
         <ContentTemplate>
             <telerik:RadGrid ID="RadGridFaturas" runat="server" AutoGenerateColumns="False" Culture="pt-BR" DataSourceID="SqlDataSourceLinhas" Skin="Bootstrap" CellSpacing="-1" GridLines="Both">
+                                  <GroupPanel Text="ARRASTE  A COLUNA PARA FILTAR"></GroupPanel>
+<GroupingSettings CollapseAllTooltip="Collapse all groups" ShowUnGroupButton="True" UnGroupButtonTooltip="DESAGRUPAR" UnGroupTooltip="">
+    
+</GroupingSettings>
+
 <GroupingSettings CollapseAllTooltip="Collapse all groups"></GroupingSettings>
         <ExportSettings>
             <Pdf PageWidth="">
@@ -107,6 +108,7 @@
                     </EditItemTemplate>
                     <ItemTemplate>
                         <asp:Label ID="codLinha_LI_LINHASLabel" runat="server" Text='<%# Eval("codLinha_LI_LINHAS") %>'></asp:Label>
+                        <asp:Label ID="Labelid_LI_LINHAS" runat="server" Text='<%# Eval("id_LI_LINHAS")  %>' Visible="false"></asp:Label>
                       <asp:Label ID="desc_OP_OPERADORASLabelEdit" runat="server" Text='<%# Eval("desc_OP_OPERADORAS")  %>' Visible="false"></asp:Label>
                     </ItemTemplate>
                     <HeaderStyle CssClass="col-xs-3" />
@@ -229,6 +231,10 @@
               <asp:Parameter DbType="Date" Name="dtaPerIni_SF_SERVICOS_FATURA" />
               <asp:Parameter DbType="Date" Name="dtaPerFim_SF_SERVICOS_FATURA" />
               <asp:Parameter DbType="Date" Name="dtVencimento_SF_SERVICOS_FATURA" />
+        
+             <asp:SessionParameter SessionField="id_PS_PESSOA_USUARIO" Name="id_PS_PESSOA_USUARIO" Type="Int32" />
+     
+        
             
           </InsertParameters>
           <SelectParameters>
@@ -244,7 +250,7 @@
     
      <asp:SqlDataSource ID="SqlDataSourceOperadoras" runat="server" ConnectionString="<%$ ConnectionStrings:conteltelecomConnectionString %>" SelectCommand="DropDownOperadoras" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
     
-     <asp:SqlDataSource ID="SqlDataSourceLinhasXOperadoras" runat="server" ConnectionString="<%$ ConnectionStrings:conteltelecomConnectionString %>" SelectCommand="SELECT LI_LINHAS.codLinha_LI_LINHAS + '-' + OP_OPERADORAS.desc_OP_OPERADORAS AS Linha, LI_LINHAS.id_LI_LINHAS FROM LI_LINHAS INNER JOIN OP_OPERADORAS ON LI_LINHAS.id_OP_OPERADORAS = OP_OPERADORAS.id_OP_OPERADORAS WHERE (LI_LINHAS.st_LI_LINHAS = 1)"></asp:SqlDataSource>
+     <asp:SqlDataSource ID="SqlDataSourceLinhasXOperadoras" runat="server" ConnectionString="<%$ ConnectionStrings:conteltelecomConnectionString %>" SelectCommand="SELECT MIN(LI_LINHAS.id_LI_LINHAS) AS id_LI_LINHAS, LI_LINHAS.codLinha_LI_LINHAS + '-' + OP_OPERADORAS.desc_OP_OPERADORAS AS Linha FROM LI_LINHAS INNER JOIN OP_OPERADORAS ON LI_LINHAS.id_OP_OPERADORAS = OP_OPERADORAS.id_OP_OPERADORAS WHERE (LI_LINHAS.st_LI_LINHAS = 1) GROUP BY OP_OPERADORAS.desc_OP_OPERADORAS, LI_LINHAS.codLinha_LI_LINHAS"></asp:SqlDataSource>
     
      <asp:SqlDataSource ID="SqlDataSourceUltimoServico" runat="server" ConnectionString="<%$ ConnectionStrings:conteltelecomConnectionString %>" SelectCommand="SELECT SF_VL_SERVICO.id_SF_SERVICOS_FATURA, SF_VL_SERVICO.desc_SF_VL_SERVICO, SF_VL_SERVICO.vl_SF_VL_SERVICO, SF_VL_SERVICO.vlDesconto_SF_VL_SERVICO, SF_VL_SERVICO.codNumLinha_SF_VL_SERVICO, SF_SERVICOS_FATURA.id_LI_LINHAS, SF_VL_SERVICO.qtDias_SF_VL_SERVICO FROM SF_VL_SERVICO INNER JOIN SF_SERVICOS_FATURA ON SF_VL_SERVICO.id_SF_SERVICOS_FATURA = SF_SERVICOS_FATURA.id_SF_SERVICOS_FATURA WHERE (SF_SERVICOS_FATURA.id_LI_LINHAS = @id_LI_LINHAS) AND (SF_SERVICOS_FATURA.mesAnoRefereincia_SF_SERVICOS_FATURA = @mesAnoRefereincia_SF_SERVICOS_FATURA) AND (SF_SERVICOS_FATURA.numSequencia_SF_SERVICOS_FATURA = 0) ORDER BY SF_VL_SERVICO.id_SF_SERVICOS_FATURA DESC" InsertCommand="INSERT INTO SF_VL_SERVICO(id_SF_SERVICOS_FATURA, desc_SF_VL_SERVICO, qtDias_SF_VL_SERVICO, vl_SF_VL_SERVICO, vlDesconto_SF_VL_SERVICO, codNumLinha_SF_VL_SERVICO) VALUES (@id_SF_SERVICOS_FATURA, @desc_SF_VL_SERVICO, @qtDias_SF_VL_SERVICO, @vl_SF_VL_SERVICO, @vlDesconto_SF_VL_SERVICO, @codNumLinha_SF_VL_SERVICO)">
          <InsertParameters>

@@ -59,22 +59,22 @@ Partial Public Class bloqueio_faturas
     Protected WithEvents RadDropDownListAno As Global.Telerik.Web.UI.RadDropDownList
     
     '''<summary>
-    '''Controle Label3.
+    '''Controle RadButtonPesquisar.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents Label3 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents RadButtonPesquisar As Global.Telerik.Web.UI.RadButton
     
     '''<summary>
-    '''Controle RadDropDownListTipoRel.
+    '''Controle RadButton2.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents RadDropDownListTipoRel As Global.Telerik.Web.UI.RadDropDownList
+    Protected WithEvents RadButton2 As Global.Telerik.Web.UI.RadButton
     
     '''<summary>
     '''Controle RadGridBloquiosFatura.
@@ -102,4 +102,22 @@ Partial Public Class bloqueio_faturas
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
     Protected WithEvents SqlDataSourceBuscaValorMes As Global.System.Web.UI.WebControls.SqlDataSource
+    
+    '''<summary>
+    '''Controle SqlDataSourceAutoComplete.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents SqlDataSourceAutoComplete As Global.System.Web.UI.WebControls.SqlDataSource
+    
+    '''<summary>
+    '''Controle SqlDataSourceBuscaLinhas.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents SqlDataSourceBuscaLinhas As Global.System.Web.UI.WebControls.SqlDataSource
 End Class

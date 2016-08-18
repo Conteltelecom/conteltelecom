@@ -68,6 +68,15 @@ Partial Public Class li_cad_dta_programacao
     Protected WithEvents SqlDataSourceInsertData As Global.System.Web.UI.WebControls.SqlDataSource
     
     '''<summary>
+    '''Controle SqlDataSourceBuscaUsoPeriodo.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents SqlDataSourceBuscaUsoPeriodo As Global.System.Web.UI.WebControls.SqlDataSource
+    
+    '''<summary>
     '''Controle RadWindowManagerMsg.
     '''</summary>
     '''<remarks>

@@ -22,19 +22,59 @@ Public Class li_cad_dta_programacao
             Case "Salvar"
                 Dim dataItem As GridDataItem = DirectCast(e.Item, GridDataItem)
                 Dim id_LI_LINHASLabelEdit As Label = DirectCast(dataItem.FindControl("id_LI_LINHASLabelEdit"), Label)
-
-                SqlDataSourceCadDtaProg.InsertParameters("id_LI_LINHAS").DefaultValue = id_LI_LINHASLabelEdit.Text
                 Dim RadDatePickerMovel As RadDatePicker = DirectCast(dataItem.FindControl("RadDatePickerMovel"), RadDatePicker)
                 Dim RadDatePickerLdn As RadDatePicker = DirectCast(dataItem.FindControl("RadDatePickerLdn"), RadDatePicker)
                 Dim observacoesTextBox As RadTextBox = DirectCast(dataItem.FindControl("observacoesTextBox"), RadTextBox)
+                SqlDataSourceBuscaUsoPeriodo.SelectParameters("codMatriz_PS_CLIENTES").DefaultValue = Request.QueryString("codMatriz_PS_CLIENTES")
+                SqlDataSourceBuscaUsoPeriodo.SelectParameters("id_LI_LINHAS").DefaultValue = id_LI_LINHASLabelEdit.Text
+                Dim dvSqlContratos As DataView = CType(SqlDataSourceBuscaUsoPeriodo.Select(DataSourceSelectArguments.Empty), DataView)
+                If (dvSqlContratos IsNot Nothing Or dvSqlContratos.Count < 0) And dvSqlContratos.Count > 0 Then
+                    For Each drvSql As DataRowView In dvSqlContratos
 
-                SqlDataSourceCadDtaProg.InsertParameters("dtMovel_LI_CAD_PROGRAMACAO").DefaultValue = If(RadDatePickerMovel.DateInput.SelectedDate <> "", RadDatePickerMovel.DateInput.SelectedDate, DBNull.Value)
-                SqlDataSourceCadDtaProg.InsertParameters("dtLdn_LI_CAD_PROGRAMACAO").DefaultValue = If(RadDatePickerLdn.DateInput.SelectedDate <> "", RadDatePickerLdn.DateInput.SelectedDate, DBNull.Value)
-                SqlDataSourceCadDtaProg.InsertParameters("obs_LI_CAD_PROGRAMACAO").DefaultValue = observacoesTextBox.Text
-                SqlDataSourceCadDtaProg.Insert()
-                RadGridCadDtaProg.MasterTableView.ClearEditItems()
-                RadGridCadDtaProg.DataBind()
-                Exit Select
+
+                        If drvSql("id_SF_TIPO_USO_CATEGORIAS") = 1 Then
+                            If IsNothing(drvSql("vlUso_SF_VL_USO")) = False Then
+                                SqlDataSourceCadDtaProg.InsertParameters("vlUso_LI_CAD_PROGRAMACAO").DbType = DbType.Decimal
+                                SqlDataSourceCadDtaProg.InsertParameters("vlUso_LI_CAD_PROGRAMACAO").DefaultValue = drvSql("vlUso_SF_VL_USO")
+
+                            End If
+                        Else
+                            If IsNothing(drvSql("vlUso_SF_VL_USO")) = False Then
+
+                                SqlDataSourceCadDtaProg.InsertParameters("vlUsomoVEL_LI_CAD_PROGRAMACAO").DbType = DbType.Decimal
+                                SqlDataSourceCadDtaProg.InsertParameters("vlUsomoVEL_LI_CAD_PROGRAMACAO").DefaultValue = drvSql("vlUso_SF_VL_USO")
+
+                            End If
+
+                        End If
+
+                            If IsNothing(drvSql("dtaPerIni_SF_SERVICOS_FATURA")) = False Then
+                            'SqlDataSourceCadDtaProg.InsertParameters("dtTarifIni_LI_CAD_PROGRAMACAO").DbType = DbType.Date
+                            SqlDataSourceCadDtaProg.InsertParameters("dtTarifIni_LI_CAD_PROGRAMACAO").DefaultValue = drvSql("dtaPerIni_SF_SERVICOS_FATURA")
+                        End If
+                        If IsNothing(drvSql("dtaPerFim_SF_SERVICOS_FATURA")) = False Then
+                            'SqlDataSourceCadDtaProg.InsertParameters("dtTarifFim_LI_CAD_PROGRAMACAO").DbType = DbType.Date
+                            SqlDataSourceCadDtaProg.InsertParameters("dtTarifFim_LI_CAD_PROGRAMACAO").DefaultValue = drvSql("dtaPerFim_SF_SERVICOS_FATURA")
+                        End If
+                        SqlDataSourceCadDtaProg.InsertParameters("id_LI_LINHAS").DefaultValue = id_LI_LINHASLabelEdit.Text
+                        SqlDataSourceCadDtaProg.InsertParameters("dtMovel_LI_CAD_PROGRAMACAO").DefaultValue = If(RadDatePickerMovel.DateInput.DisplayText <> "", RadDatePickerMovel.DateInput.DisplayText, String.Empty)
+                        SqlDataSourceCadDtaProg.InsertParameters("dtLdn_LI_CAD_PROGRAMACAO").DefaultValue = If(RadDatePickerLdn.DateInput.DisplayText <> "", RadDatePickerLdn.DateInput.DisplayText, String.Empty)
+                        SqlDataSourceCadDtaProg.InsertParameters("obs_LI_CAD_PROGRAMACAO").DefaultValue = observacoesTextBox.Text
+                        SqlDataSourceCadDtaProg.InsertParameters("mesAnoRefereincia_SF_SERVICOS_FATURA").DefaultValue = drvSql("mesAnoRefereincia_SF_SERVICOS_FATURA")
+
+
+                    Next
+
+                    SqlDataSourceCadDtaProg.Insert()
+
+                    RadGridCadDtaProg.MasterTableView.ClearEditItems()
+                    RadGridCadDtaProg.DataBind()
+                    Exit Select
+                Else
+                    RadWindowManagerMsg.RadAlert("ATENÇÃO NÃO É PERMITIDO REALIZAR PROGRAMAÇÃO PARA LINHAS SEM USO", 400, Nothing, "MESNAGEM", Nothing)
+                    Exit Select
+                End If
+
 
             Case "Delete"
                 Dim dataItem As GridDataItem = DirectCast(e.Item, GridDataItem)

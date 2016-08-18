@@ -104,27 +104,47 @@ Public Class cl_linhas_detalhes
 
     Private Sub RadGridLinhas_ItemDataBound(sender As Object, e As GridItemEventArgs) Handles RadGridLinhas.ItemDataBound
 
+
+
+
         If TypeOf e.Item Is GridEditableItem And e.Item.IsInEditMode Then
 
             If TypeOf e.Item Is GridEditFormInsertItem OrElse TypeOf e.Item Is GridDataInsertItem Then
                 ' insert item
             Else
-                If TypeOf e.Item Is GridDataItem AndAlso e.Item.OwnerTableView.Name = "DetailTableUFcidade" Then
-                    Dim ditem As GridDataItem = DirectCast(e.Item, GridDataItem)
-                    Dim RadDropDownListUf As RadDropDownList = DirectCast(ditem.FindControl("RadDropDownListUf"), RadDropDownList)
-                    SqlDataSourceDropGrid.SelectParameters("cod_PS_UF").DefaultValue = RadDropDownListUf.SelectedValue
-                    Dim RadDropDownListid_PS_CIDADES As RadDropDownList = DirectCast(ditem.FindControl("RadDropDownListCidades"), RadDropDownList)
-                    RadDropDownListid_PS_CIDADES.DataBind()
-                    Dim LabelDropCidades As Label = DirectCast(ditem.FindControl("LabelDropCidades"), Label)
-                    '   Dim LabelDropCidadesNomes As Label = DirectCast(ditem.FindControl("LabelDropCidadesNomes"), Label)
-
-                    If Not [String].IsNullOrEmpty(LabelDropCidades.Text) Then
-                        RadDropDownListid_PS_CIDADES.SelectedValue = LabelDropCidades.Text
+                Dim ditem As GridDataItem = DirectCast(e.Item, GridDataItem)
+                If TypeOf e.Item Is GridDataItem AndAlso e.Item.OwnerTableView.Name = "DetailVlLinha" Then
+                    Dim id_LI_TIPOSRadComboBox As RadComboBox = DirectCast(ditem.FindControl("id_LI_TIPOSRadComboBox"), RadComboBox)
+                    Dim HyperLinkNovoRamal As HyperLink = DirectCast(ditem.FindControl("HyperLinkNovoRamal"), HyperLink)
+                    If id_LI_TIPOSRadComboBox IsNot Nothing Then
+                        If id_LI_TIPOSRadComboBox.SelectedItem.Text = "DDR" Then
+                            id_LI_TIPOSRadComboBox.Width = Unit.Percentage(80)
+                            HyperLinkNovoRamal.Visible = True
+                        Else
+                            id_LI_TIPOSRadComboBox.Width = Unit.Percentage(100)
+                            HyperLinkNovoRamal.Visible = False
+                        End If
                     End If
-
-
                 End If
-            End If
+                If TypeOf e.Item Is GridDataItem AndAlso e.Item.OwnerTableView.Name = "DetailTableUFcidade" Then
+
+                    Dim RadDropDownListUf As RadDropDownList = DirectCast(ditem.FindControl("RadDropDownListUf"), RadDropDownList)
+                        SqlDataSourceDropGrid.SelectParameters("cod_PS_UF").DefaultValue = RadDropDownListUf.SelectedValue
+                        Dim RadDropDownListid_PS_CIDADES As RadDropDownList = DirectCast(ditem.FindControl("RadDropDownListCidades"), RadDropDownList)
+                        RadDropDownListid_PS_CIDADES.DataBind()
+                        Dim LabelDropCidades As Label = DirectCast(ditem.FindControl("LabelDropCidades"), Label)
+                        '   Dim LabelDropCidadesNomes As Label = DirectCast(ditem.FindControl("LabelDropCidadesNomes"), Label)
+
+                        If Not [String].IsNullOrEmpty(LabelDropCidades.Text) Then
+                            RadDropDownListid_PS_CIDADES.SelectedValue = LabelDropCidades.Text
+                        End If
+
+
+                    End If
+                End If
+
+
+
         End If
 
 
@@ -289,5 +309,22 @@ Public Class cl_linhas_detalhes
         End If
     End Sub
 
+    Protected Sub id_LI_TIPOSRadComboBox_SelectedIndexChanged(sender As Object, e As RadComboBoxSelectedIndexChangedEventArgs)
+        Dim combo As RadComboBox = DirectCast(sender, RadComboBox)
+        Dim item As GridDataItem = DirectCast(combo.NamingContainer, GridDataItem)
+        Dim HyperLinkNovoRamal As HyperLink = DirectCast(item.FindControl("HyperLinkNovoRamal"), HyperLink)
 
+
+        If combo.SelectedItem.Text = "DDR" Then
+            combo.Width = Unit.Percentage(80)
+            HyperLinkNovoRamal.Visible = True
+        Else
+            combo.Width = Unit.Percentage(100)
+            HyperLinkNovoRamal.Visible = False
+        End If
+
+
+
+
+    End Sub
 End Class

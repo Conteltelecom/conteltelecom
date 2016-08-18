@@ -107,25 +107,25 @@ Public Class if_input_fatura_manual_Detalhes
 
     Private Sub RadGridServicosXFaturas_ItemDataBound(sender As Object, e As GridItemEventArgs) Handles RadGridServicosXFaturas.ItemDataBound
 
-        If TypeOf e.Item Is GridDataItem Then
-            If (TypeOf e.Item Is GridDataItem) AndAlso (e.Item.OwnerTableView.Name = "Master") Then
-                Dim item As GridDataItem = DirectCast(e.Item, GridDataItem)
-                Dim name As String = item("codLinha_LI_LINHAS").Text
-                SqlDataSourceLinhasXCod.SelectParameters("codLinha_LI_LINHAS").DefaultValue = name
-                Session("codLinha_LI_LINHAS") = name
+        'If TypeOf e.Item Is GridDataItem Then
+        '    If (TypeOf e.Item Is GridDataItem) AndAlso (e.Item.OwnerTableView.Name = "Master") Then
+        '        Dim item As GridDataItem = DirectCast(e.Item, GridDataItem)
+        '        Dim name As String = item("codLinha_LI_LINHAS").Text
+        '        SqlDataSourceLinhasXCod.SelectParameters("codLinha_LI_LINHAS").DefaultValue = name
+        '        Session("codLinha_LI_LINHAS") = name
 
 
-            End If
+        '    End If
 
 
-            If TypeOf e.Item Is GridEditableItem AndAlso e.Item.IsInEditMode AndAlso e.Item.OwnerTableView.Name = "DetailTableUso" Then
+        '    If TypeOf e.Item Is GridEditableItem AndAlso e.Item.IsInEditMode AndAlso e.Item.OwnerTableView.Name = "DetailTableUso" Then
 
-                Dim editItem As GridEditableItem = DirectCast(e.Item, GridEditableItem)
+        '        Dim editItem As GridEditableItem = DirectCast(e.Item, GridEditableItem)
 
 
-            End If
+        '    End If
 
-        End If
+        'End If
 
 
 

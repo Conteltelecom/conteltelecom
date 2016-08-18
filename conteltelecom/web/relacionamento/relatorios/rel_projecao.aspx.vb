@@ -5,10 +5,12 @@ Public Class rel_projecao
     Inherits System.Web.UI.Page
     Dim listaOc As List(Of ListRelProjecao)
 
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If IsPostBack = False Then
             RadDropDownListMes.SelectedValue = Date.Today.Month
             RadDropDownListAno.SelectedValue = Date.Today.Year
+
             buscalinhas()
             Dim NovoRepDs As New ReportDataSource("DataSetProjecao", listaOc)
 
@@ -26,9 +28,16 @@ Public Class rel_projecao
     Sub buscalinhas()
         FiltroDatas()
         listaOc = New List(Of ListRelProjecao)()
-
-
+        Dim mesref As String = ""
+        Dim periodo As String = ""
         Dim dvSqlContratos As DataView = CType(SqlDataSourceBuscaLinhas.Select(DataSourceSelectArguments.Empty), DataView)
+        Dim dtaMesref As Date
+
+        Dim mesReferencia As String = FiltroDatas()
+        dtaMesref = "01/" & mesReferencia
+        Dim mesReferencia1 As String = If((dtaMesref.AddMonths(0)).Month <= 9, "0" & (dtaMesref.AddMonths(0)).Month, (dtaMesref.AddMonths(0)).Month) & "/" & (dtaMesref.AddMonths(0)).Year
+        Dim mesReferencia2 As String = If((dtaMesref.AddMonths(1)).Month <= 9, "0" & (dtaMesref.AddMonths(1)).Month, (dtaMesref.AddMonths(1)).Month) & "/" & (dtaMesref.AddMonths(1)).Year
+        Dim mesReferencia3 As String = If((dtaMesref.AddMonths(2)).Month <= 9, "0" & (dtaMesref.AddMonths(2)).Month, (dtaMesref.AddMonths(2)).Month) & "/" & (dtaMesref.AddMonths(2)).Year
 
 
         If dvSqlContratos IsNot Nothing Or dvSqlContratos.Count < 0 Then
@@ -37,7 +46,117 @@ Public Class rel_projecao
 
                 If IsDBNull(drvSql("id_LI_LINHAS")) = False And IsDBNull(drvSql("numLinha_LI_LINHAS")) = False And IsDBNull(drvSql("desc_PS_CIDADES")) = False Then
                     Try
-                        BuscaUso(drvSql("id_LI_LINHAS"), drvSql("numLinha_LI_LINHAS"), drvSql("nomeUnidade_LI_LINHAS"), drvSql("desc_PS_CIDADES"))
+
+                        SqlDataSourceValorUso.SelectParameters("id_LI_LINHAS").DefaultValue = drvSql("id_LI_LINHAS")
+
+                        Dim dvSqlLinhas As DataView = CType(SqlDataSourceValorUso.Select(DataSourceSelectArguments.Empty), DataView)
+                        If (dvSqlLinhas IsNot Nothing Or dvSqlLinhas.Count < 0) And dvSqlLinhas.Count > 0 Then
+                            For Each drvSqlLinhas As DataRowView In dvSqlLinhas
+                                mesref = drvSqlLinhas("mesAnoRefereincia_SF_SERVICOS_FATURA")
+                                If IsDBNull(drvSqlLinhas("dtTarifIni_LI_CAD_PROGRAMACAO")) = False And IsDBNull(drvSqlLinhas("dtTarifFim_LI_CAD_PROGRAMACAO")) = False Then
+                                    periodo = drvSqlLinhas("dtTarifIni_LI_CAD_PROGRAMACAO") & " á " & drvSqlLinhas("dtTarifFim_LI_CAD_PROGRAMACAO")
+                                End If
+
+                                If IsDBNull(drvSqlLinhas("vlUso_LI_CAD_PROGRAMACAO")) = False Then
+                                    '(49) 3623-0093
+                                    AddValores(drvSql("numLinha_LI_LINHAS"),
+                                              drvSql("desc_PS_CIDADES"),
+                                              drvSql("nomeUnidade_LI_LINHAS"),
+                                              1,
+                                              drvSqlLinhas("dtLdn_LI_CAD_PROGRAMACAO"),
+                                              periodo,
+                                               calculaValorMes(drvSqlLinhas("vlUso_LI_CAD_PROGRAMACAO"), drvSqlLinhas("dtTarifIni_LI_CAD_PROGRAMACAO"), drvSqlLinhas("dtTarifFim_LI_CAD_PROGRAMACAO"), CDate(mesref), drvSqlLinhas("dtLdn_LI_CAD_PROGRAMACAO"), drvSql("id_LI_LINHAS"), dtaMesref, 0, 1),
+                                                           calculaValorMes(drvSqlLinhas("vlUso_LI_CAD_PROGRAMACAO"), CDate(drvSqlLinhas("dtTarifIni_LI_CAD_PROGRAMACAO")).AddMonths(1), CDate(drvSqlLinhas("dtTarifFim_LI_CAD_PROGRAMACAO")).AddMonths(1), CDate(mesref).AddMonths(1), drvSqlLinhas("dtLdn_LI_CAD_PROGRAMACAO"), drvSql("id_LI_LINHAS"), dtaMesref, 1, 1),
+                                               0,
+                                               buscaUsoMes(1, drvSql("id_LI_LINHAS"), mesReferencia),
+                                              mesReferencia,
+                                              mesReferencia1,
+                                              mesReferencia2,
+                                              mesReferencia3,
+                                              drvSql("id_LI_LINHAS"))
+
+                                Else
+                                    AddValores(drvSql("numLinha_LI_LINHAS"),
+                                              drvSql("desc_PS_CIDADES"),
+                                              drvSql("nomeUnidade_LI_LINHAS"),
+                                              1,
+                                              String.Empty,
+                                              periodo, 0, 0, 0, buscaUsoMes(1, drvSql("id_LI_LINHAS"), mesReferencia),
+                                              String.Empty,
+                                              mesReferencia1,
+                                              mesReferencia2,
+                                              mesReferencia3,
+                                              drvSql("id_LI_LINHAS"))
+
+                                End If
+
+                                If IsDBNull(drvSqlLinhas("vlUsomoVEL_LI_CAD_PROGRAMACAO")) = False Then
+
+                                    AddValores(drvSql("numLinha_LI_LINHAS"),
+                                              drvSql("desc_PS_CIDADES"),
+                                              drvSql("nomeUnidade_LI_LINHAS"),
+                                              2,
+                                              drvSqlLinhas("dtMovel_LI_CAD_PROGRAMACAO"),
+                                              periodo,
+                                               calculaValorMes(drvSqlLinhas("vlUsomoVEL_LI_CAD_PROGRAMACAO"), drvSqlLinhas("dtTarifIni_LI_CAD_PROGRAMACAO"), drvSqlLinhas("dtTarifFim_LI_CAD_PROGRAMACAO"), CDate(mesref), drvSqlLinhas("dtLdn_LI_CAD_PROGRAMACAO"), drvSql("id_LI_LINHAS"), dtaMesref, 0, 1),
+                                                           calculaValorMes(drvSqlLinhas("vlUsomoVEL_LI_CAD_PROGRAMACAO"), CDate(drvSqlLinhas("dtTarifIni_LI_CAD_PROGRAMACAO")).AddMonths(1), CDate(drvSqlLinhas("dtTarifFim_LI_CAD_PROGRAMACAO")).AddMonths(1), CDate(mesref).AddMonths(1), drvSqlLinhas("dtLdn_LI_CAD_PROGRAMACAO"), drvSql("id_LI_LINHAS"), dtaMesref, 1, 1),
+                                               0,
+                                               buscaUsoMes(2, drvSql("id_LI_LINHAS"), mesReferencia),
+                                              mesReferencia,
+                                              mesReferencia1,
+                                              mesReferencia2,
+                                              mesReferencia3,
+                                              drvSql("id_LI_LINHAS"))
+
+                                Else
+                                    AddValores(drvSql("numLinha_LI_LINHAS"),
+                                              drvSql("desc_PS_CIDADES"),
+                                              drvSql("nomeUnidade_LI_LINHAS"),
+                                              2,
+                                              "01/01/1900",
+                                              periodo, 0, 0, 0, buscaUsoMes(2, drvSql("id_LI_LINHAS"), mesReferencia),
+                                              String.Empty,
+                                              mesReferencia1,
+                                              mesReferencia2,
+                                              mesReferencia3,
+                                              drvSql("id_LI_LINHAS"))
+                                End If
+
+
+
+
+
+
+
+                            Next
+
+                        Else
+
+                            For x = 1 To 2
+
+                                Dim Vlvalor As Decimal = buscaUsoMes(x, drvSql("id_LI_LINHAS"), mesReferencia)
+                                periodo = ""
+                                AddValores(drvSql("numLinha_LI_LINHAS"),
+                                           drvSql("desc_PS_CIDADES"),
+                                           drvSql("nomeUnidade_LI_LINHAS"),
+                                           x,
+                                               "01/01/1900",
+                                           periodo, Vlvalor, Vlvalor, Vlvalor, Vlvalor,
+                                           String.Empty,
+                                           mesReferencia1,
+                                           mesReferencia2,
+                                           mesReferencia3,
+                                           drvSql("id_LI_LINHAS"))
+                            Next
+
+                        End If
+
+
+
+
+
+
+
                     Catch ex As Exception
 
                     End Try
@@ -62,178 +181,148 @@ Public Class rel_projecao
     End Sub
 
 
-    Sub BuscaUso(ByVal id_LI_LINHAS As Integer, ByVal numLinha_LI_LINHAS As String, ByVal nomeUnidade_LI_LINHAS As String, ByVal desc_PS_CIDADES As String)
 
 
 
 
-        Dim dtMovel_LI_CAD_PROGRAMACAO As Date
-        Dim dtLdn_LI_CAD_PROGRAMACAO As Date
-        Dim dt_LI_CAD_PROGRAMACAO As Date
-        Dim dtaPerIni_SF_SERVICOS_FATURA As Date
-        Dim dtaPerFim_SF_SERVICOS_FATURA As Date
-        Dim periodo As String = ""
-        Dim mes01 As Decimal
-        Dim mes02 As Decimal
-        Dim mes03 As Decimal
-        Dim vlUso_SF_VL_USO As Decimal
-        Dim possuiUso As Integer = 0
-        Dim mesReferencia As String = ""
-        Dim mesReferencia1 As String = ""
-        Dim mesReferencia2 As String = ""
-        Dim mesReferencia3 As String = ""
+    Sub AddValores(ByVal numLinha_LI_LINHAS As String, ByVal desc_PS_CIDADES As String,
+       ByVal nomeUnidade_LI_LINHAS As String, ByVal id_SF_TIPO_USO_CATEGORIAS As Integer, ByVal dt_LI_CAD_PROGRAMACAO As Date,
+       ByVal periodo As String, ByVal mes01 As Decimal, ByVal mes02 As Decimal, ByVal mes03 As Decimal, ByVal vlUso_SF_VL_USO As Decimal,
+           ByVal mesReferencia As String, ByVal mesReferencia1 As String, ByVal mesReferencia2 As String, ByVal mesReferencia3 As String, ByVal id_LI_LINHA As Integer)
         Dim ClsValidacoes As New Validacoes
-        SqlDataSourceValorUso.SelectParameters("id_LI_LINHAS").DefaultValue = id_LI_LINHAS
-        BuscaMes(dtMovel_LI_CAD_PROGRAMACAO, dtLdn_LI_CAD_PROGRAMACAO, id_LI_LINHAS)
-        For x = 1 To 2
-            SqlDataSourceValorUso.SelectParameters("id_LI_LINHAS").DefaultValue = id_LI_LINHAS
-            SqlDataSourceValorUso.SelectParameters("mesAnoRefereincia_SF_SERVICOS_FATURA").DefaultValue = FiltroDatas()
-            SqlDataSourceValorUso.SelectParameters("id_SF_TIPO_USO_CATEGORIAS").DefaultValue = x
-            Dim dvSqlContratos As DataView = CType(SqlDataSourceValorUso.Select(DataSourceSelectArguments.Empty), DataView)
-            If (dvSqlContratos IsNot Nothing Or dvSqlContratos.Count < 0) And dvSqlContratos.Count > 0 Then
-                For Each drvSql As DataRowView In dvSqlContratos
-                    If (drvSql("id_SF_TIPO_USO_CATEGORIAS")) = 1 Then
 
-                        dt_LI_CAD_PROGRAMACAO = dtLdn_LI_CAD_PROGRAMACAO
-                    Else
-                        dt_LI_CAD_PROGRAMACAO = dtMovel_LI_CAD_PROGRAMACAO
-                    End If
-                    If IsDBNull(drvSql("vlUso_SF_VL_USO")) = False Then
-
-                        vlUso_SF_VL_USO = drvSql("vlUso_SF_VL_USO")
-                    End If
-                    If CInt(dt_LI_CAD_PROGRAMACAO.Year) < 2010 Then
-
-                        mes01 = vlUso_SF_VL_USO
-                        mes02 = vlUso_SF_VL_USO
-                        mes03 = vlUso_SF_VL_USO
-
-                    Else
-
-
-                        If IsDBNull(drvSql("dtaPerIni_SF_SERVICOS_FATURA")) = False Then
-                            periodo = drvSql("dtaPerIni_SF_SERVICOS_FATURA") & " á " & drvSql("dtaPerFim_SF_SERVICOS_FATURA")
-
-                            dtaPerIni_SF_SERVICOS_FATURA = drvSql("dtaPerIni_SF_SERVICOS_FATURA")
-                            dtaPerFim_SF_SERVICOS_FATURA = drvSql("dtaPerFim_SF_SERVICOS_FATURA")
-
-
-                            mes01 = calculaValorMes(vlUso_SF_VL_USO, dtaPerIni_SF_SERVICOS_FATURA, dtaPerFim_SF_SERVICOS_FATURA, 0, dt_LI_CAD_PROGRAMACAO)
-                            mes02 = calculaValorMes(vlUso_SF_VL_USO, dtaPerIni_SF_SERVICOS_FATURA, dtaPerFim_SF_SERVICOS_FATURA, 1, dt_LI_CAD_PROGRAMACAO)
-                            mes03 = calculaValorMes(vlUso_SF_VL_USO, dtaPerIni_SF_SERVICOS_FATURA, dtaPerFim_SF_SERVICOS_FATURA, 2, dt_LI_CAD_PROGRAMACAO)
-                        End If
-
-                    End If
-
-
-                    mesReferencia = FiltroDatas()
-                    mesReferencia1 = If((dtaPerFim_SF_SERVICOS_FATURA.AddMonths(1)).Month < 10, "0" & (dtaPerFim_SF_SERVICOS_FATURA.AddMonths(1)).Month, (dtaPerFim_SF_SERVICOS_FATURA.AddMonths(1)).Month) & "/" & (dtaPerFim_SF_SERVICOS_FATURA.AddMonths(1)).Year
-                    mesReferencia2 = If((dtaPerFim_SF_SERVICOS_FATURA.AddMonths(1)).Month < 10, "0" & (dtaPerFim_SF_SERVICOS_FATURA.AddMonths(2)).Month, (dtaPerFim_SF_SERVICOS_FATURA.AddMonths(2)).Month) & "/" & (dtaPerFim_SF_SERVICOS_FATURA.AddMonths(2)).Year
-                    mesReferencia3 = If((dtaPerFim_SF_SERVICOS_FATURA.AddMonths(2)).Month < 10, "0" & (dtaPerFim_SF_SERVICOS_FATURA.AddMonths(3)).Month, (dtaPerFim_SF_SERVICOS_FATURA.AddMonths(3)).Month) & "/" & (dtaPerFim_SF_SERVICOS_FATURA.AddMonths(3)).Year
-                    listaOc.Add(New ListRelProjecao(ClsValidacoes.TelefoneFormat2(numLinha_LI_LINHAS.ToString.TrimEnd),
-                                                             desc_PS_CIDADES.ToString.TrimEnd,
-                                                            nomeUnidade_LI_LINHAS.ToString.TrimEnd,
-                                                             drvSql("id_SF_TIPO_USO_CATEGORIAS"),
-                                                            dt_LI_CAD_PROGRAMACAO,
-                                                            periodo,
-                                                            mes01,
-                                                            mes02,
-                                                            mes03,
-                                                            vlUso_SF_VL_USO, 1, mesReferencia, mesReferencia1, mesReferencia2, mesReferencia3))
-
-
-                Next
-
-            Else
-                Dim dtaMesref As Date
-                mesReferencia = FiltroDatas()
-                dtaMesref = "01/" & mesReferencia
-                mesReferencia1 = If((dtaMesref.AddMonths(1)).Month < 10, "0" & (dtaMesref.AddMonths(1)).Month, (dtaMesref.AddMonths(1)).Month) & "/" & (dtaMesref.AddMonths(1)).Year
-                mesReferencia2 = If((dtaMesref.AddMonths(2)).Month < 10, "0" & (dtaMesref.AddMonths(2)).Month, (dtaMesref.AddMonths(2)).Month) & "/" & (dtaMesref.AddMonths(2)).Year
-                mesReferencia3 = If((dtaMesref.AddMonths(2)).Month < 10, "0" & (dtaMesref.AddMonths(2)).Month, (dtaMesref.AddMonths(3)).Month) & "/" & (dtaMesref.AddMonths(3)).Year
-                listaOc.Add(New ListRelProjecao(ClsValidacoes.TelefoneFormat2(numLinha_LI_LINHAS.ToString.TrimEnd),
-                                                           desc_PS_CIDADES.ToString.TrimEnd,
-                                                          nomeUnidade_LI_LINHAS.ToString.TrimEnd,
-                                                           x,
-                                                          dt_LI_CAD_PROGRAMACAO,
-                                                          periodo,
-                                                          mes01,
-                                                          mes02,
-                                                          mes03,
-                                                          vlUso_SF_VL_USO, 1, mesReferencia, mesReferencia1, mesReferencia2, mesReferencia3))
-
-
-            End If
-
-        Next
-
-
-
-
-
+        listaOc.Add(New ListRelProjecao(ClsValidacoes.TelefoneFormat2(numLinha_LI_LINHAS.ToString.TrimEnd),
+                                                     desc_PS_CIDADES.ToString.TrimEnd,
+                                                    nomeUnidade_LI_LINHAS.ToString.TrimEnd,
+                                                    id_SF_TIPO_USO_CATEGORIAS,
+                                                    dt_LI_CAD_PROGRAMACAO,
+                                                    periodo,
+                                                    mes01,
+                                                    mes02,
+                                                    mes03,
+                                                    vlUso_SF_VL_USO, 1, mesReferencia, mesReferencia1, mesReferencia2, mesReferencia3, id_LI_LINHA))
 
 
 
     End Sub
 
-
-
     Function calculaValorMes(ByVal usoInicial As Decimal, ByVal dtaPerIni_SF_SERVICOS_FATURA As Date, ByVal dtaPerFim_SF_SERVICOS_FATURA As Date,
-                            ByVal qtmeses As Integer, ByVal dtaProgramacao As Date) As Decimal
+                            ByVal Mesatual As String, ByVal dtaProgramacao As Date, ByRef id_LI_LINHAS As Integer, ByVal dtaMesref As String, ByVal tipo As Integer, ByVal id_categoriaUso As Integer) As Decimal
+        Try
 
-        If dtaProgramacao > dtaPerFim_SF_SERVICOS_FATURA Then
-            Return usoInicial
-        Else
 
 
             Dim valor As Decimal
-            Dim qtdiasPerido As Integer = DateDiff(DateInterval.Day, dtaPerIni_SF_SERVICOS_FATURA.AddMonths(qtmeses), (dtaPerFim_SF_SERVICOS_FATURA.AddMonths(qtmeses)))
-            Dim qtdiasUso As Integer = DateDiff(DateInterval.Day, dtaPerFim_SF_SERVICOS_FATURA.AddMonths(qtmeses), dtaProgramacao)
-
-            Dim valorUsoDiario As Decimal = usoInicial / qtdiasPerido
-
-           
-            valor = usoInicial + valorUsoDiario * qtdiasUso
+            Dim dias As Integer = DateDiff(DateInterval.Day, dtaPerIni_SF_SERVICOS_FATURA, dtaPerFim_SF_SERVICOS_FATURA)
+            Dim Validos As Integer = DateDiff(DateInterval.Day, dtaPerFim_SF_SERVICOS_FATURA, dtaProgramacao)
+            Dim nummes As Integer = DateDiff(DateInterval.Month, CDate(Mesatual), CDate(dtaMesref))
 
 
-            If valor < 0 Then
-                valor = 0
+
+            If tipo = 0 Then
+                Select Case nummes
+                    Case 0
+                        valor = usoInicial
+                        Return valor
+
+                    Case 1
+
+                        valor = (usoInicial / dias) * Validos
+                        Return valor
+
+                    Case -1
+                        Return buscaUsoMes(id_categoriaUso, id_LI_LINHAS, dtaMesref)
+                    Case Else
+                        If nummes > 1 Then
+                            Return 0
+                        End If
+                        If nummes > -1 Then
+                            Return buscaUsoMes(id_categoriaUso, id_LI_LINHAS, dtaMesref)
+                        End If
+                End Select
+
+
+            Else
+
+                Select Case nummes
+
+                    Case 0
+
+                        Return 0
+
+
+                    Case 1
+                        Return 0
+
+                    Case -1
+                        valor = (usoInicial / dias) * (dias - Validos)
+                        Return valor
+                    Case Else
+                        If nummes > 1 Then
+                            Return 0
+                        End If
+                        If nummes > -1 Then
+                            If tipo = 0 Then
+                                Return 0
+                            Else
+                                Return buscaUsoMes(1, id_LI_LINHAS, dtaMesref)
+                            End If
+
+                        End If
+
+                End Select
+
+
+
             End If
 
-            Return valor
-        End If
+
+
+        Catch ex As Exception
+            Return 0
+        End Try
+
+
+
+
+        'ElseIf dtaPerFim_SF_SERVICOS_FATURA.Month < Mesatual Then
+
+        '    If DateDiff(DateInterval.Day, dtaPerFim_SF_SERVICOS_FATURA, dtaProgramacao) <= 30 Then
+        '        Dim dias As Integer = DateDiff(DateInterval.Day, dtaPerIni_SF_SERVICOS_FATURA, dtaPerFim_SF_SERVICOS_FATURA)
+        '        Dim Validos As Integer = DateDiff(DateInterval.Day, dtaPerFim_SF_SERVICOS_FATURA, dtaProgramacao)
+        '        valor = usoInicial - (usoInicial / dias) * Validos
+        '    Else
+        '        valor = 0
+
+        '    End If
+
+        'Else
+
+
+        '    If DateDiff(DateInterval.Day, dtaPerFim_SF_SERVICOS_FATURA, dtaProgramacao) <= 30 Then
+        '        Dim dias As Integer = DateDiff(DateInterval.Day, dtaPerIni_SF_SERVICOS_FATURA, dtaPerFim_SF_SERVICOS_FATURA)
+        '        Dim Validos As Integer = DateDiff(DateInterval.Day, dtaPerFim_SF_SERVICOS_FATURA, dtaProgramacao)
+        '        valor = -(usoInicial / dias) * Validos
+        '    Else
+        '        valor = 0
+
+        '    End If
+
+
+
+
+        'End If
+
+
+
+
+
+        Return 0
+
     End Function
 
 
-    Sub BuscaMes(ByRef dtMovel_LI_CAD_PROGRAMACAO As Date, ByRef dtLdn_LI_CAD_PROGRAMACAO As Date, ByVal id_LI_LINHAS As Integer)
 
-        SqlDataSourceMes.SelectParameters("id_LI_LINHAS").DefaultValue = id_LI_LINHAS
-
-        Dim dvSqlMes As DataView = CType(SqlDataSourceMes.Select(DataSourceSelectArguments.Empty), DataView)
-
-        If dvSqlMes IsNot Nothing Or dvSqlMes.Count < 0 Then
-
-            For Each drvSql As DataRowView In dvSqlMes
-                If IsDBNull(drvSql("dtMovel_LI_CAD_PROGRAMACAO")) = False Then
-                    dtMovel_LI_CAD_PROGRAMACAO = drvSql("dtMovel_LI_CAD_PROGRAMACAO")
-
-
-                End If
-                If IsDBNull(drvSql("dtLdn_LI_CAD_PROGRAMACAO")) = False Then
-                    dtLdn_LI_CAD_PROGRAMACAO = drvSql("dtLdn_LI_CAD_PROGRAMACAO")
-
-
-                End If
-
-            Next
-
-
-
-        End If
-
-
-
-    End Sub
 
     Protected Sub RadImageButtonGerar_Click(sender As Object, e As Telerik.Web.UI.ImageButtonClickEventArgs) Handles RadImageButtonGerar.Click
         buscalinhas()
@@ -246,8 +335,38 @@ Public Class rel_projecao
 
     Function FiltroDatas() As String
 
-        Return If(RadDropDownListMes.SelectedValue < 9, "0" & RadDropDownListMes.SelectedValue, RadDropDownListMes.SelectedValue) & "/" & RadDropDownListAno.SelectedValue
+        Return If(RadDropDownListMes.SelectedValue <= 9, "0" & RadDropDownListMes.SelectedValue, RadDropDownListMes.SelectedValue) & "/" & RadDropDownListAno.SelectedValue
 
 
+    End Function
+
+
+    Function buscaUsoMes(ByVal id_SF_TIPO_USO_CATEGORIAS As Integer, ByVal id_LI_LINHAS As Integer, ByVal mesAnoRefereincia_SF_SERVICOS_FATURA As String) As Decimal
+        Try
+            SqlDataSourceMes.SelectParameters("id_SF_TIPO_USO_CATEGORIAS").DefaultValue = id_SF_TIPO_USO_CATEGORIAS
+            SqlDataSourceMes.SelectParameters("id_LI_LINHAS").DefaultValue = id_LI_LINHAS
+            SqlDataSourceMes.SelectParameters("mesAnoRefereincia_SF_SERVICOS_FATURA").DefaultValue = mesAnoRefereincia_SF_SERVICOS_FATURA
+            Dim SqlDataSourceMes_ As DataView = CType(SqlDataSourceMes.Select(DataSourceSelectArguments.Empty), DataView)
+            If SqlDataSourceMes_ IsNot Nothing Or SqlDataSourceMes_.Count < 0 Then
+
+                For Each drvSql As DataRowView In SqlDataSourceMes_
+                    If IsDBNull(drvSql("vlUso_SF_VL_USO")) = False Then
+                        Return drvSql("vlUso_SF_VL_USO")
+                    Else
+
+                        Return 0
+                    End If
+
+
+                Next
+            Else
+
+                Return 0
+            End If
+
+        Catch ex As Exception
+            Return 0
+        End Try
+        Return 0
     End Function
 End Class

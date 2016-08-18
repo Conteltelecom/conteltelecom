@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Normalmaster.master" CodeBehind="cad_menus.aspx.vb" Inherits="conteltelecom.cad_menus" %>
+﻿<%@ Page Title="CADASTRO DE TIPOS DE MENUS" Language="vb" AutoEventWireup="false" MasterPageFile="~/Normalmaster.master" CodeBehind="cad_menus.aspx.vb" Inherits="conteltelecom.cad_menus" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderHeadNormal" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderNormal" runat="server">

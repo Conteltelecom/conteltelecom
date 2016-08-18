@@ -598,7 +598,10 @@
     <Content Include="Content\themes\base\theme.css" />
     <Content Include="Content\themes\base\tooltip.css" />
     <Content Include="download_page.aspx" />
+    <Content Include="img\dollar.png" />
     <Content Include="img\downloading_32.png" />
+    <Content Include="img\Excel_32.png" />
+    <Content Include="img\pdf_32.png" />
     <Content Include="logoff.aspx" />
     <Content Include="img\accept.png" />
     <Content Include="img\accept_32.png" />
@@ -634,9 +637,11 @@
     <Content Include="web\administrador\configuracoes\cad_menus.aspx" />
     <Content Include="web\administrador\configuracoes\cad_tipo_bloqueios.aspx" />
     <Content Include="web\administrador\configuracoes\cad_usuarios.aspx" />
+    <Content Include="web\atendimento\lista_vencimento_ideal.aspx" />
     <Content Include="web\atendimento\sinc_clientes.aspx" />
     <Content Include="web\clientes\clinetes_matriz\cad_planos_x_clientes.aspx" />
     <Content Include="web\clientes\clinetes_matriz\cl_add_linhas_planos.aspx" />
+    <Content Include="web\clientes\clinetes_matriz\cl_cad_vencimento_Ideal.aspx" />
     <Content Include="web\clientes\cli_contatos.aspx" />
     <Content Include="Content\cl_cadastro_contratos.aspx" />
     <Content Include="web\clientes\cl_configuracoes\cl_cad_unidades.aspx" />
@@ -653,6 +658,9 @@
     <Content Include="web\clientes\relatorios\configuracoes\atualizar_infoamacoes_relatorio.aspx" />
     <Content Include="web\clientes\relatorios\rel_descritivo.aspx" />
     <Content Include="web\financeiro\bling\export_clientes_bling.aspx" />
+    <Content Include="web\financeiro\Rel\fi_cad_vencimento_Ideal.aspx" />
+    <Content Include="web\financeiro\Rel\razaoSocial_Cnpj.aspx" />
+    <Content Include="web\linhas\cadastro\cad_ramais.aspx" />
     <Content Include="web\linhas\cadastro\li_cad_dta_programacao.aspx" />
     <Content Include="web\linhas\cadastro\li_cad_tipo_programacao.aspx" />
     <Content Include="web\linhas\cadastro\li_dta_programacao_historico.aspx" />
@@ -666,6 +674,7 @@
     <Content Include="web\relacionamento\relatorios\rel_projecao.aspx" />
     <Content Include="web\relacionamento\relatorios\rl_rel_movel_x_inter.aspx" />
     <Content Include="web\servicos_fatura\bloqueio_faturas.aspx" />
+    <Content Include="web\servicos_fatura\cad_blocos_leitura.aspx" />
     <Content Include="web\servicos_fatura\configuracoes\cadatro_tipo_uso_rel.aspx" />
     <Content Include="web\servicos_fatura\configuracoes\sf_agrupamento_tipo_uso.aspx" />
     <Content Include="web\servicos_fatura\configuracoes\sf_cad_leiaute_detalhes.aspx" />
@@ -685,6 +694,7 @@
     <Content Include="web\servicos_fatura\if_input_fatura_manual_Detalhes.aspx" />
     <Content Include="web\servicos_fatura\configuracoes\sf_tipo_uso.aspx" />
     <Content Include="web\servicos_fatura\configuracoes\sf_cad_leiaute.aspx" />
+    <Content Include="web\servicos_fatura\mostra_servicos_uso.aspx" />
     <Content Include="web\servicos_fatura\solicitacao_fatura.aspx" />
     <Content Include="ConsultaCliente.master" />
     <Content Include="Account\Web.config" />
@@ -703,6 +713,28 @@
     </Content>
     <Content Include="DataSet\ds_Globais\DropDownUnidades.xsc">
       <DependentUpon>DropDownUnidades.xsd</DependentUpon>
+    </Content>
+    <Content Include="DataSet\ds_Globais\DropDownSF_TIPO_BLOCO.xsc">
+      <DependentUpon>DropDownSF_TIPO_BLOCO.xsd</DependentUpon>
+    </Content>
+    <Content Include="DataSet\ds_Globais\DropDownSF_LEIAUTE_VARIAVEL.xsc">
+      <DependentUpon>DropDownSF_LEIAUTE_VARIAVEL.xsd</DependentUpon>
+    </Content>
+    <None Include="DataSet\ds_Globais\DropDownSF_LEIAUTE_VARIAVEL.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DropDownSF_LEIAUTE_VARIAVEL.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="DataSet\ds_Globais\DropDownSF_LEIAUTE_VARIAVEL.xss">
+      <DependentUpon>DropDownSF_LEIAUTE_VARIAVEL.xsd</DependentUpon>
+    </Content>
+    <None Include="DataSet\ds_Globais\DropDownSF_TIPO_BLOCO.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DropDownSF_TIPO_BLOCO.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="DataSet\ds_Globais\DropDownSF_TIPO_BLOCO.xss">
+      <DependentUpon>DropDownSF_TIPO_BLOCO.xsd</DependentUpon>
     </Content>
     <None Include="DataSet\ds_Globais\DropDownUnidades.xsd">
       <SubType>Designer</SubType>
@@ -774,14 +806,17 @@
     </Content>
     <Content Include="DataSet\DataSetRelReducao.xsc">
       <DependentUpon>DataSetRelReducao.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="DataSet\DataSetRelReducao.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSetRelReducao.Designer.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Content Include="DataSet\DataSetRelReducao.xss">
       <DependentUpon>DataSetRelReducao.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="DataSet\DataSetValidaMes.xsc">
       <DependentUpon>DataSetValidaMes.xsd</DependentUpon>
@@ -1191,6 +1226,9 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Code\Anexos.vb" />
+    <Content Include="App_Code\AtualizaStatusLinha.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
     <Compile Include="App_Code\Criptografia.vb" />
     <Content Include="App_Code\FormRewriter.vb" />
     <Compile Include="App_Code\JavaScript.vb">
@@ -1215,6 +1253,16 @@
     <Compile Include="ConsultaCliente.master.vb">
       <DependentUpon>ConsultaCliente.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataSet\ds_Globais\DropDownSF_LEIAUTE_VARIAVEL.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DropDownSF_LEIAUTE_VARIAVEL.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\ds_Globais\DropDownSF_TIPO_BLOCO.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DropDownSF_TIPO_BLOCO.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataSet\ds_Globais\DropDownUnidades.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -1264,6 +1312,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetRelReducao.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="DataSet\DataSetValidaMes.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -1498,6 +1547,13 @@
       <DependentUpon>cad_usuarios.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="web\atendimento\lista_vencimento_ideal.aspx.designer.vb">
+      <DependentUpon>lista_vencimento_ideal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\atendimento\lista_vencimento_ideal.aspx.vb">
+      <DependentUpon>lista_vencimento_ideal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="web\atendimento\sinc_clientes.aspx.designer.vb">
       <DependentUpon>sinc_clientes.aspx</DependentUpon>
     </Compile>
@@ -1518,6 +1574,13 @@
     <Compile Include="web\clientes\clinetes_matriz\cl_add_linhas_planos.aspx.vb">
       <DependentUpon>cl_add_linhas_planos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\clientes\clinetes_matriz\cl_cad_vencimento_Ideal.aspx.designer.vb">
+      <DependentUpon>cl_cad_vencimento_Ideal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\clientes\clinetes_matriz\cl_cad_vencimento_Ideal.aspx.vb">
+      <DependentUpon>cl_cad_vencimento_Ideal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="web\clientes\cli_contatos.aspx.designer.vb">
       <DependentUpon>cli_contatos.aspx</DependentUpon>
@@ -1632,6 +1695,27 @@
       <DependentUpon>export_clientes_bling.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="web\financeiro\Rel\fi_cad_vencimento_Ideal.aspx.designer.vb">
+      <DependentUpon>fi_cad_vencimento_Ideal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\financeiro\Rel\fi_cad_vencimento_Ideal.aspx.vb">
+      <DependentUpon>fi_cad_vencimento_Ideal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="web\financeiro\Rel\razaoSocial_Cnpj.aspx.designer.vb">
+      <DependentUpon>razaoSocial_Cnpj.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\financeiro\Rel\razaoSocial_Cnpj.aspx.vb">
+      <DependentUpon>razaoSocial_Cnpj.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="web\linhas\cadastro\cad_ramais.aspx.designer.vb">
+      <DependentUpon>cad_ramais.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\linhas\cadastro\cad_ramais.aspx.vb">
+      <DependentUpon>cad_ramais.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="web\linhas\cadastro\li_cad_dta_programacao.aspx.designer.vb">
       <DependentUpon>li_cad_dta_programacao.aspx</DependentUpon>
     </Compile>
@@ -1721,6 +1805,13 @@
     </Compile>
     <Compile Include="web\servicos_fatura\bloqueio_faturas.aspx.vb">
       <DependentUpon>bloqueio_faturas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="web\servicos_fatura\cad_blocos_leitura.aspx.designer.vb">
+      <DependentUpon>cad_blocos_leitura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\servicos_fatura\cad_blocos_leitura.aspx.vb">
+      <DependentUpon>cad_blocos_leitura.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="web\servicos_fatura\configuracoes\cadatro_tipo_uso_rel.aspx.designer.vb">
@@ -1841,6 +1932,13 @@
     <Compile Include="web\servicos_fatura\configuracoes\sf_cad_leiaute.aspx.vb">
       <DependentUpon>sf_cad_leiaute.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\servicos_fatura\mostra_servicos_uso.aspx.designer.vb">
+      <DependentUpon>mostra_servicos_uso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\servicos_fatura\mostra_servicos_uso.aspx.vb">
+      <DependentUpon>mostra_servicos_uso.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="web\servicos_fatura\solicitacao_fatura.aspx.designer.vb">
       <DependentUpon>solicitacao_fatura.aspx</DependentUpon>

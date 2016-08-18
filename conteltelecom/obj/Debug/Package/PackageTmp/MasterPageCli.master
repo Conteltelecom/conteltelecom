@@ -33,6 +33,8 @@
             </telerik:NavigationNode>
                  <telerik:NavigationNode  Text="CAD. PROGRAMAÇÃO" NavigateUrl='<%# String.Format("~/web/linhas/cadastro/li_cad_dta_programacao.aspx?id_pessoas={0}&consultaMatriz={1}&codMatriz_PS_CLIENTES={2}", Session("id_pessoaNav"), Request.QueryString("consultaMatriz"), Request.QueryString("codMatriz_PS_CLIENTES"))%>'>
             </telerik:NavigationNode>
+              <telerik:NavigationNode  Text="CAD. VENCIMENTO IDEAL" NavigateUrl='<%# String.Format("~/web/clientes/clinetes_matriz/cl_cad_vencimento_Ideal.aspx?id_pessoas={0}&consultaMatriz={1}&codMatriz_PS_CLIENTES={2}", Session("id_pessoaNav"), Request.QueryString("consultaMatriz"), Request.QueryString("codMatriz_PS_CLIENTES"))%>'>
+            </telerik:NavigationNode>
          </Nodes>
                      </telerik:NavigationNode>
        

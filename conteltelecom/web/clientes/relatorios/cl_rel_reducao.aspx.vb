@@ -18,9 +18,16 @@ Public Class cl_rel_reducao
                 Session("codMatriz_PS_CLIENTES") = ""
             Else
 
-                RadDropDownListMes.SelectedValue = Date.Today.Month
-                RadDropDownListAno.SelectedValue = Date.Today.Year
-                Session("mesAnoRefereincia_SF_SERVICOS_FATURA") = If(RadDropDownListMes.SelectedValue < 9, "0" & RadDropDownListMes.SelectedValue, RadDropDownListMes.SelectedValue) & "/" & RadDropDownListAno.SelectedValue
+                If IsNothing(Request.QueryString("mesAnoRefereincia_SF_SERVICOS_FATURA")) = True Then
+
+
+                    Session("mesAnoRefereincia_SF_SERVICOS_FATURA") = Request.QueryString("mesAnoRefereincia_SF_SERVICOS_FATURA")
+                Else
+
+
+
+                End If
+
 
                 Session("codMatriz_PS_CLIENTES") = Request.QueryString("id_PS_PESSOA")
                 RadAutoCompleteBoxBuscaMatriz.Visible = False

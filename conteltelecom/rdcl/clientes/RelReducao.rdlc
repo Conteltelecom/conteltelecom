@@ -369,6 +369,9 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox2</rd:DefaultName>
+                      <Visibility>
+                        <Hidden>=IIf((Sum(Fields!contaRetificada_SF_SERVICOS_FATURA.Value, "RelReducao"))&gt;=1,false,true)</Hidden>
+                      </Visibility>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -1345,7 +1348,7 @@
             <TablixMember />
             <TablixMember>
               <Visibility>
-                <Hidden>=IIf(CDec(Sum(Fields!vlRetificado_SF_SERVICOS_FATURA.Value, "RelReducao"))=CDec("0.00"),true,false)</Hidden>
+                <Hidden>=IIf((Sum(Fields!contaRetificada_SF_SERVICOS_FATURA.Value, "RelReducao"))&gt;=1,false,true)</Hidden>
               </Visibility>
             </TablixMember>
           </TablixMembers>

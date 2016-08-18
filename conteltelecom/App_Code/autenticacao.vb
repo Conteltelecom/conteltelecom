@@ -16,26 +16,43 @@ Public Class autenticacao
         Dim id_PS_PESSOA As Integer = 0
         Dim StrConectionString As New Sql
         Dim constr As String = StrConectionString.StrConectionString.ToString
+
         Using con As New SqlConnection(constr)
             Using cmd As New SqlCommand("Validate_User")
-                cmd.CommandType = CommandType.StoredProcedure
-                cmd.Parameters.AddWithValue("@username_USUARIOS", User)
-                cmd.Parameters.AddWithValue("@password_USUARIOS", Senha)
-                cmd.Parameters.Add("@tipoErro", SqlDbType.Int)
-                cmd.Parameters.Add("@id_PS_PESSOA", SqlDbType.Int)
-                cmd.Parameters.Add("@idEmpresa_PS_PESSOA", SqlDbType.Int)
+                Try
 
-                cmd.Parameters("@idEmpresa_PS_PESSOA").Direction = ParameterDirection.Output
-                cmd.Parameters("@tipoErro").Direction = ParameterDirection.Output
-                cmd.Parameters("@id_PS_PESSOA").Direction = ParameterDirection.Output
-                cmd.Connection = con
-                con.Open()
-                cmd.ExecuteNonQuery()
-                con.Close()
-                tipoErro = cmd.Parameters("@tipoErro").Value.ToString()
-                id_PS_PESSOA = cmd.Parameters("@id_PS_PESSOA").Value.ToString()
+
+                    cmd.CommandType = CommandType.StoredProcedure
+                    cmd.Parameters.AddWithValue("@username_USUARIOS", User)
+                    cmd.Parameters.AddWithValue("@password_USUARIOS", Senha)
+                    cmd.Parameters.Add("@tipoErro", SqlDbType.Int)
+                    cmd.Parameters.Add("@id_PS_PESSOA", SqlDbType.Int)
+                    cmd.Parameters.Add("@idEmpresa_PS_PESSOA", SqlDbType.Int)
+
+                    cmd.Parameters("@idEmpresa_PS_PESSOA").Direction = ParameterDirection.Output
+                    cmd.Parameters("@tipoErro").Direction = ParameterDirection.Output
+                    cmd.Parameters("@id_PS_PESSOA").Direction = ParameterDirection.Output
+                    cmd.Connection = con
+                    con.Open()
+                    cmd.ExecuteNonQuery()
+                    con.Close()
+                    tipoErro = cmd.Parameters("@tipoErro").Value.ToString()
+                    id_PS_PESSOA = cmd.Parameters("@id_PS_PESSOA").Value.ToString()
+
+                Catch ex As Exception
+
+                    tipoErro = -4
+                    id_PS_PESSOA = 0
+
+
+                End Try
             End Using
-            Select Case tipoErro
+        End Using
+
+
+
+
+        Select Case tipoErro
                 Case 0
                     Return False
                     Exit Select
@@ -59,14 +76,14 @@ Public Class autenticacao
                 Case -5
                     Try
                         Dim ipPrincipal As String = "192.168.1.12"
-                        Dim ipSecundario As String = "192.168.1.20"
+                    Dim ipSecundario As String = "192.168.1.21"
 
-                        If ReturPing(ipPrincipal) = True Then
-                            Return AdAutentica(ipPrincipal, User, Senha, resutado)
-                            Session("FirstName") = id_PS_PESSOA
+                    If ReturPing(ipPrincipal) = True Then
+                            Return AdAutentica(ipPrincipal, User, Senha, resutado, id_PS_PESSOA, idEmpresa_PS_PESSOA)
+
                         ElseIf ReturPing(ipSecundario) = True Then
-                            Return AdAutentica(ipSecundario, User, Senha, resutado)
-                            Session("FirstName") = id_PS_PESSOA
+                            Return AdAutentica(ipPrincipal, User, Senha, resutado, id_PS_PESSOA, idEmpresa_PS_PESSOA)
+
                         Else
                             resutado = "Atenção!!!!!! Servidor de autenticação com problemas"
                         End If
@@ -82,7 +99,7 @@ Public Class autenticacao
                     Return True
                     Exit Select
             End Select
-        End Using
+
 
 
 
@@ -96,12 +113,15 @@ Public Class autenticacao
 
 
     End Function
-    Public Function AdAutentica(ByVal IpServer As String, ByVal User As String, ByVal Senha As String, ByRef resutado As String) As Boolean
+    Public Function AdAutentica(ByVal IpServer As String, ByVal User As String,
+                                ByVal Senha As String, ByRef resutado As String,
+                               ByVal id_PS_PESSOA As Integer, ByVal idEmpresa_PS_PESSOA As Integer) As Boolean
         Try
+            Dim VarSession As New VarSession
             Dim oAD As DirectoryEntry = New DirectoryEntry("LDAP://" + IpServer, User, Senha)
 
             resutado = oAD.Name
-
+            VarSession.CriaVarSessionLogin(id_PS_PESSOA, idEmpresa_PS_PESSOA)
             Return True
 
         Catch ex As Exception

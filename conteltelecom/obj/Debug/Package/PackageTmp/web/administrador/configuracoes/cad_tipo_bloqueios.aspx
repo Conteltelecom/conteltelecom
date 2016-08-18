@@ -1,8 +1,8 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Normalmaster.master" CodeBehind="cad_tipo_bloqueios.aspx.vb" Inherits="conteltelecom.cad_tipo_bloqueios" %>
+﻿<%@ Page Title="CADASTRO DE BLOQUEIOS" Language="vb" AutoEventWireup="false" MasterPageFile="~/Normalmaster.master" CodeBehind="cad_tipo_bloqueios.aspx.vb" Inherits="conteltelecom.cad_tipo_bloqueios" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderHeadNormal" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderNormal" runat="server">
-    <telerik:RadGrid ID="RadGridCadBloqueios" runat="server" AutoGenerateColumns="False" Culture="pt-BR" DataSourceID="SqlDataSourceCadBloqueios" Skin="Bootstrap" AllowAutomaticDeletes="True" AllowAutomaticInserts="True" AllowAutomaticUpdates="True" AllowPaging="True">
+    <telerik:RadGrid ID="RadGridCadBloqueios" runat="server" AutoGenerateColumns="False" Culture="pt-BR" DataSourceID="SqlDataSourceCadBloqueios" Skin="Bootstrap" AllowAutomaticDeletes="True" AllowAutomaticInserts="True" AllowAutomaticUpdates="True" AllowPaging="True" CellSpacing="-1" GridLines="Both">
 
 <GroupingSettings CollapseAllTooltip="Collapse all groups"></GroupingSettings>
         <ExportSettings>
@@ -11,7 +11,6 @@
         </ExportSettings>
         <ClientSettings>
             <Selecting AllowRowSelect="True" />
-            <Scrolling AllowScroll="True" UseStaticHeaders="True" />
         </ClientSettings>
         <MasterTableView DataKeyNames="id_ADM_CAD_TIPO_BLOQUEIO" CommandItemDisplay="Top" EditMode="InPlace"   DataSourceID="SqlDataSourceCadBloqueios" NoDetailRecordsText="" NoMasterRecordsText="" AllowPaging="False">
         <CommandItemSettings AddNewRecordImageUrl="../../../img/add.png" AddNewRecordText="NOVO" ShowRefreshButton="false"   />

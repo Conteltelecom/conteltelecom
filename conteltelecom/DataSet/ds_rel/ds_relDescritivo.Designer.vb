@@ -202,7 +202,7 @@ Partial Public Class ds_relDescritivo
         Me.DataSetName = "ds_relDescritivo"
         Me.Prefix = ""
         Me.Namespace = "http://tempuri.org/ds_relDescritivo.xsd"
-        Me.EnforceConstraints = true
+        Me.EnforceConstraints = false
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
         Me.tableRelDiscritivo = New RelDiscritivoDataTable()
         MyBase.Tables.Add(Me.tableRelDiscritivo)
@@ -1626,52 +1626,52 @@ Namespace ds_relDescritivoTableAdapters
                 "VL_SERVICO, CL_PLANOS_CLIENTE_1.valor_CL_PLANOS_CLIENTE, OP_PLANOS.desc_OP_PLANO"& _ 
                 "S, '' AS minutos_SF_VL_USO, PS_PESSOA.desc_PS_PESSOA, SF_VL_SERVICO.id_SF_VL_SER"& _ 
                 "VICO, SF_SERVICOS_FATURA_1.contaRetificada_SF_SERVICOS_FATURA, SF_SERVICOS_FATUR"& _ 
-                "A_1.mesAnoRefereincia_SF_SERVICOS_FATURA FROM OP_PLANOS INNER JOIN PS_JURIDICA A"& _ 
-                "S PS_JURIDICA_1 INNER JOIN PS_CLIENTES AS PS_CLIENTES_1 ON PS_JURIDICA_1.id_PS_J"& _ 
-                "URIDICA = PS_CLIENTES_1.id_PS_JURIDICA INNER JOIN CL_PLANOS_CLIENTE AS CL_PLANOS"& _ 
-                "_CLIENTE_1 INNER JOIN CL_PLANOSxLINHAS AS CL_PLANOSxLINHAS_1 ON CL_PLANOS_CLIENT"& _ 
-                "E_1.id_CL_PLANOS_CLIENTE = CL_PLANOSxLINHAS_1.id_CL_PLANOS_CLIENTE INNER JOIN LI"& _ 
-                "_LINHAS AS LI_LINHAS_2 ON CL_PLANOSxLINHAS_1.id_LI_LINHAS = LI_LINHAS_2.id_LI_LI"& _ 
-                "NHAS INNER JOIN LI_LINHAS AS LI_LINHAS_1 ON CL_PLANOSxLINHAS_1.idLinhasPai_LI_LI"& _ 
-                "NHAS = LI_LINHAS_1.id_LI_LINHAS INNER JOIN PS_CIDADES AS PS_CIDADES_1 ON LI_LINH"& _ 
-                "AS_1.id_PS_CIDADES = PS_CIDADES_1.id_PS_CIDADES ON PS_CLIENTES_1.id_PS_PESSOA = "& _ 
-                "CL_PLANOS_CLIENTE_1.id_PS_PESSOA ON OP_PLANOS.id_OP_PLANOS = CL_PLANOS_CLIENTE_1"& _ 
-                ".id_OP_PLANOS INNER JOIN PS_PESSOA ON PS_CLIENTES_1.codMatriz_PS_CLIENTES = PS_P"& _ 
-                "ESSOA.id_PS_PESSOA LEFT OUTER JOIN SF_VL_SERVICO INNER JOIN SF_SERVICOS_FATURA A"& _ 
-                "S SF_SERVICOS_FATURA_1 ON SF_VL_SERVICO.id_SF_SERVICOS_FATURA = SF_SERVICOS_FATU"& _ 
-                "RA_1.id_SF_SERVICOS_FATURA ON CL_PLANOSxLINHAS_1.id_LI_LINHAS = SF_SERVICOS_FATU"& _ 
-                "RA_1.id_LI_LINHAS WHERE (SF_SERVICOS_FATURA_1.mesAnoRefereincia_SF_SERVICOS_FATU"& _ 
-                "RA = @mesAnoRefereincia_SF_SERVICOS_FATURA) AND (SF_SERVICOS_FATURA_1.codMatriz_"& _ 
-                "PS_CLIENTES = @codMatriz_PS_CLIENTES) AND (SF_SERVICOS_FATURA_1.numSequencia_SF_"& _ 
-                "SERVICOS_FATURA = 0) UNION ALL SELECT CL_PLANOSxLINHAS.idLinhasPai_LI_LINHAS, CL"& _ 
-                "_PLANOSxLINHAS.id_LI_LINHAS, CL_PLANOS_CLIENTE.desc_CL_PLANOS_CLIENTE, CL_PLANOS"& _ 
-                "_CLIENTE.ordem_CL_PLANOS_CLIENTE, LI_LINHAS.numLinha_LI_LINHAS, LI_LINHAS_1.codL"& _ 
-                "inha_LI_LINHAS, PS_CIDADES.desc_PS_CIDADES, PS_JURIDICA.CNPJ_PS_JURIDICA, PS_JUR"& _ 
-                "IDICA.razaosocial_PS_JURIDICA, 1 AS tipoinfo, SF_VL_USO.vlUso_SF_VL_USO AS vl_SF"& _ 
-                "_VL_SERVICO, 0 AS vlDesconto_SF_VL_SERVICO, SF_TIPO_USO.desc_SF_TIPO_USO AS desc"& _ 
-                "_SF_VL_SERVICO, '' AS qtDias_SF_VL_SERVICO, CL_PLANOS_CLIENTE.valor_CL_PLANOS_CL"& _ 
-                "IENTE, OP_PLANOS_1.desc_OP_PLANOS, OP_OPERADORAS.desc_OP_OPERADORAS + ' -' + CAS"& _ 
-                "T(SF_VL_USO.minutos_SF_VL_USO AS VARCHAR(11)) AS minutos_SF_VL_USO, PS_PESSOA_1."& _ 
-                "desc_PS_PESSOA, SF_VL_USO.id_SF_VL_USO AS id_SF_VL_SERVICO, SF_SERVICOS_FATURA.c"& _ 
-                "ontaRetificada_SF_SERVICOS_FATURA, SF_SERVICOS_FATURA.mesAnoRefereincia_SF_SERVI"& _ 
-                "COS_FATURA FROM OP_OPERADORAS INNER JOIN SF_SERVICOS_FATURA INNER JOIN SF_VL_USO"& _ 
-                " ON SF_SERVICOS_FATURA.id_SF_SERVICOS_FATURA = SF_VL_USO.id_SF_SERVICOS_FATURA I"& _ 
-                "NNER JOIN SF_TIPO_USO ON SF_VL_USO.id_SF_TIPO_USO = SF_TIPO_USO.id_SF_TIPO_USO O"& _ 
-                "N OP_OPERADORAS.id_OP_OPERADORAS = SF_VL_USO.id_OP_OPERADORAS RIGHT OUTER JOIN O"& _ 
-                "P_PLANOS AS OP_PLANOS_1 INNER JOIN PS_JURIDICA INNER JOIN PS_CLIENTES ON PS_JURI"& _ 
-                "DICA.id_PS_JURIDICA = PS_CLIENTES.id_PS_JURIDICA INNER JOIN CL_PLANOS_CLIENTE IN"& _ 
-                "NER JOIN CL_PLANOSxLINHAS ON CL_PLANOS_CLIENTE.id_CL_PLANOS_CLIENTE = CL_PLANOSx"& _ 
-                "LINHAS.id_CL_PLANOS_CLIENTE INNER JOIN LI_LINHAS ON CL_PLANOSxLINHAS.id_LI_LINHA"& _ 
-                "S = LI_LINHAS.id_LI_LINHAS INNER JOIN LI_LINHAS AS LI_LINHAS_1 ON CL_PLANOSxLINH"& _ 
-                "AS.idLinhasPai_LI_LINHAS = LI_LINHAS_1.id_LI_LINHAS INNER JOIN PS_CIDADES ON LI_"& _ 
-                "LINHAS_1.id_PS_CIDADES = PS_CIDADES.id_PS_CIDADES ON PS_CLIENTES.id_PS_PESSOA = "& _ 
-                "CL_PLANOS_CLIENTE.id_PS_PESSOA ON OP_PLANOS_1.id_OP_PLANOS = CL_PLANOS_CLIENTE.i"& _ 
-                "d_OP_PLANOS INNER JOIN PS_PESSOA AS PS_PESSOA_1 ON PS_CLIENTES.codMatriz_PS_CLIE"& _ 
-                "NTES = PS_PESSOA_1.id_PS_PESSOA ON SF_SERVICOS_FATURA.id_LI_LINHAS = CL_PLANOSxL"& _ 
-                "INHAS.id_LI_LINHAS WHERE (SF_SERVICOS_FATURA.mesAnoRefereincia_SF_SERVICOS_FATUR"& _ 
-                "A = @mesAnoRefereincia_SF_SERVICOS_FATURA) AND (SF_SERVICOS_FATURA.codMatriz_PS_"& _ 
-                "CLIENTES = @codMatriz_PS_CLIENTES) AND (SF_SERVICOS_FATURA.numSequencia_SF_SERVI"& _ 
-                "COS_FATURA = 0)"
+                "A_1.mesAnoRefereincia_SF_SERVICOS_FATURA FROM PS_JURIDICA AS PS_JURIDICA_1 INNER"& _ 
+                " JOIN PS_CLIENTES AS PS_CLIENTES_1 ON PS_JURIDICA_1.id_PS_JURIDICA = PS_CLIENTES"& _ 
+                "_1.id_PS_JURIDICA INNER JOIN PS_PESSOA ON PS_CLIENTES_1.codMatriz_PS_CLIENTES = "& _ 
+                "PS_PESSOA.id_PS_PESSOA INNER JOIN OP_PLANOS INNER JOIN CL_PLANOS_CLIENTE AS CL_P"& _ 
+                "LANOS_CLIENTE_1 INNER JOIN CL_PLANOSxLINHAS AS CL_PLANOSxLINHAS_1 ON CL_PLANOS_C"& _ 
+                "LIENTE_1.id_CL_PLANOS_CLIENTE = CL_PLANOSxLINHAS_1.id_CL_PLANOS_CLIENTE INNER JO"& _ 
+                "IN LI_LINHAS AS LI_LINHAS_2 ON CL_PLANOSxLINHAS_1.id_LI_LINHAS = LI_LINHAS_2.id_"& _ 
+                "LI_LINHAS INNER JOIN LI_LINHAS AS LI_LINHAS_1 ON CL_PLANOSxLINHAS_1.idLinhasPai_"& _ 
+                "LI_LINHAS = LI_LINHAS_1.id_LI_LINHAS INNER JOIN PS_CIDADES AS PS_CIDADES_1 ON LI"& _ 
+                "_LINHAS_1.id_PS_CIDADES = PS_CIDADES_1.id_PS_CIDADES ON OP_PLANOS.id_OP_PLANOS ="& _ 
+                " CL_PLANOS_CLIENTE_1.id_OP_PLANOS ON PS_CLIENTES_1.id_PS_CLIENTES = LI_LINHAS_1."& _ 
+                "id_PS_CLIENTES LEFT OUTER JOIN SF_VL_SERVICO INNER JOIN SF_SERVICOS_FATURA AS SF"& _ 
+                "_SERVICOS_FATURA_1 ON SF_VL_SERVICO.id_SF_SERVICOS_FATURA = SF_SERVICOS_FATURA_1"& _ 
+                ".id_SF_SERVICOS_FATURA ON CL_PLANOSxLINHAS_1.id_LI_LINHAS = SF_SERVICOS_FATURA_1"& _ 
+                ".id_LI_LINHAS WHERE (SF_SERVICOS_FATURA_1.mesAnoRefereincia_SF_SERVICOS_FATURA ="& _ 
+                " @mesAnoRefereincia_SF_SERVICOS_FATURA) AND (SF_SERVICOS_FATURA_1.codMatriz_PS_C"& _ 
+                "LIENTES = @codMatriz_PS_CLIENTES) AND (SF_SERVICOS_FATURA_1.numSequencia_SF_SERV"& _ 
+                "ICOS_FATURA = 0) UNION ALL SELECT CL_PLANOSxLINHAS.idLinhasPai_LI_LINHAS, CL_PLA"& _ 
+                "NOSxLINHAS.id_LI_LINHAS, CL_PLANOS_CLIENTE.desc_CL_PLANOS_CLIENTE, CL_PLANOS_CLI"& _ 
+                "ENTE.ordem_CL_PLANOS_CLIENTE, LI_LINHAS.numLinha_LI_LINHAS, LI_LINHAS_1.codLinha"& _ 
+                "_LI_LINHAS, PS_CIDADES.desc_PS_CIDADES, PS_JURIDICA.CNPJ_PS_JURIDICA, PS_JURIDIC"& _ 
+                "A.razaosocial_PS_JURIDICA, 1 AS tipoinfo, SF_VL_USO.vlUso_SF_VL_USO AS vl_SF_VL_"& _ 
+                "SERVICO, 0 AS vlDesconto_SF_VL_SERVICO, SF_TIPO_USO.desc_SF_TIPO_USO AS desc_SF_"& _ 
+                "VL_SERVICO, '' AS qtDias_SF_VL_SERVICO, CL_PLANOS_CLIENTE.valor_CL_PLANOS_CLIENT"& _ 
+                "E, OP_PLANOS_1.desc_OP_PLANOS, OP_OPERADORAS.desc_OP_OPERADORAS + ' -' + CAST(SF"& _ 
+                "_VL_USO.minutos_SF_VL_USO AS VARCHAR(11)) AS minutos_SF_VL_USO, PS_PESSOA_1.desc"& _ 
+                "_PS_PESSOA, SF_VL_USO.id_SF_VL_USO AS id_SF_VL_SERVICO, SF_SERVICOS_FATURA.conta"& _ 
+                "Retificada_SF_SERVICOS_FATURA, SF_SERVICOS_FATURA.mesAnoRefereincia_SF_SERVICOS_"& _ 
+                "FATURA FROM OP_OPERADORAS INNER JOIN SF_SERVICOS_FATURA INNER JOIN SF_VL_USO ON "& _ 
+                "SF_SERVICOS_FATURA.id_SF_SERVICOS_FATURA = SF_VL_USO.id_SF_SERVICOS_FATURA INNER"& _ 
+                " JOIN SF_TIPO_USO ON SF_VL_USO.id_SF_TIPO_USO = SF_TIPO_USO.id_SF_TIPO_USO ON OP"& _ 
+                "_OPERADORAS.id_OP_OPERADORAS = SF_VL_USO.id_OP_OPERADORAS RIGHT OUTER JOIN PS_JU"& _ 
+                "RIDICA INNER JOIN PS_CLIENTES ON PS_JURIDICA.id_PS_JURIDICA = PS_CLIENTES.id_PS_"& _ 
+                "JURIDICA INNER JOIN PS_PESSOA AS PS_PESSOA_1 ON PS_CLIENTES.codMatriz_PS_CLIENTE"& _ 
+                "S = PS_PESSOA_1.id_PS_PESSOA INNER JOIN OP_PLANOS AS OP_PLANOS_1 INNER JOIN CL_P"& _ 
+                "LANOS_CLIENTE INNER JOIN CL_PLANOSxLINHAS ON CL_PLANOS_CLIENTE.id_CL_PLANOS_CLIE"& _ 
+                "NTE = CL_PLANOSxLINHAS.id_CL_PLANOS_CLIENTE INNER JOIN LI_LINHAS ON CL_PLANOSxLI"& _ 
+                "NHAS.id_LI_LINHAS = LI_LINHAS.id_LI_LINHAS INNER JOIN LI_LINHAS AS LI_LINHAS_1 O"& _ 
+                "N CL_PLANOSxLINHAS.idLinhasPai_LI_LINHAS = LI_LINHAS_1.id_LI_LINHAS INNER JOIN P"& _ 
+                "S_CIDADES ON LI_LINHAS_1.id_PS_CIDADES = PS_CIDADES.id_PS_CIDADES ON OP_PLANOS_1"& _ 
+                ".id_OP_PLANOS = CL_PLANOS_CLIENTE.id_OP_PLANOS ON PS_CLIENTES.id_PS_CLIENTES = L"& _ 
+                "I_LINHAS_1.id_PS_CLIENTES ON SF_SERVICOS_FATURA.id_LI_LINHAS = CL_PLANOSxLINHAS."& _ 
+                "id_LI_LINHAS WHERE (SF_SERVICOS_FATURA.mesAnoRefereincia_SF_SERVICOS_FATURA = @m"& _ 
+                "esAnoRefereincia_SF_SERVICOS_FATURA) AND (SF_SERVICOS_FATURA.codMatriz_PS_CLIENT"& _ 
+                "ES = @codMatriz_PS_CLIENTES) AND (SF_SERVICOS_FATURA.numSequencia_SF_SERVICOS_FA"& _ 
+                "TURA = 0)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@mesAnoRefereincia_SF_SERVICOS_FATURA", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "mesAnoRefereincia_SF_SERVICOS_FATURA", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@codMatriz_PS_CLIENTES", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))

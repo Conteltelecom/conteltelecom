@@ -299,7 +299,7 @@
         Return False
 
     End Function
-    Function SomenteNumeros(ByVal strNumero As String) As String
+    Public Shared Function SomenteNumeros(ByVal strNumero As String) As String
 
         Dim re As New Regex("[0-9]")
         Dim s As New StringBuilder()

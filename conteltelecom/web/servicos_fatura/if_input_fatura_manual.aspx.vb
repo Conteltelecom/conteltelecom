@@ -81,7 +81,7 @@ Public Class if_input_fatura_manual
             SqlDataSourceLinhas.InsertParameters("dtaPerIni_SF_SERVICOS_FATURA").DefaultValue = dtaPerIni_SF_SERVICOS_FATURA.DateInput.SelectedDate
             SqlDataSourceLinhas.InsertParameters("dtaPerFim_SF_SERVICOS_FATURA").DefaultValue = dtaPerFim_SF_SERVICOS_FATURA.DateInput.SelectedDate
             SqlDataSourceLinhas.InsertParameters("dtVencimento_SF_SERVICOS_FATURA").DefaultValue = dtVencimento_SF_SERVICOS_FATURA.DateInput.SelectedDate
-
+            SqlDataSourceLinhas.InsertParameters("id_PS_PESSOA_USUARIO").DefaultValue = Session("id_PS_PESSOA_USUARIO")
 
             CslValidacoes.BuscaRazaoSocial_Operadora(label01null, label02null, idCompany, id_OP_OPERADORAS,
              id_LI_TIPOS, id_PS_CIDADES, codMatriz_PS_CLIENTES, id_PS_PESSOA, vlInicial_id_LI_TIPOS, perIncial_LI_LINHAS, foraAnalise_LI_LINHAS, nomeUnidade_LI_LINHAS, codLinha_LI_LINHAS)
@@ -252,11 +252,16 @@ Public Class if_input_fatura_manual
             End Try
         End If
         If e.CommandName = "Edit" Then
+
             Dim dataItem As GridDataItem = DirectCast(e.Item, GridDataItem)
             Dim id_SF_SERVICOS_FATURALabel As Label = DirectCast(dataItem.FindControl("id_SF_SERVICOS_FATURALabel"), Label)
             Dim mesAnoRefereincia_SF_SERVICOS_FATURALabel As Label = DirectCast(dataItem.FindControl("mesAnoRefereincia_SF_SERVICOS_FATURALabel"), Label)
             Dim codLinha_LI_LINHASLabel As Label = DirectCast(dataItem.FindControl("codLinha_LI_LINHASLabel"), Label)
-            HttpContext.Current.Response.Redirect("~/web/servicos_fatura/if_input_fatura_manual_Detalhes.aspx?mesAnoRefereincia_SF_SERVICOS_FATURA=" & mesAnoRefereincia_SF_SERVICOS_FATURALabel.Text & "&id_LI_LINHAS=" & codLinha_LI_LINHASLabel.Text & "&id_SF_SERVICOS_FATURA=" & id_SF_SERVICOS_FATURALabel.Text)
+            Dim Labelid_LI_LINHAS As Label = DirectCast(dataItem.FindControl("Labelid_LI_LINHAS"), Label)
+
+
+
+            HttpContext.Current.Response.Redirect("~/web/servicos_fatura/if_input_fatura_manual_Detalhes.aspx?mesAnoRefereincia_SF_SERVICOS_FATURA=" & mesAnoRefereincia_SF_SERVICOS_FATURALabel.Text & "&codLinha_LI_LINHAS=" & codLinha_LI_LINHASLabel.Text & "&id_SF_SERVICOS_FATURA=" & id_SF_SERVICOS_FATURALabel.Text & "&id_LI_LINHAS=" & Labelid_LI_LINHAS.Text)
 
         End If
 

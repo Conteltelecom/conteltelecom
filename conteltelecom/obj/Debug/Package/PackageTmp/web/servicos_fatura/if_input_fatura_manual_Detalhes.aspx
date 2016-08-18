@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Normalmaster.master" CodeBehind="if_input_fatura_manual_Detalhes.aspx.vb" Inherits="conteltelecom.if_input_fatura_manual_Detalhes" %>
+﻿<%@ Page Title="DETALHES DA FATURA" Language="vb" AutoEventWireup="false" MasterPageFile="~/Normalmaster.master" CodeBehind="if_input_fatura_manual_Detalhes.aspx.vb" Inherits="conteltelecom.if_input_fatura_manual_Detalhes" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderHeadNormal" runat="server">
 
@@ -76,11 +76,13 @@
 
                         </telerik:GridTemplateColumn>
                         <telerik:GridTemplateColumn DataField="vl_SF_VL_SERVICO" FilterControlAltText="Filter vl_SF_VL_SERVICO column" HeaderText="VALOR R$" UniqueName="vl_SF_VL_SERVICO">
+						
 
                             <EditItemTemplate>
 
                                 <telerik:RadNumericTextBox ID="vl_SF_VL_SERVICORadNumericTextBox" runat="server" DbValue='<%# Bind("vl_SF_VL_SERVICO") %>' Type="Number" Width="90%">
-                                </telerik:RadNumericTextBox>
+                                <IncrementSettings InterceptMouseWheel="false" />
+								</telerik:RadNumericTextBox>
                                  <asp:RequiredFieldValidator ID="RequiredFieldValidatovl_SF_VL_SERVICO" ControlToValidate="vl_SF_VL_SERVICORadNumericTextBox" runat="server" ErrorMessage="*" Display="Dynamic" SetFocusOnError="true" ForeColor="RED"></asp:RequiredFieldValidator>
                             </EditItemTemplate>
                             <ItemTemplate>
@@ -95,7 +97,8 @@
                             <EditItemTemplate>
                                  <asp:Label id="negativo" runat="server" Text="-"></asp:Label>
                                 <telerik:RadNumericTextBox ID="vlDesconto_SF_VL_SERVICORadNumericTextBox" runat="server" DbValue='<%# Bind("vlDesconto_SF_VL_SERVICO") %>' Type="Number" Width="90%" MinValue="0" >
-                                </telerik:RadNumericTextBox>
+                                <IncrementSettings InterceptMouseWheel="false" />
+								</telerik:RadNumericTextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidatovlDesconto_SF_VL_SERVIC" ControlToValidate="vlDesconto_SF_VL_SERVICORadNumericTextBox" runat="server" ErrorMessage="*" Display="Dynamic" SetFocusOnError="true" ForeColor="RED"></asp:RequiredFieldValidator>
                             </EditItemTemplate>
                             <ItemTemplate>
@@ -168,7 +171,8 @@
                         <telerik:GridTemplateColumn DataField="vlUso_SF_VL_USO" FilterControlAltText="Filter vlUso_SF_VL_USO column" HeaderText="VL USO R$" UniqueName="vlUso_SF_VL_USO">
                             <EditItemTemplate>
                                 <telerik:RadNumericTextBox ID="vlUso_SF_VL_USORadNumericTextBox" runat="server" DbValue='<%# Bind("vlUso_SF_VL_USO") %>' Type="Number" Width="90%">
-                                </telerik:RadNumericTextBox>
+                                <IncrementSettings InterceptMouseWheel="false" />
+								</telerik:RadNumericTextBox>
                                  <asp:RequiredFieldValidator ID="RequiredFieldValidatovlUso_SF_VL_USO" ControlToValidate="vlUso_SF_VL_USORadNumericTextBox" runat="server" ErrorMessage="*" Display="Dynamic" SetFocusOnError="true" ForeColor="RED"></asp:RequiredFieldValidator>
                             </EditItemTemplate>
                             <ItemTemplate>
@@ -358,7 +362,7 @@
             <asp:Parameter Name="codNumLinha_SF_VL_SERVICO" />
         </InsertParameters>
         <SelectParameters>
-            <asp:Parameter Name="codLinha_LI_LINHAS" Type="String" />
+            <asp:QueryStringParameter Name="codLinha_LI_LINHAS" QueryStringField="codLinha_LI_LINHAS" Type="String" />
         </SelectParameters>
     </asp:SqlDataSource>
 

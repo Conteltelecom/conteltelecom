@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Normalmaster.master" CodeBehind="cad_operadoras.aspx.vb" Inherits="conteltelecom.cad_operadoras" %>
+﻿<%@ Page Title="CADASTRO DE OPERADORAS" Language="vb" AutoEventWireup="false" MasterPageFile="~/Normalmaster.master" CodeBehind="cad_operadoras.aspx.vb" Inherits="conteltelecom.cad_operadoras" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderHeadNormal" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderNormal" runat="server">

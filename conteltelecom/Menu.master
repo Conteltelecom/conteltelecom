@@ -30,6 +30,32 @@
         <div id="sidebar-wrapper" style="padding-top:48px">
             <telerik:RadPanelBar ID="RadPanelBar1" runat="server" Skin="Bootstrap"   Height="100%" RenderMode="Auto" >
                     <Items>
+                           <telerik:RadPanelItem runat="server" Text="ATENDIMENTO">
+                               <Items>
+                                      <telerik:RadPanelItem runat="server" Text="RELATÓRIOS">
+                                          <Items>
+                                              <telerik:RadPanelItem runat="server" Text="VENCIMENTO IDEIAL" NavigateUrl="~/web/atendimento/lista_vencimento_ideal.aspx">
+
+                                                  </telerik:RadPanelItem>
+                                          </Items>
+                               </telerik:RadPanelItem>
+                               </Items>
+                               </telerik:RadPanelItem>
+                        <telerik:RadPanelItem runat="server" Text="ANÁLISE DE FATURAS">
+                            <Items>
+                                 <telerik:RadPanelItem runat="server" Text="FATURAMENTO"
+                               NavigateUrl="~/web/servicos_fatura/bloqueio_faturas.aspx?TipoBloqIni=500&TipoBloqFim=599">
+                                </telerik:RadPanelItem>
+                                <telerik:RadPanelItem runat="server" Text="SENSOR DE GRAVIDADE"
+                               NavigateUrl="~/web/servicos_fatura/bloqueio_faturas.aspx?TipoBloqIni=500&TipoBloqFim=999">
+                                </telerik:RadPanelItem>
+                                <telerik:RadPanelItem runat="server" Text="VENCIMENTO IDEAL"
+                               NavigateUrl="~/web/atendimento/lista_vencimento_ideal.aspx">
+                                </telerik:RadPanelItem>
+                                
+                            </Items>
+                             
+                            </telerik:RadPanelItem>
                         <telerik:RadPanelItem runat="server" Text="ADMINISTRADOR">
                             <Items>
                                           <telerik:RadPanelItem Text="CAD. TIPO MENUS" NavigateUrl="~/web/administrador/configuracoes/cad_menus.aspx">
@@ -38,14 +64,27 @@
                                  <telerik:RadPanelItem Text="CAD. PÁGINAS" NavigateUrl="~/web/administrador/configuracoes/adm_cad_paginas.aspx">
 
                                           </telerik:RadPanelItem>
-                                <telerik:RadPanelItem Text="CAD. BLOQUEIOS" NavigateUrl="~/web/administrador/configuracoes/cad_tipo_bloqueios.aspx">
+                                <telerik:RadPanelItem Text="CAD. BLOQUEIOS" NavigateUrl="~/web/administrador/configuracoes/cad_tipo_bloqueios">
 
+                                          </telerik:RadPanelItem>
+                                <telerik:RadPanelItem Text="GERENCIAL" >
+                                    <Items>
+                                        <telerik:RadPanelItem Text="FATURAMENTO"     NavigateUrl="~/web/servicos_fatura/bloqueio_faturas.aspx?TipoBloqIni=0&TipoBloqFim=1001">
+
+                                          </telerik:RadPanelItem>
+
+                                    </Items>
                                           </telerik:RadPanelItem>
                                                          </Items>
 
                             </telerik:RadPanelItem>
                           <telerik:RadPanelItem runat="server" Text="LINHAS">
+
                               <Items>
+                                   <telerik:RadPanelItem runat="server" Text="CAD VENCIMENTO IDEAL" NavigateUrl="~/web/financeiro/Rel/fi_cad_vencimento_Ideal.aspx">
+
+
+                                       </telerik:RadPanelItem>
                                   <telerik:RadPanelItem runat="server" Text="CONFIGURAÇÕES">
                                       <Items>
                                           <telerik:RadPanelItem Text="TP PROGRAMAÇÃO" NavigateUrl="~/web/linhas/cadastro/li_cad_tipo_programacao.aspx">
@@ -86,9 +125,23 @@
                                                                     </telerik:RadPanelItem>
                                 <telerik:RadPanelItem runat="server" Text="REL PENDÊNCIAS"  NavigateUrl="~/web/clientes/relatorios/cl_rel_reducaoPendecias.aspx" Target="_blank">
                                                                     </telerik:RadPanelItem>
-                               <telerik:RadPanelItem runat="server" Text="CAD. LEIAUTE"  NavigateUrl="~/web/servicos_fatura/configuracoes/sf_cad_leiaute.aspx" >
-                                                                    </telerik:RadPanelItem>
-                            
+
+                               
+                               <telerik:RadPanelItem runat="server" Text="CONF LEITURA" >
+                                   <Items>
+                                    <telerik:RadPanelItem runat="server" Text="CAD. LEIAUTE"  NavigateUrl="~/web/servicos_fatura/configuracoes/sf_cad_leiaute.aspx" >
+                                  
+                                         </telerik:RadPanelItem>
+                                        <telerik:RadPanelItem runat="server" Text="CAD. BLOCOS"  NavigateUrl="~/web/servicos_fatura/cad_blocos_leitura.aspx?idBlocoPai_SF_BLOCO_LEITURA=0" >
+                                  
+                                         </telerik:RadPanelItem>
+                                   </Items>
+                                          </telerik:RadPanelItem>
+                              
+                         
+                                <telerik:RadPanelItem runat="server" Text="FATURAMENTO"
+                               NavigateUrl="~/web/servicos_fatura/bloqueio_faturas.aspx?TipoBloqIni=0&TipoBloqFim=199">
+                                </telerik:RadPanelItem>
                            </Items>
                                     
                                         </telerik:RadPanelItem>
@@ -115,6 +168,14 @@
                          <telerik:RadPanelItem runat="server" Text="FINANCEIRO"  Visible="True">
                                                            <Items>
                                 <telerik:RadPanelItem runat="server" Text="GERA CVS CLIENTES" NavigateUrl="~/web/financeiro/bling/export_clientes_bling.aspx">
+                                </telerik:RadPanelItem>
+                                 <telerik:RadPanelItem runat="server" Text="CLIENTE & CNPJ" NavigateUrl="~/web/financeiro/Rel/razaoSocial_Cnpj.aspx">
+                                </telerik:RadPanelItem>
+                          <telerik:RadPanelItem runat="server" Text="À FATURAR"
+                               NavigateUrl="~/web/servicos_fatura/bloqueio_faturas.aspx?TipoBloqIni=900&TipoBloqFim=999">
+                                </telerik:RadPanelItem>
+                                                                <telerik:RadPanelItem runat="server" Text="FATURADO"
+                               NavigateUrl="~/web/servicos_fatura/bloqueio_faturas.aspx?TipoBloqIni=998&TipoBloqFim=1001">
                                 </telerik:RadPanelItem>
                             </Items>
                             
