@@ -11,7 +11,7 @@ Public Class cl_rel_reducao
             Dim Parametros As Integer = 1
 
 
-            RadDropDownListMes.SelectedValue = Date.Today.Month
+            RadDropDownListMes.SelectedValue = Date.Today.Month.ToString("d2")
             RadDropDownListAno.SelectedValue = Date.Today.Year
 
             If IsNothing(Request.QueryString("id_PS_PESSOA")) = True Then
@@ -21,7 +21,7 @@ Public Class cl_rel_reducao
                 If IsNothing(Request.QueryString("mesAnoRefereincia_SF_SERVICOS_FATURA")) = True Then
 
 
-                    Session("mesAnoRefereincia_SF_SERVICOS_FATURA") = Request.QueryString("mesAnoRefereincia_SF_SERVICOS_FATURA")
+                    Session("mesAnoRefereincia_SF_SERVICOS_FATURA") = Date.Today.Month.ToString("d2") & "/" & Date.Today.Year
                 Else
 
 
@@ -64,7 +64,7 @@ Public Class cl_rel_reducao
             Session("codMatriz_PS_CLIENTES") = Request.QueryString("id_PS_PESSOA")
         End If
 
-        Session("mesAnoRefereincia_SF_SERVICOS_FATURA") = If(RadDropDownListMes.SelectedValue < 9, "0" & RadDropDownListMes.SelectedValue, RadDropDownListMes.SelectedValue) & "/" & RadDropDownListAno.SelectedValue
+        Session("mesAnoRefereincia_SF_SERVICOS_FATURA") = RadDropDownListMes.SelectedValue & "/" & RadDropDownListAno.SelectedValue
         Dim Parametros As Integer = 1
         If RadDropDownListTipoRel.SelectedValue = 2 Then
             Parametros = 2

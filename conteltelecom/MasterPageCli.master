@@ -35,6 +35,8 @@
             </telerik:NavigationNode>
               <telerik:NavigationNode  Text="CAD. VENCIMENTO IDEAL" NavigateUrl='<%# String.Format("~/web/clientes/clinetes_matriz/cl_cad_vencimento_Ideal.aspx?id_pessoas={0}&consultaMatriz={1}&codMatriz_PS_CLIENTES={2}", Session("id_pessoaNav"), Request.QueryString("consultaMatriz"), Request.QueryString("codMatriz_PS_CLIENTES"))%>'>
             </telerik:NavigationNode>
+               <telerik:NavigationNode  Text="CAD. AGRUPAMENTO" NavigateUrl='<%# String.Format("~/web/linhas\cadastro\li_cad_linhas_chave.aspx?id_pessoas={0}&consultaMatriz={1}&codMatriz_PS_CLIENTES={2}", Session("id_pessoaNav"), Request.QueryString("consultaMatriz"), Request.QueryString("codMatriz_PS_CLIENTES"))%>'>
+            </telerik:NavigationNode>
          </Nodes>
                      </telerik:NavigationNode>
        
@@ -54,6 +56,9 @@
                    <telerik:NavigationNode ID="descritvo" Text="DESCRITIVO" NavigateUrl='<%# String.Format("~/web/clientes/relatorios/rel_descritivo.aspx?id_PS_PESSOA={0}&consultaMatriz={1}", Session("id_PS_PESSOA"), Request.QueryString("consultaMatriz"))%>' Target="_blank">
                            </telerik:NavigationNode>
                </Nodes>              
+            </telerik:NavigationNode>
+
+              <telerik:NavigationNode  Text="FATURAS CLIENTE" NavigateUrl='<%# String.Format("~/web/clientes/soliciacao_fauras/anexos_solicitacao_fatura.aspx?id_pessoas={0}&consultaMatriz={1}", Session("id_pessoaNav"), Request.QueryString("consultaMatriz"))%>'  >
             </telerik:NavigationNode>
             <telerik:NavigationNode ID="MatrizGeral" Text="GERAL" NavigateUrl='<%# String.Format("~/web/pessoas/ps_cliente_detalhes.aspx?id_pessoas={0}&consultaMatriz={1}", Session("id_pessoaNav"), Request.QueryString("consultaMatriz"))%>'>
             </telerik:NavigationNode>

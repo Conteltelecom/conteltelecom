@@ -60,31 +60,6 @@
             <Mappings />
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
-            <MainSource>
-              <DbSource ConnectionRef="naoUsar (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT SF_SERVICOS_FATURA.vltotalLinha_SF_SERVICOS_FATURA, SF_SERVICOS_FATURA.id_SF_SERVICOS_FATURA, SF_SERVICOS_FATURA.mesAnoRefereincia_SF_SERVICOS_FATURA, OP_OPERADORAS.desc_OP_OPERADORAS, OP_OPERADORAS.id_OP_OPERADORAS, CAST(PS_CLIENTES.codMatriz_PS_CLIENTES AS VARCHAR) + ' - ' + PS_JURIDICA.razaosocial_PS_JURIDICA AS razaosocial_PS_JURIDICA, PS_CLIENTES.codMatriz_PS_CLIENTES, CASE WHEN SF_SERVICOS_FATURA.numSequencia_SF_SERVICOS_FATURA &gt; 0 THEN 'CONTA RETIFICADA' ELSE 'NORMAL' END AS tipoConta, SF_SERVICOS_FATURA.id_LI_LINHAS, SF_SERVICOS_FATURA.codLinha_LI_LINHAS FROM PS_JURIDICA INNER JOIN PS_CLIENTES ON PS_JURIDICA.id_PS_JURIDICA = PS_CLIENTES.id_PS_JURIDICA INNER JOIN SF_SERVICOS_FATURA INNER JOIN OP_OPERADORAS ON SF_SERVICOS_FATURA.id_OP_OPERADORAS = OP_OPERADORAS.id_OP_OPERADORAS ON PS_CLIENTES.codMatriz_PS_CLIENTES = SF_SERVICOS_FATURA.codMatriz_PS_CLIENTES AND PS_CLIENTES.id_PS_PESSOA = SF_SERVICOS_FATURA.id_PS_PESSOA WHERE (SF_SERVICOS_FATURA.id_SF_SERVICOS_FATURA = 345)</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </MainSource>
-            <Mappings>
-              <Mapping SourceColumn="vltotalLinha_SF_SERVICOS_FATURA" DataSetColumn="vltotalLinha_SF_SERVICOS_FATURA" />
-              <Mapping SourceColumn="id_SF_SERVICOS_FATURA" DataSetColumn="id_SF_SERVICOS_FATURA" />
-              <Mapping SourceColumn="mesAnoRefereincia_SF_SERVICOS_FATURA" DataSetColumn="mesAnoRefereincia_SF_SERVICOS_FATURA" />
-              <Mapping SourceColumn="desc_OP_OPERADORAS" DataSetColumn="desc_OP_OPERADORAS" />
-              <Mapping SourceColumn="id_OP_OPERADORAS" DataSetColumn="id_OP_OPERADORAS" />
-              <Mapping SourceColumn="razaosocial_PS_JURIDICA" DataSetColumn="razaosocial_PS_JURIDICA" />
-              <Mapping SourceColumn="codMatriz_PS_CLIENTES" DataSetColumn="codMatriz_PS_CLIENTES" />
-              <Mapping SourceColumn="tipoConta" DataSetColumn="tipoConta" />
-              <Mapping SourceColumn="id_LI_LINHAS" DataSetColumn="id_LI_LINHAS" />
-              <Mapping SourceColumn="codLinha_LI_LINHAS" DataSetColumn="codLinha_LI_LINHAS" />
-            </Mappings>
-            <Sources />
-          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -93,7 +68,7 @@
   <xs:element name="BuscaCPF_Nomexsd" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="BuscaCPF_Nomexsd" msprop:Generator_UserDSName="BuscaCPF_Nomexsd">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="BuscaCPF_Nome" msprop:Generator_TableClassName="BuscaCPF_NomeDataTable" msprop:Generator_TableVarName="tableBuscaCPF_Nome" msprop:Generator_RowChangedName="BuscaCPF_NomeRowChanged" msprop:Generator_TablePropName="BuscaCPF_Nome" msprop:Generator_RowDeletingName="BuscaCPF_NomeRowDeleting" msprop:Generator_RowChangingName="BuscaCPF_NomeRowChanging" msprop:Generator_RowEvHandlerName="BuscaCPF_NomeRowChangeEventHandler" msprop:Generator_RowDeletedName="BuscaCPF_NomeRowDeleted" msprop:Generator_RowClassName="BuscaCPF_NomeRow" msprop:Generator_UserTableName="BuscaCPF_Nome" msprop:Generator_RowEvArgName="BuscaCPF_NomeRowChangeEvent">
+        <xs:element name="BuscaCPF_Nome" msprop:Generator_TableClassName="BuscaCPF_NomeDataTable" msprop:Generator_TableVarName="tableBuscaCPF_Nome" msprop:Generator_TablePropName="BuscaCPF_Nome" msprop:Generator_RowDeletingName="BuscaCPF_NomeRowDeleting" msprop:Generator_RowChangingName="BuscaCPF_NomeRowChanging" msprop:Generator_RowEvHandlerName="BuscaCPF_NomeRowChangeEventHandler" msprop:Generator_RowDeletedName="BuscaCPF_NomeRowDeleted" msprop:Generator_UserTableName="BuscaCPF_Nome" msprop:Generator_RowChangedName="BuscaCPF_NomeRowChanged" msprop:Generator_RowEvArgName="BuscaCPF_NomeRowChangeEvent" msprop:Generator_RowClassName="BuscaCPF_NomeRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_PS_PESSOA" msprop:Generator_ColumnVarNameInTable="columnid_PS_PESSOA" msprop:Generator_ColumnPropNameInRow="id_PS_PESSOA" msprop:Generator_ColumnPropNameInTable="id_PS_PESSOAColumn" msprop:Generator_UserColumnName="id_PS_PESSOA" type="xs:string" />
@@ -102,7 +77,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="RadAutoCompleteBox_Ps_Fisica" msprop:Generator_TableClassName="RadAutoCompleteBox_Ps_FisicaDataTable" msprop:Generator_TableVarName="tableRadAutoCompleteBox_Ps_Fisica" msprop:Generator_RowChangedName="RadAutoCompleteBox_Ps_FisicaRowChanged" msprop:Generator_TablePropName="RadAutoCompleteBox_Ps_Fisica" msprop:Generator_RowDeletingName="RadAutoCompleteBox_Ps_FisicaRowDeleting" msprop:Generator_RowChangingName="RadAutoCompleteBox_Ps_FisicaRowChanging" msprop:Generator_RowEvHandlerName="RadAutoCompleteBox_Ps_FisicaRowChangeEventHandler" msprop:Generator_RowDeletedName="RadAutoCompleteBox_Ps_FisicaRowDeleted" msprop:Generator_RowClassName="RadAutoCompleteBox_Ps_FisicaRow" msprop:Generator_UserTableName="RadAutoCompleteBox_Ps_Fisica" msprop:Generator_RowEvArgName="RadAutoCompleteBox_Ps_FisicaRowChangeEvent">
+        <xs:element name="RadAutoCompleteBox_Ps_Fisica" msprop:Generator_TableClassName="RadAutoCompleteBox_Ps_FisicaDataTable" msprop:Generator_TableVarName="tableRadAutoCompleteBox_Ps_Fisica" msprop:Generator_TablePropName="RadAutoCompleteBox_Ps_Fisica" msprop:Generator_RowDeletingName="RadAutoCompleteBox_Ps_FisicaRowDeleting" msprop:Generator_RowChangingName="RadAutoCompleteBox_Ps_FisicaRowChanging" msprop:Generator_RowEvHandlerName="RadAutoCompleteBox_Ps_FisicaRowChangeEventHandler" msprop:Generator_RowDeletedName="RadAutoCompleteBox_Ps_FisicaRowDeleted" msprop:Generator_UserTableName="RadAutoCompleteBox_Ps_Fisica" msprop:Generator_RowChangedName="RadAutoCompleteBox_Ps_FisicaRowChanged" msprop:Generator_RowEvArgName="RadAutoCompleteBox_Ps_FisicaRowChangeEvent" msprop:Generator_RowClassName="RadAutoCompleteBox_Ps_FisicaRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_PS_PESSOA" msprop:Generator_ColumnVarNameInTable="columnid_PS_PESSOA" msprop:Generator_ColumnPropNameInRow="id_PS_PESSOA" msprop:Generator_ColumnPropNameInTable="id_PS_PESSOAColumn" msprop:Generator_UserColumnName="id_PS_PESSOA" type="xs:string" minOccurs="0" />
@@ -112,7 +87,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="RadAutoCompleteBoxPs_Juridica" msprop:Generator_TableClassName="RadAutoCompleteBoxPs_JuridicaDataTable" msprop:Generator_TableVarName="tableRadAutoCompleteBoxPs_Juridica" msprop:Generator_TablePropName="RadAutoCompleteBoxPs_Juridica" msprop:Generator_RowDeletingName="RadAutoCompleteBoxPs_JuridicaRowDeleting" msprop:Generator_RowChangingName="RadAutoCompleteBoxPs_JuridicaRowChanging" msprop:Generator_RowEvHandlerName="RadAutoCompleteBoxPs_JuridicaRowChangeEventHandler" msprop:Generator_RowDeletedName="RadAutoCompleteBoxPs_JuridicaRowDeleted" msprop:Generator_UserTableName="RadAutoCompleteBoxPs_Juridica" msprop:Generator_RowChangedName="RadAutoCompleteBoxPs_JuridicaRowChanged" msprop:Generator_RowEvArgName="RadAutoCompleteBoxPs_JuridicaRowChangeEvent" msprop:Generator_RowClassName="RadAutoCompleteBoxPs_JuridicaRow">
+        <xs:element name="RadAutoCompleteBoxPs_Juridica" msprop:Generator_TableClassName="RadAutoCompleteBoxPs_JuridicaDataTable" msprop:Generator_TableVarName="tableRadAutoCompleteBoxPs_Juridica" msprop:Generator_RowChangedName="RadAutoCompleteBoxPs_JuridicaRowChanged" msprop:Generator_TablePropName="RadAutoCompleteBoxPs_Juridica" msprop:Generator_RowDeletingName="RadAutoCompleteBoxPs_JuridicaRowDeleting" msprop:Generator_RowChangingName="RadAutoCompleteBoxPs_JuridicaRowChanging" msprop:Generator_RowEvHandlerName="RadAutoCompleteBoxPs_JuridicaRowChangeEventHandler" msprop:Generator_RowDeletedName="RadAutoCompleteBoxPs_JuridicaRowDeleted" msprop:Generator_RowClassName="RadAutoCompleteBoxPs_JuridicaRow" msprop:Generator_UserTableName="RadAutoCompleteBoxPs_Juridica" msprop:Generator_RowEvArgName="RadAutoCompleteBoxPs_JuridicaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_PS_PESSOA" msprop:Generator_ColumnVarNameInTable="columnid_PS_PESSOA" msprop:Generator_ColumnPropNameInRow="id_PS_PESSOA" msprop:Generator_ColumnPropNameInTable="id_PS_PESSOAColumn" msprop:Generator_UserColumnName="id_PS_PESSOA" type="xs:string" minOccurs="0" />
@@ -120,7 +95,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="vltotalLinha_SF_SERVICOS_FATURA" msprop:Generator_ColumnVarNameInTable="columnvltotalLinha_SF_SERVICOS_FATURA" msprop:Generator_ColumnPropNameInRow="vltotalLinha_SF_SERVICOS_FATURA" msprop:Generator_ColumnPropNameInTable="vltotalLinha_SF_SERVICOS_FATURAColumn" msprop:Generator_UserColumnName="vltotalLinha_SF_SERVICOS_FATURA" type="xs:decimal" minOccurs="0" />

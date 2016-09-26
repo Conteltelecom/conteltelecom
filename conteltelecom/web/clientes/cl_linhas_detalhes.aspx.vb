@@ -244,6 +244,7 @@ Public Class cl_linhas_detalhes
                         GridDropDownColumnid_LI_TIPOS = DirectCast(item.FindControl("id_LI_TIPOSRadComboBox"), RadComboBox)
                         vlIdeal_LI_LINHAS = DirectCast(item.FindControl("vlIdeal_LI_LINHASRadNumericTextBox"), RadNumericTextBox)
                         vlInicial_id_LI_TIPOS = DirectCast(item.FindControl("vlInicial_id_LI_TIPOSRadNumericTextBox"), RadNumericTextBox)
+
                         Exit Select
 
                     Case "DetailTableDta"
@@ -266,7 +267,7 @@ Public Class cl_linhas_detalhes
                     Case "DetailTableCep"
                         numEndereco_LI_LINHASRadNumericTextBox = DirectCast(item.FindControl("numEndereco_LI_LINHASRadNumericTextBox"), RadNumericTextBox)
                         complemeto_LI_LINHASTextBox = DirectCast(item.FindControl("complemeto_LI_LINHASTextBox"), RadTextBox)
-                        numLinha_LI_LINHA = DirectCast(item.FindControl("numLinha_LI_LINHASRadMaskedTextBox"), RadMaskedTextBox)
+
                         cep_LI_LINHASRadMaskedTextBox = DirectCast(item.FindControl("cep_LI_LINHASRadMaskedTextBox"), RadMaskedTextBox)
                         Exit Select
                     Case "DetailTableObservacoes"

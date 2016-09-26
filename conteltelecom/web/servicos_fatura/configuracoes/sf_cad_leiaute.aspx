@@ -2,55 +2,69 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderHeadNormal" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderNormal" runat="server">
-<telerik:RadWindowManager ID = "RadWindowManager1" runat="server">
-     <Localization OK = "Yes" Cancel = "No" />
-</telerik:RadWindowManager> 
-    <telerik:RadGrid ID="RadGridCadLeiaute" runat="server" AutoGenerateColumns="False" Culture="pt-BR" DataSourceID="SqlDataSourceBuscaLeiaute" CellSpacing="-1" GridLines="Both" Skin="Bootstrap" AllowAutomaticDeletes="True" AllowAutomaticInserts="True" AllowAutomaticUpdates="True">
+
+    <telerik:RadGrid ID="RadGridCadLeiaute" runat="server"  AutoGenerateColumns="False" Culture="pt-BR" DataSourceID="SqlDataSourceBuscaLeiaute" CellSpacing="-1" GridLines="Both" Skin="Bootstrap" AllowAutomaticDeletes="True" AllowAutomaticInserts="True" AllowAutomaticUpdates="True" ClientSettings-AllowRowHide="True">
    
 <GroupingSettings CollapseAllTooltip="Collapse all groups"></GroupingSettings>
         <ExportSettings>
             <Pdf PageWidth="">
             </Pdf>
         </ExportSettings>
-        <MasterTableView DataKeyNames="id_SF_CAD_LEIAUTE" DataSourceID="SqlDataSourceBuscaLeiaute" CommandItemDisplay="Top" EditMode="InPlace"  >
-           <CommandItemSettings ShowRefreshButton="false" AddNewRecordText="NOVO" AddNewRecordImageUrl="../../../img/add.png" />
+        
+        <MasterTableView DataKeyNames="id_SF_CAD_LEIAUTE,id_OP_OPERADORAS" DataSourceID="SqlDataSourceBuscaLeiaute"  >
+ 
              <Columns>
-                <telerik:GridBoundColumn DataField="id_SF_CAD_LEIAUTE" FilterControlAltText="Filter id_SF_CAD_LEIAUTE column" HeaderText="ID" SortExpression="id_SF_CAD_LEIAUTE" UniqueName="id_SF_CAD_LEIAUTE" DataType="System.Int32" ReadOnly="True">
-                </telerik:GridBoundColumn>
-                 <telerik:GridTemplateColumn DataField="desc_SF_CAD_LEIAUTE" FilterControlAltText="Filter desc_SF_CAD_LEIAUTE column" HeaderText="DESCRIÇÃO " SortExpression="desc_SF_CAD_LEIAUTE" UniqueName="desc_SF_CAD_LEIAUTE">
+                 
+                 <telerik:GridBoundColumn DataField="id_SF_CAD_LEIAUTE" DataType="System.Int32" FilterControlAltText="Filter id_SF_CAD_LEIAUTE column" HeaderText="ID" ReadOnly="True" SortExpression="id_SF_CAD_LEIAUTE" UniqueName="id_SF_CAD_LEIAUTE">
+                 </telerik:GridBoundColumn>
+                 <telerik:GridTemplateColumn DataField="desc_SF_CAD_LEIAUTE" FilterControlAltText="Filter desc_SF_CAD_LEIAUTE column" HeaderText="DESCRIÇÃO" SortExpression="desc_SF_CAD_LEIAUTE" UniqueName="desc_SF_CAD_LEIAUTE">
                      <EditItemTemplate>
-                         <telerik:RadTextBox ID="desc_SF_CAD_LEIAUTETextBox" runat="server" Width="95%" Text='<%# Bind("desc_SF_CAD_LEIAUTE") %>'></telerik:RadTextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFielddesc_SF_CAD_LEIAUTETextBox" ControlToValidate="desc_SF_CAD_LEIAUTETextBox" runat="server" ErrorMessage="*" Display="Dynamic" SetFocusOnError="true" ForeColor="RED"></asp:RequiredFieldValidator>
+                         <asp:RequiredFieldValidator ID="RequiredFieldValidatordesc_OP_OPERADORASTextBox" ControlToValidate="desc_SF_CAD_LEIAUTETextBox" runat="server" ErrorMessage="*" Display="Dynamic" SetFocusOnError="true" ForeColor="RED"></asp:RequiredFieldValidator>
+                        <telerik:RadTextBox ID="desc_SF_CAD_LEIAUTETextBox" runat="server" Width="95%" Text='<%# Bind("desc_SF_CAD_LEIAUTE") %>'> </telerik:RadTextBox>
                      </EditItemTemplate>
                      <ItemTemplate>
                          <asp:Label ID="desc_SF_CAD_LEIAUTELabel" runat="server" Text='<%# Eval("desc_SF_CAD_LEIAUTE") %>'></asp:Label>
                      </ItemTemplate>
-                     <HeaderStyle CssClass="col-xs-6" />
+                     <HeaderStyle CssClass="col-xs-10" />
                  </telerik:GridTemplateColumn>
-                 <telerik:GridTemplateColumn DataField="desc_OP_OPERADORAS" FilterControlAltText="Filter desc_OP_OPERADORAS column" HeaderText="desc_OP_OPERADORAS" SortExpression="desc_OP_OPERADORAS" UniqueName="desc_OP_OPERADORAS">
+                 <telerik:GridTemplateColumn DataField="desc_OP_OPERADORAS" FilterControlAltText="Filter desc_OP_OPERADORAS column" HeaderText="OPERADORA" SortExpression="desc_OP_OPERADORAS" UniqueName="desc_OP_OPERADORAS">
                      <EditItemTemplate>
-                         <telerik:RadDropDownList ID="RadDropDownListOperadoras" Width="95%" runat="server" DataSourceID="ObjectDataSourceOperadoras" DataTextField="desc_OP_OPERADORAS" DataValueField="id_OP_OPERADORAS" DropDownHeight="150px" SelectedValue='<%# Bind("id_OP_OPERADORAS") %>' Skin="Bootstrap"></telerik:RadDropDownList>
-                                            </EditItemTemplate>
+              
+                        
+                         <telerik:RadDropDownList ID="RadDropDownListOPERADORAS" runat="server" Width="95%" DataSourceID="ObjectDataSourceOperadoras" DataTextField="desc_OP_OPERADORAS" DataValueField="id_OP_OPERADORAS" DropDownHeight="150px" SelectedValue='<%# Bind("id_OP_OPERADORAS") %>' Skin="Bootstrap"></telerik:RadDropDownList>
+                            
+                     </EditItemTemplate>
                      <ItemTemplate>
                          <asp:Label ID="desc_OP_OPERADORASLabel" runat="server" Text='<%# Eval("desc_OP_OPERADORAS") %>'></asp:Label>
                      </ItemTemplate>
-                     <HeaderStyle CssClass="col-xs-6" />
+                     <HeaderStyle CssClass="col-xs-2" />
                  </telerik:GridTemplateColumn>
-                 <telerik:GridCheckBoxColumn DataField="st_SF_CAD_LEIAUTE" DataType="System.Int16" DefaultInsertValue="1" FilterControlAltText="Filter st_SF_CAD_LEIAUTE column" HeaderText="ST" StringFalseValue="0" StringTrueValue="1" UniqueName="st_SF_CAD_LEIAUTE">
+                 <telerik:GridCheckBoxColumn DataField="st_SF_CAD_LEIAUTE" DataType="System.Int16" DefaultInsertValue="1" FilterControlAltText="Filter st_SF_CAD_LEIAUTE column" HeaderText="ST" StringFalseValue="0" StringTrueValue="1" UniqueName="st_SF_CAD_LEIAUTE" UseNativeEditorsInMobileMode="False">
                  </telerik:GridCheckBoxColumn>
-                 <telerik:GridEditCommandColumn ButtonType="ImageButton"  EditImageUrl="~\img\Editar_32.png" UpdateImageUrl="~\img\accept_32.png" CancelImageUrl="~\img\block_32.png" InsertImageUrl="~\img\accept_32.png" >
+                 <telerik:GridEditCommandColumn ButtonType="ImageButton">
                  </telerik:GridEditCommandColumn>
-                 <telerik:GridButtonColumn FilterControlAltText="Filter EXCLUIR column" ConfirmDialogType="RadWindow"  UniqueName="EXCLUIR" ButtonType="ImageButton" ImageUrl="~\img\delete_32.png" ConfirmText="ATENÇÃO O REGISTRO SERA EXCLUÍDO">
+                 <telerik:GridButtonColumn FilterControlAltText="Filter Excluir column" UniqueName="Excluir">
                  </telerik:GridButtonColumn>
+                                 <telerik:GridTemplateColumn FilterControlAltText="Filter TemplateColumn column" UniqueName="TemplateColumn">
+            <ItemTemplate>
+                <telerik:RadButton  ID="RadButtonVisualizar"  UniqueName="NovaPagina" CommandName="NovaPagina"    ButtonType ="LinkButton" NavigateUrl='<%# String.Format("~/web/servicos_fatura/configuracoes/sf_cad_leiaute_detalhes.aspx?id_SF_CAD_LEIAUTE={0}", Eval("id_SF_CAD_LEIAUTE"))    %>' runat="server" Text="DETALHES">
+                    <Icon PrimaryIconUrl ="../../../img/search_page.png" />
+                </telerik:RadButton>
+                 <HeaderStyle CssClass="col-xs-1" />
+                                      <ItemStyle HorizontalAlign="Center" />
+            </ItemTemplate>
+            <HeaderStyle CssClass="col-xs-2" />
+        </telerik:GridTemplateColumn>
             </Columns>
 
 <EditFormSettings>
 <EditColumn UniqueName="EditCommandColumn1" FilterControlAltText="Filter EditCommandColumn1 column"></EditColumn>
 </EditFormSettings>
+
         </MasterTableView>
 
     </telerik:RadGrid>
-    <asp:SqlDataSource ID="SqlDataSourceBuscaLeiaute" runat="server" ConnectionString="<%$ ConnectionStrings:conteltelecomConnectionString %>" SelectCommand="SELECT SF_CAD_LEIAUTE.desc_SF_CAD_LEIAUTE, SF_CAD_LEIAUTE.id_SF_CAD_LEIAUTE, SF_CAD_LEIAUTE.id_OP_OPERADORAS, OP_OPERADORAS.desc_OP_OPERADORAS, SF_CAD_LEIAUTE.st_SF_CAD_LEIAUTE FROM SF_CAD_LEIAUTE INNER JOIN OP_OPERADORAS ON SF_CAD_LEIAUTE.id_OP_OPERADORAS = OP_OPERADORAS.id_OP_OPERADORAS" DeleteCommand="DELETE FROM SF_CAD_LEIAUTE WHERE (id_SF_CAD_LEIAUTE = @id_SF_CAD_LEIAUTE)" InsertCommand="INSERT INTO SF_CAD_LEIAUTE(desc_SF_CAD_LEIAUTE, st_SF_CAD_LEIAUTE, id_OP_OPERADORAS) VALUES (@desc_SF_CAD_LEIAUTE, @st_SF_CAD_LEIAUTE, @id_OP_OPERADORAS)" UpdateCommand="UPDATE SF_CAD_LEIAUTE SET desc_SF_CAD_LEIAUTE = @desc_SF_CAD_LEIAUTE, st_SF_CAD_LEIAUTE = @st_SF_CAD_LEIAUTE, id_OP_OPERADORAS = @id_OP_OPERADORAS WHERE (id_SF_CAD_LEIAUTE = @id_SF_CAD_LEIAUTE)">
+    <asp:SqlDataSource ID="SqlDataSourceBuscaLeiaute" runat="server" ConnectionString="<%$ ConnectionStrings:conteltelecom %>" SelectCommand="SELECT SF_CAD_LEIAUTE.desc_SF_CAD_LEIAUTE, OP_OPERADORAS.desc_OP_OPERADORAS, SF_CAD_LEIAUTE.id_SF_CAD_LEIAUTE, OP_OPERADORAS.id_OP_OPERADORAS, SF_CAD_LEIAUTE.st_SF_CAD_LEIAUTE FROM SF_CAD_LEIAUTE INNER JOIN OP_OPERADORAS ON SF_CAD_LEIAUTE.id_OP_OPERADORAS = OP_OPERADORAS.id_OP_OPERADORAS" DeleteCommand="DELETE FROM SF_CAD_LEIAUTE WHERE (id_SF_CAD_LEIAUTE = @id_SF_CAD_LEIAUTE)" InsertCommand="INSERT INTO SF_CAD_LEIAUTE(desc_SF_CAD_LEIAUTE, st_SF_CAD_LEIAUTE, id_OP_OPERADORAS, id_PS_PESSOA_inc, id_PS_PESSOA_alt) VALUES (@desc_SF_CAD_LEIAUTE, @st_SF_CAD_LEIAUTE, @id_OP_OPERADORAS, @id_PS_PESSOA_inc, @id_PS_PESSOA_alt)" UpdateCommand="UPDATE SF_CAD_LEIAUTE SET desc_SF_CAD_LEIAUTE = @desc_SF_CAD_LEIAUTE, st_SF_CAD_LEIAUTE = @st_SF_CAD_LEIAUTE, dtAlt_SF_CAD_LEIAUTE = GETDATE(), id_OP_OPERADORAS = @id_OP_OPERADORAS, id_PS_PESSOA_alt = @id_PS_PESSOA_alt WHERE (id_SF_CAD_LEIAUTE = @id_SF_CAD_LEIAUTE)">
         <DeleteParameters>
             <asp:Parameter Name="id_SF_CAD_LEIAUTE" />
         </DeleteParameters>
@@ -58,11 +72,14 @@
             <asp:Parameter Name="desc_SF_CAD_LEIAUTE" />
             <asp:Parameter Name="st_SF_CAD_LEIAUTE" />
             <asp:Parameter Name="id_OP_OPERADORAS" />
+                        <asp:SessionParameter SessionField="id_PS_PESSOA_USUARIO" Name="id_PS_PESSOA_inc" Type="Int32" />
+                <asp:SessionParameter SessionField="id_PS_PESSOA_USUARIO" Name="id_PS_PESSOA_alt" Type="Int32" />
         </InsertParameters>
         <UpdateParameters>
             <asp:Parameter Name="desc_SF_CAD_LEIAUTE" />
             <asp:Parameter Name="st_SF_CAD_LEIAUTE" />
             <asp:Parameter Name="id_OP_OPERADORAS" />
+              <asp:SessionParameter SessionField="id_PS_PESSOA_USUARIO" Name="id_PS_PESSOA_alt" Type="Int32" />
             <asp:Parameter Name="id_SF_CAD_LEIAUTE" />
         </UpdateParameters>
     </asp:SqlDataSource>
@@ -78,4 +95,5 @@
             <asp:Parameter Name="Original_id_OP_OPERADORAS" Type="Int32" />
         </UpdateParameters>
     </asp:ObjectDataSource>
+ 
 </asp:Content>

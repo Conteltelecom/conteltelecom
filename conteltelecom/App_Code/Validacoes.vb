@@ -54,9 +54,9 @@
                 '  Dim iCpf As Int64 = Convert.ToInt64(cnpj)
                 If cnpj.ToString.Length <= 11 Then
 
-                    Return String.Format("{0:###\.###\.###\-##}", Convert.ToInt64(cnpj))
+                    Return (String.Format("{0:###\.###\.###\-##}", Convert.ToInt64(cnpj))).PadLeft(15, "0")
                 Else
-                    Return String.Format("{0:##\.###\.###\/####\-##}", Convert.ToInt64(cnpj))
+                    Return String.Format("{0:##\.###\.###\/####\-##}", Convert.ToInt64(cnpj)).PadLeft(18, "0")
                 End If
 
 

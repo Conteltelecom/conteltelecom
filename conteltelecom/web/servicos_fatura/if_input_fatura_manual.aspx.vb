@@ -90,11 +90,11 @@ Public Class if_input_fatura_manual
             SqlDataSourceLinhas.InsertParameters("codLinha_LI_LINHAS").DefaultValue = codLinha_LI_LINHAS
             SqlDataSourceLinhas.InsertParameters("vl_contrato").DefaultValue = vl_contrato
             If id_PS_CIDADES = 0 Then
-                RadWindowManagerMsg.RadAlert("ATENÇÃO CIDADE NÃO CADATRADA", 400, Nothing, "MESNAGEM", Nothing)
+                RadWindowManagerMsg.RadAlert("ATENÇÃO CIDADE NÃO CADATRADA", 400, Nothing, "MENSAGEM", Nothing)
                 Exit Sub
             End If
             If nomeUnidade_LI_LINHAS = "" Then
-                RadWindowManagerMsg.RadAlert("ATENÇÃO UNIDADE NÃO CADATRADA", 400, Nothing, "MESNAGEM", Nothing)
+                RadWindowManagerMsg.RadAlert("ATENÇÃO UNIDADE NÃO CADATRADA", 400, Nothing, "MENSAGEM", Nothing)
                 Exit Sub
             Else
                 SqlDataSourceLinhas.InsertParameters("nomeUnidade_LI_LINHAS").DefaultValue = nomeUnidade_LI_LINHAS
@@ -248,7 +248,7 @@ Public Class if_input_fatura_manual
                 End If
             Catch ex As Exception
 
-                RadWindowManagerMsg.RadAlert("ATENÇÃO OCORREU UM ERRO DURANTE A OPERAÇÃO", 400, Nothing, "MESNAGEM", Nothing)
+                RadWindowManagerMsg.RadAlert("ATENÇÃO OCORREU UM ERRO DURANTE A OPERAÇÃO", 400, Nothing, "MENSAGEM", Nothing)
             End Try
         End If
         If e.CommandName = "Edit" Then
@@ -286,7 +286,7 @@ Public Class if_input_fatura_manual
             id_SF_SERVICOS_FATURA_Atual = e.Command.Parameters("@Id").Value
         Else
             id_SF_SERVICOS_FATURA_Atual = e.Command.Parameters("@Id").Value
-            RadWindowManagerMsg.RadAlert("REGISTRO JÁ EXISTE", 400, Nothing, "MESNAGEM", Nothing)
+            RadWindowManagerMsg.RadAlert("REGISTRO JÁ EXISTE", 400, Nothing, "MENSAGEM", Nothing)
         End If
 
     End Sub

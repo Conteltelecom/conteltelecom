@@ -790,7 +790,7 @@ Namespace DropDownCidadeTableAdapters
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT desc_PS_CIDADES, id_PS_CIDADES FROM PS_CIDADES WHERE (cod_PS_UF = @cod_PS_"& _ 
-                "UF) AND (st_PS_CIDADES = 1)"
+                "UF) AND (st_PS_CIDADES = 1)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"order by desc_PS_CIDADES"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@cod_PS_UF", Global.System.Data.SqlDbType.NChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, "cod_PS_UF", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub

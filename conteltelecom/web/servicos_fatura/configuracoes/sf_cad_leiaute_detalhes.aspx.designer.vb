@@ -48,4 +48,13 @@ Partial Public Class sf_cad_leiaute_detalhes
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
     Protected WithEvents ObjectDataSourceSF_TIPO_LEITURA As Global.System.Web.UI.WebControls.ObjectDataSource
+    
+    '''<summary>
+    '''Controle SqlDataSourceCadVariaveis.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents SqlDataSourceCadVariaveis As Global.System.Web.UI.WebControls.SqlDataSource
 End Class

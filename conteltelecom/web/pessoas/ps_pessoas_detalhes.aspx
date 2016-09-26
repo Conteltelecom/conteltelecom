@@ -50,7 +50,7 @@
                             <asp:Label ID="Label13" runat="server"  Font-Bold="true" Text="CPF:" />
                         </td>
                         <td>
-                            <asp:Label ID="LabelCpf" Font-Bold="false" runat="server" Text='<%#Me.CpfFormat(Eval("cpf_PS_FISICA")) %>' />
+                            <asp:Label ID="LabelCpf" Font-Bold="false" runat="server" Text='<%# Me.CpfFormat(Eval("cpf_PS_FISICA")) %>' />
                         </td>
                         <td>
                             <asp:Label ID="Label15" runat="server" Font-Bold="true" Text="DATA NASCIMENTO:" />

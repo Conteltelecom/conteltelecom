@@ -22,9 +22,9 @@ Public Class rel_descritivo
                     Session("codMatriz_PS_CLIENTES") = ""
                 Else
 
-                    RadDropDownListMes.SelectedValue = Date.Today.Month
+                    RadDropDownListMes.SelectedValue = Date.Today.Month.ToString("d2")
                     RadDropDownListAno.SelectedValue = Date.Today.Year
-                    Session("mesAnoRefereincia_SF_SERVICOS_FATURA") = If(RadDropDownListMes.SelectedValue < 9, "0" & RadDropDownListMes.SelectedValue, RadDropDownListMes.SelectedValue) & "/" & RadDropDownListAno.SelectedValue
+                    Session("mesAnoRefereincia_SF_SERVICOS_FATURA") = RadDropDownListMes.SelectedValue & "/" & RadDropDownListAno.SelectedValue
                     Session("codMatriz_PS_CLIENTES") = Request.QueryString("id_PS_PESSOA")
                     RadAutoCompleteBoxBuscaMatriz.Visible = False
                     Label2.Visible = False
@@ -57,7 +57,7 @@ Public Class rel_descritivo
         Else
             Session("codMatriz_PS_CLIENTES") = Request.QueryString("id_PS_PESSOA")
         End If
-        Session("mesAnoRefereincia_SF_SERVICOS_FATURA") = If(RadDropDownListMes.SelectedValue < 9, "0" & RadDropDownListMes.SelectedValue, RadDropDownListMes.SelectedValue) & "/" & RadDropDownListAno.SelectedValue
+        Session("mesAnoRefereincia_SF_SERVICOS_FATURA") = RadDropDownListMes.SelectedValue & "/" & RadDropDownListAno.SelectedValue
 
         ReportViewer1.LocalReport.Refresh()
 
@@ -89,7 +89,7 @@ Public Class rel_descritivo
 
         Else
             sqldatasetBusca = SqlDataSourceBusca
-            Session("mesAnoRefereincia_SF_SERVICOS_FATURA") = If(RadDropDownListMes.SelectedValue < 9, "0" & RadDropDownListMes.SelectedValue, RadDropDownListMes.SelectedValue) & "/" & RadDropDownListAno.SelectedValue
+            Session("mesAnoRefereincia_SF_SERVICOS_FATURA") = RadDropDownListMes.SelectedValue & "/" & RadDropDownListAno.SelectedValue
         End If
 
 

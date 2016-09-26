@@ -8,5 +8,11 @@ Public Class sf_cad_leiaute
 
     End Sub
 
+    Private Sub RadGridCadLeiaute_PreRender(sender As Object, e As EventArgs) Handles RadGridCadLeiaute.PreRender
+        If IsPostBack = False Then
+            PersonalizarControles.SubRadGrid(RadGridCadLeiaute, 0)
+            RadGridCadLeiaute.Rebind()
+        End If
 
+    End Sub
 End Class

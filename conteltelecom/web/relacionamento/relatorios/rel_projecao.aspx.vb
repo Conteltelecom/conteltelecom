@@ -228,7 +228,13 @@ Public Class rel_projecao
                     Case 1
 
                         valor = (usoInicial / dias) * Validos
-                        Return valor
+                        If valor > usoInicial Then
+                            Return usoInicial
+                        Else
+                            Return valor
+
+                        End If
+
 
                     Case -1
                         Return buscaUsoMes(id_categoriaUso, id_LI_LINHAS, dtaMesref)

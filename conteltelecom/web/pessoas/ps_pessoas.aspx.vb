@@ -12,7 +12,7 @@ Public Class ps_pessoas
     Public Function CpfFormat(cpf As Object) As String
 
         Dim ClsValidacoes As New conteltelecom.Validacoes
-        Return ClsValidacoes.CpfFormat(cpf)
+        Return ClsValidacoes.CNPJFormat(cpf)
 
     End Function
     Public Function FormataFone(fone As Object) As String

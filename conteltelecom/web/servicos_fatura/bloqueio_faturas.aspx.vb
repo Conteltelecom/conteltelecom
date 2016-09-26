@@ -5,12 +5,12 @@ Public Class bloqueio_faturas
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If IsPostBack = False Then
-            RadDropDownListMes.SelectedValue = Date.Today.Month
+            RadDropDownListMes.SelectedValue = Date.Today.Month.ToString("d2")
             RadDropDownListAno.SelectedValue = Date.Today.Year
-            Dim mes01 As String = If(RadDropDownListMes.SelectedValue < 9, "0" & RadDropDownListMes.SelectedValue, RadDropDownListMes.SelectedValue) & "/" & RadDropDownListAno.SelectedValue
+            Dim mes01 As String = RadDropDownListMes.SelectedValue & "/" & RadDropDownListAno.SelectedValue
             Dim dtaMesref As Date = "01/" & mes01
-            Dim mes02 As String = If((dtaMesref.AddMonths(-1)).Month < 10, "0" & (dtaMesref.AddMonths(-1)).Month, (dtaMesref.AddMonths(-1)).Month) & "/" & (dtaMesref.AddMonths(-1)).Year
-            Dim mes03 As String = If((dtaMesref.AddMonths(-2)).Month < 10, "0" & (dtaMesref.AddMonths(-2)).Month, (dtaMesref.AddMonths(-2)).Month) & "/" & (dtaMesref.AddMonths(-2)).Year
+            Dim mes02 As String = dtaMesref.AddMonths(-1).Month.ToString("d2") & "/" & dtaMesref.AddMonths(-1).Year
+            Dim mes03 As String = dtaMesref.AddMonths(-2).Month.ToString("d2") & "/" & dtaMesref.AddMonths(-2).Year
             SqlDataSourceBuscaClientes.SelectParameters("DtMes01").DefaultValue = mes01
             SqlDataSourceBuscaClientes.SelectParameters("DtMes02").DefaultValue = mes02
             SqlDataSourceBuscaClientes.SelectParameters("DtMes03").DefaultValue = mes03
@@ -33,10 +33,10 @@ Public Class bloqueio_faturas
 
     Sub Filtro()
 
-        Dim mes01 As String = If(RadDropDownListMes.SelectedValue < 9, "0" & RadDropDownListMes.SelectedValue, RadDropDownListMes.SelectedValue) & "/" & RadDropDownListAno.SelectedValue
+        Dim mes01 As String = RadDropDownListMes.SelectedValue & "/" & RadDropDownListAno.SelectedValue
         Dim dtaMesref As Date = "01/" & mes01
-        Dim mes02 As String = If((dtaMesref.AddMonths(-1)).Month < 10, "0" & (dtaMesref.AddMonths(-1)).Month, (dtaMesref.AddMonths(-1)).Month) & "/" & (dtaMesref.AddMonths(-1)).Year
-        Dim mes03 As String = If((dtaMesref.AddMonths(-2)).Month < 10, "0" & (dtaMesref.AddMonths(-2)).Month, (dtaMesref.AddMonths(-2)).Month) & "/" & (dtaMesref.AddMonths(-2)).Year
+        Dim mes02 As String = dtaMesref.AddMonths(-1).Month.ToString("d2") & "/" & dtaMesref.AddMonths(-1).Year
+        Dim mes03 As String = dtaMesref.AddMonths(-2).Month.ToString("d2") & "/" & dtaMesref.AddMonths(-2).Year
 
         'Dim header As GridHeaderItem = TryCast(RadGridBloquiosFatura.MasterTableView.GetItems(GridItemType.Header)(0), GridHeaderItem)
 
@@ -76,10 +76,10 @@ Public Class bloqueio_faturas
 
 
     Protected Sub RadButtonPesquisar_Click(sender As Object, e As EventArgs)
-        Dim mes01 As String = If(RadDropDownListMes.SelectedValue < 9, "0" & RadDropDownListMes.SelectedValue, RadDropDownListMes.SelectedValue) & "/" & RadDropDownListAno.SelectedValue
+        Dim mes01 As String = RadDropDownListMes.SelectedValue & "/" & RadDropDownListAno.SelectedValue
         Dim dtaMesref As Date = "01/" & mes01
-        Dim mes02 As String = If((dtaMesref.AddMonths(-1)).Month < 10, "0" & (dtaMesref.AddMonths(-1)).Month, (dtaMesref.AddMonths(-1)).Month) & "/" & (dtaMesref.AddMonths(-1)).Year
-        Dim mes03 As String = If((dtaMesref.AddMonths(-2)).Month < 10, "0" & (dtaMesref.AddMonths(-2)).Month, (dtaMesref.AddMonths(-2)).Month) & "/" & (dtaMesref.AddMonths(-2)).Year
+        Dim mes02 As String = dtaMesref.AddMonths(-1).Month.ToString("d2") & "/" & dtaMesref.AddMonths(-1).Year
+        Dim mes03 As String = dtaMesref.AddMonths(-2).Month.ToString("d2") & "/" & dtaMesref.AddMonths(-2).Year
         SqlDataSourceBuscaClientes.SelectParameters("DtMes01").DefaultValue = mes01
         SqlDataSourceBuscaClientes.SelectParameters("DtMes02").DefaultValue = mes02
         SqlDataSourceBuscaClientes.SelectParameters("DtMes03").DefaultValue = mes03
@@ -97,7 +97,7 @@ Public Class bloqueio_faturas
 
 
 
-        Dim mes01 As String = If(RadDropDownListMes.SelectedValue < 9, "0" & RadDropDownListMes.SelectedValue, RadDropDownListMes.SelectedValue) & "/" & RadDropDownListAno.SelectedValue
+        Dim mes01 As String = RadDropDownListMes.SelectedValue & "/" & RadDropDownListAno.SelectedValue
 
 
 

@@ -4,16 +4,16 @@ Public Class sf_cad_leiaute_detalhes
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        If Page.IsPostBack = False Then
-            Select Case Request.QueryString("modo")
-                Case "EditAll", "PerformInsert"
-                    For Each item As GridDataItem In RadGri_dsf_cad_leiaute.Items
-                        If item.IsInEditMode = False Then
-                            '    item.FireCommandEvent("EditAll", [String].Empty)
-                        End If
-                    Next
-            End Select
-        End If
+
     End Sub
 
+
+
+    Private Sub RadGri_dsf_cad_leiaute_PreRender(sender As Object, e As EventArgs) Handles RadGri_dsf_cad_leiaute.PreRender
+        If IsPostBack = False Then
+            PersonalizarControles.SubRadGrid(RadGri_dsf_cad_leiaute, 0)
+            RadGri_dsf_cad_leiaute.MasterTableView.DetailTables.Item(0).EditMode = GridEditMode.InPlace
+            RadGri_dsf_cad_leiaute.Rebind()
+        End If
+    End Sub
 End Class

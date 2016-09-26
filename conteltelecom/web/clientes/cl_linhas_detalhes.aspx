@@ -49,7 +49,8 @@
                             <EditItemTemplate>
 
                                 <telerik:RadNumericTextBox ID="vlInicial_id_LI_TIPOSRadNumericTextBox" runat="server" DbValue='<%# Bind("vlInicial_id_LI_TIPOS") %>' Width="100%" Type="Number">
-                                </telerik:RadNumericTextBox>
+                                <IncrementSettings InterceptMouseWheel="false" />
+								</telerik:RadNumericTextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidatorvlInicial_id_LI_TIPOS" ControlToValidate="vlInicial_id_LI_TIPOSRadNumericTextBox" runat="server" ErrorMessage="*" Display="Dynamic" SetFocusOnError="true" ForeColor="RED"></asp:RequiredFieldValidator>
                             </EditItemTemplate>
                             <ItemTemplate>
@@ -60,7 +61,8 @@
                         <telerik:GridTemplateColumn DataField="vlIdeal_LI_LINHAS"  FilterControlAltText="Filter vlIdeal_LI_LINHAS column" HeaderText="VALOR IDEAL" UniqueName="vlIdeal_LI_LINHAS">
                             <EditItemTemplate>
                                 <telerik:RadNumericTextBox ID="vlIdeal_LI_LINHASRadNumericTextBox" MaxValue="15" Width="100%" runat="server" DbValue='<%# Bind("vlIdeal_LI_LINHAS") %>' Type="Number">
-                                </telerik:RadNumericTextBox>
+                                <IncrementSettings InterceptMouseWheel="false" />
+								</telerik:RadNumericTextBox>
                             </EditItemTemplate>
                             <ItemTemplate>
                                 <asp:Label ID="vlIdeal_LI_LINHASLabel" runat="server" Text='<%# Eval("vlIdeal_LI_LINHAS") %>'></asp:Label>
@@ -74,7 +76,8 @@
                         <telerik:GridTemplateColumn DataField="diaVenc_LI_LINHAS" FilterControlAltText="Filter diaVenc_LI_LINHAS column" HeaderText="DIA VENCIMENTO" UniqueName="diaVenc_LI_LINHAS">
                             <EditItemTemplate>
                                 <telerik:RadNumericTextBox Width ="100%" ID="diaVenc_LI_LINHASTextBox" MaxLength="2" runat="server" Text='<%# Bind("diaVenc_LI_LINHAS") %>' MaxValue="31" MinValue ="1">
-                                    <NumberFormat DecimalDigits="0" />
+                                    <IncrementSettings InterceptMouseWheel="false" />
+									<NumberFormat DecimalDigits="0" />
                                 </telerik:RadNumericTextBox>
                                                                 
                             </EditItemTemplate>
@@ -85,7 +88,8 @@
                         </telerik:GridTemplateColumn>
                         <telerik:GridTemplateColumn DataField="perIncial_LI_LINHAS" FilterControlAltText="Filter perIncial_LI_LINHAS column" HeaderText="PERÍODO INICIAL" UniqueName="perIncial_LI_LINHAS">
                             <EditItemTemplate>
-                                <telerik:RadMaskedTextBox Width ="100%" ID="perIncial_LI_LINHASTextBox" Mask="<1..12>/<2000..2050>"   runat="server" Text='<%# Bind("perIncial_LI_LINHAS") %>'></telerik:RadMaskedTextBox>
+                                <telerik:RadMaskedTextBox Width ="100%" ID="perIncial_LI_LINHASTextBox" Mask="<1..12>/<2000..2050>"   runat="server" Text='<%# Bind("perIncial_LI_LINHAS") %>'>
+								</telerik:RadMaskedTextBox>
                                            
                             
                             </EditItemTemplate>

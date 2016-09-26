@@ -148,7 +148,7 @@ Public Class atualizar_infoamacoes_relatorio
 
                 Next
 
-                RadWindowManagerMsgSite.RadAlert("REGISTROS ALTERADOS COM SUCESSO", 400, Nothing, "MESNAGEM", Nothing)
+                RadWindowManagerMsgSite.RadAlert("REGISTROS ALTERADOS COM SUCESSO", 400, Nothing, "MENSAGEM", Nothing)
 
             End If
         End If
@@ -258,13 +258,13 @@ Public Class atualizar_infoamacoes_relatorio
                     End If
 
                 Catch ex As Exception
-                    RadWindowManagerMsgSite.RadAlert("ERRO DURANTE O PROCESSO", 400, Nothing, "MESNAGEM", Nothing)
+                    RadWindowManagerMsgSite.RadAlert("ERRO DURANTE O PROCESSO", 400, Nothing, "MENSAGEM", Nothing)
                 End Try
             Next
             ajustaUso()
             ajustaUsoIdLinha()
             e.Canceled = True
-            RadWindowManagerMsgSite.RadAlert("REGISTROS ALTERADOS COM SUCESSO", 400, Nothing, "MESNAGEM", Nothing)
+            RadWindowManagerMsgSite.RadAlert("REGISTROS ALTERADOS COM SUCESSO", 400, Nothing, "MENSAGEM", Nothing)
         End If
     End Sub
 

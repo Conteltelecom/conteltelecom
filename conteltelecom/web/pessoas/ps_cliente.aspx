@@ -39,7 +39,7 @@
                    </div> 
                       </div>
              <div class="form-group"> 
-                    <asp:Label ID="LabelCnpj" CssClass="col-lg-2 control-label"  Font-Bold="true" runat="server" Text="CNPJ:" ></asp:Label>
+                    <asp:Label ID="LabelCnpj" CssClass="col-lg-2 control-label"  Font-Bold="true" runat="server" Text="CPF/CNPJ:" ></asp:Label>
                <div class="col-lg-4">
          
                     <telerik:RadMaskedTextBox ID="RadMaskedTextBoxCnpjI" Width="100%" Mask="##.###.###/####-##" CssClass="form-control"   runat="server" Skin="Bootstrap"></telerik:RadMaskedTextBox> 
@@ -92,7 +92,7 @@
     <br />
   
              
-     <telerik:RadGrid ID="RadGridPessoas" runat="server" Skin="Bootstrap" AutoGenerateColumns="false"   Culture="pt-BR" DataSourceID="SqlDataSourcePesoas" GroupPanelPosition="Top"   >
+     <telerik:RadGrid ID="RadGridPessoas" runat="server" Skin="Bootstrap" AutoGenerateColumns="False"  RenderMode="Auto"  Culture="pt-BR" DataSourceID="SqlDataSourcePesoas" Width="100%" style="margin-top: 0px"   >
 
 <GroupingSettings CollapseAllTooltip="Collapse all groups"></GroupingSettings>
              <ExportSettings>
@@ -127,9 +127,14 @@
                                  <asp:Label ID="razaosocial_PS_JURIDICALabel" runat="server" Text='<%# Eval("razaosocial_PS_JURIDICA") %>'></asp:Label>
                              </ItemTemplate>
                          </telerik:GridTemplateColumn>
-                         <telerik:GridBoundColumn DataField="CNPJ_PS_JURIDICA" FilterControlAltText="Filter CNPJ_PS_JURIDICA column" HeaderText="CNPJ" UniqueName="CNPJ_PS_JURIDICA">
-                             <HeaderStyle CssClass="col-xs-2" />
-                         </telerik:GridBoundColumn>
+                         <telerik:GridTemplateColumn DataField="CNPJ_PS_JURIDICA" FilterControlAltText="Filter CNPJ_PS_JURIDICA column" HeaderText="CPF/CNPJ" UniqueName="CNPJ_PS_JURIDICA">
+                             <EditItemTemplate>
+                                 <asp:TextBox ID="CNPJ_PS_JURIDICATextBox" runat="server" Text='<%# Bind("CNPJ_PS_JURIDICA") %>'></asp:TextBox>
+                             </EditItemTemplate>
+                             <ItemTemplate>
+                                 <asp:Label ID="CNPJ_PS_JURIDICALabel" runat="server" Text='<%# Me.FCnpjFormat(Eval("CNPJ_PS_JURIDICA")) %>' ></asp:Label>
+                             </ItemTemplate>
+                         </telerik:GridTemplateColumn>
                          <telerik:GridBoundColumn DataField="uf_cidade" FilterControlAltText="Filter uf_cidade column" HeaderText="UF / CIDADE" UniqueName="uf_cidade">
                              <HeaderStyle CssClass="col-xs-3" />
                          </telerik:GridBoundColumn>
@@ -174,7 +179,7 @@
                                       </ItemTemplate>
                                       <HeaderStyle CssClass="col-xs-5" />
                                   </telerik:GridTemplateColumn>
-                                  <telerik:GridTemplateColumn DataField="CNPJ_PS_JURIDICA" FilterControlAltText="Filter CNPJ_PS_JURIDICA column" HeaderText="CNPJ" UniqueName="CNPJ_PS_JURIDICA">
+                                  <telerik:GridTemplateColumn DataField="CNPJ_PS_JURIDICA" FilterControlAltText="Filter CNPJ_PS_JURIDICA column" HeaderText="CPF\CNPJ" UniqueName="CNPJ_PS_JURIDICA">
                                       <EditItemTemplate>
                                           <asp:TextBox ID="CNPJ_PS_JURIDICATextBox" runat="server" Text='<%# Bind("CNPJ_PS_JURIDICA") %>'></asp:TextBox>
                                       </EditItemTemplate>
@@ -224,6 +229,10 @@
                 </EditFormSettings>
              
          </MasterTableView>
+   
+
+
+<HeaderContextMenu RenderMode="Auto"></HeaderContextMenu>
    
      </telerik:RadGrid>
      

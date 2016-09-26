@@ -57,7 +57,7 @@
                 </telerik:GridButtonColumn>
             </Columns>
             <EditFormSettings>
-                <EditColumn FilterControlAltText="Filter EditCommandColumn1 column" InsertImageUrl="~\img\accept_32.png" UpdateImageUrl="~\img\accept_32.png"  UniqueName="EditCommandColumn1">
+                <EditColumn FilterControlAltText="Filter EditCommandColumn1 column"  InsertImageUrl="~\img\accept_32.png" UpdateImageUrl="~\img\accept_32.png"  UniqueName="EditCommandColumn1">
                  
                 </EditColumn>
                 

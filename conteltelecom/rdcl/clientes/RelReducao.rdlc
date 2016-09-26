@@ -930,7 +930,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>VALOR CONTEL</Value>
+                              <Value>=IIf(Parameters!tipoRel.Value=2,"VALOR CONTEL","")</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -975,6 +975,9 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
+                      <Visibility>
+                        <Hidden>=IIf(Parameters!tipoRel.Value=2,false,true)</Hidden>
+                      </Visibility>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -1126,7 +1129,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=IIf(Parameters!tipoRel.Value=2,ReportItems!VlTotalReducao.Value -ReportItems!ValorContel.Value,"")</Value>
+                              <Value>=ReportItems!VlTotalReducao.Value-ReportItems!ValorContel.Value</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                                 <Format>'R$' #,0.00;('R$' #,0.00)</Format>
@@ -1139,6 +1142,9 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox84</rd:DefaultName>
+                      <Visibility>
+                        <Hidden>=IIf(Parameters!tipoRel.Value=2,false,true)</Hidden>
+                      </Visibility>
                       <Style>
                         <Border>
                           <Style>None</Style>

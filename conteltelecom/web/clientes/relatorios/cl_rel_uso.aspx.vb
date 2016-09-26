@@ -8,7 +8,7 @@ Public Class cl_rel_uso
 
         If IsPostBack = False Then
 
-            RadDropDownListMes.SelectedValue = Date.Today.Month
+            RadDropDownListMes.SelectedValue = Date.Today.Month.ToString("d2")
             RadDropDownListAno.SelectedValue = Date.Today.Year
             Dim Parametros As Integer
             If RadDropDownLisTipo.SelectedValue = 0 Then
@@ -26,7 +26,7 @@ Public Class cl_rel_uso
 
                 RadDropDownListMes.SelectedValue = Date.Today.Month
                 RadDropDownListAno.SelectedValue = Date.Today.Year
-                Session("mesAnoRefereincia_SF_SERVICOS_FATURA") = If(RadDropDownListMes.SelectedValue < 9, "0" & RadDropDownListMes.SelectedValue, RadDropDownListMes.SelectedValue) & "/" & RadDropDownListAno.SelectedValue
+                Session("mesAnoRefereincia_SF_SERVICOS_FATURA") = Date.Today.Month.ToString("d2") & "/" & Date.Today.Year
                 Session("codMatriz_PS_CLIENTES") = Request.QueryString("id_PS_PESSOA")
                 RadAutoCompleteBoxBuscaMatriz.Visible = False
                 Label2.Visible = False
@@ -61,7 +61,7 @@ Public Class cl_rel_uso
         Dim prmReport As New ReportParameter("tipoRel", Parametros)
 
         ReportViewerUso.LocalReport.SetParameters(New ReportParameter() {prmReport})
-        Session("mesAnoRefereincia_SF_SERVICOS_FATURA") = If(RadDropDownListMes.SelectedValue < 9, "0" & RadDropDownListMes.SelectedValue, RadDropDownListMes.SelectedValue) & "/" & RadDropDownListAno.SelectedValue
+        Session("mesAnoRefereincia_SF_SERVICOS_FATURA") = RadDropDownListMes.SelectedValue & "/" & RadDropDownListAno.SelectedValue
         ReportViewerUso.LocalReport.Refresh()
 
         ' Response.Redirect(Request.Url.ToString())

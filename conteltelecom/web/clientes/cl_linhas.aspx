@@ -45,7 +45,7 @@
                     </ItemTemplate>
                     <HeaderStyle CssClass="col-lg-4" />
                 </telerik:GridTemplateColumn>
-                <telerik:GridTemplateColumn DataField="CNPJ_PS_JURIDICA" FilterControlAltText="Filter CNPJ_PS_JURIDICA column" HeaderText="CNPJ" UniqueName="CNPJ_PS_JURIDICA">
+                <telerik:GridTemplateColumn DataField="CNPJ_PS_JURIDICA" FilterControlAltText="Filter CNPJ_PS_JURIDICA column" HeaderText="CPF/CNPJ" UniqueName="CNPJ_PS_JURIDICA">
                     <EditItemTemplate>
                         <asp:TextBox ID="CNPJ_PS_JURIDICATextBox" runat="server" Text='<%# Bind("CNPJ_PS_JURIDICA") %>'></asp:TextBox>
                     </EditItemTemplate>

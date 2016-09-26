@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderNormal" runat="server">
     <telerik:RadGrid ID="RadGridCadUseuarios" runat="server" AutoGenerateColumns="False" Culture="pt-BR" DataSourceID="SqlDataSourceCriaUsuarios" CellSpacing="-1" GridLines="Both">
-<GroupingSettings CollapseAllTooltip="Collapse all groups"></GroupingSettings>
+<GroupingSettings CollapseAllTooltip="Collapse all groups" CollapseTooltip="Recolher grupo"></GroupingSettings>
         <ExportSettings>
             <Pdf PageWidth="">
             </Pdf>

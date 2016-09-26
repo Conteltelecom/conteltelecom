@@ -14,40 +14,49 @@ Option Explicit On
 Partial Public Class solicitacao_fatura
     
     '''<summary>
-    '''Controle LabelNome.
+    '''Controle Label1.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents LabelNome As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''Controle RadTextBoxMesAno.
+    '''Controle RadDropDownListMes.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents RadTextBoxMesAno As Global.Telerik.Web.UI.RadMaskedTextBox
+    Protected WithEvents RadDropDownListMes As Global.Telerik.Web.UI.RadDropDownList
     
     '''<summary>
-    '''Controle RadButtonPesquisar.
+    '''Controle Label4.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents RadButtonPesquisar As Global.Telerik.Web.UI.RadButton
+    Protected WithEvents Label4 As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''Controle RadButtonLimpar.
+    '''Controle RadDropDownListAno.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents RadButtonLimpar As Global.Telerik.Web.UI.RadButton
+    Protected WithEvents RadDropDownListAno As Global.Telerik.Web.UI.RadDropDownList
+    
+    '''<summary>
+    '''Controle RadImageButtonGerar.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents RadImageButtonGerar As Global.Telerik.Web.UI.RadImageButton
     
     '''<summary>
     '''Controle UpdatePanel1.

@@ -14,15 +14,6 @@ Option Explicit On
 Partial Public Class sf_cad_leiaute
     
     '''<summary>
-    '''Controle RadWindowManager1.
-    '''</summary>
-    '''<remarks>
-    '''Campo gerado automaticamente.
-    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-    '''</remarks>
-    Protected WithEvents RadWindowManager1 As Global.Telerik.Web.UI.RadWindowManager
-    
-    '''<summary>
     '''Controle RadGridCadLeiaute.
     '''</summary>
     '''<remarks>

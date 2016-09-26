@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Normalmaster.master" CodeBehind="lista_vencimento_ideal.aspx.vb" Inherits="conteltelecom.lista_vencimento_ideal" %>
+﻿<%@ Page Title="LISTA DE VENCIMENTOS IDEAIS" Language="vb" AutoEventWireup="false" MasterPageFile="~/Normalmaster.master" CodeBehind="lista_vencimento_ideal.aspx.vb" Inherits="conteltelecom.lista_vencimento_ideal" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderHeadNormal" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderNormal" runat="server">

@@ -2,44 +2,53 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderHeadNormal" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderNormal" runat="server">
-    <telerik:RadGrid ID="RadGridCadVariaveis" runat="server" AutoGenerateColumns="False" Culture="pt-BR" DataSourceID="SqlDataSourceCadVariaveis" GroupPanelPosition="Top">
+    <telerik:RadGrid ID="RadGridCadVariaveis" runat="server" AutoGenerateColumns="False" Culture="pt-BR" DataSourceID="SqlDataSourceCadVariaveis" AllowAutomaticDeletes="True" AllowAutomaticInserts="True" AllowAutomaticUpdates="True" CellSpacing="-1" GridLines="Both">
 <GroupingSettings CollapseAllTooltip="Collapse all groups"></GroupingSettings>
-        <MasterTableView DataKeyNames="id_SF_VARIAVEIS" DataSourceID="SqlDataSourceCadVariaveis">
+        <ExportSettings>
+            <Pdf PageWidth="">
+            </Pdf>
+        </ExportSettings>
+        <MasterTableView DataKeyNames="id_SF_CAD_VARIAVEL" DataSourceID="SqlDataSourceCadVariaveis">
             <Columns>
-                <telerik:GridBoundColumn DataField="id_SF_VARIAVEIS" DataType="System.Int32" FilterControlAltText="Filter id_SF_VARIAVEIS column" HeaderText="id_SF_VARIAVEIS" ReadOnly="True" SortExpression="id_SF_VARIAVEIS" UniqueName="id_SF_VARIAVEIS">
+                <telerik:GridBoundColumn DataField="id_SF_CAD_VARIAVEL" FilterControlAltText="Filter id_SF_CAD_VARIAVEL column" HeaderText="ID" SortExpression="id_SF_CAD_VARIAVEL" UniqueName="id_SF_CAD_VARIAVEL" DataType="System.Int32" ReadOnly="True">
                 </telerik:GridBoundColumn>
-                <telerik:GridBoundColumn DataField="desc_SF_VARIAVEIS" FilterControlAltText="Filter desc_SF_VARIAVEIS column" HeaderText="desc_SF_VARIAVEIS" SortExpression="desc_SF_VARIAVEIS" UniqueName="desc_SF_VARIAVEIS">
-                </telerik:GridBoundColumn>
-                <telerik:GridBoundColumn DataField="st_SF_VARIAVEIS" DataType="System.Byte" FilterControlAltText="Filter st_SF_VARIAVEIS column" HeaderText="st_SF_VARIAVEIS" SortExpression="st_SF_VARIAVEIS" UniqueName="st_SF_VARIAVEIS">
-                </telerik:GridBoundColumn>
-                <telerik:GridBoundColumn DataField="tamanho_SF_VARIAVEIS" DataType="System.Int32" FilterControlAltText="Filter tamanho_SF_VARIAVEIS column" HeaderText="tamanho_SF_VARIAVEIS" SortExpression="tamanho_SF_VARIAVEIS" UniqueName="tamanho_SF_VARIAVEIS">
-                </telerik:GridBoundColumn>
-                <telerik:GridBoundColumn DataField="posIni_SF_VARIAVEIS" DataType="System.Int32" FilterControlAltText="Filter posIni_SF_VARIAVEIS column" HeaderText="posIni_SF_VARIAVEIS" SortExpression="posIni_SF_VARIAVEIS" UniqueName="posIni_SF_VARIAVEIS">
-                </telerik:GridBoundColumn>
-                <telerik:GridBoundColumn DataField="posFim_SF_VARIAVEIS" DataType="System.Int32" FilterControlAltText="Filter posFim_SF_VARIAVEIS column" HeaderText="posFim_SF_VARIAVEIS" SortExpression="posFim_SF_VARIAVEIS" UniqueName="posFim_SF_VARIAVEIS">
-                </telerik:GridBoundColumn>
+                <telerik:GridTemplateColumn DataField="desc_SF_CAD_VARIAVEL" FilterControlAltText="Filter desc_SF_CAD_VARIAVEL column" HeaderText="DESCRIÇÃO DA VARIAVEL" SortExpression="desc_SF_CAD_VARIAVEL" UniqueName="desc_SF_CAD_VARIAVEL">
+                    <EditItemTemplate>
+                        <telerik:RadTextBox ID="desc_SF_CAD_VARIAVELTextBox"  Width="95%" runat="server" Text='<%# Bind("desc_SF_CAD_VARIAVEL") %>'></telerik:RadTextBox>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="desc_SF_CAD_VARIAVELLabel" runat="server" Text='<%# Eval("desc_SF_CAD_VARIAVEL") %>'></asp:Label>
+                    </ItemTemplate>
+                    <HeaderStyle CssClass="col-xs-12" />
+                </telerik:GridTemplateColumn>
+                <telerik:GridCheckBoxColumn DataType="System.Int16" DefaultInsertValue="1" FilterControlAltText="Filter st_SF_CAD_VARIAVEL column" HeaderText="ST" StringFalseValue="0" StringTrueValue="1" UniqueName="st_SF_CAD_VARIAVEL" DataField="st_SF_CAD_VARIAVEL">
+                </telerik:GridCheckBoxColumn>
+                <telerik:GridEditCommandColumn>
+                </telerik:GridEditCommandColumn>
+                <telerik:GridButtonColumn FilterControlAltText="Filter Excluir column" UniqueName="Excluir">
+                </telerik:GridButtonColumn>
             </Columns>
+
+<EditFormSettings>
+<EditColumn UniqueName="EditCommandColumn1" FilterControlAltText="Filter EditCommandColumn1 column"></EditColumn>
+</EditFormSettings>
         </MasterTableView>
     </telerik:RadGrid>
-    <asp:SqlDataSource ID="SqlDataSourceCadVariaveis" runat="server" ConnectionString="<%$ ConnectionStrings:conteltelecomConnectionString %>" DeleteCommand="DELETE FROM [SF_VARIAVEIS] WHERE [id_SF_VARIAVEIS] = @id_SF_VARIAVEIS" InsertCommand="INSERT INTO [SF_VARIAVEIS] ([id_SF_VARIAVEIS], [desc_SF_VARIAVEIS], [st_SF_VARIAVEIS], [tamanho_SF_VARIAVEIS], [posIni_SF_VARIAVEIS], [posFim_SF_VARIAVEIS]) VALUES (@id_SF_VARIAVEIS, @desc_SF_VARIAVEIS, @st_SF_VARIAVEIS, @tamanho_SF_VARIAVEIS, @posIni_SF_VARIAVEIS, @posFim_SF_VARIAVEIS)" SelectCommand="SELECT [id_SF_VARIAVEIS], [desc_SF_VARIAVEIS], [st_SF_VARIAVEIS], [tamanho_SF_VARIAVEIS], [posIni_SF_VARIAVEIS], [posFim_SF_VARIAVEIS] FROM [SF_VARIAVEIS]" UpdateCommand="UPDATE [SF_VARIAVEIS] SET [desc_SF_VARIAVEIS] = @desc_SF_VARIAVEIS, [st_SF_VARIAVEIS] = @st_SF_VARIAVEIS, [tamanho_SF_VARIAVEIS] = @tamanho_SF_VARIAVEIS, [posIni_SF_VARIAVEIS] = @posIni_SF_VARIAVEIS, [posFim_SF_VARIAVEIS] = @posFim_SF_VARIAVEIS WHERE [id_SF_VARIAVEIS] = @id_SF_VARIAVEIS">
+    <asp:SqlDataSource ID="SqlDataSourceCadVariaveis" runat="server" ConnectionString="<%$ ConnectionStrings:conteltelecomConnectionString %>" DeleteCommand="DELETE FROM SF_CAD_VARIAVEL WHERE (id_SF_CAD_VARIAVEL = @id_SF_CAD_VARIAVEL)" InsertCommand="INSERT INTO SF_CAD_VARIAVEL(desc_SF_CAD_VARIAVEL, st_SF_CAD_VARIAVEL, id_PS_PESSOA_inc, id_PS_PESSOA_alt) VALUES (@desc_SF_CAD_VARIAVEL, @st_SF_CAD_VARIAVEL, @id_PS_PESSOA_inc, @id_PS_PESSOA_alt)" SelectCommand="SELECT desc_SF_CAD_VARIAVEL, id_SF_CAD_VARIAVEL, st_SF_CAD_VARIAVEL FROM SF_CAD_VARIAVEL" UpdateCommand="UPDATE SF_CAD_VARIAVEL SET desc_SF_CAD_VARIAVEL = @desc_SF_CAD_VARIAVEL, st_SF_CAD_VARIAVEL = @st_SF_CAD_VARIAVEL, id_PS_PESSOA_alt = @id_PS_PESSOA_alt, dtAlt_SF_CAD_VARIAVEL = GETDATE() WHERE (id_SF_CAD_VARIAVEL = @id_SF_CAD_VARIAVEL)">
         <DeleteParameters>
-            <asp:Parameter Name="id_SF_VARIAVEIS" Type="Int32" />
+            <asp:Parameter Name="id_SF_CAD_VARIAVEL" />
         </DeleteParameters>
         <InsertParameters>
-            <asp:Parameter Name="id_SF_VARIAVEIS" Type="Int32" />
-            <asp:Parameter Name="desc_SF_VARIAVEIS" Type="String" />
-            <asp:Parameter Name="st_SF_VARIAVEIS" Type="Byte" />
-            <asp:Parameter Name="tamanho_SF_VARIAVEIS" Type="Int32" />
-            <asp:Parameter Name="posIni_SF_VARIAVEIS" Type="Int32" />
-            <asp:Parameter Name="posFim_SF_VARIAVEIS" Type="Int32" />
+            <asp:Parameter Name="desc_SF_CAD_VARIAVEL" />
+            <asp:Parameter Name="st_SF_CAD_VARIAVEL" />
+                    <asp:SessionParameter SessionField="id_PS_PESSOA_USUARIO" Name="id_PS_PESSOA_inc" Type="Int32" />
+                <asp:SessionParameter SessionField="id_PS_PESSOA_USUARIO" Name="id_PS_PESSOA_alt" Type="Int32" />
         </InsertParameters>
         <UpdateParameters>
-            <asp:Parameter Name="desc_SF_VARIAVEIS" Type="String" />
-            <asp:Parameter Name="st_SF_VARIAVEIS" Type="Byte" />
-            <asp:Parameter Name="tamanho_SF_VARIAVEIS" Type="Int32" />
-            <asp:Parameter Name="posIni_SF_VARIAVEIS" Type="Int32" />
-            <asp:Parameter Name="posFim_SF_VARIAVEIS" Type="Int32" />
-            <asp:Parameter Name="id_SF_VARIAVEIS" Type="Int32" />
+            <asp:Parameter Name="desc_SF_CAD_VARIAVEL" />
+            <asp:Parameter Name="st_SF_CAD_VARIAVEL" />
+   <asp:SessionParameter SessionField="id_PS_PESSOA_USUARIO" Name="id_PS_PESSOA_alt" Type="Int32" />
+            <asp:Parameter Name="id_SF_CAD_VARIAVEL" />
         </UpdateParameters>
     </asp:SqlDataSource>
 </asp:Content>

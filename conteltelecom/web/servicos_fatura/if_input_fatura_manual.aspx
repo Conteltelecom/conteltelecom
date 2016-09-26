@@ -79,7 +79,7 @@
     <br />
       <asp:UpdatePanel ID="UpdatePanelGridFauturas" runat="server" UpdateMode="Conditional" >
         <ContentTemplate>
-            <telerik:RadGrid ID="RadGridFaturas" runat="server" AutoGenerateColumns="False" Culture="pt-BR" DataSourceID="SqlDataSourceLinhas" Skin="Bootstrap" CellSpacing="-1" GridLines="Both">
+            <telerik:RadGrid ID="RadGridFaturas" runat="server" AutoGenerateColumns="False" Culture="pt-BR" DataSourceID="SqlDataSourceLinhas" Skin="Bootstrap" CellSpacing="-1" GridLines="Both" EnableHeaderContextMenu="True">
                                   <GroupPanel Text="ARRASTE  A COLUNA PARA FILTAR"></GroupPanel>
 <GroupingSettings CollapseAllTooltip="Collapse all groups" ShowUnGroupButton="True" UnGroupButtonTooltip="DESAGRUPAR" UnGroupTooltip="">
     
@@ -172,7 +172,8 @@
                 <telerik:GridTemplateColumn DataField="vltotalLinha_SF_SERVICOS_FATURA" FilterControlAltText="Filter vltotalLinha_SF_SERVICOS_FATURA column" HeaderText="VL TOTAL R$" UniqueName="vltotalLinha_SF_SERVICOS_FATURA">
                     <EditItemTemplate>
                         <telerik:RadNumericTextBox ID="vltotalLinha_SF_SERVICOS_FATURARadNumericTextBox" runat="server" Width="90%" DbValue='<%#Eval("vltotalLinha_SF_SERVICOS_FATURA") %>' Type="Number">
-                        </telerik:RadNumericTextBox>
+                        <IncrementSettings InterceptMouseWheel="false" />
+						</telerik:RadNumericTextBox>
                          <asp:RequiredFieldValidator ID="RequivltotalLinha" ControlToValidate="vltotalLinha_SF_SERVICOS_FATURARadNumericTextBox" runat="server" ErrorMessage="*" Display="Dynamic" SetFocusOnError="true" ForeColor="RED"></asp:RequiredFieldValidator>
                     </EditItemTemplate>
                     <ItemTemplate>
