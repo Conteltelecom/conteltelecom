@@ -7,7 +7,7 @@
     <rsweb:ReportViewer ID="ReportViewerRelQualificacaoTecnica" runat="server" Width="100%" Font-Names="Verdana" Font-Size="8pt" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt">
         <LocalReport ReportPath="rdcl\relacionamento\AtestadoQualificacaoTecnica.rdlc">
             <DataSources>
-                <rsweb:ReportDataSource DataSourceId="ObjectDataSourceCapacitacaoTecnica" Name="DataSetPessoasJuridica" />
+                <rsweb:ReportDataSource DataSourceId="ObjectDataSourceCapacitacaoTecnica"  Name="DataSetPessoasJuridica" />
                 <rsweb:ReportDataSource DataSourceId="ObjectDataSourceAtestado2" Name="DataSetValores" />
             </DataSources>
         </LocalReport>
