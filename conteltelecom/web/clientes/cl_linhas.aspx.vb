@@ -29,7 +29,7 @@ Public Class cl_linhas
 
                 Dim dataItem As GridDataItem = DirectCast(e.Item, GridDataItem)
                 Dim codLinha_LI_LINHASTextBox As TextBox = DirectCast(dataItem.FindControl("codLinha_LI_LINHASTextBox"), TextBox)
-                Dim numLinha_LI_LINHASRadMaskedTextBox As RadMaskedTextBox = DirectCast(dataItem.FindControl("numLinha_LI_LINHASRadMaskedTextBox"), RadMaskedTextBox)
+                Dim numLinha_LI_LINHASRadMaskedTextBox As RadTextBox = DirectCast(dataItem.FindControl("numLinha_LI_LINHASRadMaskedTextBox"), RadTextBox)
                 Dim numContrato_LI_LINHAS As TextBox = DirectCast(dataItem("numContrato_LI_LINHAS").Controls(0), TextBox)
                 Dim st_LI_LINHAS As CheckBox = DirectCast(dataItem("st_LI_LINHAS").Controls(0), CheckBox)
 
@@ -61,7 +61,6 @@ Public Class cl_linhas
 
 
 
-
     Private Sub SqlDataSourceLinhasCliente_Inserted(sender As Object, e As SqlDataSourceStatusEventArgs) Handles SqlDataSourceLinhasCliente.Inserted
         retornoInsert = e.Command.Parameters("@Id").Value
     End Sub
@@ -76,6 +75,8 @@ Public Class cl_linhas
         If IsNothing(Request.QueryString("codMatriz_PS_CLIENTES")) = False Then
             If Request.QueryString("codMatriz_PS_CLIENTES") <> "" Then
                 RadGridLinhas.MasterTableView.CommandItemDisplay = GridCommandItemDisplay.None
+
+
                 RadGridLinhas.Rebind()
             Else
                 RadGridLinhas.MasterTableView.GetColumn("CNPJ_PS_JURIDICA").Visible = False

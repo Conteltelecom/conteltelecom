@@ -954,35 +954,29 @@ Namespace DataSetBuscaUsoTableAdapters
                 "EGORIAS_1 ON SF_TIPO_USO_1.id_SF_TIPO_USO_CATEGORIAS = SF_TIPO_USO_CATEGORIAS_1."& _ 
                 "id_SF_TIPO_USO_CATEGORIAS ON "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         SF_SERVICOS_FATURA_1.id_"& _ 
                 "SF_SERVICOS_FATURA = SF_VL_USO_1.id_SF_SERVICOS_FATURA"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (SF_SERVICO"& _ 
-                "S_FATURA_1.numSequencia_SF_SERVICOS_FATURA = 0) AND (DATEPART(MM, '01/' + SF_SER"& _ 
-                "VICOS_FATURA_1.mesAnoRefereincia_SF_SERVICOS_FATURA) >= @mesIni) AND (DATEPART(M"& _ 
-                "M, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         '01/' + SF_SERVICOS_FATURA_1.mesAnoRefereincia_SF_"& _ 
-                "SERVICOS_FATURA) <= @mesFim) AND (DATEPART(YYYY, '01/' + SF_SERVICOS_FATURA_1.me"& _ 
-                "sAnoRefereincia_SF_SERVICOS_FATURA) >= @AnoIni) "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         AND ("& _ 
-                "DATEPART(YYYY, '01/' + SF_SERVICOS_FATURA_1.mesAnoRefereincia_SF_SERVICOS_FATURA"& _ 
-                ") <= @AnoFim) AND (SF_VL_USO_1.linhaVirtual_LI_LINHAS = 0)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"GROUP BY PS_JURIDICA"& _ 
-                "_1.razaosocial_PS_JURIDICA, SF_SERVICOS_FATURA_1.mesAnoRefereincia_SF_SERVICOS_F"& _ 
-                "ATURA, PS_JURIDICA_1.id_PS_PESSOA, PS_CLIENTES_1.id_PS_PESSOA, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"               "& _ 
-                "          SF_SERVICOS_FATURA_1.foraAnalise_LI_LINHAS, SF_SERVICOS_FATURA_1.id_CL"& _ 
-                "_TIPOS_CONTRATOS"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY SF_SERVICOS_FATURA_1.mesAnoRefereincia_SF_SERVICOS_FA"& _ 
-                "TURA DESC, SF_SERVICOS_FATURA_1.foraAnalise_LI_LINHAS"
+                "S_FATURA_1.numSequencia_SF_SERVICOS_FATURA = 0) AND (SF_VL_USO_1.linhaVirtual_LI"& _ 
+                "_LINHAS = 0) AND (CONVERT(datetime, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         '01/' + SF_SERVIC"& _ 
+                "OS_FATURA_1.mesAnoRefereincia_SF_SERVICOS_FATURA, 103) >= @DtIni) AND (CONVERT(d"& _ 
+                "atetime, '28/' + SF_SERVICOS_FATURA_1.mesAnoRefereincia_SF_SERVICOS_FATURA, 103)"& _ 
+                " "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         <= @DtFim)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"GROUP BY PS_JURIDICA_1.razaosocial_PS_JU"& _ 
+                "RIDICA, SF_SERVICOS_FATURA_1.mesAnoRefereincia_SF_SERVICOS_FATURA, PS_JURIDICA_1"& _ 
+                ".id_PS_PESSOA, PS_CLIENTES_1.id_PS_PESSOA, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         SF_SERVICO"& _ 
+                "S_FATURA_1.foraAnalise_LI_LINHAS, SF_SERVICOS_FATURA_1.id_CL_TIPOS_CONTRATOS"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"OR"& _ 
+                "DER BY SF_SERVICOS_FATURA_1.mesAnoRefereincia_SF_SERVICOS_FATURA DESC, SF_SERVIC"& _ 
+                "OS_FATURA_1.foraAnalise_LI_LINHAS"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@mesIni", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@mesFim", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@AnoIni", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@AnoFim", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DtIni", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DtFim", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As DataSetBuscaUso.LI_LINHASDataTable, ByVal mesIni As Decimal, ByVal mesFim As Decimal, ByVal AnoIni As Decimal, ByVal AnoFim As Decimal) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As DataSetBuscaUso.LI_LINHASDataTable, ByVal DtIni As Date, ByVal DtFim As Date) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Me.Adapter.SelectCommand.Parameters(0).Value = CType(mesIni,Decimal)
-            Me.Adapter.SelectCommand.Parameters(1).Value = CType(mesFim,Decimal)
-            Me.Adapter.SelectCommand.Parameters(2).Value = CType(AnoIni,Decimal)
-            Me.Adapter.SelectCommand.Parameters(3).Value = CType(AnoFim,Decimal)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(DtIni,Date)
+            Me.Adapter.SelectCommand.Parameters(1).Value = CType(DtFim,Date)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
             End If
@@ -994,12 +988,10 @@ Namespace DataSetBuscaUsoTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData(ByVal mesIni As Decimal, ByVal mesFim As Decimal, ByVal AnoIni As Decimal, ByVal AnoFim As Decimal) As DataSetBuscaUso.LI_LINHASDataTable
+        Public Overloads Overridable Function GetData(ByVal DtIni As Date, ByVal DtFim As Date) As DataSetBuscaUso.LI_LINHASDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Me.Adapter.SelectCommand.Parameters(0).Value = CType(mesIni,Decimal)
-            Me.Adapter.SelectCommand.Parameters(1).Value = CType(mesFim,Decimal)
-            Me.Adapter.SelectCommand.Parameters(2).Value = CType(AnoIni,Decimal)
-            Me.Adapter.SelectCommand.Parameters(3).Value = CType(AnoFim,Decimal)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(DtIni,Date)
+            Me.Adapter.SelectCommand.Parameters(1).Value = CType(DtFim,Date)
             Dim dataTable As DataSetBuscaUso.LI_LINHASDataTable = New DataSetBuscaUso.LI_LINHASDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable

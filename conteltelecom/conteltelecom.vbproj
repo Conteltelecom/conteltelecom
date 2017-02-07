@@ -62,6 +62,10 @@
       <HintPath>..\packages\AspNet.ScriptManager.jQuery.2.2.0\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="CKEditor.NET, Version=3.6.4.0, Culture=neutral, PublicKeyToken=e379cdf2f8354999, processorArchitecture=MSIL">
+      <HintPath>..\packages\CkeditorForASP.NET.3.6.4.0\lib\CKEditor.NET.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -144,53 +148,53 @@
     <Reference Include="Microsoft.AspNet.FriendlyUrls">
       <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Web.Spreadsheet, Version=2016.2.426.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Web.Spreadsheet, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\RCAJAX\2016.2.504.45\AdditionalLibraries\Bin45\Telerik.Web.Spreadsheet.dll</HintPath>
+      <HintPath>..\lib\RCAJAX\2016.3.914.45\AdditionalLibraries\Bin45\Telerik.Web.Spreadsheet.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Web.UI, Version=2016.2.504.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Web.UI, Version=2016.3.914.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\RCAJAX\2016.2.504.45\Telerik.Web.UI.dll</HintPath>
+      <HintPath>..\lib\RCAJAX\2016.3.914.45\Telerik.Web.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Web.UI.Skins, Version=2016.2.504.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Web.UI.Skins, Version=2016.3.914.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\RCAJAX\2016.2.504.45\Telerik.Web.UI.Skins.dll</HintPath>
+      <HintPath>..\lib\RCAJAX\2016.3.914.45\Telerik.Web.UI.Skins.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.Core, Version=2016.2.421.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\RCAJAX\2016.2.504.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Core.dll</HintPath>
+      <HintPath>..\lib\RCAJAX\2016.3.914.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.Fixed, Version=2016.2.421.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Windows.Documents.Fixed, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\RCAJAX\2016.2.504.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Fixed.dll</HintPath>
+      <HintPath>..\lib\RCAJAX\2016.3.914.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Fixed.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.Flow, Version=2016.2.421.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Windows.Documents.Flow, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\RCAJAX\2016.2.504.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Flow.dll</HintPath>
+      <HintPath>..\lib\RCAJAX\2016.3.914.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Flow.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.Flow.FormatProviders.Pdf, Version=2016.2.421.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Windows.Documents.Flow.FormatProviders.Pdf, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\RCAJAX\2016.2.504.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Flow.FormatProviders.Pdf.dll</HintPath>
+      <HintPath>..\lib\RCAJAX\2016.3.914.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Flow.FormatProviders.Pdf.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.Spreadsheet, Version=2016.2.421.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\RCAJAX\2016.2.504.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
+      <HintPath>..\lib\RCAJAX\2016.3.914.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml, Version=2016.2.421.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\RCAJAX\2016.2.504.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+      <HintPath>..\lib\RCAJAX\2016.3.914.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf, Version=2016.2.421.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\RCAJAX\2016.2.504.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll</HintPath>
+      <HintPath>..\lib\RCAJAX\2016.3.914.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Zip, Version=2016.2.421.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Windows.Zip, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\RCAJAX\2016.2.504.45\AdditionalLibraries\Bin45\Telerik.Windows.Zip.dll</HintPath>
+      <HintPath>..\lib\RCAJAX\2016.3.914.45\AdditionalLibraries\Bin45\Telerik.Windows.Zip.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Zip.Extensions, Version=2016.2.421.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Windows.Zip.Extensions, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\RCAJAX\2016.2.504.45\AdditionalLibraries\Bin45\Telerik.Windows.Zip.Extensions.dll</HintPath>
+      <HintPath>..\lib\RCAJAX\2016.3.914.45\AdditionalLibraries\Bin45\Telerik.Windows.Zip.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
@@ -424,6 +428,7 @@
   <ItemGroup>
     <Content Include="Account\AddPhoneNumber.aspx" />
     <Content Include="Account\Confirm.aspx" />
+    <Content Include="Account\css\style.css" />
     <Content Include="Account\Forgot.aspx" />
     <Content Include="Account\Lockout.aspx" />
     <Content Include="Account\LoginOld.aspx" />
@@ -438,42 +443,647 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="App_Browsers\Intelligencia.UrlRewriter.dll" />
-    <Content Include="App_Data\RadCaptcha\0.wav" />
-    <Content Include="App_Data\RadCaptcha\1.wav" />
-    <Content Include="App_Data\RadCaptcha\2.wav" />
-    <Content Include="App_Data\RadCaptcha\3.wav" />
-    <Content Include="App_Data\RadCaptcha\4.wav" />
-    <Content Include="App_Data\RadCaptcha\5.wav" />
-    <Content Include="App_Data\RadCaptcha\6.wav" />
-    <Content Include="App_Data\RadCaptcha\7.wav" />
-    <Content Include="App_Data\RadCaptcha\8.wav" />
-    <Content Include="App_Data\RadCaptcha\9.wav" />
-    <Content Include="App_Data\RadCaptcha\A.wav" />
-    <Content Include="App_Data\RadCaptcha\B.wav" />
-    <Content Include="App_Data\RadCaptcha\C.wav" />
-    <Content Include="App_Data\RadCaptcha\D.wav" />
-    <Content Include="App_Data\RadCaptcha\E.wav" />
-    <Content Include="App_Data\RadCaptcha\F.wav" />
-    <Content Include="App_Data\RadCaptcha\G.wav" />
-    <Content Include="App_Data\RadCaptcha\H.wav" />
-    <Content Include="App_Data\RadCaptcha\I.wav" />
-    <Content Include="App_Data\RadCaptcha\J.wav" />
-    <Content Include="App_Data\RadCaptcha\K.wav" />
-    <Content Include="App_Data\RadCaptcha\L.wav" />
-    <Content Include="App_Data\RadCaptcha\M.wav" />
-    <Content Include="App_Data\RadCaptcha\N.wav" />
-    <Content Include="App_Data\RadCaptcha\O.wav" />
-    <Content Include="App_Data\RadCaptcha\P.wav" />
-    <Content Include="App_Data\RadCaptcha\Q.wav" />
-    <Content Include="App_Data\RadCaptcha\R.wav" />
-    <Content Include="App_Data\RadCaptcha\S.wav" />
-    <Content Include="App_Data\RadCaptcha\T.wav" />
-    <Content Include="App_Data\RadCaptcha\U.wav" />
-    <Content Include="App_Data\RadCaptcha\V.wav" />
-    <Content Include="App_Data\RadCaptcha\W.wav" />
-    <Content Include="App_Data\RadCaptcha\X.wav" />
-    <Content Include="App_Data\RadCaptcha\Y.wav" />
-    <Content Include="App_Data\RadCaptcha\Z.wav" />
+    <Content Include="Complementos\Complemento.aspx" />
+    <Content Include="Content\App_Data\RadCaptcha\0.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\1.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\2.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\3.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\4.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\5.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\6.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\7.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\8.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\9.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\A.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\B.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\C.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\D.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\E.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\F.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\G.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\H.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\I.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\J.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\K.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\L.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\M.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\N.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\O.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\P.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\Q.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\R.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\S.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\T.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\U.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\V.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\W.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\X.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\Y.wav" />
+    <Content Include="Content\App_Data\RadCaptcha\Z.wav" />
+    <Content Include="Content\Mobile\colors\beauty\beauty.css" />
+    <Content Include="Content\Mobile\colors\beauty\images\bg-orange.jpg" />
+    <Content Include="Content\Mobile\colors\beauty\images\bullet_checked.png" />
+    <Content Include="Content\Mobile\colors\beauty\images\bullet_cross.png" />
+    <Content Include="Content\Mobile\colors\beauty\images\bullet_cross_big.png" />
+    <Content Include="Content\Mobile\colors\beauty\images\bullet_cross_big_close.png" />
+    <Content Include="Content\Mobile\colors\beauty\images\bullet_cross_white.png" />
+    <Content Include="Content\Mobile\colors\beauty\images\comments.png" />
+    <Content Include="Content\Mobile\colors\beauty\images\logo.png" />
+    <Content Include="Content\Mobile\colors\beauty\images\toggle.png" />
+    <Content Include="Content\Mobile\colors\beauty\images\toggle_blog.png" />
+    <Content Include="Content\Mobile\colors\beauty\images\trans_black.png" />
+    <Content Include="Content\Mobile\colors\black\black.css" />
+    <Content Include="Content\Mobile\colors\black\images\bullet_checked.png" />
+    <Content Include="Content\Mobile\colors\black\images\bullet_cross.png" />
+    <Content Include="Content\Mobile\colors\black\images\bullet_cross_big.png" />
+    <Content Include="Content\Mobile\colors\black\images\bullet_cross_big_close.png" />
+    <Content Include="Content\Mobile\colors\black\images\bullet_cross_white.png" />
+    <Content Include="Content\Mobile\colors\black\images\comments.png" />
+    <Content Include="Content\Mobile\colors\black\images\logo.png" />
+    <Content Include="Content\Mobile\colors\black\images\toggle.png" />
+    <Content Include="Content\Mobile\colors\black\images\toggle_blog.png" />
+    <Content Include="Content\Mobile\colors\corporate\corporate.css" />
+    <Content Include="Content\Mobile\colors\corporate\images\bg-corporate.jpg" />
+    <Content Include="Content\Mobile\colors\corporate\images\bullet_checked.png" />
+    <Content Include="Content\Mobile\colors\corporate\images\bullet_cross_big.png" />
+    <Content Include="Content\Mobile\colors\corporate\images\bullet_cross_big_close.png" />
+    <Content Include="Content\Mobile\colors\corporate\images\bullet_cross_white.png" />
+    <Content Include="Content\Mobile\colors\corporate\images\comments.png" />
+    <Content Include="Content\Mobile\colors\corporate\images\toggle.png" />
+    <Content Include="Content\Mobile\colors\corporate\images\toggle_blog.png" />
+    <Content Include="Content\Mobile\colors\green\green.css" />
+    <Content Include="Content\Mobile\colors\green\images\bg-green.jpg" />
+    <Content Include="Content\Mobile\colors\green\images\bullet_checked.png" />
+    <Content Include="Content\Mobile\colors\green\images\bullet_cross.png" />
+    <Content Include="Content\Mobile\colors\green\images\bullet_cross_big.png" />
+    <Content Include="Content\Mobile\colors\green\images\bullet_cross_big_close.png" />
+    <Content Include="Content\Mobile\colors\green\images\bullet_cross_white.png" />
+    <Content Include="Content\Mobile\colors\green\images\comments.png" />
+    <Content Include="Content\Mobile\colors\green\images\logo.png" />
+    <Content Include="Content\Mobile\colors\green\images\toggle.png" />
+    <Content Include="Content\Mobile\colors\green\images\toggle_blog.png" />
+    <Content Include="Content\Mobile\colors\green\images\transparent_circle.png" />
+    <Content Include="Content\Mobile\colors\medical\images\bg-medical.jpg" />
+    <Content Include="Content\Mobile\colors\medical\images\bullet_checked.png" />
+    <Content Include="Content\Mobile\colors\medical\images\bullet_cross.png" />
+    <Content Include="Content\Mobile\colors\medical\images\bullet_cross_big.png" />
+    <Content Include="Content\Mobile\colors\medical\images\bullet_cross_big_close.png" />
+    <Content Include="Content\Mobile\colors\medical\images\bullet_cross_white.png" />
+    <Content Include="Content\Mobile\colors\medical\images\comments.png" />
+    <Content Include="Content\Mobile\colors\medical\images\logo.png" />
+    <Content Include="Content\Mobile\colors\medical\images\toggle.png" />
+    <Content Include="Content\Mobile\colors\medical\images\toggle_blog.png" />
+    <Content Include="Content\Mobile\colors\medical\medical.css" />
+    <Content Include="Content\Mobile\colors\medical\transparent_circle.png" />
+    <Content Include="Content\Mobile\colors\metro\images\bg-metro.jpg" />
+    <Content Include="Content\Mobile\colors\metro\images\bullet_checked.png" />
+    <Content Include="Content\Mobile\colors\metro\images\bullet_cross_big.png" />
+    <Content Include="Content\Mobile\colors\metro\images\bullet_cross_big_close.png" />
+    <Content Include="Content\Mobile\colors\metro\images\bullet_cross_white.png" />
+    <Content Include="Content\Mobile\colors\metro\images\comments.png" />
+    <Content Include="Content\Mobile\colors\metro\images\toggle.png" />
+    <Content Include="Content\Mobile\colors\metro\images\toggle_blog.png" />
+    <Content Include="Content\Mobile\colors\metro\metro.css" />
+    <Content Include="Content\Mobile\css\idangerous.swiper.css" />
+    <Content Include="Content\Mobile\css\img\icons.png" />
+    <Content Include="Content\Mobile\css\img\icons.svg" />
+    <Content Include="Content\Mobile\css\img\loader.gif" />
+    <Content Include="Content\Mobile\css\style.css" />
+    <Content Include="Content\Mobile\css\swipebox.css" />
+    <Content Include="Content\Mobile\images\apple-touch-icon.png" />
+    <Content Include="Content\Mobile\images\apple-touch-startup-image-320x460.png" />
+    <Content Include="Content\Mobile\images\avatar.jpg" />
+    <Content Include="Content\Mobile\images\icons\2014.png" />
+    <Content Include="Content\Mobile\images\icons\2015.png" />
+    <Content Include="Content\Mobile\images\icons\2016.png" />
+    <Content Include="Content\Mobile\images\icons\2017.png" />
+    <Content Include="Content\Mobile\images\icons\2018.png" />
+    <Content Include="Content\Mobile\images\icons\2019.png" />
+    <Content Include="Content\Mobile\images\icons\2020.png" />
+    <Content Include="Content\Mobile\images\icons\about.png" />
+    <Content Include="Content\Mobile\images\icons\abr.png" />
+    <Content Include="Content\Mobile\images\icons\ago.png" />
+    <Content Include="Content\Mobile\images\icons\blog.png" />
+    <Content Include="Content\Mobile\images\icons\clients.png" />
+    <Content Include="Content\Mobile\images\icons\code.png" />
+    <Content Include="Content\Mobile\images\icons\contact.png" />
+    <Content Include="Content\Mobile\images\icons\dez.png" />
+    <Content Include="Content\Mobile\images\icons\docs.png" />
+    <Content Include="Content\Mobile\images\icons\fev.png" />
+    <Content Include="Content\Mobile\images\icons\Financeiro.png" />
+    <Content Include="Content\Mobile\images\icons\Fundo.png" />
+    <Content Include="Content\Mobile\images\icons\Grafico.png" />
+    <Content Include="Content\Mobile\images\icons\home.png" />
+    <Content Include="Content\Mobile\images\icons\jan.png" />
+    <Content Include="Content\Mobile\images\icons\jul.png" />
+    <Content Include="Content\Mobile\images\icons\jun.png" />
+    <Content Include="Content\Mobile\images\icons\layout.png" />
+    <Content Include="Content\Mobile\images\icons\mai.png" />
+    <Content Include="Content\Mobile\images\icons\map_pin.png" />
+    <Content Include="Content\Mobile\images\icons\mar.png" />
+    <Content Include="Content\Mobile\images\icons\nov.png" />
+    <Content Include="Content\Mobile\images\icons\out.png" />
+    <Content Include="Content\Mobile\images\icons\pencil.png" />
+    <Content Include="Content\Mobile\images\icons\phone.png" />
+    <Content Include="Content\Mobile\images\icons\photos.png" />
+    <Content Include="Content\Mobile\images\icons\report.png" />
+    <Content Include="Content\Mobile\images\icons\Sac.png" />
+    <Content Include="Content\Mobile\images\icons\Sair.png" />
+    <Content Include="Content\Mobile\images\icons\security.png" />
+    <Content Include="Content\Mobile\images\icons\services.png" />
+    <Content Include="Content\Mobile\images\icons\set.png" />
+    <Content Include="Content\Mobile\images\icons\social\digg.png" />
+    <Content Include="Content\Mobile\images\icons\social\facebook.png" />
+    <Content Include="Content\Mobile\images\icons\social\flickr.png" />
+    <Content Include="Content\Mobile\images\icons\social\google.png" />
+    <Content Include="Content\Mobile\images\icons\social\pinterest.png" />
+    <Content Include="Content\Mobile\images\icons\social\twitter.png" />
+    <Content Include="Content\Mobile\images\icons\success.png" />
+    <Content Include="Content\Mobile\images\icons\tools.png" />
+    <Content Include="Content\Mobile\images\icons\top.png" />
+    <Content Include="Content\Mobile\images\icons\travel.png" />
+    <Content Include="Content\Mobile\images\icons\twitter.png" />
+    <Content Include="Content\Mobile\images\icons\Vazio.png" />
+    <Content Include="Content\Mobile\images\icons\videos.png" />
+    <Content Include="Content\Mobile\images\icons_dark\about.png" />
+    <Content Include="Content\Mobile\images\icons_dark\blog.png" />
+    <Content Include="Content\Mobile\images\icons_dark\clients.png" />
+    <Content Include="Content\Mobile\images\icons_dark\contact.png" />
+    <Content Include="Content\Mobile\images\icons_dark\docs.png" />
+    <Content Include="Content\Mobile\images\icons_dark\home.png" />
+    <Content Include="Content\Mobile\images\icons_dark\photos.png" />
+    <Content Include="Content\Mobile\images\icons_dark\tools.png" />
+    <Content Include="Content\Mobile\images\icons_dark\twitter.png" />
+    <Content Include="Content\Mobile\images\icons_dark\videos.png" />
+    <Content Include="Content\Mobile\images\oi-logo1.png" />
+    <Content Include="Content\Mobile\images\page_photo.jpg" />
+    <Content Include="Content\Mobile\images\photos\photo1.jpg" />
+    <Content Include="Content\Mobile\images\photos\photo10.jpg" />
+    <Content Include="Content\Mobile\images\photos\photo11.jpg" />
+    <Content Include="Content\Mobile\images\photos\photo2.jpg" />
+    <Content Include="Content\Mobile\images\photos\photo3.jpg" />
+    <Content Include="Content\Mobile\images\photos\photo4.jpg" />
+    <Content Include="Content\Mobile\images\photos\photo5.jpg" />
+    <Content Include="Content\Mobile\images\photos\photo6.jpg" />
+    <Content Include="Content\Mobile\images\photos\photo7.jpg" />
+    <Content Include="Content\Mobile\images\photos\photo8.jpg" />
+    <Content Include="Content\Mobile\images\photos\photo9.jpg" />
+    <Content Include="Content\Mobile\images\portfolio_thumb.jpg" />
+    <Content Include="Content\Mobile\images\portfolio_thumb2.jpg" />
+    <Content Include="Content\Mobile\images\portfolio_thumb3.jpg" />
+    <Content Include="Default.aspx" />
+    <Content Include="img\Operadoras\Embratel.png" />
+    <Content Include="img\LogoLogin.png" />
+    <Content Include="img\Operadoras\oi.png" />
+    <Content Include="img\page_process_32.png" />
+    <Content Include="Scripts\ckeditor\adapters\jquery.js" />
+    <Content Include="Scripts\ckeditor\CHANGES.html" />
+    <Content Include="Scripts\ckeditor\ckeditor.asp" />
+    <Content Include="Scripts\ckeditor\ckeditor.js" />
+    <Content Include="Scripts\ckeditor\ckeditor.php" />
+    <Content Include="Scripts\ckeditor\ckeditor_basic.js" />
+    <Content Include="Scripts\ckeditor\ckeditor_basic_source.js" />
+    <Content Include="Scripts\ckeditor\ckeditor_php4.php" />
+    <Content Include="Scripts\ckeditor\ckeditor_php5.php" />
+    <Content Include="Scripts\ckeditor\ckeditor_source.js" />
+    <Content Include="Scripts\ckeditor\config.js" />
+    <Content Include="Scripts\ckeditor\contents.css" />
+    <Content Include="Scripts\ckeditor\images\spacer.gif" />
+    <Content Include="Scripts\ckeditor\INSTALL.html" />
+    <Content Include="Scripts\ckeditor\lang\af.js" />
+    <Content Include="Scripts\ckeditor\lang\ar.js" />
+    <Content Include="Scripts\ckeditor\lang\bg.js" />
+    <Content Include="Scripts\ckeditor\lang\bn.js" />
+    <Content Include="Scripts\ckeditor\lang\bs.js" />
+    <Content Include="Scripts\ckeditor\lang\ca.js" />
+    <Content Include="Scripts\ckeditor\lang\cs.js" />
+    <Content Include="Scripts\ckeditor\lang\cy.js" />
+    <Content Include="Scripts\ckeditor\lang\da.js" />
+    <Content Include="Scripts\ckeditor\lang\de.js" />
+    <Content Include="Scripts\ckeditor\lang\el.js" />
+    <Content Include="Scripts\ckeditor\lang\en-au.js" />
+    <Content Include="Scripts\ckeditor\lang\en-ca.js" />
+    <Content Include="Scripts\ckeditor\lang\en-gb.js" />
+    <Content Include="Scripts\ckeditor\lang\en.js" />
+    <Content Include="Scripts\ckeditor\lang\eo.js" />
+    <Content Include="Scripts\ckeditor\lang\es.js" />
+    <Content Include="Scripts\ckeditor\lang\et.js" />
+    <Content Include="Scripts\ckeditor\lang\eu.js" />
+    <Content Include="Scripts\ckeditor\lang\fa.js" />
+    <Content Include="Scripts\ckeditor\lang\fi.js" />
+    <Content Include="Scripts\ckeditor\lang\fo.js" />
+    <Content Include="Scripts\ckeditor\lang\fr-ca.js" />
+    <Content Include="Scripts\ckeditor\lang\fr.js" />
+    <Content Include="Scripts\ckeditor\lang\gl.js" />
+    <Content Include="Scripts\ckeditor\lang\gu.js" />
+    <Content Include="Scripts\ckeditor\lang\he.js" />
+    <Content Include="Scripts\ckeditor\lang\hi.js" />
+    <Content Include="Scripts\ckeditor\lang\hr.js" />
+    <Content Include="Scripts\ckeditor\lang\hu.js" />
+    <Content Include="Scripts\ckeditor\lang\id.js" />
+    <Content Include="Scripts\ckeditor\lang\is.js" />
+    <Content Include="Scripts\ckeditor\lang\it.js" />
+    <Content Include="Scripts\ckeditor\lang\ja.js" />
+    <Content Include="Scripts\ckeditor\lang\ka.js" />
+    <Content Include="Scripts\ckeditor\lang\km.js" />
+    <Content Include="Scripts\ckeditor\lang\ko.js" />
+    <Content Include="Scripts\ckeditor\lang\lt.js" />
+    <Content Include="Scripts\ckeditor\lang\lv.js" />
+    <Content Include="Scripts\ckeditor\lang\mk.js" />
+    <Content Include="Scripts\ckeditor\lang\mn.js" />
+    <Content Include="Scripts\ckeditor\lang\ms.js" />
+    <Content Include="Scripts\ckeditor\lang\nb.js" />
+    <Content Include="Scripts\ckeditor\lang\nl.js" />
+    <Content Include="Scripts\ckeditor\lang\no.js" />
+    <Content Include="Scripts\ckeditor\lang\pl.js" />
+    <Content Include="Scripts\ckeditor\lang\pt-br.js" />
+    <Content Include="Scripts\ckeditor\lang\pt.js" />
+    <Content Include="Scripts\ckeditor\lang\ro.js" />
+    <Content Include="Scripts\ckeditor\lang\ru.js" />
+    <Content Include="Scripts\ckeditor\lang\sk.js" />
+    <Content Include="Scripts\ckeditor\lang\sl.js" />
+    <Content Include="Scripts\ckeditor\lang\sr-latn.js" />
+    <Content Include="Scripts\ckeditor\lang\sr.js" />
+    <Content Include="Scripts\ckeditor\lang\sv.js" />
+    <Content Include="Scripts\ckeditor\lang\th.js" />
+    <Content Include="Scripts\ckeditor\lang\tr.js" />
+    <Content Include="Scripts\ckeditor\lang\ug.js" />
+    <Content Include="Scripts\ckeditor\lang\uk.js" />
+    <Content Include="Scripts\ckeditor\lang\vi.js" />
+    <Content Include="Scripts\ckeditor\lang\zh-cn.js" />
+    <Content Include="Scripts\ckeditor\lang\zh.js" />
+    <Content Include="Scripts\ckeditor\lang\_languages.js" />
+    <Content Include="Scripts\ckeditor\lang\_translationstatus.txt" />
+    <Content Include="Scripts\ckeditor\LICENSE.html" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\cs.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\cy.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\da.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\de.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\el.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\en.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\eo.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\fa.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\fi.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\fr.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\gu.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\he.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\it.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\mk.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\nb.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\nl.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\no.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\pt-br.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\ro.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\tr.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\ug.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\vi.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\zh-cn.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\_translationstatus.txt" />
+    <Content Include="Scripts\ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="Scripts\ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="Scripts\ckeditor\plugins\adobeair\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\ajax\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\autogrow\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\bbcode\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="Scripts\ckeditor\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\bg.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\cs.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\cy.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\da.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\de.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\el.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\en.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\eo.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\et.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\fa.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\fi.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\fr.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\gu.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\he.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\hr.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\it.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\nb.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\nl.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\no.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\pl.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\pt-br.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\tr.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\ug.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\uk.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\vi.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\zh-cn.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\_translationstatus.txt" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="Scripts\ckeditor\plugins\div\dialogs\div.js" />
+    <Content Include="Scripts\ckeditor\plugins\docprops\dialogs\docprops.js" />
+    <Content Include="Scripts\ckeditor\plugins\docprops\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\find\dialogs\find.js" />
+    <Content Include="Scripts\ckeditor\plugins\flash\dialogs\flash.js" />
+    <Content Include="Scripts\ckeditor\plugins\flash\images\placeholder.png" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\button.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\form.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\radio.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\select.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\textarea.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\textfield.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="Scripts\ckeditor\plugins\iframedialog\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="Scripts\ckeditor\plugins\iframe\images\placeholder.png" />
+    <Content Include="Scripts\ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="Scripts\ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="Scripts\ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="Scripts\ckeditor\plugins\link\images\anchor.gif" />
+    <Content Include="Scripts\ckeditor\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="Scripts\ckeditor\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="Scripts\ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="Scripts\ckeditor\plugins\pastetext\dialogs\pastetext.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\dialogs\placeholder.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\bg.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\cs.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\cy.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\da.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\de.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\el.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\en.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\eo.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\et.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\fa.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\fi.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\fr.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\he.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\hr.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\it.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\nb.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\nl.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\no.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\pl.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\pt-br.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\tr.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\ug.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\uk.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\vi.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\zh-cn.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\_translationstatus.txt" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\placeholder.gif" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\preview\preview.html" />
+    <Content Include="Scripts\ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="Scripts\ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_address.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_div.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_h1.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_h2.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_h3.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_h4.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_h5.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_h6.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_p.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_pre.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\envelope.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\heart.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\kiss.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\cs.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\cy.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\de.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\el.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\en.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\eo.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\et.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\fa.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\fi.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\fr.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\he.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\hr.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\it.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\nb.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\nl.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\no.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\pt-br.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\tr.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\ug.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\zh-cn.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\_translationstatus.txt" />
+    <Content Include="Scripts\ckeditor\plugins\stylesheetparser\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\styles\styles\default.js" />
+    <Content Include="Scripts\ckeditor\plugins\tableresize\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="Scripts\ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="Scripts\ckeditor\plugins\templates\dialogs\templates.js" />
+    <Content Include="Scripts\ckeditor\plugins\templates\templates\default.js" />
+    <Content Include="Scripts\ckeditor\plugins\templates\templates\images\template1.gif" />
+    <Content Include="Scripts\ckeditor\plugins\templates\templates\images\template2.gif" />
+    <Content Include="Scripts\ckeditor\plugins\templates\templates\images\template3.gif" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\dialogs\uicolor.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\bg.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\cs.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\cy.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\da.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\de.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\el.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\en.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\eo.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\et.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\fa.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\fi.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\fr.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\he.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\hr.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\it.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\mk.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\nb.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\nl.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\no.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\pl.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\pt-br.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\tr.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\ug.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\uk.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\vi.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\zh-cn.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\_translationstatus.txt" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\uicolor.gif" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\yui\assets\hue_bg.png" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\yui\assets\hue_thumb.png" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\yui\assets\picker_mask.png" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\yui\assets\picker_thumb.png" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\yui\assets\yui.css" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\yui\yui.js" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="Scripts\ckeditor\plugins\xml\plugin.js" />
+    <Content Include="Scripts\ckeditor\skins\kama\dialog.css" />
+    <Content Include="Scripts\ckeditor\skins\kama\editor.css" />
+    <Content Include="Scripts\ckeditor\skins\kama\icons.png" />
+    <Content Include="Scripts\ckeditor\skins\kama\icons_rtl.png" />
+    <Content Include="Scripts\ckeditor\skins\kama\images\dialog_sides.gif" />
+    <Content Include="Scripts\ckeditor\skins\kama\images\dialog_sides.png" />
+    <Content Include="Scripts\ckeditor\skins\kama\images\dialog_sides_rtl.png" />
+    <Content Include="Scripts\ckeditor\skins\kama\images\mini.gif" />
+    <Content Include="Scripts\ckeditor\skins\kama\images\noimage.png" />
+    <Content Include="Scripts\ckeditor\skins\kama\images\sprites.png" />
+    <Content Include="Scripts\ckeditor\skins\kama\images\sprites_ie6.png" />
+    <Content Include="Scripts\ckeditor\skins\kama\images\toolbar_start.gif" />
+    <Content Include="Scripts\ckeditor\skins\kama\skin.js" />
+    <Content Include="Scripts\ckeditor\skins\kama\templates.css" />
+    <Content Include="Scripts\ckeditor\skins\office2003\dialog.css" />
+    <Content Include="Scripts\ckeditor\skins\office2003\editor.css" />
+    <Content Include="Scripts\ckeditor\skins\office2003\icons.png" />
+    <Content Include="Scripts\ckeditor\skins\office2003\icons_rtl.png" />
+    <Content Include="Scripts\ckeditor\skins\office2003\images\dialog_sides.gif" />
+    <Content Include="Scripts\ckeditor\skins\office2003\images\dialog_sides.png" />
+    <Content Include="Scripts\ckeditor\skins\office2003\images\dialog_sides_rtl.png" />
+    <Content Include="Scripts\ckeditor\skins\office2003\images\mini.gif" />
+    <Content Include="Scripts\ckeditor\skins\office2003\images\noimage.png" />
+    <Content Include="Scripts\ckeditor\skins\office2003\images\sprites.png" />
+    <Content Include="Scripts\ckeditor\skins\office2003\images\sprites_ie6.png" />
+    <Content Include="Scripts\ckeditor\skins\office2003\skin.js" />
+    <Content Include="Scripts\ckeditor\skins\office2003\templates.css" />
+    <Content Include="Scripts\ckeditor\skins\v2\dialog.css" />
+    <Content Include="Scripts\ckeditor\skins\v2\editor.css" />
+    <Content Include="Scripts\ckeditor\skins\v2\icons.png" />
+    <Content Include="Scripts\ckeditor\skins\v2\icons_rtl.png" />
+    <Content Include="Scripts\ckeditor\skins\v2\images\dialog_sides.gif" />
+    <Content Include="Scripts\ckeditor\skins\v2\images\dialog_sides.png" />
+    <Content Include="Scripts\ckeditor\skins\v2\images\dialog_sides_rtl.png" />
+    <Content Include="Scripts\ckeditor\skins\v2\images\mini.gif" />
+    <Content Include="Scripts\ckeditor\skins\v2\images\noimage.png" />
+    <Content Include="Scripts\ckeditor\skins\v2\images\sprites.png" />
+    <Content Include="Scripts\ckeditor\skins\v2\images\sprites_ie6.png" />
+    <Content Include="Scripts\ckeditor\skins\v2\images\toolbar_start.gif" />
+    <Content Include="Scripts\ckeditor\skins\v2\skin.js" />
+    <Content Include="Scripts\ckeditor\skins\v2\templates.css" />
+    <Content Include="Scripts\ckeditor\themes\default\theme.js" />
+    <Content Include="Scripts\Mobile\code.js" />
+    <Content Include="Scripts\Mobile\idangerous.swiper-2.1.min.js" />
+    <Content Include="Scripts\Mobile\idangerous.swiper.scrollbar-2.1.js" />
+    <Content Include="Scripts\Mobile\jquery-1.10.1.min.js" />
+    <Content Include="Scripts\Mobile\jquery.fitvids.js" />
+    <Content Include="Scripts\Mobile\jquery.swipebox.js" />
+    <Content Include="Scripts\Mobile\jquery.tabify.js" />
+    <Content Include="Scripts\Mobile\load.js" />
+    <Content Include="Scripts\Mobile\twitter\jquery.tweet.js" />
+    <Content Include="web\administrador\configuracoes\AreaCliente\Mobile\Configuracoes\CadastraStatusFatura.aspx" />
+    <Content Include="web\administrador\configuracoes\CadTipoTelefone.aspx" />
+    <Content Include="web\administrador\configuracoes\Chamados\CadastroStatusChamado.aspx" />
+    <Content Include="web\administrador\configuracoes\Chamados\CadastroTarefas.aspx" />
+    <Content Include="web\administrador\configuracoes\Chamados\Ch_CadastroPrioriades.aspx" />
+    <Content Include="web\area_cliente\mobile\ascx\WebUserControlListview.ascx" />
+    <Content Include="web\area_cliente\mobile\Chamados\FiltroChamadosMesAno.aspx" />
+    <Content Include="web\administrador\configuracoes\cliente\adm_cad_tpComissoes.aspx" />
+    <Content Include="web\administrador\configuracoes\Usuario\CadastroPermissao.aspx" />
+    <Content Include="web\administrador\configuracoes\Usuario\CadastroSetorUsuario.aspx" />
+    <Content Include="web\administrador\configuracoes\Usuario\CadatroSetor.aspx" />
+    <Content Include="web\area_cliente\mobile\Chamados\AbrirChamadoMobile.aspx" />
+    <Content Include="web\area_cliente\mobile\Chamados\Chamados.aspx" />
+    <Content Include="web\area_cliente\mobile\Chamados\ConsultaChamados.aspx" />
+    <Content Include="web\area_cliente\mobile\Faturas\Faturas.aspx" />
+    <Content Include="web\area_cliente\mobile\Faturas\FiltroFaturas.aspx" />
+    <Content Include="web\area_cliente\mobile\M_Default.aspx" />
+    <Content Include="web\area_cliente\mobile\Relatorios\RelDevolucao.aspx" />
+    <Content Include="web\area_cliente\web\ac_faturas.aspx" />
+    <Content Include="web\area_cliente\web\css\grid.css" />
+    <Content Include="web\area_cliente\web\css\ie.css" />
+    <Content Include="web\area_cliente\web\css\reset.css" />
+    <Content Include="web\area_cliente\web\css\responsive.css" />
+    <Content Include="web\area_cliente\web\css\style.css" />
+    <Content Include="web\area_cliente\web\css\zerogrid.css" />
+    <Content Include="web\area_cliente\web\graficos\graficos_periodo_x_valor.aspx" />
+    <Content Include="web\area_cliente\web\graficos\grafico_reducao.aspx" />
+    <Content Include="web\area_cliente\web\images\box-tail.gif" />
+    <Content Include="web\area_cliente\web\images\center-shadow.png" />
+    <Content Include="web\area_cliente\web\images\center-shadow2.jpg" />
+    <Content Include="web\area_cliente\web\images\Cliente_32.png" />
+    <Content Include="web\area_cliente\web\images\content-bg.jpg" />
+    <Content Include="web\area_cliente\web\images\content-tail.gif" />
+    <Content Include="web\area_cliente\web\images\footer-tail.gif" />
+    <Content Include="web\area_cliente\web\images\gallery-img1.png" />
+    <Content Include="web\area_cliente\web\images\gallery-img2.png" />
+    <Content Include="web\area_cliente\web\images\gallery-img3.png" />
+    <Content Include="web\area_cliente\web\images\input-tail.gif" />
+    <Content Include="web\area_cliente\web\images\logo.png" />
+    <Content Include="web\area_cliente\web\images\marker-1.gif" />
+    <Content Include="web\area_cliente\web\images\marker-2.png" />
+    <Content Include="web\area_cliente\web\images\marker-3.gif" />
+    <Content Include="web\area_cliente\web\images\menu-bg.jpg" />
+    <Content Include="web\area_cliente\web\images\menu-row-tail.gif" />
+    <Content Include="web\area_cliente\web\images\menu-spacer.gif" />
+    <Content Include="web\area_cliente\web\images\page1-img1.png" />
+    <Content Include="web\area_cliente\web\images\page1-img2.png" />
+    <Content Include="web\area_cliente\web\images\page1-img3.png" />
+    <Content Include="web\area_cliente\web\images\page1-img4.png" />
+    <Content Include="web\area_cliente\web\images\page1-img5.jpg" />
+    <Content Include="web\area_cliente\web\images\page1-img6.jpg" />
+    <Content Include="web\area_cliente\web\images\page1-img7.jpg" />
+    <Content Include="web\area_cliente\web\images\page2-img1.jpg" />
+    <Content Include="web\area_cliente\web\images\page2-img2.jpg" />
+    <Content Include="web\area_cliente\web\images\page2-img3.jpg" />
+    <Content Include="web\area_cliente\web\images\page2-img4.jpg" />
+    <Content Include="web\area_cliente\web\images\page2-img5.jpg" />
+    <Content Include="web\area_cliente\web\images\page2-img6.jpg" />
+    <Content Include="web\area_cliente\web\images\page3-img1.png" />
+    <Content Include="web\area_cliente\web\images\page3-img2.png" />
+    <Content Include="web\area_cliente\web\images\page3-img3.png" />
+    <Content Include="web\area_cliente\web\images\page3-img4.png" />
+    <Content Include="web\area_cliente\web\images\page3-img5.png" />
+    <Content Include="web\area_cliente\web\images\page3-img6.png" />
+    <Content Include="web\area_cliente\web\images\page3-img7.jpg" />
+    <Content Include="web\area_cliente\web\images\page4-img1.jpg" />
+    <Content Include="web\area_cliente\web\images\page4-img2.jpg" />
+    <Content Include="web\area_cliente\web\images\page4-img3.jpg" />
+    <Content Include="web\area_cliente\web\images\page4-img4.jpg" />
+    <Content Include="web\area_cliente\web\images\page4-img5.jpg" />
+    <Content Include="web\area_cliente\web\images\page4-img6.jpg" />
+    <Content Include="web\area_cliente\web\images\pic-1.gif" />
+    <Content Include="web\area_cliente\web\images\Report_valor_32.png" />
+    <Content Include="web\area_cliente\web\images\row-bot-tail.gif" />
+    <Content Include="web\area_cliente\web\images\row-bot-tail2.gif" />
+    <Content Include="web\area_cliente\web\images\row-top-tail.jpg" />
+    <Content Include="web\area_cliente\web\images\search-bg.jpg" />
+    <Content Include="web\area_cliente\web\images\search-icon.png" />
+    <Content Include="web\area_cliente\web\images\social-icons.png" />
+    <Content Include="web\area_cliente\web\images\text-area-tail.gif" />
+    <Content Include="web\area_cliente\web\js\css3-mediaqueries.js" />
+    <Content Include="web\area_cliente\web\js\cufon-replace.js" />
+    <Content Include="web\area_cliente\web\js\cufon-yui.js" />
+    <Content Include="web\area_cliente\web\js\FF-cash.js" />
+    <Content Include="web\area_cliente\web\js\html5.js" />
+    <Content Include="web\area_cliente\web\js\JavaScriptGraficos.js" />
+    <Content Include="web\area_cliente\web\js\jquery-1.6.3.min.js" />
+    <Content Include="web\area_cliente\web\js\jquery.featureCarousel.js" />
+    <Content Include="web\area_cliente\web\js\NewsGoth_400.font.js" />
+    <Content Include="web\area_cliente\web\js\NewsGoth_700.font.js" />
+    <Content Include="web\area_cliente\web\js\NewsGoth_Lt_BT_italic_400.font.js" />
+    <Content Include="web\area_cliente\web\js\Vegur_400.font.js" />
     <Content Include="bin\AjaxControlToolkit.dll" />
     <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\AspNet.ScriptManager.bootstrap.dll" />
@@ -623,11 +1233,10 @@
     <Content Include="img\OK.png" />
     <Content Include="img\portabilidade.png" />
     <Content Include="img\promotion.png" />
-    <Content Include="Content\ring.gif" />
     <Content Include="img\save_32.png" />
     <Content Include="img\search_page.png" />
     <Content Include="Account\css\reset.css" />
-    <Content Include="Account\css\style.css" />
+    <Content Include="Account\css\styleOld.css" />
     <Content Include="Account\login.aspx" />
     <Content Include="img\Word.png" />
     <Content Include="Scripts\JavaScriptMsg.js" />
@@ -640,12 +1249,15 @@
     <Content Include="web\administrador\configuracoes\cad_tipo_bloqueios.aspx" />
     <Content Include="web\administrador\configuracoes\cad_usuarios.aspx" />
     <Content Include="web\atendimento\lista_vencimento_ideal.aspx" />
+    <Content Include="web\atendimento\relatorios\rel_devolucoes_mes.aspx" />
     <Content Include="web\atendimento\sinc_clientes.aspx" />
+    <Content Include="web\Chamados\AbrirChamado.aspx" />
+    <Content Include="web\Chamados\ChamadosDetalhes.aspx" />
     <Content Include="web\clientes\clinetes_matriz\cad_planos_x_clientes.aspx" />
     <Content Include="web\clientes\clinetes_matriz\cl_add_linhas_planos.aspx" />
     <Content Include="web\clientes\clinetes_matriz\cl_cad_vencimento_Ideal.aspx" />
     <Content Include="web\clientes\cli_contatos.aspx" />
-    <Content Include="Content\cl_cadastro_contratos.aspx" />
+    <Content Include="web\clientes\cl_configuracoes\cad_comissoes_empresa.aspx" />
     <Content Include="web\clientes\cl_configuracoes\cl_cad_unidades.aspx" />
     <Content Include="web\clientes\cl_contatos_detalhes.aspx" />
     <Content Include="web\clientes\cl_contratos.aspx" />
@@ -661,11 +1273,23 @@
     <Content Include="web\clientes\relatorios\rel_descritivo.aspx" />
     <Content Include="web\clientes\soliciacao_fauras\anexos_solicitacao_fatura.aspx" />
     <Content Include="web\financeiro\bling\export_clientes_bling.aspx" />
+    <Content Include="web\financeiro\configuracoes\CadastroAcrescTarifas.aspx" />
+    <Content Include="web\financeiro\configuracoes\CadastroBancos.aspx" />
+    <Content Include="web\financeiro\configuracoes\CadastroCategorias.aspx" />
+    <Content Include="web\financeiro\configuracoes\CadastroDadosBancarios.aspx" />
+    <Content Include="web\financeiro\configuracoes\CadastroDestinatarios.aspx" />
+    <Content Include="web\financeiro\configuracoes\CadastroOcorrencias.aspx" />
+    <Content Include="web\financeiro\configuracoes\CadastroStatusConta.aspx" />
+    <Content Include="web\financeiro\configuracoes\CadastroSubcategorias.aspx" />
+    <Content Include="web\financeiro\configuracoes\CadastroTipoOperacao.aspx" />
+    <Content Include="web\financeiro\fi_contas_pagar.aspx" />
+    <Content Include="web\financeiro\fi_contas_receber.aspx" />
     <Content Include="web\financeiro\Rel\fi_cad_vencimento_Ideal.aspx" />
     <Content Include="web\financeiro\Rel\mostra_faturamento.aspx" />
+    <Content Include="web\financeiro\Rel\cnpj_cidades.aspx" />
+    <Content Include="web\financeiro\Rel\mostra_status_liberacao.aspx" />
     <Content Include="web\financeiro\Rel\razaoSocial_Cnpj.aspx" />
     <Content Include="web\linhas\cadastro\cad_ramais.aspx" />
-    <Content Include="web\linhas\cadastro\li_cad_agrupamento_linhas.aspx" />
     <Content Include="web\linhas\cadastro\li_cad_dta_programacao.aspx" />
     <Content Include="web\linhas\cadastro\li_cad_filhas.aspx" />
     <Content Include="web\linhas\cadastro\li_cad_linhas_chave.aspx" />
@@ -678,9 +1302,15 @@
     <Content Include="web\pessoas\ps_cliente.aspx" />
     <Content Include="web\pessoas\ps_cliente_detalhes.aspx" />
     <Content Include="web\relacionamento\li_linhas_X_cidades.aspx" />
+    <Content Include="web\relacionamento\relatorios\AtestadoQualificacaoTecnica.aspx" />
+    <Content Include="web\relacionamento\relatorios\li_rel_valor_inicial.aspx" />
     <Content Include="web\relacionamento\relatorios\RelUsoAnual.aspx" />
     <Content Include="web\relacionamento\relatorios\rel_projecao.aspx" />
     <Content Include="web\relacionamento\relatorios\rl_rel_movel_x_inter.aspx" />
+    <Content Include="web\relacionamento\relatorios\rl_rel_uso_mes.aspx" />
+    <Content Include="web\Representantes\CadatroRepresentante.aspx" />
+    <Content Include="web\Representantes\CadatroRepresentanteEmail.aspx" />
+    <Content Include="web\Representantes\CadatroRepresentanteTelefone.aspx" />
     <Content Include="web\servicos_fatura\bloqueio_faturas.aspx" />
     <Content Include="web\servicos_fatura\configuracoes\cadatro_tipo_uso_rel.aspx" />
     <Content Include="web\servicos_fatura\configuracoes\sf_agrupamento_tipo_uso.aspx" />
@@ -725,6 +1355,29 @@
     <Content Include="DataSet\ds_Globais\DropDownSF_LEIAUTE_VARIAVEL.xsc">
       <DependentUpon>DropDownSF_LEIAUTE_VARIAVEL.xsd</DependentUpon>
     </Content>
+    <Content Include="Account\scss\style.scss" />
+    <Content Include="Content\Mobile\colors\beauty\Descr.WD3" />
+    <Content Include="Content\Mobile\colors\beauty\images\Descr.WD3" />
+    <Content Include="Content\Mobile\colors\black\Descr.WD3" />
+    <Content Include="Content\Mobile\colors\black\images\Descr.WD3" />
+    <Content Include="Content\Mobile\colors\corporate\Descr.WD3" />
+    <Content Include="Content\Mobile\colors\corporate\images\Descr.WD3" />
+    <Content Include="Content\Mobile\colors\green\Descr.WD3" />
+    <Content Include="Content\Mobile\colors\green\images\Descr.WD3" />
+    <Content Include="Content\Mobile\colors\medical\Descr.WD3" />
+    <Content Include="Content\Mobile\colors\medical\images\Descr.WD3" />
+    <Content Include="Content\Mobile\colors\metro\Descr.WD3" />
+    <Content Include="Content\Mobile\colors\metro\images\Descr.WD3" />
+    <Content Include="Content\Mobile\images\Descr.WD3" />
+    <Content Include="Content\Mobile\images\icons\Descr.WD3" />
+    <Content Include="Content\Mobile\images\icons\social\Descr.WD3" />
+    <Content Include="Content\Mobile\images\icons_dark\Descr.WD3" />
+    <Content Include="Content\Mobile\images\photos\Descr.WD3" />
+    <Content Include="Anexos\2000\janeiro\10.pdf" />
+    <Content Include="Anexos\2000\janeiro\16.pdf" />
+    <Content Include="Anexos\2000\janeiro\7.pdf" />
+    <Content Include="Anexos\2000\janeiro\8.pdf" />
+    <Content Include="Anexos\2000\janeiro\9.pdf" />
     <None Include="DataSet\ds_Globais\DropDownSF_LEIAUTE_VARIAVEL.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -762,6 +1415,17 @@
     </None>
     <Content Include="DataSet\ds_Globais\RadAutoCompleteBoxPaginas.xss">
       <DependentUpon>RadAutoCompleteBoxPaginas.xsd</DependentUpon>
+    </Content>
+    <Content Include="DataSet\ds_rel\Relacionamento\AtestadoQualificacaoTecnica.xsc">
+      <DependentUpon>AtestadoQualificacaoTecnica.xsd</DependentUpon>
+    </Content>
+    <None Include="DataSet\ds_rel\Relacionamento\AtestadoQualificacaoTecnica.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AtestadoQualificacaoTecnica.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="DataSet\ds_rel\Relacionamento\AtestadoQualificacaoTecnica.xss">
+      <DependentUpon>AtestadoQualificacaoTecnica.xsd</DependentUpon>
     </Content>
     <None Include="DataSet\ds_rel\Relacionamento\DataSetBuscaUso.xsd">
       <SubType>Designer</SubType>
@@ -1013,8 +1677,9 @@
     <Content Include="DataSet\ps_pessoa\ps_contatos\radgridBuscacontatos.xss">
       <DependentUpon>radgridBuscacontatos.xsd</DependentUpon>
     </Content>
-    <None Include="My Project\PublishProfiles\Contel.pubxml" />
     <Content Include="Relatorios.master" />
+    <Content Include="Scripts\ckeditor\ckeditor.pack" />
+    <None Include="My Project\PublishProfiles\Fernando.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />
@@ -1024,9 +1689,9 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="App_Data\RadSpell\de-DE.tdf" />
-    <Content Include="App_Data\RadSpell\en-US.tdf" />
-    <Content Include="App_Data\RadSpell\fr-FR.tdf" />
+    <Content Include="Content\App_Data\RadSpell\de-DE.tdf" />
+    <Content Include="Content\App_Data\RadSpell\en-US.tdf" />
+    <Content Include="Content\App_Data\RadSpell\fr-FR.tdf" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -1088,7 +1753,6 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Web.config">
@@ -1109,12 +1773,15 @@
     <Content Include="DataSet\ValidaCPF.xss">
       <DependentUpon>ValidaCPF.xsd</DependentUpon>
     </Content>
+    <Content Include="Site.Mobile.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="web\area_cliente\web\ac_web.master" />
+    <Content Include="web\Representantes\Representante.master" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account\AddPhoneNumber.aspx.designer.vb">
@@ -1226,21 +1893,35 @@
     <Content Include="App_Code\AtualizaStatusLinha.vb">
       <SubType>ASPXCodeBehind</SubType>
     </Content>
+    <Compile Include="App_Code\ClassEnviaEmail.vb" />
     <Compile Include="App_Code\controles\PersonalizarControles.vb">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="App_Code\controles\RetornaImagens.vb" />
     <Compile Include="App_Code\Criptografia.vb" />
     <Content Include="App_Code\FormRewriter.vb" />
     <Compile Include="App_Code\JavaScript.vb">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Code\listas\ListRelProjecao.vb" />
+    <Content Include="App_Code\listas\ListTotal.vb" />
+    <Compile Include="App_Code\Mensagens.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\MesnagensEmail.vb" />
     <Compile Include="App_Code\Sql.vb" />
     <Compile Include="App_Code\Validacoes.vb" />
     <Compile Include="App_Code\autenticacao.vb">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Code\VarSession.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Complementos\Complemento.aspx.designer.vb">
+      <DependentUpon>Complemento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Complementos\Complemento.aspx.vb">
+      <DependentUpon>Complemento.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="DataSet\App_Start\BundleConfig.vb" />
@@ -1279,6 +1960,11 @@
     </Compile>
     <Compile Include="DataSet\ds_linhas\DataSetLinhas01.vb">
       <DependentUpon>DataSetLinhas01.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\ds_rel\Relacionamento\AtestadoQualificacaoTecnica.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AtestadoQualificacaoTecnica.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataSet\ds_rel\Relacionamento\DataSetBuscaUso.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -1384,6 +2070,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ds_relDescritivo.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSet\ds_rel\Relacionamento\DataSetBuscaUso.vb">
+      <DependentUpon>DataSetBuscaUso.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSet\ds_rel\Relacionamento\DataSetProjecao.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1399,6 +2088,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>radgridBuscacontatos.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="download_page.aspx.designer.vb">
       <DependentUpon>download_page.aspx</DependentUpon>
     </Compile>
@@ -1412,13 +2108,6 @@
     <Compile Include="logoff.aspx.vb">
       <DependentUpon>logoff.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.vb">
-      <SubType>ASPXCodeBehind</SubType>
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Default.aspx.designer.vb">
-      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Code\Filtros.vb" />
     <Compile Include="Global.asax.vb">
@@ -1487,25 +2176,26 @@
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Site.Mobile.Master.designer.vb">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.vb">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Startup.vb" />
     <Compile Include="DataSet\ValidaCPF.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ValidaCPF.xsd</DependentUpon>
     </Compile>
+    <Compile Include="App_Code\TipoDispositivo.vb" />
     <Compile Include="ViewSwitcher.ascx.vb">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.vb">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Site.Mobile.Master.vb">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site.Mobile.Master.designer.vb">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="visualizar_pdf.aspx.designer.vb">
       <DependentUpon>visualizar_pdf.aspx</DependentUpon>
@@ -1526,6 +2216,20 @@
     </Compile>
     <Compile Include="web\administrador\configuracoes\adm_paginas_menu.aspx.vb">
       <DependentUpon>adm_paginas_menu.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="web\administrador\configuracoes\AreaCliente\Mobile\Configuracoes\CadastraStatusFatura.aspx.designer.vb">
+      <DependentUpon>CadastraStatusFatura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\administrador\configuracoes\AreaCliente\Mobile\Configuracoes\CadastraStatusFatura.aspx.vb">
+      <DependentUpon>CadastraStatusFatura.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="web\administrador\configuracoes\CadTipoTelefone.aspx.designer.vb">
+      <DependentUpon>CadTipoTelefone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\administrador\configuracoes\CadTipoTelefone.aspx.vb">
+      <DependentUpon>CadTipoTelefone.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="web\administrador\configuracoes\cad_menus.aspx.designer.vb">
@@ -1549,6 +2253,146 @@
       <DependentUpon>cad_usuarios.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="web\administrador\configuracoes\Chamados\CadastroStatusChamado.aspx.designer.vb">
+      <DependentUpon>CadastroStatusChamado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\administrador\configuracoes\Chamados\CadastroStatusChamado.aspx.vb">
+      <DependentUpon>CadastroStatusChamado.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="web\administrador\configuracoes\Chamados\CadastroTarefas.aspx.designer.vb">
+      <DependentUpon>CadastroTarefas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\administrador\configuracoes\Chamados\CadastroTarefas.aspx.vb">
+      <DependentUpon>CadastroTarefas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="web\administrador\configuracoes\Chamados\Ch_CadastroPrioriades.aspx.designer.vb">
+      <DependentUpon>Ch_CadastroPrioriades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\administrador\configuracoes\Chamados\Ch_CadastroPrioriades.aspx.vb">
+      <DependentUpon>Ch_CadastroPrioriades.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="web\area_cliente\mobile\ascx\WebUserControlListview.ascx.designer.vb">
+      <DependentUpon>WebUserControlListview.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="web\area_cliente\mobile\ascx\WebUserControlListview.ascx.vb">
+      <DependentUpon>WebUserControlListview.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\area_cliente\mobile\Chamados\FiltroChamadosMesAno.aspx.designer.vb">
+      <DependentUpon>FiltroChamadosMesAno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\area_cliente\mobile\Chamados\FiltroChamadosMesAno.aspx.vb">
+      <DependentUpon>FiltroChamadosMesAno.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="web\administrador\configuracoes\cliente\adm_cad_tpComissoes.aspx.designer.vb">
+      <DependentUpon>adm_cad_tpComissoes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\administrador\configuracoes\cliente\adm_cad_tpComissoes.aspx.vb">
+      <DependentUpon>adm_cad_tpComissoes.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="web\administrador\configuracoes\Usuario\CadastroPermissao.aspx.designer.vb">
+      <DependentUpon>CadastroPermissao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\administrador\configuracoes\Usuario\CadastroPermissao.aspx.vb">
+      <DependentUpon>CadastroPermissao.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="web\administrador\configuracoes\Usuario\CadastroSetorUsuario.aspx.designer.vb">
+      <DependentUpon>CadastroSetorUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\administrador\configuracoes\Usuario\CadastroSetorUsuario.aspx.vb">
+      <DependentUpon>CadastroSetorUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="web\administrador\configuracoes\Usuario\CadatroSetor.aspx.designer.vb">
+      <DependentUpon>CadatroSetor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\administrador\configuracoes\Usuario\CadatroSetor.aspx.vb">
+      <DependentUpon>CadatroSetor.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="web\area_cliente\mobile\Chamados\AbrirChamadoMobile.aspx.designer.vb">
+      <DependentUpon>AbrirChamadoMobile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\area_cliente\mobile\Chamados\AbrirChamadoMobile.aspx.vb">
+      <DependentUpon>AbrirChamadoMobile.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="web\area_cliente\mobile\Chamados\Chamados.aspx.designer.vb">
+      <DependentUpon>Chamados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\area_cliente\mobile\Chamados\Chamados.aspx.vb">
+      <DependentUpon>Chamados.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="web\area_cliente\mobile\Chamados\ConsultaChamados.aspx.designer.vb">
+      <DependentUpon>ConsultaChamados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\area_cliente\mobile\Chamados\ConsultaChamados.aspx.vb">
+      <DependentUpon>ConsultaChamados.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="web\area_cliente\mobile\Faturas\Faturas.aspx.designer.vb">
+      <DependentUpon>Faturas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\area_cliente\mobile\Faturas\Faturas.aspx.vb">
+      <DependentUpon>Faturas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="web\area_cliente\mobile\Faturas\FiltroFaturas.aspx.designer.vb">
+      <DependentUpon>FiltroFaturas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\area_cliente\mobile\Faturas\FiltroFaturas.aspx.vb">
+      <DependentUpon>FiltroFaturas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="web\area_cliente\mobile\M_Default.aspx.designer.vb">
+      <DependentUpon>M_Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\area_cliente\mobile\M_Default.aspx.vb">
+      <DependentUpon>M_Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="web\area_cliente\mobile\Relatorios\RelDevolucao.aspx.designer.vb">
+      <DependentUpon>RelDevolucao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\area_cliente\mobile\Relatorios\RelDevolucao.aspx.vb">
+      <DependentUpon>RelDevolucao.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="web\area_cliente\web\ac_faturas.aspx.designer.vb">
+      <DependentUpon>ac_faturas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\area_cliente\web\ac_faturas.aspx.vb">
+      <DependentUpon>ac_faturas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="web\area_cliente\web\ac_web.master.designer.vb">
+      <DependentUpon>ac_web.master</DependentUpon>
+    </Compile>
+    <Compile Include="web\area_cliente\web\ac_web.master.vb">
+      <DependentUpon>ac_web.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\area_cliente\web\graficos\graficos_periodo_x_valor.aspx.designer.vb">
+      <DependentUpon>graficos_periodo_x_valor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\area_cliente\web\graficos\graficos_periodo_x_valor.aspx.vb">
+      <DependentUpon>graficos_periodo_x_valor.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="web\area_cliente\web\graficos\grafico_reducao.aspx.designer.vb">
+      <DependentUpon>grafico_reducao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\area_cliente\web\graficos\grafico_reducao.aspx.vb">
+      <DependentUpon>grafico_reducao.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="web\atendimento\lista_vencimento_ideal.aspx.designer.vb">
       <DependentUpon>lista_vencimento_ideal.aspx</DependentUpon>
     </Compile>
@@ -1556,11 +2400,32 @@
       <DependentUpon>lista_vencimento_ideal.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="web\atendimento\relatorios\rel_devolucoes_mes.aspx.designer.vb">
+      <DependentUpon>rel_devolucoes_mes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\atendimento\relatorios\rel_devolucoes_mes.aspx.vb">
+      <DependentUpon>rel_devolucoes_mes.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="web\atendimento\sinc_clientes.aspx.designer.vb">
       <DependentUpon>sinc_clientes.aspx</DependentUpon>
     </Compile>
     <Compile Include="web\atendimento\sinc_clientes.aspx.vb">
       <DependentUpon>sinc_clientes.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="web\Chamados\AbrirChamado.aspx.designer.vb">
+      <DependentUpon>AbrirChamado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\Chamados\AbrirChamado.aspx.vb">
+      <DependentUpon>AbrirChamado.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="web\Chamados\ChamadosDetalhes.aspx.designer.vb">
+      <DependentUpon>ChamadosDetalhes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\Chamados\ChamadosDetalhes.aspx.vb">
+      <DependentUpon>ChamadosDetalhes.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="web\clientes\clinetes_matriz\cad_planos_x_clientes.aspx.designer.vb">
@@ -1591,11 +2456,11 @@
       <DependentUpon>cli_contatos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Content\cl_cadastro_contratos.aspx.designer.vb">
-      <DependentUpon>cl_cadastro_contratos.aspx</DependentUpon>
+    <Compile Include="web\clientes\cl_configuracoes\cad_comissoes_empresa.aspx.designer.vb">
+      <DependentUpon>cad_comissoes_empresa.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Content\cl_cadastro_contratos.aspx.vb">
-      <DependentUpon>cl_cadastro_contratos.aspx</DependentUpon>
+    <Compile Include="web\clientes\cl_configuracoes\cad_comissoes_empresa.aspx.vb">
+      <DependentUpon>cad_comissoes_empresa.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="web\clientes\cl_configuracoes\cl_cad_unidades.aspx.designer.vb">
@@ -1695,13 +2560,34 @@
     </Compile>
     <Compile Include="web\clientes\soliciacao_fauras\anexos_solicitacao_fatura.aspx.vb">
       <DependentUpon>anexos_solicitacao_fatura.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="web\financeiro\bling\export_clientes_bling.aspx.designer.vb">
       <DependentUpon>export_clientes_bling.aspx</DependentUpon>
     </Compile>
     <Compile Include="web\financeiro\bling\export_clientes_bling.aspx.vb">
       <DependentUpon>export_clientes_bling.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\financeiro\configuracoes\CadastroBancos.aspx.designer.vb">
+      <DependentUpon>CadastroBancos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\financeiro\configuracoes\CadastroBancos.aspx.vb">
+      <DependentUpon>CadastroBancos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\financeiro\configuracoes\CadastroDadosBancarios.aspx.designer.vb">
+      <DependentUpon>CadastroDadosBancarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\financeiro\configuracoes\CadastroDadosBancarios.aspx.vb">
+      <DependentUpon>CadastroDadosBancarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\financeiro\fi_contas_pagar.aspx.designer.vb">
+      <DependentUpon>fi_contas_pagar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\financeiro\fi_contas_pagar.aspx.vb">
+      <DependentUpon>fi_contas_pagar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="web\financeiro\Rel\fi_cad_vencimento_Ideal.aspx.designer.vb">
@@ -1718,6 +2604,20 @@
       <DependentUpon>mostra_faturamento.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="web\financeiro\Rel\cnpj_cidades.aspx.designer.vb">
+      <DependentUpon>cnpj_cidades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\financeiro\Rel\cnpj_cidades.aspx.vb">
+      <DependentUpon>cnpj_cidades.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="web\financeiro\Rel\mostra_status_liberacao.aspx.designer.vb">
+      <DependentUpon>mostra_status_liberacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\financeiro\Rel\mostra_status_liberacao.aspx.vb">
+      <DependentUpon>mostra_status_liberacao.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="web\financeiro\Rel\razaoSocial_Cnpj.aspx.designer.vb">
       <DependentUpon>razaoSocial_Cnpj.aspx</DependentUpon>
     </Compile>
@@ -1730,13 +2630,6 @@
     </Compile>
     <Compile Include="web\linhas\cadastro\cad_ramais.aspx.vb">
       <DependentUpon>cad_ramais.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="web\linhas\cadastro\li_cad_agrupamento_linhas.aspx.designer.vb">
-      <DependentUpon>li_cad_agrupamento_linhas.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="web\linhas\cadastro\li_cad_agrupamento_linhas.aspx.vb">
-      <DependentUpon>li_cad_agrupamento_linhas.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="web\linhas\cadastro\li_cad_dta_programacao.aspx.designer.vb">
@@ -1779,6 +2672,7 @@
     </Compile>
     <Compile Include="web\linhas\cl_linhas_x_clientes.aspx.vb">
       <DependentUpon>cl_linhas_x_clientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="web\operadoras\cad_operadoras.aspx.designer.vb">
       <DependentUpon>cad_operadoras.aspx</DependentUpon>
@@ -1822,6 +2716,20 @@
       <DependentUpon>li_linhas_X_cidades.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="web\relacionamento\relatorios\AtestadoQualificacaoTecnica.aspx.designer.vb">
+      <DependentUpon>AtestadoQualificacaoTecnica.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\relacionamento\relatorios\AtestadoQualificacaoTecnica.aspx.vb">
+      <DependentUpon>AtestadoQualificacaoTecnica.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="web\relacionamento\relatorios\li_rel_valor_inicial.aspx.designer.vb">
+      <DependentUpon>li_rel_valor_inicial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\relacionamento\relatorios\li_rel_valor_inicial.aspx.vb">
+      <DependentUpon>li_rel_valor_inicial.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="web\relacionamento\relatorios\RelUsoAnual.aspx.designer.vb">
       <DependentUpon>RelUsoAnual.aspx</DependentUpon>
     </Compile>
@@ -1841,6 +2749,41 @@
     </Compile>
     <Compile Include="web\relacionamento\relatorios\rl_rel_movel_x_inter.aspx.vb">
       <DependentUpon>rl_rel_movel_x_inter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\relacionamento\relatorios\rl_rel_uso_mes.aspx.designer.vb">
+      <DependentUpon>rl_rel_uso_mes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\relacionamento\relatorios\rl_rel_uso_mes.aspx.vb">
+      <DependentUpon>rl_rel_uso_mes.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="web\Representantes\CadatroRepresentante.aspx.designer.vb">
+      <DependentUpon>CadatroRepresentante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\Representantes\CadatroRepresentante.aspx.vb">
+      <DependentUpon>CadatroRepresentante.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="web\Representantes\CadatroRepresentanteEmail.aspx.designer.vb">
+      <DependentUpon>CadatroRepresentanteEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\Representantes\CadatroRepresentanteEmail.aspx.vb">
+      <DependentUpon>CadatroRepresentanteEmail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="web\Representantes\CadatroRepresentanteTelefone.aspx.designer.vb">
+      <DependentUpon>CadatroRepresentanteTelefone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\Representantes\CadatroRepresentanteTelefone.aspx.vb">
+      <DependentUpon>CadatroRepresentanteTelefone.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="web\Representantes\Representante.master.designer.vb">
+      <DependentUpon>Representante.master</DependentUpon>
+    </Compile>
+    <Compile Include="web\Representantes\Representante.master.vb">
+      <DependentUpon>Representante.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="web\servicos_fatura\bloqueio_faturas.aspx.designer.vb">
@@ -2011,6 +2954,7 @@
     <EmbeddedResource Include="rdcl\clientes\RelUso.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="rdcl\relacionamento\AtestadoQualificacaoTecnica.rdlc" />
     <EmbeddedResource Include="rdcl\relacionamento\Rel_Projecao.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -2032,7 +2976,6 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <Content Include="Site.Master" />
-    <Content Include="Site.Mobile.Master" />
     <Content Include="ViewSwitcher.ascx" />
   </ItemGroup>
   <ItemGroup>
@@ -2041,6 +2984,9 @@
     <Folder Include="DataSet\cl_clientes\" />
     <Folder Include="DataSet\ps_pessoa\ps_cidades_uf\" />
     <Folder Include="DynamicData\FieldTemplates\" />
+    <Folder Include="web\area_cliente\smartphone\" />
+    <Folder Include="web\area_cliente\web\relatorios\" />
+    <Folder Include="web\area_representante\" />
     <Folder Include="web\empresas\" />
     <Folder Include="web\pesquisa\" />
   </ItemGroup>
@@ -2063,6 +3009,27 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebForms_Basic.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebForms_Basic.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
@@ -2082,7 +3049,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
     </VisualStudio>
   </ProjectExtensions>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

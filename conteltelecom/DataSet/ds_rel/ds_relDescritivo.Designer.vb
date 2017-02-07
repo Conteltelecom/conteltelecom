@@ -681,8 +681,8 @@ Partial Public Class ds_relDescritivo
             MyBase.Columns.Add(Me.columnmesAnoRefereincia_SF_SERVICOS_FATURA)
             Me.columndesc_CL_PLANOS_CLIENTE.ReadOnly = true
             Me.columndesc_CL_PLANOS_CLIENTE.MaxLength = 301
-            Me.columnnumLinha_LI_LINHAS.MaxLength = 15
-            Me.columncodLinha_LI_LINHAS.MaxLength = 15
+            Me.columnnumLinha_LI_LINHAS.MaxLength = 50
+            Me.columncodLinha_LI_LINHAS.MaxLength = 50
             Me.columndesc_PS_CIDADES.MaxLength = 150
             Me.columnCNPJ_PS_JURIDICA.MaxLength = 14
             Me.columnrazaosocial_PS_JURIDICA.MaxLength = 250

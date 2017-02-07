@@ -14,6 +14,7 @@ Public Class autenticacao
         Dim idEmpresa_PS_PESSOA As Integer = 0
         Dim tipoErro As Integer = 0
         Dim id_PS_PESSOA As Integer = 0
+
         Dim StrConectionString As New Sql
         Dim constr As String = StrConectionString.StrConectionString.ToString
 
@@ -38,7 +39,7 @@ Public Class autenticacao
                     con.Close()
                     tipoErro = cmd.Parameters("@tipoErro").Value.ToString()
                     id_PS_PESSOA = cmd.Parameters("@id_PS_PESSOA").Value.ToString()
-
+                    idEmpresa_PS_PESSOA = cmd.Parameters("@idEmpresa_PS_PESSOA").Value.ToString()
                 Catch ex As Exception
 
                     tipoErro = -4
@@ -70,8 +71,8 @@ Public Class autenticacao
                     Return False
                     Exit Select
                 Case -4
-                    resutado = "Atenção!!!!!! USURARIO INVÁLIDO"
-                    Return False
+                resutado = "Atenção!!!!!! USUARIO INVÁLIDO"
+                Return False
                     Exit Select
                 Case -5
                     Try

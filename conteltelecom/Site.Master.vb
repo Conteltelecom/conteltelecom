@@ -45,7 +45,12 @@ Public Class SiteMaster
         End If
         Dim ValidaSessao As New VarSession
         If ValidaSessao.ValidaSessao() = False Then
-            HttpContext.Current.Response.Redirect("~/logoff.aspx")
+            Try
+                HttpContext.Current.Response.Redirect("~/logoff.aspx")
+            Catch ex As Exception
+
+            End Try
+
         End If
 
     End Sub

@@ -1,0 +1,39 @@
+﻿<%@ Master Language="VB" MasterPageFile="~/Menu.master" AutoEventWireup="false" CodeBehind="Representante.master.vb" Inherits="conteltelecom.Representante" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderMenuhead" runat="server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderRepresentanteHead" runat="server">
+
+                         </asp:ContentPlaceHolder> 
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderMenu" runat="server">
+   
+        <div style="margin:2px"></div>
+      <telerik:RadNavigation runat="server" ID="NavClienteMatriz" dir="rtl" Visible="true">
+        <Nodes>
+               <telerik:NavigationNode Text="SAIR" NavigateUrl="~/logoff.aspx" >
+
+            </telerik:NavigationNode>
+            <telerik:NavigationNode Text ="CONTATOS">
+                <Nodes>
+                    <telerik:NavigationNode Text="E-MAIL" NavigateUrl='<%# String.Format("~/web/Representantes/CadatroRepresentanteEmail.aspx?id_PS_PESSOA={0}", Request.QueryString("id_PS_PESSOA"))%>'>
+                    </telerik:NavigationNode>
+                    <telerik:NavigationNode Text="TELEFONES" NavigateUrl='<%# String.Format("~/web/Representantes/CadatroRepresentanteTelefone.aspx?id_PS_PESSOA={0}", Request.QueryString("id_PS_PESSOA"))%>'>
+
+                    </telerik:NavigationNode>
+                </Nodes>
+            </telerik:NavigationNode>
+           
+            </Nodes>
+          
+          </telerik:RadNavigation>
+    <br />
+    <br />
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderRepresentanteBody" runat="server">
+         
+
+
+
+
+                                 </asp:ContentPlaceHolder> 
+  
+</asp:Content>

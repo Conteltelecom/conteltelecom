@@ -185,20 +185,23 @@ Public Class ps_cliente_detalhes
 
     Private Sub RadDataForm1_PreRender(sender As Object, e As EventArgs) Handles RadDataForm1.PreRender
 
+        If IsPostBack = False Then
 
-        If RadDataForm1.Items.Count > 0 Then
-            Dim RadDropDownListuF As RadDropDownList
-            Dim RadDropDownListCidade As RadDropDownList
-            RadDropDownListuF = DirectCast(RadDataForm1.Items(0).FindControl("RadDropDownListuF"), RadDropDownList)
-            Dim TextBoxid_PS_CIDADES As TextBox = DirectCast(RadDataForm1.Items(0).FindControl("TextBoxid_PS_CIDADES"), TextBox)
-            If IsNothing(RadDropDownListuF) = False Then
-                SqlDataSourceDropGrid.SelectParameters("cod_PS_UF").DefaultValue = RadDropDownListuF.SelectedValue
-                RadDropDownListCidade = DirectCast(RadDataForm1.Items(0).FindControl("RadDropDownListCidade"), RadDropDownList)
-                'RadDropDownListCidade.DataBind()
-                RadDropDownListCidade.SelectedValue = TextBoxid_PS_CIDADES.Text
+
+            If RadDataForm1.Items.Count > 0 Then
+                Dim RadDropDownListuF As RadDropDownList
+                Dim RadDropDownListCidade As RadDropDownList
+                RadDropDownListuF = DirectCast(RadDataForm1.Items(0).FindControl("RadDropDownListuF"), RadDropDownList)
+                Dim TextBoxid_PS_CIDADES As TextBox = DirectCast(RadDataForm1.Items(0).FindControl("TextBoxid_PS_CIDADES"), TextBox)
+                If IsNothing(RadDropDownListuF) = False Then
+                    SqlDataSourceDropGrid.SelectParameters("cod_PS_UF").DefaultValue = RadDropDownListuF.SelectedValue
+                    RadDropDownListCidade = DirectCast(RadDataForm1.Items(0).FindControl("RadDropDownListCidade"), RadDropDownList)
+                    'RadDropDownListCidade.DataBind()
+                    RadDropDownListCidade.SelectedValue = TextBoxid_PS_CIDADES.Text
+                End If
+            Else
+
             End If
-        Else
-
         End If
     End Sub
 

@@ -16,8 +16,8 @@ Public Class cli_contatos
     End Function
     Public Function CpfFormat(cpf As Object) As String
 
-        Dim ClsValidacoes As New conteltelecom.Validacoes
-        Return ClsValidacoes.CNPJFormat(cpf)
+
+        Return Validacoes.CNPJFormat(cpf)
 
     End Function
 

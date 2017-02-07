@@ -9,22 +9,12 @@
 
         If IsPostBack = False Then
 
-            Dim ano As String = Year(Date.Now)
-            Dim mes As String = Month(Date.Now)
-            If CInt(mes) < 10 Then
-                mes = "0" & mes
 
-            End If
+            ObjectDataSourceBuscUsoAnual.SelectParameters("DtIni").DefaultValue = "01/" & Month(Date.Now) & "/" & Year(Date.Now)
+            ObjectDataSourceBuscUsoAnual.SelectParameters("DtFim").DefaultValue = Func_Ultimo_Dia_Mes(Date.Now)
 
-
-            Session("mesFim") = mes
-            Session("mesIni") = mes
-            Session("AnoIni") = ano
-            Session("AnoFim)") = ano
-
-
-            RadDatePickerMesIni.SelectedDate = "01/" & mes & "/" & Year(Date.Now)
-            RadDatePickerFinal.SelectedDate = Func_Ultimo_Dia_Mes(Date.Now)
+            RadDatePickerMesIni.SelectedDate = ObjectDataSourceBuscUsoAnual.SelectParameters("DtIni").DefaultValue
+            RadDatePickerFinal.SelectedDate = ObjectDataSourceBuscUsoAnual.SelectParameters("DtFim").DefaultValue
             ReportViewerUsoAnual.LocalReport.Refresh()
             ReportViewerUsoAnual.DataBind()
 
@@ -53,12 +43,11 @@
 
 
 
-        Session("mesFim") = "0" & Month(RadDatePickerFinal.DateInput.SelectedDate)
-        Session("mesIni") = "0" & Month(RadDatePickerMesIni.DateInput.SelectedDate)
-        Session("AnoIni") = Year(RadDatePickerMesIni.DateInput.SelectedDate)
-        Session("AnoFim)") = Year(RadDatePickerFinal.DateInput.SelectedDate)
+        ObjectDataSourceBuscUsoAnual.SelectParameters("DtIni").DefaultValue = "01/" & Month(RadDatePickerMesIni.DateInput.SelectedDate) & "/" & Year(RadDatePickerMesIni.DateInput.SelectedDate)
+        ObjectDataSourceBuscUsoAnual.SelectParameters("DtFim").DefaultValue = "28/" & Month(RadDatePickerFinal.DateInput.SelectedDate) & "/" & Year(RadDatePickerFinal.DateInput.SelectedDate)
 
-
+        RadDatePickerMesIni.SelectedDate = ObjectDataSourceBuscUsoAnual.SelectParameters("DtIni").DefaultValue
+        RadDatePickerFinal.SelectedDate = Func_Ultimo_Dia_Mes(ObjectDataSourceBuscUsoAnual.SelectParameters("DtFim").DefaultValue)
         ReportViewerUsoAnual.LocalReport.Refresh()
         ReportViewerUsoAnual.DataBind()
 

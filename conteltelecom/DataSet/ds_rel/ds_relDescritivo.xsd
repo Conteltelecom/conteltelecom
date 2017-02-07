@@ -54,7 +54,7 @@
   <xs:element name="ds_relDescritivo" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:EnforceConstraints="False" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ds_relDescritivo" msprop:Generator_UserDSName="ds_relDescritivo">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="RelDiscritivo" msprop:Generator_TableClassName="RelDiscritivoDataTable" msprop:Generator_TableVarName="tableRelDiscritivo" msprop:Generator_RowChangedName="RelDiscritivoRowChanged" msprop:Generator_TablePropName="RelDiscritivo" msprop:Generator_RowDeletingName="RelDiscritivoRowDeleting" msprop:Generator_RowChangingName="RelDiscritivoRowChanging" msprop:Generator_RowEvHandlerName="RelDiscritivoRowChangeEventHandler" msprop:Generator_RowDeletedName="RelDiscritivoRowDeleted" msprop:Generator_RowClassName="RelDiscritivoRow" msprop:Generator_UserTableName="RelDiscritivo" msprop:Generator_RowEvArgName="RelDiscritivoRowChangeEvent">
+        <xs:element name="RelDiscritivo" msprop:Generator_TableClassName="RelDiscritivoDataTable" msprop:Generator_TableVarName="tableRelDiscritivo" msprop:Generator_TablePropName="RelDiscritivo" msprop:Generator_RowDeletingName="RelDiscritivoRowDeleting" msprop:Generator_RowChangingName="RelDiscritivoRowChanging" msprop:Generator_RowEvHandlerName="RelDiscritivoRowChangeEventHandler" msprop:Generator_RowDeletedName="RelDiscritivoRowDeleted" msprop:Generator_UserTableName="RelDiscritivo" msprop:Generator_RowChangedName="RelDiscritivoRowChanged" msprop:Generator_RowEvArgName="RelDiscritivoRowChangeEvent" msprop:Generator_RowClassName="RelDiscritivoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ordem_CL_PLANOS_CLIENTE" msprop:Generator_ColumnVarNameInTable="columnordem_CL_PLANOS_CLIENTE" msprop:Generator_ColumnPropNameInRow="ordem_CL_PLANOS_CLIENTE" msprop:Generator_ColumnPropNameInTable="ordem_CL_PLANOS_CLIENTEColumn" msprop:Generator_UserColumnName="ordem_CL_PLANOS_CLIENTE" type="xs:int" minOccurs="0" />
@@ -70,14 +70,14 @@
               <xs:element name="numLinha_LI_LINHAS" msprop:Generator_ColumnVarNameInTable="columnnumLinha_LI_LINHAS" msprop:Generator_ColumnPropNameInRow="numLinha_LI_LINHAS" msprop:Generator_ColumnPropNameInTable="numLinha_LI_LINHASColumn" msprop:Generator_UserColumnName="numLinha_LI_LINHAS" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="15" />
+                    <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="codLinha_LI_LINHAS" msprop:Generator_ColumnVarNameInTable="columncodLinha_LI_LINHAS" msprop:Generator_ColumnPropNameInRow="codLinha_LI_LINHAS" msprop:Generator_ColumnPropNameInTable="codLinha_LI_LINHASColumn" msprop:Generator_UserColumnName="codLinha_LI_LINHAS" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="15" />
+                    <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

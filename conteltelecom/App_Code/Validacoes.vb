@@ -6,7 +6,24 @@
 
 
     End Function
+    Public Shared Function FormatarMesRef(StrMesRef As String, ByVal TipoRetorno As Integer) As String
+        ' TipoRetorno = 1 EX=01/2000
+        ' TipoRetorno = 0 EX=Janeiro/2000
+        If IsDate(StrMesRef) Then
 
+
+            Dim mes As String = StrMesRef.Substring(0, StrMesRef.Length - 5)
+            Dim ano As String = StrMesRef.Substring(StrMesRef.Length - 4)
+
+            If TipoRetorno = 0 Then
+                StrMesRef = MonthName(mes) & "/" & ano
+            ElseIf TipoRetorno = 1 Then
+                StrMesRef = mes & "/" & ano
+            End If
+        End If
+
+        Return StrMesRef
+    End Function
 
 
     Public Shared Function FormatarCep(Strcep As Object) As String

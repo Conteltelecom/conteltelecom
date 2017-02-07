@@ -104,15 +104,6 @@ Partial Public Class MasterPageCli
     Protected WithEvents reducao As Global.Telerik.Web.UI.NavigationNode
     
     '''<summary>
-    '''Controle Pendecia.
-    '''</summary>
-    '''<remarks>
-    '''Campo gerado automaticamente.
-    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-    '''</remarks>
-    Protected WithEvents Pendecia As Global.Telerik.Web.UI.NavigationNode
-    
-    '''<summary>
     '''Controle Projecao.
     '''</summary>
     '''<remarks>

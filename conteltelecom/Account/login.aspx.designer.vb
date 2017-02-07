@@ -12,7 +12,7 @@ Option Explicit On
 
 
 Partial Public Class login
-    
+
     '''<summary>
     '''Controle ImageLogo.
     '''</summary>
@@ -21,7 +21,16 @@ Partial Public Class login
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
     Protected WithEvents ImageLogo As Global.System.Web.UI.WebControls.Image
-    
+
+    '''<summary>
+    '''Controle logar.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents logar As Global.System.Web.UI.HtmlControls.HtmlForm
+
     '''<summary>
     '''Controle ScriptManager1.
     '''</summary>
@@ -30,7 +39,7 @@ Partial Public Class login
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
     Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
-    
+
     '''<summary>
     '''Controle RadNotification1.
     '''</summary>
@@ -39,31 +48,22 @@ Partial Public Class login
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
     Protected WithEvents RadNotification1 As Global.Telerik.Web.UI.RadNotification
-    
+
     '''<summary>
-    '''Controle RadTextBoxNome.
+    '''Controle nome.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents RadTextBoxNome As Global.Telerik.Web.UI.RadTextBox
-    
+    Protected WithEvents nome As Global.System.Web.UI.WebControls.TextBox
+
     '''<summary>
-    '''Controle RadTextBoxSenha.
+    '''Controle password.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents RadTextBoxSenha As Global.Telerik.Web.UI.RadTextBox
-    
-    '''<summary>
-    '''Controle RadButtonlog.
-    '''</summary>
-    '''<remarks>
-    '''Campo gerado automaticamente.
-    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-    '''</remarks>
-    Protected WithEvents RadButtonlog As Global.Telerik.Web.UI.RadButton
+    Protected WithEvents password As Global.System.Web.UI.WebControls.TextBox
 End Class

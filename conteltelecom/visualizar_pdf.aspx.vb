@@ -5,30 +5,18 @@ Public Class visualizar_pdf
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Try
-
-
-            Dim FilePath As String = Server.MapPath(Request.QueryString("caminho_ANEXOS_FATURAS") & Request.QueryString("id_ANEXOS_FATURAS") & ".pdf")
-
+            Dim FilePath As String = Server.MapPath(Request.QueryString("caminho_ANEXOS_FATURAS"))
             Dim User As New WebClient()
-
             Dim FileBuffer As [Byte]() = User.DownloadData(FilePath)
-
+            Response.ContentType = "application/pdf"
             If FileBuffer IsNot Nothing Then
                 If Request.QueryString("IsDownload") = 1 Then
                     Response.AddHeader("content-disposition", "attachment;filename=" & FilePath)
-
                 Else
-
-
-                    Response.AddHeader("content-disposition", "inline;filename=" & FilePath)
+                    Response.AddHeader("content-length", FileBuffer.Length.ToString())
                 End If
-
-                Response.ContentType = "application/pdf"
-                '  Response.AddHeader("Content-disposition", "inline; filename=\" & FilePath)
-                '  Response.AddHeader("content-length", FileBuffer.Length.ToString())
-
-
                 Response.BinaryWrite(FileBuffer)
+
             End If
 
         Catch ex As Exception

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este arquivo é usado pelo processo empacotar/publicar do seu projeto Web. É possível personalizar o comportamento desse processo
+ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>Z:\conteltelecom</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="rdcl/relacionamento/RelUsoAnual.rdlc">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="web/financeiro/Rel/mostra_status_liberacao.aspx">
+      <publishTime>12/02/2016 13:40:14</publishTime>
+    </File>
+    <File Include="web/relacionamento/relatorios/RelUsoAnual.aspx">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

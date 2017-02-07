@@ -8,42 +8,50 @@ Public Class cl_rel_reducao
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
         If IsPostBack = False Then
+
+
             Dim Parametros As Integer = 1
 
+            If IsNothing(Request.QueryString("mesAnoRefereincia_SF_SERVICOS_FATURA")) = True Then
+                RadDropDownListMes.SelectedValue = Date.Today.Month.ToString("d2")
+                RadDropDownListAno.SelectedValue = Date.Today.Year
+            Else
+                Dim mes As String = Request.QueryString("mesAnoRefereincia_SF_SERVICOS_FATURA").ToString.Substring(0, Request.QueryString("mesAnoRefereincia_SF_SERVICOS_FATURA").ToString.Length - 5)
+                Dim ano As String = Request.QueryString("mesAnoRefereincia_SF_SERVICOS_FATURA").ToString.Substring(Request.QueryString("mesAnoRefereincia_SF_SERVICOS_FATURA").ToString.Length - 4)
+                RadDropDownListMes.SelectedValue = mes
+                RadDropDownListAno.SelectedValue = ano
 
-            RadDropDownListMes.SelectedValue = Date.Today.Month.ToString("d2")
-            RadDropDownListAno.SelectedValue = Date.Today.Year
+            End If
+
 
             If IsNothing(Request.QueryString("id_PS_PESSOA")) = True Then
                 Session("codMatriz_PS_CLIENTES") = ""
             Else
-
                 If IsNothing(Request.QueryString("mesAnoRefereincia_SF_SERVICOS_FATURA")) = True Then
-
-
                     Session("mesAnoRefereincia_SF_SERVICOS_FATURA") = Date.Today.Month.ToString("d2") & "/" & Date.Today.Year
-                Else
-
-
-
                 End If
-
-
                 Session("codMatriz_PS_CLIENTES") = Request.QueryString("id_PS_PESSOA")
                 RadAutoCompleteBoxBuscaMatriz.Visible = False
                 Label2.Visible = False
                 If RadDropDownListTipoRel.SelectedValue = 2 Then
                     Parametros = 2
                 End If
-                Dim prmReport As New ReportParameter("tipoRel", Parametros)
 
-                ReportViewerRelReducao.LocalReport.SetParameters(New ReportParameter() {prmReport})
-
-                ReportViewerRelReducao.LocalReport.Refresh()
             End If
+            If IsNothing(Request.QueryString("areaCliente")) = False Then
+                Session("codMatriz_PS_CLIENTES") = Session("idEmpresa_PS_PESSOA")
+                RadAutoCompleteBoxBuscaMatriz.Visible = False
+                Label2.Visible = False
+                RadDropDownListTipoRel.Visible = False
+                LabelTipoRel.Visible = False
+                If RadDropDownListTipoRel.SelectedValue = 2 Then
+                    Parametros = 2
+                End If
 
-
-
+            End If
+            Dim prmReport As New ReportParameter("tipoRel", Parametros)
+            ReportViewerRelReducao.LocalReport.SetParameters(New ReportParameter() {prmReport})
+            ReportViewerRelReducao.LocalReport.Refresh()
         End If
     End Sub
 
@@ -68,6 +76,18 @@ Public Class cl_rel_reducao
         Dim Parametros As Integer = 1
         If RadDropDownListTipoRel.SelectedValue = 2 Then
             Parametros = 2
+        End If
+
+        If IsNothing(Request.QueryString("areaCliente")) = False Then
+            Session("codMatriz_PS_CLIENTES") = Session("idEmpresa_PS_PESSOA")
+            RadAutoCompleteBoxBuscaMatriz.Visible = False
+            Label2.Visible = False
+            RadDropDownListTipoRel.Visible = False
+            LabelTipoRel.Visible = False
+            If RadDropDownListTipoRel.SelectedValue = 2 Then
+                Parametros = 2
+            End If
+
         End If
         Dim prmReport As New ReportParameter("tipoRel", Parametros)
 

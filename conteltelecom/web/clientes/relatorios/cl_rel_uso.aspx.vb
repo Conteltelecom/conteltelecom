@@ -20,14 +20,24 @@ Public Class cl_rel_uso
             Dim prmReport As New ReportParameter("tipoRel", Parametros)
 
             ReportViewerUso.LocalReport.SetParameters(New ReportParameter() {prmReport})
-            If IsNothing(Request.QueryString("id_PS_PESSOA")) = True Then
+            If IsNothing(Request.QueryString("id_PS_PESSOA")) = True And IsNothing(Request.QueryString("areaCliente")) = True Then
                 Session("codMatriz_PS_CLIENTES") = ""
             Else
-
                 RadDropDownListMes.SelectedValue = Date.Today.Month
                 RadDropDownListAno.SelectedValue = Date.Today.Year
                 Session("mesAnoRefereincia_SF_SERVICOS_FATURA") = Date.Today.Month.ToString("d2") & "/" & Date.Today.Year
-                Session("codMatriz_PS_CLIENTES") = Request.QueryString("id_PS_PESSOA")
+                If IsNothing(Request.QueryString("areaCliente")) = True Then
+                    Session("codMatriz_PS_CLIENTES") = Session("idEmpresa_PS_PESSOA")
+                Else
+                    Session("codMatriz_PS_CLIENTES") = Request.QueryString("id_PS_PESSOA")
+                End If
+
+
+
+
+
+
+
                 RadAutoCompleteBoxBuscaMatriz.Visible = False
                 Label2.Visible = False
                 ReportViewerUso.LocalReport.Refresh()
@@ -40,7 +50,7 @@ Public Class cl_rel_uso
 
     Protected Sub RadImageButtonGerar_Click(sender As Object, e As Telerik.Web.UI.ImageButtonClickEventArgs)
 
-        If IsNothing(Request.QueryString("id_PS_PESSOA")) = True Then
+        If IsNothing(Request.QueryString("id_PS_PESSOA")) = True And IsNothing(Request.QueryString("areaCliente")) = True Then
             If IsNothing(RadAutoCompleteBoxBuscaMatriz) = False Then
                 For Each entry As AutoCompleteBoxEntry In RadAutoCompleteBoxBuscaMatriz.Entries
                     If RadAutoCompleteBoxBuscaMatriz.Text = entry.Text Then
@@ -49,7 +59,13 @@ Public Class cl_rel_uso
                 Next
             End If
         Else
-            Session("codMatriz_PS_CLIENTES") = Request.QueryString("id_PS_PESSOA")
+            If IsNothing(Request.QueryString("areaCliente")) = True Then
+                Session("codMatriz_PS_CLIENTES") = Request.QueryString("id_PS_PESSOA")
+            Else
+
+                Session("codMatriz_PS_CLIENTES") = Session("idEmpresa_PS_PESSOA")
+            End If
+
         End If
         Dim Parametros As Integer
         If RadDropDownLisTipo.SelectedValue = 0 Then

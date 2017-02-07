@@ -1,0 +1,11 @@
+﻿<%@ Master Language="VB" MasterPageFile="~/Menu.master" AutoEventWireup="false" CodeBehind="ac_web.master.vb" Inherits="conteltelecom.ac_web" %>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderMenu" runat="server">
+    
+      <asp:ContentPlaceHolder ID="ContentPlaceHolderHeadNormal" runat="server">
+           <div style="margin:2px">
+                         </div>
+         
+    </asp:ContentPlaceHolder>
+   
+</asp:Content>

@@ -1,65 +1,43 @@
-﻿Imports System.Text
-Imports System.IO
-Imports System.Security.Cryptography
+﻿Imports System.Security.Cryptography
+Imports System.Text
 
 Public Class Criptografia
-    Private Shared chave As Byte() = {}
-    Private Shared iv As Byte() = {12, 34, 56, 78, 90, 102,
-        114, 126}
-
+    Dim myKey As String
+    Dim des As New TripleDESCryptoServiceProvider()
+    Dim hashmd5 As New MD5CryptoServiceProvider()
 
     Public Sub New()
+        'Inserir o codigo de configuração da classe
+        myKey = "18420101Aa@@@@"
     End Sub
-    Public Shared Function Criptografar(valor As String, chaveCriptografia As String) As String
-        Dim des As DESCryptoServiceProvider
-        Dim ms As MemoryStream
-        Dim cs As CryptoStream
-        Dim input As Byte()
 
-        Try
-            des = New DESCryptoServiceProvider()
-            ms = New MemoryStream()
-            input = Encoding.UTF8.GetBytes(valor)
-            chave = Encoding.UTF8.GetBytes(chaveCriptografia.Substring(0, 8))
-
-            cs = New CryptoStream(ms, des.CreateEncryptor(chave, iv), CryptoStreamMode.Write)
-            cs.Write(input, 0, input.Length)
-            cs.FlushFinalBlock()
-
-            Return Convert.ToBase64String(ms.ToArray())
-        Catch ex As Exception
-            Throw ex
-        End Try
-    End Function
-
-    Public Shared Function Descriptografar(valor As String, chaveCriptografia As String) As String
-        Dim des As DESCryptoServiceProvider
-        Dim ms As MemoryStream
-        Dim cs As CryptoStream
-        Dim input As Byte()
-        If String.IsNullOrEmpty(valor) Then
-            valor = "1"
+    Public Function clsCrypto(ByVal texto As String, ByVal Operacao As Boolean) As String
+        If Operacao Then
+            clsCrypto = Cifra(texto)
+        Else
+            clsCrypto = DeCifra(texto)
         End If
-
-        Try
-            des = New DESCryptoServiceProvider()
-            ms = New MemoryStream()
-
-            input = New Byte(valor.Length - 1) {}
-            input = Convert.FromBase64String(valor.Replace(" ", "+"))
-
-            chave = Encoding.UTF8.GetBytes(chaveCriptografia.Substring(0, 8))
-
-            cs = New CryptoStream(ms, des.CreateDecryptor(chave, iv), CryptoStreamMode.Write)
-            cs.Write(input, 0, input.Length)
-            cs.FlushFinalBlock()
-
-            Return Encoding.UTF8.GetString(ms.ToArray())
-        Catch ex As Exception
-            Throw ex
-        End Try
     End Function
+
+    Private Function DeCifra(ByVal texto As String) As String
+
+
+        des.Key = hashmd5.ComputeHash(ASCIIEncoding.ASCII.GetBytes(myKey))
+        des.Mode = CipherMode.ECB
+        Dim desdencrypt As ICryptoTransform = des.CreateDecryptor()
+        Dim buff() As Byte = Convert.FromBase64String(texto)
+        DeCifra = ASCIIEncoding.ASCII.GetString(desdencrypt.TransformFinalBlock(buff, 0, buff.Length))
+
+
+    End Function
+
+    Private Function Cifra(ByVal texto As String) As String
+        des.Key = hashmd5.ComputeHash(ASCIIEncoding.ASCII.GetBytes(myKey))
+        des.Mode = CipherMode.ECB
+        Dim desdencrypt As ICryptoTransform = des.CreateEncryptor()
+        Dim MyASCIIEncoding = New ASCIIEncoding()
+        Dim buff() As Byte = ASCIIEncoding.ASCII.GetBytes(texto)
+        Cifra = Convert.ToBase64String(desdencrypt.TransformFinalBlock(buff, 0, buff.Length))
+    End Function
+
 End Class
-
-
-

@@ -1,9 +1,9 @@
 ﻿'------------------------------------------------------------------------------
 ' <gerado automaticamente>
-'     O código foi gerado por uma ferramenta.
+'     Este código foi gerado por uma ferramenta.
 '
 '     As alterações ao arquivo poderão causar comportamento incorreto e serão perdidas se
-'     o código é regenerado. 
+'     o código for recriado
 ' </gerado automaticamente>
 '------------------------------------------------------------------------------
 
@@ -12,7 +12,7 @@ Option Explicit On
 
 
 Partial Public Class sf_agrupamento_tipo_uso
-
+    
     '''<summary>
     '''Controle RadGridAgrupamentoTipoUso.
     '''</summary>
@@ -21,7 +21,7 @@ Partial Public Class sf_agrupamento_tipo_uso
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
     Protected WithEvents RadGridAgrupamentoTipoUso As Global.Telerik.Web.UI.RadGrid
-
+    
     '''<summary>
     '''Controle SqlDataSourceAgrupamantos.
     '''</summary>

@@ -17,7 +17,7 @@
     </telerik:RadNavigation>
     <br>
     <div style="margin-left: 10px; margin-right: 10px" >
-          <telerik:RadAjaxLoadingPanel ID="RadAjaxLoadingPanel1"  runat="server" InitialDelayTime="1000" Modal="false"  Transparency="10" MinDisplayTime="1" Width="50px"  >
+          <telerik:RadAjaxLoadingPanel ID="RadAjaxLoadingPanel1" BackgroundTransparency="0"  runat="server" InitialDelayTime="1000" Modal="false"  Transparency="10" MinDisplayTime="1" Width="50px"  >
      
           <div id="divLoading">
 

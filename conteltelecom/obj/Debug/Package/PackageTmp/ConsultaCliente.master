@@ -1,0 +1,44 @@
+﻿<%@ Master Language="VB" MasterPageFile="~/Menu.master" AutoEventWireup="false" CodeBehind="ConsultaCliente.master.vb" Inherits="conteltelecom.ConsultaCliente" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderMenuhead" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderMenu" runat="server">
+        <div style="margin:2px"></div>
+      
+    <telerik:RadNavigation runat="server"  ID="Nav1"   dir="rtl" >
+        <Nodes>
+            <telerik:NavigationNode ID="CNPJ_VINCULADOS" Text="CNPJ VINCULADOS"  NavigateUrl='<%# String.Format("~/web/clientes/cli_contatos.aspx?id_pessoas={0}", Session("id_pessoaNav"))%>'>
+                </telerik:NavigationNode>
+             <telerik:NavigationNode ID="CAD_LINHAS" Text="CAD. LINHAS"  NavigateUrl='<%# String.Format("~/web/clientes/cli_contatos.aspx?id_pessoas={0}", Session("id_pessoaNav"))%>'>
+               <Nodes>
+                                <telerik:NavigationNode ID="LINHAS_VIRTUAIS" Text="LINHAS VIRTUAIS"  NavigateUrl='<%# String.Format("~/web/clientes/cli_contatos.aspx?id_pessoas={0}", Session("id_pessoaNav"))%>'>
+                                    </telerik:NavigationNode>
+                   <telerik:NavigationNode ID="LINHAS" Text="LINHAS"  NavigateUrl='<%# String.Format("~/web/clientes/cli_contatos.aspx?id_pessoas={0}", Session("id_pessoaNav"))%>'>
+                                    </telerik:NavigationNode>
+               </Nodes>
+                  </telerik:NavigationNode>
+
+
+        </Nodes>
+
+           
+    </telerik:RadNavigation>
+    <br> 
+      <fieldset>
+    <legend><asp:Label ID="LabelCliente" runat="server" Text="" Font-Bold="true"></asp:Label></legend> 
+           
+          </fieldset>
+
+
+  
+          
+    
+     <div style="margin-left:10px;margin-right:10px ; height:100% !important">
+     
+   
+   <asp:ContentPlaceHolder ID="ContentPlaceHolderBodyConsultaCliente" runat="server">
+   
+                      </asp:ContentPlaceHolder> 
+          </div>
+
+     
+</asp:Content>

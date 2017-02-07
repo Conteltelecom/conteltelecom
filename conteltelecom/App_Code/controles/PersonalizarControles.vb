@@ -3,123 +3,154 @@
 
 Public Class PersonalizarControles
     Inherits System.Web.UI.Page
+
+    Public Shared Sub SubRadWindowManager(ByRef p_RadWindowManager As RadWindowManager, ByVal pTipo As Int16)
+        p_RadWindowManager.Width = 300
+        p_RadWindowManager.Height = 200
+        p_RadWindowManager.Skin = "Sunset"
+    End Sub
+
     Public Shared Sub SubRadGrid(ByRef P_RadGrid As RadGrid, ByVal pTipoModoEdicao As Int16)
 
 
-
-
-        Select Case pTipoModoEdicao
-            Case 0
-                P_RadGrid.MasterTableView.EditMode = GridEditMode.InPlace
-
-                Exit Select
-            Case 1
-                P_RadGrid.MasterTableView.EditMode = GridEditMode.EditForms
-                P_RadGrid.MasterTableView.EditFormSettings.EditFormType = GridEditFormType.Template
-                P_RadGrid.MasterTableView.EditFormSettings.EditColumn.CancelImageUrl = "~\img\block_32.png"
-                '  P_RadGrid.MasterTableView.EditFormSettings.FormTableStyle.Width = Unit.Percentage(100)
-                '  P_RadGrid.MasterTableView.EditFormSettings.FormTableStyle.CssClass = "table"
-
-                Exit Select
-            Case 2
-                Exit Select
-            Case 3
-
-        End Select
+        Try
 
 
 
-        '################################################################################################ 
-        P_RadGrid.RenderMode = RenderMode.Auto
+            Select Case pTipoModoEdicao
+                Case 0
+                    P_RadGrid.MasterTableView.EditMode = GridEditMode.InPlace
 
-        P_RadGrid.Skin = "Bootstrap"
-        If pTipoModoEdicao = 3 Then
-            P_RadGrid.MasterTableView.CommandItemSettings.ShowAddNewRecordButton = False
+                    Exit Select
+                Case 1
+                    P_RadGrid.MasterTableView.EditMode = GridEditMode.EditForms
+                    P_RadGrid.MasterTableView.EditFormSettings.EditFormType = GridEditFormType.Template
+                    P_RadGrid.MasterTableView.EditFormSettings.EditColumn.CancelImageUrl = "~\img\block_32.png"
+                    '  P_RadGrid.MasterTableView.EditFormSettings.FormTableStyle.Width = Unit.Percentage(100)
+                    '  P_RadGrid.MasterTableView.EditFormSettings.FormTableStyle.CssClass = "table"
 
-        End If
-        P_RadGrid.CellSpacing = "0"
-        P_RadGrid.GridLines = GridLines.None
-        P_RadGrid.AutoGenerateColumns = False
-        P_RadGrid.MasterTableView.CommandItemDisplay = Telerik.Web.UI.GridCommandItemDisplay.Top
-        P_RadGrid.MasterTableView.CommandItemStyle.CssClass = "rgEditForm"
+                    Exit Select
+                Case 2
+                    Exit Select
+                Case 3
 
-        P_RadGrid.MasterTableView.CommandItemSettings.AddNewRecordText = "NOVO"
-        P_RadGrid.MasterTableView.CommandItemSettings.AddNewRecordImageUrl = "~\img\add.png"
-        P_RadGrid.MasterTableView.CommandItemSettings.ShowRefreshButton = False
+            End Select
+
+
+
+            '################################################################################################ 
+            P_RadGrid.RenderMode = RenderMode.Auto
+
+            P_RadGrid.Skin = "Bootstrap"
+            If pTipoModoEdicao = 3 Then
+                P_RadGrid.MasterTableView.CommandItemSettings.ShowAddNewRecordButton = False
+
+            End If
+            P_RadGrid.CellSpacing = "0"
+            P_RadGrid.GridLines = GridLines.None
+            P_RadGrid.AutoGenerateColumns = False
+            P_RadGrid.MasterTableView.CommandItemDisplay = Telerik.Web.UI.GridCommandItemDisplay.Top
+            P_RadGrid.MasterTableView.CommandItemStyle.CssClass = "rgEditForm"
+            P_RadGrid.MasterTableView.TableLayout = GridTableLayout.Auto
+            P_RadGrid.MasterTableView.CommandItemSettings.AddNewRecordText = "NOVO"
+            P_RadGrid.MasterTableView.CommandItemSettings.AddNewRecordImageUrl = "~\img\add.png"
+            P_RadGrid.MasterTableView.CommandItemSettings.ShowRefreshButton = False
             P_RadGrid.MasterTableView.CommandItemSettings.ShowPrintButton = False
             P_RadGrid.MasterTableView.CommandItemSettings.PrintGridText = "IMPRIMIR"
             P_RadGrid.MasterTableView.CommandItemSettings.ExportToExcelImageUrl = "~\img\Excel_32.png"
             P_RadGrid.MasterTableView.CommandItemSettings.ShowExportToExcelButton = True
             P_RadGrid.MasterTableView.CommandItemSettings.ExportToExcelText = ""
+            P_RadGrid.MasterTableView.CommandItemSettings.ShowExportToPdfButton = True
+            P_RadGrid.MasterTableView.CommandItemSettings.ExportToPdfText = ""
+            P_RadGrid.MasterTableView.CommandItemSettings.ExportToPdfImageUrl = "~\img\pdf_32.png"
             P_RadGrid.MasterTableView.EditFormSettings.EditColumn.ButtonType = GridButtonColumnType.ImageButton
             P_RadGrid.MasterTableView.EditFormSettings.EditColumn.EditImageUrl = "~\img\edit_32.png"
             P_RadGrid.MasterTableView.EditFormSettings.EditColumn.UpdateImageUrl = "~\img\accept_32.png"
             P_RadGrid.MasterTableView.EditFormSettings.EditColumn.InsertImageUrl = "~\img\accept_32.png"
             P_RadGrid.MasterTableView.EditFormSettings.EditColumn.CancelImageUrl = "~\img\block_32.png"
-        P_RadGrid.MasterTableView.PageSize = 30
-        P_RadGrid.MasterTableView.EnableSplitHeaderText = False 'EVITA QUEBA DE LINHA NA  NO CABEÇALHO
-        P_RadGrid.MasterTableView.NoMasterRecordsText = "SEM REGISTRO"
-        '################################################################################################ 
-        P_RadGrid.GroupPanel.Text = "ARRASTE  A COLUNA PARA FILTAR"
+            P_RadGrid.MasterTableView.PageSize = 30
+            P_RadGrid.MasterTableView.EnableSplitHeaderText = False 'EVITA QUEBA DE LINHA NA  NO CABEÇALHO
+            P_RadGrid.MasterTableView.NoMasterRecordsText = "SEM REGISTRO"
+            '################################################################################################  
+            P_RadGrid.GroupPanel.Text = "ARRASTE  A COLUNA PARA FILTAR"
             P_RadGrid.GroupingSettings.CollapseAllTooltip = "DESAGRUPAR"
-        P_RadGrid.GroupingSettings.ShowUnGroupButton = True
-        P_RadGrid.ShowGroupPanel = True
-        P_RadGrid.GroupingSettings.CollapseTooltip = "RECOLHER GRUPO"
-        P_RadGrid.ClientSettings.AllowDragToGroup = True
-        P_RadGrid.ClientSettings.AllowColumnsReorder = True
-        P_RadGrid.ClientSettings.ReorderColumnsOnClient = True
-        P_RadGrid.ClientSettings.Selecting.AllowRowSelect = True
-        P_RadGrid.ExportSettings.ExportOnlyData = True
-        P_RadGrid.GroupingSettings.CollapseAllTooltip = "Fechar todos"
-        P_RadGrid.AllowPaging = True
+            P_RadGrid.GroupingSettings.GroupSplitDisplayFormat = "MOSTRANDO {0} DE {1} ITENS."
+            P_RadGrid.GroupingSettings.GroupContinuedFormatString = "... Grupo continuou a partir da página anterior."
+            P_RadGrid.GroupingSettings.GroupContinuesFormatString = "Grupo continua na página seguinte."
+            P_RadGrid.GroupingSettings.ShowUnGroupButton = True
+            P_RadGrid.ShowGroupPanel = True
+            P_RadGrid.GroupPanel.Text = "ARRASTE  A COLUNA PARA FILTAR"
+
+            P_RadGrid.GroupingSettings.CollapseTooltip = "RECOLHER GRUPO"
+            P_RadGrid.ClientSettings.AllowDragToGroup = True
+            P_RadGrid.ClientSettings.AllowColumnsReorder = True
+            P_RadGrid.ClientSettings.ReorderColumnsOnClient = True
+            P_RadGrid.ClientSettings.Selecting.AllowRowSelect = True
+            P_RadGrid.ExportSettings.ExportOnlyData = True
+            P_RadGrid.GroupingSettings.CollapseAllTooltip = "Fechar todos"
+            P_RadGrid.AllowPaging = True
 
 
-        '###############################################  GridExcelExportFormat ################################################# 
-        P_RadGrid.ExportSettings.Excel.Format = GridExcelExportFormat.Xlsx
+            '###############################################  GridExcelExportFormat ################################################# 
+            P_RadGrid.ExportSettings.Excel.Format = GridExcelExportFormat.Xlsx
             P_RadGrid.ExportSettings.ExportOnlyData = True
             P_RadGrid.ExportSettings.ExportOnlyData = True
             P_RadGrid.ExportSettings.HideStructureColumns = True
             P_RadGrid.ExportSettings.IgnorePaging = True
             P_RadGrid.ExportSettings.OpenInNewWindow = True
 
-        For Each column As GridColumn In P_RadGrid.MasterTableView.RenderColumns
-            If column.ColumnType = "GridEditCommandColumn" Then
-                Dim editcol As GridEditCommandColumn = DirectCast(column, GridEditCommandColumn)
-                editcol.ButtonType = GridButtonColumnType.ImageButton
-                editcol.ItemStyle.CssClass="rgEditForm"
-                editcol.EditImageUrl = "~\img\edit_32.png"
-                editcol.UpdateImageUrl = "~\img\accept_32.png"
-                editcol.InsertImageUrl = "~\img\accept_32.png"
-                editcol.CancelImageUrl = "~\img\block_32.png"
-                Exit For
-            End If
-        Next
+            For Each column As GridColumn In P_RadGrid.MasterTableView.RenderColumns
+                If column.ColumnType = "GridEditCommandColumn" Then
+                    Dim editcol As GridEditCommandColumn = DirectCast(column, GridEditCommandColumn)
+                    editcol.ButtonType = GridButtonColumnType.ImageButton
+                    editcol.ItemStyle.CssClass = "rgEditForm"
+                    editcol.EditImageUrl = "~\img\edit_32.png"
+                    editcol.UpdateImageUrl = "~\img\accept_32.png"
+                    editcol.InsertImageUrl = "~\img\accept_32.png"
+                    editcol.CancelImageUrl = "~\img\block_32.png"
+                    Exit For
+                End If
+            Next
 
 
 
-        For Each column As GridColumn In P_RadGrid.MasterTableView.RenderColumns
+            For Each column As GridColumn In P_RadGrid.MasterTableView.RenderColumns
 
 
-            If column.UniqueName = "Excluir" Then
-                Dim excluirCol As GridButtonColumn = DirectCast(column, GridButtonColumn)
-                excluirCol.ButtonType = GridButtonColumnType.ImageButton
-                excluirCol.ItemStyle.CssClass = "rgEditForm"
-                excluirCol.ImageUrl = "~\img\delete_32.png"
-                excluirCol.ConfirmDialogType = GridConfirmDialogType.RadWindow
-                excluirCol.ConfirmDialogWidth = 300
-                excluirCol.ConfirmDialogHeight = 200
-                excluirCol.CommandName = RadGrid.DeleteCommandName
-                excluirCol.ConfirmText = "ATENÇÃO O REGISTRO SERA EXCLUÍDO"
+                If column.UniqueName = "Excluir" Then
+                    Dim excluirCol As GridButtonColumn = DirectCast(column, GridButtonColumn)
+                    excluirCol.ButtonType = GridButtonColumnType.ImageButton
+                    excluirCol.ItemStyle.CssClass = "rgEditForm"
+                    excluirCol.ImageUrl = "~\img\delete_32.png"
+                    excluirCol.ConfirmDialogType = GridConfirmDialogType.RadWindow
+                    excluirCol.ConfirmDialogWidth = 300
+                    excluirCol.ConfirmDialogHeight = 200
+                    excluirCol.CommandName = RadGrid.DeleteCommandName
+                    excluirCol.ConfirmText = "ATENÇÃO O REGISTRO SERA EXCLUÍDO"
 
-            End If
+                End If
+                If column.UniqueName = "DetalhesNovo" Then
+                    Dim excluirCol As GridButtonColumn = DirectCast(column, GridButtonColumn)
+                    excluirCol.ButtonType = GridButtonColumnType.LinkButton
+                    excluirCol.Text = "DETALHES"
+                    excluirCol.ButtonType = GridButtonColumnType.PushButton
+
+                    excluirCol.ImageUrl = "~\img\delete_32.png"
+
+                    excluirCol.CommandName = "Detalhes"
 
 
-        Next
+                End If
 
-        Dim _SubRadGridFilhos As New PersonalizarControles
 
-        _SubRadGridFilhos.SubRadGridFilhos(P_RadGrid)
+            Next
 
+            Dim _SubRadGridFilhos As New PersonalizarControles
+
+            _SubRadGridFilhos.SubRadGridFilhos(P_RadGrid)
+        Catch ex As Exception
+
+        End Try
 
     End Sub
     Public Sub SubRadGridFilhos(ByRef P_RadGrid As RadGrid)
@@ -132,6 +163,7 @@ Public Class PersonalizarControles
                 P_RadGrid.MasterTableView.DetailTables.Item(value).CommandItemDisplay = Telerik.Web.UI.GridCommandItemDisplay.Top
                 P_RadGrid.MasterTableView.DetailTables.Item(value).CommandItemStyle.CssClass = "rgEditForm"
 
+                '
                 P_RadGrid.MasterTableView.DetailTables.Item(value).CommandItemSettings.AddNewRecordText = "NOVO"
                 P_RadGrid.MasterTableView.DetailTables.Item(value).CommandItemSettings.AddNewRecordImageUrl = "~\img\add.png"
                 P_RadGrid.MasterTableView.DetailTables.Item(value).CommandItemSettings.ShowRefreshButton = False
@@ -197,5 +229,15 @@ Public Class PersonalizarControles
 
     End Sub
 
+    Sub SubRadListView(ByRef P_RadListView As RadListView)
 
+
+    End Sub
+
+    Public Sub RadButtonLimpar(ByRef p_RadButton As RadButton)
+
+
+
+
+    End Sub
 End Class

@@ -192,4 +192,31 @@ Partial Public Class if_input_fatura_manual
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
     Protected WithEvents HiddenField1 As Global.System.Web.UI.WebControls.HiddenField
+    
+    '''<summary>
+    '''Controle SqlDataSourceBuscafaturas.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents SqlDataSourceBuscafaturas As Global.System.Web.UI.WebControls.SqlDataSource
+    
+    '''<summary>
+    '''Controle SqlDataSourceBuscaLinhasFatura.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents SqlDataSourceBuscaLinhasFatura As Global.System.Web.UI.WebControls.SqlDataSource
+    
+    '''<summary>
+    '''Controle SqlDataSourceBuscaValorFaturas.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents SqlDataSourceBuscaValorFaturas As Global.System.Web.UI.WebControls.SqlDataSource
 End Class

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Relatorios.master" CodeBehind="RelUsoAnual.aspx.vb" Inherits="conteltelecom.RelUsoAnual" %>
+﻿<%@ Page Title="RELATÓRIO DE USO POR DATA" Language="vb" AutoEventWireup="false" MasterPageFile="~/Relatorios.master" CodeBehind="RelUsoAnual.aspx.vb" Inherits="conteltelecom.RelUsoAnual" %>
 
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="headRelatorio" runat="server">
@@ -53,10 +53,8 @@
           </asp:UpdatePanel>
     <asp:ObjectDataSource ID="ObjectDataSourceBuscUsoAnual"  runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="conteltelecom.DataSetBuscaUsoTableAdapters.LI_LINHASTableAdapter">
         <SelectParameters>
-            <asp:SessionParameter Name="mesIni" SessionField="mesIni" DefaultValue="05" Type="String" />
-            <asp:SessionParameter Name="mesFim" SessionField="mesFim" DefaultValue="05"  Type="String" />
-            <asp:SessionParameter Name="AnoIni" SessionField="AnoIni" DefaultValue="2016" Type="String" />
-            <asp:SessionParameter Name="AnoFim" SessionField="AnoFim" DefaultValue="2016" Type="String" />
+            <asp:Parameter Name="DtIni" Type="DateTime" />
+            <asp:Parameter Name="DtFim" Type="DateTime" />
         </SelectParameters>
     </asp:ObjectDataSource>
 </asp:Content>

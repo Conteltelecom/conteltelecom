@@ -1,5 +1,5 @@
 ﻿Imports System.Data.SqlClient
-
+Imports Telerik.Web.UI
 Public Class Anexos
 
     Function Upload(nome_ANEXOS As String, mine_ANEXOS As String, data_ANEXOS As Byte(), categoria_ANEXO As Integer, identificador_ANEXOS As Integer) As Boolean
@@ -96,6 +96,15 @@ Public Class Anexos
 
 
     End Sub
+
+
+    Public Sub AnexaArquivos(p_RadAsyncUploadAnexos As RadAsyncUpload)
+
+    End Sub
+
+
+
+
 
 
 End Class

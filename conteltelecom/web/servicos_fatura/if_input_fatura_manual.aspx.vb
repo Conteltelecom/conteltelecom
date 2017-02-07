@@ -18,7 +18,7 @@ Public Class if_input_fatura_manual
 
     End Sub
 
-    Private Sub RadGridFaturas_ItemCommand(sender As Object, e As GridCommandEventArgs) Handles RadGridFaturas.ItemCommand
+    Sub RadGridFaturas_ItemCommand(sender As Object, e As GridCommandEventArgs) Handles RadGridFaturas.ItemCommand
 
 
 
@@ -27,13 +27,11 @@ Public Class if_input_fatura_manual
         Dim RadMaskedTextBoxmesAno As New RadMaskedTextBox
         Dim vltotalLinha_SF_SERVICOS_FATURARadNumericTextBox As New RadNumericTextBox
         Dim idCompany As Integer = 0
-        Dim idAnterior As Integer
-        Dim mesAteriorUso As Integer = 0
+
 
 
 
         If e.CommandName = "PerformInsert" Then
-
             Dim eitem As GridEditableItem = DirectCast(e.Item, GridEditableItem)
             autoCompleteBox = DirectCast(eitem.FindControl("RadAutoCompleteBoxCodLInhas"), RadAutoCompleteBox)
             RadMaskedTextBoxmesAno = DirectCast(eitem.FindControl("RadMaskedTextBoxmesAno"), RadMaskedTextBox)
@@ -41,26 +39,18 @@ Public Class if_input_fatura_manual
             Dim dtaPerFim_SF_SERVICOS_FATURA As New RadDatePicker
             Dim dtVencimento_SF_SERVICOS_FATURA As New RadDatePicker
             vltotalLinha_SF_SERVICOS_FATURARadNumericTextBox = DirectCast(eitem.FindControl("vltotalLinha_SF_SERVICOS_FATURARadNumericTextBox"), RadNumericTextBox)
-
             dtaPerIni_SF_SERVICOS_FATURA = DirectCast(eitem.FindControl("RadDatePickerDataInicial"), RadDatePicker)
             dtaPerFim_SF_SERVICOS_FATURA = DirectCast(eitem.FindControl("RadDatePickerDataIniFinal"), RadDatePicker)
-
             dtVencimento_SF_SERVICOS_FATURA = DirectCast(eitem.FindControl("RadDatePickerdtVencimento_SF_SERVICOS_FATURA"), RadDatePicker)
-            Try
 
+            For Each entry As AutoCompleteBoxEntry In autoCompleteBox.Entries
+                If entry.Text = autoCompleteBox.Text Then
+                    idCompany = Convert.ToInt32(entry.Value)
 
+                End If
+            Next
 
-
-                For Each entry As AutoCompleteBoxEntry In autoCompleteBox.Entries
-                    If entry.Text = autoCompleteBox.Text Then
-                        idCompany = Convert.ToInt32(entry.Value)
-
-                    End If
-                Next
-
-            Catch ex As Exception
-
-            End Try
+            Dim idAnterior As Integer
             Dim id_PS_PESSOA As Integer
             Dim id_PS_CIDADES As Integer
             Dim id_LI_TIPOS As Integer
@@ -75,6 +65,8 @@ Public Class if_input_fatura_manual
             Dim nomeUnidade_LI_LINHAS As String = ""
             Dim id_CL_TIPOS_CONTRATOS As Integer
             Dim codLinha_LI_LINHAS As String = ""
+            Dim mesAteriorUso As Integer = 0
+            '   SqlDataSourceLinhas = New SqlDataSource
 
             SqlDataSourceLinhas.InsertParameters("id_LI_LINHAS").DefaultValue = idCompany
 
@@ -84,7 +76,7 @@ Public Class if_input_fatura_manual
             SqlDataSourceLinhas.InsertParameters("id_PS_PESSOA_USUARIO").DefaultValue = Session("id_PS_PESSOA_USUARIO")
 
             CslValidacoes.BuscaRazaoSocial_Operadora(label01null, label02null, idCompany, id_OP_OPERADORAS,
-             id_LI_TIPOS, id_PS_CIDADES, codMatriz_PS_CLIENTES, id_PS_PESSOA, vlInicial_id_LI_TIPOS, perIncial_LI_LINHAS, foraAnalise_LI_LINHAS, nomeUnidade_LI_LINHAS, codLinha_LI_LINHAS)
+         id_LI_TIPOS, id_PS_CIDADES, codMatriz_PS_CLIENTES, id_PS_PESSOA, vlInicial_id_LI_TIPOS, perIncial_LI_LINHAS, foraAnalise_LI_LINHAS, nomeUnidade_LI_LINHAS, codLinha_LI_LINHAS)
 
             CslValidacoes.BuscaValorContrato(vl_contrato, id_CL_TIPOS_CONTRATOS, codMatriz_PS_CLIENTES)
             SqlDataSourceLinhas.InsertParameters("codLinha_LI_LINHAS").DefaultValue = codLinha_LI_LINHAS
@@ -113,12 +105,7 @@ Public Class if_input_fatura_manual
             SqlDataSourceLinhas.InsertParameters("id_OP_OPERADORAS").DefaultValue = id_OP_OPERADORAS
             SqlDataSourceLinhas.InsertParameters("mesAnoRefereincia_SF_SERVICOS_FATURA").DefaultValue = RadMaskedTextBoxmesAno.TextWithLiterals
 
-            SqlDataSourceLinhas.InsertParameters("vltotalLinha_SF_SERVICOS_FATURA").DefaultValue = vltotalLinha_SF_SERVICOS_FATURARadNumericTextBox.DbValue.ToString
-
-            SqlDataSourceLinhas.InsertParameters("vltotalLinha_SF_SERVICOS_FATURA").DefaultValue = vltotalLinha_SF_SERVICOS_FATURARadNumericTextBox.DbValue.ToString
-            SqlDataSourceLinhas.InsertParameters("vltotalLinha_SF_SERVICOS_FATURA").DefaultValue = vltotalLinha_SF_SERVICOS_FATURARadNumericTextBox.DbValue.ToString
-            SqlDataSourceLinhas.InsertParameters("vltotalLinha_SF_SERVICOS_FATURA").DefaultValue = vltotalLinha_SF_SERVICOS_FATURARadNumericTextBox.DbValue.ToString
-
+            SqlDataSourceLinhas.InsertParameters("vltotalLinha_SF_SERVICOS_FATURA").DefaultValue = vltotalLinha_SF_SERVICOS_FATURARadNumericTextBox.DbValue
 
 
 
@@ -129,6 +116,7 @@ Public Class if_input_fatura_manual
 
                 SqlDataSourceLinhas.Insert()
                 If id_SF_SERVICOS_FATURA_Atual = -1 Then
+
                     Exit Sub
                 Else
 
@@ -185,7 +173,7 @@ Public Class if_input_fatura_manual
                             If id_SF_SERVICOS_FATURA_Atual = 0 Then
                                 ' SqlDataSourceUltimoServico .Insert()
                                 If id_SF_SERVICOS_FATURA_Atual = -1 Then
-                                 '   Exit Sub
+                                    '   Exit Sub
                                 End If
                                 'SqlDataSourceUltimoServico.InsertParameters("id_SF_SERVICOS_FATURA").DefaultValue = id_SF_SERVICOS_FATURA_Atual
                             End If
@@ -199,7 +187,7 @@ Public Class if_input_fatura_manual
                     SqlDataSourceUso.SelectParameters("id_LI_LINHAS").DefaultValue = idCompany
 
                     Dim mes1 As String = ""
-                    mes1 = Month(CDate("01/" & RadMaskedTextBoxmesAno.TextWithLiterals).AddMonths(-1).ToString)
+                    mes1 = Month(CDate("01/" & RadMaskedTextBoxmesAno.TextWithLiterals.ToString).AddMonths(-1).ToString)
                     If CInt(mes1) < 10 Then
 
                         mes1 = "0" & mes
@@ -242,14 +230,24 @@ Public Class if_input_fatura_manual
 
                     End If
 
-
-
                     HttpContext.Current.Response.Redirect("~/web/servicos_fatura/if_input_fatura_manual_Detalhes.aspx?mesAnoRefereincia_SF_SERVICOS_FATURA=" & RadMaskedTextBoxmesAno.TextWithLiterals & "&id_LI_LINHAS=" & idCompany & "&id_SF_SERVICOS_FATURA=" & id_SF_SERVICOS_FATURA_Atual)
                 End If
             Catch ex As Exception
 
                 RadWindowManagerMsg.RadAlert("ATENÇÃO OCORREU UM ERRO DURANTE A OPERAÇÃO", 400, Nothing, "MENSAGEM", Nothing)
             End Try
+
+
+
+            CslValidacoes = Nothing
+
+
+
+
+
+
+
+
         End If
         If e.CommandName = "Edit" Then
 
@@ -283,6 +281,7 @@ Public Class if_input_fatura_manual
 
     Private Sub SqlDataSourceLinhas_Inserted(sender As Object, e As SqlDataSourceStatusEventArgs) Handles SqlDataSourceLinhas.Inserted
         If e.Command.Parameters("@Id").Value > 0 Then
+
             id_SF_SERVICOS_FATURA_Atual = e.Command.Parameters("@Id").Value
         Else
             id_SF_SERVICOS_FATURA_Atual = e.Command.Parameters("@Id").Value
@@ -304,19 +303,84 @@ Public Class if_input_fatura_manual
         Dim autoCompleteBox As New RadAutoCompleteBox
         If RadGridFaturas.MasterTableView.IsItemInserted Then
             Dim edititem As GridEditableItem = DirectCast(RadGridFaturas.MasterTableView.GetInsertItem(), GridEditableItem)
+            Dim RadAutoCompleteBoxNumFatura As RadAutoCompleteBox = DirectCast(edititem.FindControl("RadAutoCompleteBoxNumFatura"), RadAutoCompleteBox)
             autoCompleteBox = DirectCast(edititem.FindControl("RadAutoCompleteBoxCodLInhas"), RadAutoCompleteBox)
             desc_OP_OPERADORASLabelEdit = DirectCast(edititem.FindControl("desc_OP_OPERADORASLabelEdit"), Label)
-            Dim idCompany As Integer = 0
+            Dim id_LI_LINHAS As Integer = 0
             If autoCompleteBox IsNot Nothing Then
                 For Each entry As AutoCompleteBoxEntry In autoCompleteBox.Entries
                     If entry.Text = autoCompleteBox.Text Then
-                        idCompany = Convert.ToInt32(entry.Value)
-                        CslValidacoes.BuscaRazaoSocial_Operadora(razaosocial_PS_JURIDICALabelEdit, desc_OP_OPERADORASLabelEdit, idCompany, 0, 0, 0, 0, 0, 0.0, "", 0, "", "")
+                        id_LI_LINHAS = Convert.ToInt32(entry.Value)
+                        If RadAutoCompleteBoxNumFatura.Text = "" Then
+                            CslValidacoes.BuscaRazaoSocial_Operadora(razaosocial_PS_JURIDICALabelEdit, desc_OP_OPERADORASLabelEdit, id_LI_LINHAS, 0, 0, 0, 0, 0, 0.0, "", 0, "", "")
+                        Else
 
-                        Exit For
-                    End If
-                Next
-            End If
+                            Dim vltotalLinha_SF_SERVICOS_FATURARadNumericTextBox As RadNumericTextBox = DirectCast(edititem.FindControl("vltotalLinha_SF_SERVICOS_FATURARadNumericTextBox"), RadNumericTextBox)
+
+                            Dim RadMaskedTextBoxmesAno As RadMaskedTextBox = DirectCast(edititem.FindControl("RadMaskedTextBoxmesAno"), RadMaskedTextBox)
+                            Dim RadDatePickerdtVencimento_SF_SERVICOS_FATURA As RadDatePicker = DirectCast(edititem.FindControl("RadDatePickerdtVencimento_SF_SERVICOS_FATURA"), RadDatePicker)
+                            Dim RadDatePickerDataIniFinal As RadDatePicker = DirectCast(edititem.FindControl("RadDatePickerDataIniFinal"), RadDatePicker)
+                            Dim RadDatePickerDataInicial As RadDatePicker = DirectCast(edititem.FindControl("RadDatePickerDataInicial"), RadDatePicker)
+                            razaosocial_PS_JURIDICALabelEdit = DirectCast(edititem.FindControl("razaosocial_PS_JURIDICALabelEdit"), Label)
+
+                            For Each id_SF As AutoCompleteBoxEntry In RadAutoCompleteBoxNumFatura.Entries
+                                If id_SF.Text = RadAutoCompleteBoxNumFatura.Text Then
+                                    SqlDataSourceBuscaValorFaturas.SelectParameters("id_SF_LEITURA_FATURA").DefaultValue = Convert.ToInt32(id_SF.Value)
+                                    SqlDataSourceBuscaValorFaturas.SelectParameters("id_LI_LINHAS").DefaultValue = id_LI_LINHAS
+                                End If
+                            Next
+                            Dim dvSql As DataView = CType(SqlDataSourceBuscaValorFaturas.Select(DataSourceSelectArguments.Empty), DataView)
+                            If dvSql IsNot Nothing Then
+                                If dvSql.Count <> 0 Then
+                                    For Each drvSql As DataRowView In dvSql
+                                        If IsDBNull(drvSql("dtPeriodo_ini_SF_LEITURA_FATURA")) = False Then
+                                            RadDatePickerDataInicial.SelectedDate = drvSql("dtPeriodo_ini_SF_LEITURA_FATURA")
+
+                                        End If
+                                        If IsDBNull(drvSql("dtPeriodo_Fim_SF_LEITURA_FATURA")) = False Then
+                                            RadDatePickerDataIniFinal.SelectedDate = drvSql("dtPeriodo_Fim_SF_LEITURA_FATURA")
+                                        End If
+                                        If IsDBNull(drvSql("dtVencimento_SF_LEITURA_FATURA")) = False Then
+                                            RadDatePickerdtVencimento_SF_SERVICOS_FATURA.SelectedDate = drvSql("dtVencimento_SF_LEITURA_FATURA")
+                                        End If
+                                        If IsDBNull(drvSql("mesReferencia_SF_LEITURA_FATURA")) = False Then
+                                            RadMaskedTextBoxmesAno.Text = drvSql("mesReferencia_SF_LEITURA_FATURA").ToString
+                                        End If
+                                        If IsDBNull(drvSql("razaosocial_PS_JURIDICA")) = False Then
+                                            razaosocial_PS_JURIDICALabelEdit.Text = drvSql("razaosocial_PS_JURIDICA")
+                                        End If
+                                        If IsDBNull(drvSql("vlTotal_SF_SOLICITACAO_FATURA_NOTA")) = False Then
+                                            vltotalLinha_SF_SERVICOS_FATURARadNumericTextBox.DbValue = CDec(drvSql("vlTotal_SF_SOLICITACAO_FATURA_NOTA"))
+                                        End If
+                                    Next
+
+
+                                End If
+
+                            End If
+
+
+
+
+                        End If
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            Exit For
+        End If
+        Next
+        End If
         End If
 
 
@@ -328,18 +392,18 @@ Public Class if_input_fatura_manual
 
     End Sub
 
-    Private Sub RadGridFaturas_ItemDataBound(sender As Object, e As GridItemEventArgs) Handles RadGridFaturas.ItemDataBound
-        If TypeOf e.Item Is GridEditableItem And e.Item.IsInEditMode Then
+    'Private Sub RadGridFaturas_ItemDataBound(sender As Object, e As GridItemEventArgs) Handles RadGridFaturas.ItemDataBound
+    'If TypeOf e.Item Is GridEditableItem And e.Item.IsInEditMode Then
 
-            If TypeOf e.Item Is GridEditFormInsertItem OrElse TypeOf e.Item Is GridDataInsertItem Then
-                Dim ditem As GridDataItem = DirectCast(e.Item, GridDataItem)
-                Dim RadMaskedTextBoxmesAno As RadMaskedTextBox = DirectCast(ditem.FindControl("RadMaskedTextBoxmesAno"), RadMaskedTextBox)
-                Dim ClsBuscaMesAnoAtual As New conteltelecom.Validacoes
-                RadMaskedTextBoxmesAno.Text = ClsBuscaMesAnoAtual.BuscaMesAnoAtual
+    ' If TypeOf e.Item Is GridEditFormInsertItem OrElse TypeOf e.Item Is GridDataInsertItem Then
+    ' Dim ditem As GridDataItem = DirectCast(e.Item, GridDataItem)
+    '  Dim RadMaskedTextBoxmesAno As RadMaskedTextBox = DirectCast(ditem.FindControl("RadMaskedTextBoxmesAno"), RadMaskedTextBox)
+    '  Dim ClsBuscaMesAnoAtual As New conteltelecom.Validacoes
+    ' RadMaskedTextBoxmesAno.Text = ClsBuscaMesAnoAtual.BuscaMesAnoAtual
 
-            End If
-        End If
-    End Sub
+    '  End If
+    '   End If
+    '  End Sub
 
     Protected Sub RadMaskedTextBoxmesAno_TextChanged(sender As Object, e As EventArgs)
         Dim clsValidacoes As New Validacoes
@@ -352,6 +416,9 @@ Public Class if_input_fatura_manual
     End Sub
 
     Private Sub RadGridFaturas_PreRender(sender As Object, e As EventArgs) Handles RadGridFaturas.PreRender
+
+
+
         If Page.IsPostBack = False Then
 
             Select Case Request.QueryString("modo")
@@ -372,10 +439,14 @@ Public Class if_input_fatura_manual
             RadGridFaturas.MasterTableView.GetColumn("dtaPerFim_SF_SERVICOS_FATURA").Visible = True
             RadGridFaturas.MasterTableView.GetColumn("dtaPerIni_SF_SERVICOS_FATURA").Visible = True
 
+        End If
+        If IsPostBack = False Then
+            PersonalizarControles.SubRadGrid(RadGridFaturas, 1)
 
-
+            RadGridFaturas.Rebind()
 
         End If
+
 
     End Sub
 
@@ -395,5 +466,33 @@ Public Class if_input_fatura_manual
 
 
     End Sub
+
+    Protected Sub RadAutoCompleteBoxNumFatura_TextChanged(sender As Object, e As AutoCompleteTextEventArgs)
+
+        Dim newRadAutoCompleteBox As RadAutoCompleteBox = DirectCast(sender, RadAutoCompleteBox)
+        Dim item As GridEditableItem = DirectCast(newRadAutoCompleteBox.NamingContainer, GridEditableItem)
+        Dim RadAutoCompleteBoxCodLInhas As RadAutoCompleteBox = DirectCast(item.FindControl("RadAutoCompleteBoxCodLInhas"), RadAutoCompleteBox)
+        For Each entry As AutoCompleteBoxEntry In newRadAutoCompleteBox.Entries
+            If entry.Text = newRadAutoCompleteBox.Text Then
+                SqlDataSourceBuscaLinhasFatura.SelectParameters("id_SF_LEITURA_FATURA").DefaultValue = entry.Value
+                RadAutoCompleteBoxCodLInhas.DataSourceID = "SqlDataSourceBuscaLinhasFatura"
+                RadAutoCompleteBoxCodLInhas.DataBind()
+
+
+
+
+
+
+
+
+
+
+
+
+            End If
+        Next
+
+    End Sub
+
 
 End Class

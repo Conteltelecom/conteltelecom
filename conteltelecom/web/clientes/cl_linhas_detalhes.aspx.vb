@@ -185,11 +185,11 @@ Public Class cl_linhas_detalhes
     Private Sub RadGridLinhas_ItemCommand(sender As Object, e As GridCommandEventArgs) Handles RadGridLinhas.ItemCommand
 
         Dim numContrato_LI_LINHASTextBox As New RadTextBox
-        Dim st_LI_LINHAS As New CheckBox
+        Dim numCircuitoPai_LI_LINHASTextBox As New RadTextBox
         Dim id_OP_OPERADORASRadComboBox As New RadComboBox
         Dim codLinha_LI_LINHASTextBox As New RadTextBox
         '****************DetailVlLinha *********************************************
-        Dim numLinha_LI_LINHAS As New RadMaskedTextBox
+        Dim numLinha_LI_LINHAS As New RadTextBox
         Dim GridDropDownColumnid_LI_TIPOS As New RadComboBox
         Dim vlIdeal_LI_LINHAS As New RadNumericTextBox
         Dim vlInicial_id_LI_TIPOS As New RadNumericTextBox
@@ -203,7 +203,7 @@ Public Class cl_linhas_detalhes
 
         '*********************ForaAnalise*************************************
         Dim foraAnalise_LI_LINHAS As New CheckBox
-
+        Dim st_LI_LINHAS As New CheckBox
         Dim liCancelada_LI_LINHAS As New CheckBox
         '*********************DetailTableUFcidade*************************************
         Dim RadDropDownListUf As New RadDropDownList
@@ -232,7 +232,7 @@ Public Class cl_linhas_detalhes
                 Select Case item.OwnerTableView.Name
                     Case "Master"
                         numContrato_LI_LINHASTextBox = DirectCast(item.FindControl("numContrato_LI_LINHASTextBox"), RadTextBox)
-                        st_LI_LINHAS = DirectCast(item("st_LI_LINHAS").Controls(0), CheckBox)
+                        numCircuitoPai_LI_LINHASTextBox = DirectCast(item.FindControl("numCircuitoPai_LI_LINHASTextBox"), RadTextBox)
                         id_OP_OPERADORASRadComboBox = DirectCast(item.FindControl("id_OP_OPERADORASRadComboBox"), RadComboBox)
                         codLinha_LI_LINHASTextBox = DirectCast(item.FindControl("codLinha_LI_LINHASTextBox"), RadTextBox)
 
@@ -240,7 +240,7 @@ Public Class cl_linhas_detalhes
 
 
                     Case "DetailVlLinha"
-                        numLinha_LI_LINHAS = DirectCast(item.FindControl("numLinha_LI_LINHASRadMaskedTextBox"), RadMaskedTextBox)
+                        numLinha_LI_LINHAS = DirectCast(item.FindControl("numLinha_LI_LINHASRadMaskedTextBox"), RadTextBox)
                         GridDropDownColumnid_LI_TIPOS = DirectCast(item.FindControl("id_LI_TIPOSRadComboBox"), RadComboBox)
                         vlIdeal_LI_LINHAS = DirectCast(item.FindControl("vlIdeal_LI_LINHASRadNumericTextBox"), RadNumericTextBox)
                         vlInicial_id_LI_TIPOS = DirectCast(item.FindControl("vlInicial_id_LI_TIPOSRadNumericTextBox"), RadNumericTextBox)
@@ -256,6 +256,7 @@ Public Class cl_linhas_detalhes
                     Case "ForaAnalise"
                         foraAnalise_LI_LINHAS = DirectCast(item("foraAnalise_LI_LINHAS").Controls(0), CheckBox)
                         liCancelada_LI_LINHAS = DirectCast(item("liCancelada_LI_LINHAS").Controls(0), CheckBox)
+                        st_LI_LINHAS = DirectCast(item("st_LI_LINHAS").Controls(0), CheckBox)
                         Exit Select
 
                     Case "DetailTableUFcidade"
@@ -278,7 +279,7 @@ Public Class cl_linhas_detalhes
 
             Next
             If e.CommandName = "Update" Or e.CommandName = "PerformInsert" Then
-                SqlDataSourceContatosLinhas.UpdateParameters("id_PS_CLIENTES").DefaultValue = Request.QueryString("id_cliente")
+                ' SqlDataSourceContatosLinhas.UpdateParameters("id_PS_CLIENTES").DefaultValue = Request.QueryString("id_cliente")
                 SqlDataSourceContatosLinhas.UpdateParameters("id_LI_TIPOS").DefaultValue = GridDropDownColumnid_LI_TIPOS.SelectedValue
                 SqlDataSourceContatosLinhas.UpdateParameters("vlInicial_id_LI_TIPOS").DefaultValue = vlInicial_id_LI_TIPOS.Text
                 SqlDataSourceContatosLinhas.UpdateParameters("numContrato_LI_LINHAS").DefaultValue = numContrato_LI_LINHASTextBox.Text
@@ -300,6 +301,9 @@ Public Class cl_linhas_detalhes
                 SqlDataSourceContatosLinhas.UpdateParameters("id_OP_OPERADORAS").DefaultValue = id_OP_OPERADORASRadComboBox.SelectedValue
                 SqlDataSourceContatosLinhas.UpdateParameters("codLinha_LI_LINHAS").DefaultValue = codLinha_LI_LINHASTextBox.Text
                 SqlDataSourceContatosLinhas.UpdateParameters("nomeUnidade_LI_LINHAS").DefaultValue = nomeUnidade_LI_LINHASTextBox.SelectedText
+                SqlDataSourceContatosLinhas.UpdateParameters("numCircuitoPai_LI_LINHAS").DefaultValue = numCircuitoPai_LI_LINHASTextBox.Text
+                SqlDataSourceContatosLinhas.UpdateParameters("obs_LI_LINHAS").DefaultValue = obs_LI_LINHASTextBox.Text
+
                 SqlDataSourceContatosLinhas.Update()
                 Call VoltarPaginaAnterior()
             End If

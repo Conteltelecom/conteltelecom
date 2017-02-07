@@ -68,6 +68,15 @@ Partial Public Class Menu
     Protected WithEvents ImageLogo As Global.System.Web.UI.WebControls.Image
     
     '''<summary>
+    '''Controle RadPanelBarClientes.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents RadPanelBarClientes As Global.Telerik.Web.UI.RadPanelBar
+    
+    '''<summary>
     '''Controle RadPanelBar1.
     '''</summary>
     '''<remarks>
